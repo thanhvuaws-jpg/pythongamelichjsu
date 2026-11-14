@@ -95,6 +95,10 @@ thứ người chơi thấy.
     <td><img src="docs/readme/doan_ket.png" alt="Đoạn kết Điện Biên Phủ"><br><sub><b>Đoạn kết</b>: lá cờ "Quyết chiến Quyết thắng" trên nóc hầm chỉ huy địch, chiều 7/5/1954.</sub></td>
     <td><img src="docs/readme/trang_chu.png" alt="Trang chủ"><br><sub><b>Trang chủ</b>: giới thiệu, đăng ký, đăng nhập, bảng xếp hạng.</sub></td>
   </tr>
+  <tr>
+    <td><img src="docs/readme/quan_tri.png" alt="Cổng quản trị Sử quán"><br><sub><b>Cổng quản trị "Sử quán"</b>: tổng quan, người dùng, sổ thao tác.</sub></td>
+    <td><img src="docs/readme/ket_qua.png" alt="Thắng trận thách đấu"><br><sub><b>Thắng thách đấu</b>: máy chủ phân xử, ghi kết quả cho cả hai người.</sub></td>
+  </tr>
 </table>
 
 ## Chơi cùng bạn bè và thách đấu thật
