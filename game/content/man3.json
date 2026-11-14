@@ -1,0 +1,1381 @@
+{
+ "level": {
+  "id": "man3",
+  "order_no": 3,
+  "title": "Từ Tân Trào đến Điện Biên",
+  "period_label": "1945 – 1954",
+  "intro": "Chín năm từ cây đa Tân Trào đến lá cờ trên hầm chỉ huy Điện Biên Phủ. Người kể là một cựu binh tuổi đã cao.",
+  "unlock_rule": {
+   "level_done": "man2"
+  },
+  "badge": "Chiến sĩ Điện Biên",
+  "cover": "dien_bien",
+  "map_view": {
+   "lat": 21.2,
+   "lon": 104.9,
+   "zoom": 2.6
+  }
+ },
+ "places": [
+  {
+   "id": "p_tan_trao",
+   "name": "Tân Trào",
+   "names": [
+    {
+     "period": "Trước 1945",
+     "name": "Làng Kim Long"
+    },
+    {
+     "period": "Năm 1945",
+     "name": "Thủ đô khu giải phóng"
+    }
+   ],
+   "modern_name": "Tân Trào, vùng Sơn Dương, Tuyên Quang",
+   "lat": 21.77,
+   "lon": 105.43,
+   "summary": "Nơi có đình và cây đa Tân Trào, gắn với Quốc dân Đại hội tháng 8/1945."
+  },
+  {
+   "id": "p_ba_dinh",
+   "name": "Ba Đình",
+   "names": [
+    {
+     "period": "Năm 1945",
+     "name": "Vườn hoa Ba Đình"
+    }
+   ],
+   "modern_name": "Quảng trường Ba Đình, Hà Nội",
+   "lat": 21.0368,
+   "lon": 105.8342,
+   "label": "top",
+   "summary": "Nơi Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập ngày 2/9/1945, trong lòng Hà Nội từng 60 ngày đêm chiến đấu năm 1946–1947."
+  },
+  {
+   "id": "p_dong_khe",
+   "name": "Đông Khê",
+   "names": [
+    {
+     "period": "Năm 1950",
+     "name": "Cứ điểm Đông Khê trên đường số 4"
+    }
+   ],
+   "modern_name": "Đông Khê, vùng Thạch An, Cao Bằng",
+   "lat": 22.43,
+   "lon": 106.43,
+   "summary": "Trận mở màn chiến dịch Biên giới năm 1950, phá thế khoá chặt biên giới Việt – Trung của địch trên đường số 4."
+  },
+  {
+   "id": "p_dien_bien",
+   "name": "Điện Biên Phủ",
+   "names": [
+    {
+     "period": "Năm 1954",
+     "name": "Lòng chảo Mường Thanh"
+    }
+   ],
+   "modern_name": "Lòng chảo Điện Biên Phủ, tỉnh Điện Biên",
+   "lat": 21.39,
+   "lon": 103.02,
+   "summary": "Tập đoàn cứ điểm mạnh giữa lòng chảo Tây Bắc, nơi diễn ra trận quyết chiến chiến lược năm 1954."
+  }
+ ],
+ "relics": [
+  {
+   "id": "r_tan_trao",
+   "title": "Cây đa Tân Trào",
+   "place": "p_tan_trao",
+   "stamp": "TÂN TRÀO",
+   "scene": "tan_trao",
+   "keeper": "cuu_binh",
+   "keeper_name": "Bác cựu binh",
+   "artifact": "a_co_tan_trao",
+   "summary": "Chiến tranh thế giới sắp kết thúc, thời cơ chỉ mở ra trong vài ngày. Quyết định ở ngôi đình nhỏ đã thay đổi tất cả.",
+   "central_question": "Vì sao tháng 8/1945 được gọi là “thời cơ ngàn năm có một”?",
+   "keeper_line": "Bác là lính, không phải ông đồ, nên bác kể theo kiểu của lính. Cứ hỏi gì thì hỏi.",
+   "keeper_done": "Về Hà Nội đi cháu. Mùa thu năm ấy, chỉ trong khoảng nửa tháng, từ 14 đến 28/8, khởi nghĩa đã thắng lợi trên cả nước.",
+   "steps": [
+    {
+     "story": "d_tt_1"
+    },
+    {
+     "fragment": "f_tan_trao"
+    },
+    {
+     "question": "q_tt_1"
+    },
+    {
+     "question": "q_tt_2"
+    }
+   ]
+  },
+  {
+   "id": "r_ba_dinh",
+   "title": "Ba Đình và Hà Nội 60 ngày đêm",
+   "place": "p_ba_dinh",
+   "stamp": "BA ĐÌNH",
+   "scene": "ba_dinh",
+   "requires": [
+    "r_tan_trao"
+   ],
+   "keeper": "cuu_binh",
+   "keeper_name": "Bác cựu binh",
+   "artifact": "a_tuyen_ngon",
+   "summary": "Từ ngày độc lập đến lời kêu gọi toàn quốc kháng chiến chỉ hơn một năm, mà Nam Bộ đã phải cầm súng từ tháng 9/1945.",
+   "central_question": "Vì sao vừa giành độc lập, nước ta đã phải kháng chiến?",
+   "keeper_line": "Bác đứng ở đây từ lúc tóc còn xanh. Cái nắng tháng Chín năm ấy bác còn nhớ.",
+   "keeper_done": "Hà Nội giữ chân địch hai tháng, đủ để bộ máy kháng chiến lên Việt Bắc. Rồi đến lượt núi rừng đánh giặc.",
+   "steps": [
+    {
+     "story": "d_bd_1945"
+    },
+    {
+     "question": "q_ba_1"
+    },
+    {
+     "story": "d_bd_29"
+    },
+    {
+     "fragment": "f_tuyen_ngon"
+    },
+    {
+     "question": "q_ba_2"
+    },
+    {
+     "story": "d_bd_1946"
+    },
+    {
+     "fragment": "f_loi_keu_goi"
+    },
+    {
+     "fragment": "f_viet_bac"
+    },
+    {
+     "question": "q_ba_3"
+    }
+   ]
+  },
+  {
+   "id": "r_bien_gioi",
+   "title": "Đông Khê mở màn Biên giới 1950",
+   "place": "p_dong_khe",
+   "stamp": "BIÊN GIỚI",
+   "scene": "tan_trao",
+   "requires": [
+    "r_ba_dinh"
+   ],
+   "optional": true,
+   "keeper": "cuu_binh",
+   "keeper_name": "Bác cựu binh",
+   "artifact": "a_no_bien_gioi",
+   "summary": "Di tích phụ: lần đầu quân đội ta chủ động mở một chiến dịch tiến công lớn.",
+   "central_question": "Vì sao chiến dịch Biên giới được xem là một bước trưởng thành?",
+   "keeper_line": "Cao Bằng núi đá lởm chởm, đường số 4 thì đèo cao. Đi bộ qua đây mới biết thế nào là khổ.",
+   "keeper_done": "Từ đó, đường giao thông với bên ngoài đã thông suốt, ta có thế chủ động trên chiến trường.",
+   "steps": [
+    {
+     "story": "d_bg_1"
+    },
+    {
+     "fragment": "f_bien_gioi"
+    },
+    {
+     "question": "q_bg_1"
+    }
+   ]
+  },
+  {
+   "id": "r_dien_bien",
+   "title": "Lòng chảo Điện Biên Phủ",
+   "place": "p_dien_bien",
+   "stamp": "ĐIỆN BIÊN",
+   "scene": "dien_bien",
+   "requires": [
+    "r_ba_dinh"
+   ],
+   "keeper": "cuu_binh",
+   "keeper_name": "Bác cựu binh",
+   "artifact": "a_phao",
+   "summary": "Một quyết định đổi phương châm giữa lúc pháo đã vào vị trí, rồi 56 ngày đêm đào hào, ở hầm, chịu mưa rừng.",
+   "central_question": "Vì sao quyết định “đánh chắc, tiến chắc” là mấu chốt của chiến thắng?",
+   "keeper_line": "Đến rồi cháu ạ. Đất này giờ lúa tốt lắm. Hồi đó thì đào đến đâu cũng có sắt.",
+   "keeper_done": "Bác kể đến đây thôi. Cháu ghép xong dòng thời gian là cuốn sử của cụ Đồ đã đủ. Đừng để nó rách nữa nhé.",
+   "steps": [
+    {
+     "story": "d_db_1"
+    },
+    {
+     "question": "q_db_1"
+    },
+    {
+     "story": "d_db_2"
+    },
+    {
+     "fragment": "f_doi_phuong_cham"
+    },
+    {
+     "battle": "b_dien_bien"
+    },
+    {
+     "question": "q_db_2"
+    },
+    {
+     "story": "d_db_3"
+    },
+    {
+     "fragment": "f_toan_thang"
+    },
+    {
+     "question": "q_db_3"
+    },
+    {
+     "story": "d_db_4"
+    },
+    {
+     "fragment": "f_geneve"
+    },
+    {
+     "question": "q_db_4"
+    }
+   ],
+   "extra_prompt": "Vẫn còn muốn hỏi bác nữa à?",
+   "extra_talk": [
+    {
+     "id": "t_db_so",
+     "label": "Bác có sợ không ạ?",
+     "lines": [
+      {
+       "speaker": "Bác cựu binh",
+       "portrait": "cuu_binh",
+       "fiction": true,
+       "text": "Sợ chứ cháu. Ai bảo không sợ là chưa ra trận. Nhưng ở hào, người bên cạnh mình cũng run, thế là mình lại không run nữa. Câu chuyện của bác chỉ là lời kể, nhưng những người thật như thế thì nhiều lắm."
+      }
+     ]
+    },
+    {
+     "id": "t_db_coc",
+     "label": "Hai trận Bạch Đằng và Điện Biên Phủ có gì giống nhau không ạ?",
+     "needs": "f_coc_938",
+     "locked_hint": "Cần mảnh ghép về cọc Bạch Đằng của Màn 1",
+     "lines": [
+      {
+       "speaker": "Bác cựu binh",
+       "portrait": "cuu_binh",
+       "fiction": true,
+       "text": "Khác thời đại, khác vũ khí. Nhưng có một điểm giống: biết chờ đúng lúc. Ngô Quyền chờ nước rút, Đại tướng cũng chờ đến khi chắc thắng mới đánh."
+      },
+      {
+       "speaker": "Ghi chú sử học",
+       "portrait": "tu_lieu",
+       "text": "So sánh như vậy chỉ giúp nhớ bài học, không nên hiểu rằng hoàn cảnh hai trận giống nhau. Lịch sử cần được hiểu trong đúng bối cảnh từng thời."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "persons": [
+  {
+   "id": "ho_chi_minh",
+   "name": "Hồ Chí Minh",
+   "years": "1890 – 1969",
+   "portrait": "tu_lieu",
+   "bio": "Lãnh tụ của cách mạng Việt Nam, Chủ tịch nước Việt Nam Dân chủ Cộng hoà. Người đọc Tuyên ngôn Độc lập ngày 2/9/1945 và ra Lời kêu gọi toàn quốc kháng chiến năm 1946."
+  },
+  {
+   "id": "vo_nguyen_giap",
+   "name": "Võ Nguyên Giáp",
+   "years": "1911 – 2013",
+   "portrait": "tu_lieu",
+   "bio": "Đại tướng, Tổng Tư lệnh Quân đội Nhân dân Việt Nam, Chỉ huy trưởng chiến dịch Điện Biên Phủ, người quyết định đổi phương châm sang “đánh chắc, tiến chắc”."
+  },
+  {
+   "id": "be_van_dan",
+   "name": "Bế Văn Đàn",
+   "years": "1931 – 1953",
+   "portrait": "tu_lieu",
+   "bio": "Anh hùng lực lượng vũ trang. Tháng 12/1953 ở Mường Pồn, đã lấy thân mình làm giá súng cho đồng đội bắn."
+  },
+  {
+   "id": "to_vinh_dien",
+   "name": "Tô Vĩnh Diện",
+   "years": "1924 – 1954",
+   "portrait": "tu_lieu",
+   "bio": "Anh hùng lực lượng vũ trang. Trong khi kéo pháo năm 1954, đã lấy thân mình chèn để cứu khẩu pháo."
+  },
+  {
+   "id": "phan_dinh_giot",
+   "name": "Phan Đình Giót",
+   "years": "1920 – 1954",
+   "portrait": "tu_lieu",
+   "bio": "Anh hùng lực lượng vũ trang. Trong trận Him Lam ngày 13/3/1954, đã lấy thân mình lấp lỗ châu mai."
+  },
+  {
+   "id": "de_castries",
+   "name": "Christian de Castries",
+   "years": "1902 – 1991",
+   "portrait": "tu_lieu",
+   "bio": "Thiếu tướng, chỉ huy tập đoàn cứ điểm Điện Biên Phủ của quân Pháp, bị bắt chiều 7/5/1954."
+  }
+ ],
+ "events": [
+  {
+   "id": "e_1945_dh",
+   "title": "Quốc dân Đại hội Tân Trào",
+   "date": {
+    "start": "1945-08-16",
+    "end": "1945-08-17",
+    "precision": "day",
+    "label": "16–17/8/1945"
+   },
+   "place": "p_tan_trao",
+   "summary": "Đại hội tán thành chủ trương tổng khởi nghĩa, lập Uỷ ban Dân tộc giải phóng do Hồ Chí Minh làm Chủ tịch.",
+   "significance": "Đưa ra quyết định chung của toàn dân tộc khi thời cơ đến.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_tan_trao"
+   ],
+   "citations": [
+    "c_vk_1945",
+    "c_ls_1945"
+   ]
+  },
+  {
+   "id": "e_1945_hn",
+   "title": "Khởi nghĩa giành chính quyền ở Hà Nội",
+   "date": {
+    "start": "1945-08-19",
+    "precision": "day",
+    "label": "19/8/1945"
+   },
+   "place": "p_ba_dinh",
+   "summary": "Từ cuộc mít tinh ở Nhà hát Lớn, quần chúng kéo đi chiếm các cơ quan đầu não của chính quyền cũ.",
+   "significance": "Thúc đẩy khởi nghĩa thắng lợi trên cả nước trong thời gian rất ngắn.",
+   "in_timeline": true,
+   "citations": [
+    "c_ls_1945"
+   ]
+  },
+  {
+   "id": "e_1945_td",
+   "title": "Tuyên ngôn Độc lập",
+   "date": {
+    "start": "1945-09-02",
+    "precision": "day",
+    "label": "2/9/1945"
+   },
+   "place": "p_ba_dinh",
+   "summary": "Tại Ba Đình, Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập, khai sinh nước Việt Nam Dân chủ Cộng hoà.",
+   "significance": "Mở ra kỷ nguyên độc lập của dân tộc.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_tuyen_ngon"
+   ],
+   "citations": [
+    "c_tuyen_ngon"
+   ]
+  },
+  {
+   "id": "e_1946",
+   "title": "Toàn quốc kháng chiến",
+   "date": {
+    "start": "1946-12-19",
+    "precision": "day",
+    "label": "19/12/1946"
+   },
+   "place": "p_ba_dinh",
+   "summary": "Trước các hành động lấn tới của Pháp, cả nước bước vào kháng chiến. Hà Nội chiến đấu giam chân địch 60 ngày đêm.",
+   "significance": "Bảo vệ cơ quan đầu não rút lên chiến khu an toàn.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_loi_keu_goi"
+   ],
+   "citations": [
+    "c_loi_keu_goi",
+    "c_ls_1945"
+   ]
+  },
+  {
+   "id": "e_1947",
+   "title": "Chiến dịch Việt Bắc",
+   "date": {
+    "start": "1947-10-01",
+    "end": "1947-12-31",
+    "precision": "month",
+    "label": "10–12/1947"
+   },
+   "place": "p_tan_trao",
+   "summary": "Quân ta đánh bại cuộc tiến công lớn của Pháp lên căn cứ địa Việt Bắc.",
+   "significance": "Làm thất bại kế hoạch đánh nhanh thắng nhanh của địch.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_viet_bac"
+   ],
+   "citations": [
+    "c_qs_vb"
+   ]
+  },
+  {
+   "id": "e_1950",
+   "title": "Chiến dịch Biên giới",
+   "date": {
+    "start": "1950-09-01",
+    "end": "1950-10-31",
+    "precision": "month",
+    "label": "9–10/1950"
+   },
+   "place": "p_dong_khe",
+   "summary": "Mở màn ở Đông Khê, quân ta đánh tan hệ thống phòng ngự của Pháp trên đường số 4.",
+   "significance": "Quân ta từ đây giành thế chủ động trên chiến trường chính Bắc Bộ.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_bien_gioi"
+   ],
+   "citations": [
+    "c_qs_bg"
+   ]
+  },
+  {
+   "id": "e_1954_pc",
+   "title": "Đổi phương châm: Đánh chắc, tiến chắc",
+   "date": {
+    "start": "1954-01-26",
+    "precision": "day",
+    "label": "26/1/1954"
+   },
+   "place": "p_dien_bien",
+   "summary": "Đại tướng Võ Nguyên Giáp quyết định thay đổi phương châm tác chiến, kéo pháo ra để chuẩn bị lại.",
+   "significance": "Quyết định khó khăn nhất nhưng có tính chất then chốt đối với thắng lợi.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_doi_phuong_cham"
+   ],
+   "citations": [
+    "c_qs_dbp"
+   ]
+  },
+  {
+   "id": "e_1954_him",
+   "title": "Mở màn chiến dịch tại Him Lam",
+   "date": {
+    "start": "1954-03-13",
+    "precision": "day",
+    "label": "13/3/1954"
+   },
+   "place": "p_dien_bien",
+   "summary": "Pháo ta bắn vào Him Lam, mở đầu đợt tấn công thứ nhất của chiến dịch.",
+   "significance": "Bắt đầu 56 ngày đêm của chiến dịch.",
+   "in_timeline": true,
+   "citations": [
+    "c_qs_dbp",
+    "c_bt_dbp"
+   ]
+  },
+  {
+   "id": "e_1954_tt",
+   "title": "Toàn thắng ở Điện Biên Phủ",
+   "date": {
+    "start": "1954-05-07",
+    "precision": "day",
+    "label": "7/5/1954"
+   },
+   "place": "p_dien_bien",
+   "summary": "Quân ta chiếm sở chỉ huy, bắt tướng De Castries, tập đoàn cứ điểm bị tiêu diệt hoàn toàn.",
+   "significance": "Tạo điều kiện quyết định cho thắng lợi trên bàn đàm phán Genève.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_toan_thang"
+   ],
+   "citations": [
+    "c_qs_dbp",
+    "c_bt_dbp"
+   ]
+  },
+  {
+   "id": "e_1954_gv",
+   "title": "Ký kết Hiệp định Genève",
+   "date": {
+    "start": "1954-07-21",
+    "precision": "day",
+    "label": "21/7/1954"
+   },
+   "place": "p_dien_bien",
+   "summary": "Các bên ký kết Hiệp định về đình chỉ chiến sự ở Đông Dương, vĩ tuyến 17 là giới tuyến quân sự tạm thời.",
+   "significance": "Chấm dứt cuộc chiến tranh với Pháp, miền Bắc được hoàn toàn giải phóng.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_geneve"
+   ],
+   "citations": [
+    "c_ls_1945"
+   ]
+  }
+ ],
+ "causal_links": [
+  {
+   "from_event_id": "e_1945_dh",
+   "to_event_id": "e_1945_hn",
+   "kind": "leads_to",
+   "note": "Lệnh tổng khởi nghĩa thúc đẩy các địa phương giành chính quyền."
+  },
+  {
+   "from_event_id": "e_1945_hn",
+   "to_event_id": "e_1945_td",
+   "kind": "leads_to",
+   "note": "Giành được chính quyền, tuyên bố độc lập trước quốc dân và thế giới."
+  },
+  {
+   "from_event_id": "e_1946",
+   "to_event_id": "e_1947",
+   "kind": "context_of",
+   "note": "Cơ quan đầu não rút lên Việt Bắc, nơi địch tiến công năm 1947."
+  },
+  {
+   "from_event_id": "e_1954_pc",
+   "to_event_id": "e_1954_him",
+   "kind": "cause_of",
+   "note": "Chuẩn bị theo phương châm mới rồi mới mở màn chiến dịch."
+  },
+  {
+   "from_event_id": "e_1954_him",
+   "to_event_id": "e_1954_tt",
+   "kind": "leads_to",
+   "note": "Ba đợt tấn công kéo dài 56 ngày đêm."
+  },
+  {
+   "from_event_id": "e_1954_tt",
+   "to_event_id": "e_1954_gv",
+   "kind": "cause_of",
+   "note": "Thắng lợi quân sự tạo thế mạnh trên bàn đàm phán."
+  }
+ ],
+ "fragments": [
+  {
+   "id": "f_tan_trao",
+   "event_id": "e_1945_dh",
+   "title": "Thời cơ trong vài ngày",
+   "kind_label": "Bối cảnh",
+   "icon": "co_sao",
+   "body": "Tháng 8/1945, Nhật đầu hàng Đồng minh, quân Đồng minh chưa vào Đông Dương. Hội nghị toàn quốc của Đảng và Quốc dân Đại hội họp ở Tân Trào đã nắm bắt thời điểm này, quyết định tổng khởi nghĩa, lập Uỷ ban Dân tộc giải phóng.",
+   "citations": [
+    "c_vk_1945",
+    "c_ls_1945"
+   ]
+  },
+  {
+   "id": "f_tuyen_ngon",
+   "event_id": "e_1945_td",
+   "title": "Bản Tuyên ngôn ở Ba Đình",
+   "kind_label": "Văn bản",
+   "icon": "hich",
+   "body": "Chiều 2/9/1945, trước hàng chục vạn người, Chủ tịch Hồ Chí Minh đọc bản Tuyên ngôn Độc lập. Văn kiện dẫn quyền con người từ các bản tuyên ngôn của Mỹ, của Pháp để khẳng định quyền của dân tộc.",
+   "quote": "Nước Việt Nam có quyền hưởng tự do và độc lập.",
+   "citations": [
+    "c_tuyen_ngon"
+   ]
+  },
+  {
+   "id": "f_loi_keu_goi",
+   "event_id": "e_1946",
+   "title": "Lời kêu gọi đêm 19/12",
+   "kind_label": "Văn bản",
+   "icon": "hich",
+   "body": "Đêm 19/12/1946, tiếng súng kháng chiến nổ ra ở Hà Nội. Lời kêu gọi toàn quốc kháng chiến của Chủ tịch Hồ Chí Minh đề ngày 19/12, sáng 20/12 được Đài Tiếng nói Việt Nam phát đi. Trung đoàn Thủ đô cùng nhân dân chiến đấu 60 ngày đêm với tinh thần quyết tử.",
+   "quote": "Chúng ta thà hy sinh tất cả, chứ nhất định không chịu mất nước.",
+   "citations": [
+    "c_loi_keu_goi"
+   ]
+  },
+  {
+   "id": "f_viet_bac",
+   "event_id": "e_1947",
+   "title": "Thu đông 1947",
+   "kind_label": "Diễn biến",
+   "icon": "no",
+   "body": "Thu đông 1947, Pháp mở cuộc tiến công lớn lên Việt Bắc, nhằm phá cơ quan đầu não kháng chiến. Quân dân ta đánh địch trên cả đường sông Lô và đường số 4. Sau hơn hai tháng, địch phải rút khỏi phần lớn căn cứ địa.",
+   "citations": [
+    "c_qs_vb"
+   ]
+  },
+  {
+   "id": "f_bien_gioi",
+   "event_id": "e_1950",
+   "title": "Đông Khê và Thất Khê",
+   "kind_label": "Diễn biến",
+   "icon": "co_sao",
+   "body": "Tháng 9/1950, quân ta đánh Đông Khê mở màn. Hệ thống cứ điểm của Pháp trên đường số 4 rung chuyển, nhiều binh đoàn địch bị đánh thiệt hại nặng trên đường rút. Lần đầu quân ta chủ động mở chiến dịch lớn và giành thắng lợi.",
+   "citations": [
+    "c_qs_bg"
+   ]
+  },
+  {
+   "id": "f_doi_phuong_cham",
+   "event_id": "e_1954_pc",
+   "title": "Một đêm không ngủ",
+   "kind_label": "Quyết định",
+   "icon": "phao",
+   "body": "Sau khi cân nhắc nhiều đêm, ngày 26/1/1954 Đại tướng Võ Nguyên Giáp quyết định đổi phương châm từ “đánh nhanh, giải quyết nhanh” sang “đánh chắc, tiến chắc”. Pháo đã kéo vào lại phải kéo ra, chuẩn bị lại trận địa.",
+   "citations": [
+    "c_qs_dbp"
+   ]
+  },
+  {
+   "id": "f_toan_thang",
+   "event_id": "e_1954_tt",
+   "title": "Lá cờ trên hầm chỉ huy",
+   "kind_label": "Diễn biến",
+   "icon": "co_sao",
+   "body": "Đêm 6/5/1954, khối bộc phá gần một tấn nổ trên đồi A1. Chiều 7/5, quân ta tiến vào sở chỉ huy, bắt tướng De Castries, lá cờ “Quyết chiến, Quyết thắng” tung bay. Chiến dịch kết thúc sau 56 ngày đêm.",
+   "citations": [
+    "c_qs_dbp",
+    "c_bt_dbp"
+   ]
+  },
+  {
+   "id": "f_geneve",
+   "event_id": "e_1954_gv",
+   "title": "Hiệp định Genève",
+   "kind_label": "Văn bản",
+   "icon": "sach",
+   "body": "Ngày 21/7/1954, các bên ký kết Hiệp định Genève về Đông Dương. Hiệp định ghi nhận các quyền dân tộc cơ bản, lấy vĩ tuyến 17 làm giới tuyến quân sự tạm thời và dự kiến tổng tuyển cử thống nhất vào tháng 7/1956.",
+   "citations": [
+    "c_ls_1945"
+   ]
+  }
+ ],
+ "dialogues": [
+  {
+   "id": "d_tt_1",
+   "bg": "tan_trao",
+   "unlocks": [
+    "ho_chi_minh",
+    "e_1945_dh",
+    "p_tan_trao"
+   ],
+   "nodes": [
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "text": "Tháng Tám năm ấy bác mới mười bảy, đi liên lạc cho đội du kích. Cây đa này lúc đó đã già lắm rồi, gốc to mấy người ôm không xuể."
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "memory": true,
+     "bg": "tan_trao",
+     "cite": [
+      "c_vk_1945"
+     ],
+     "text": "Nhật đầu hàng Đồng minh. Quân Đồng minh thì chưa kịp vào. Lúc đó như một khoảng trống: ai nhanh tay thì nắm lấy đất nước mình. Từ các nơi, đại biểu lội suối qua rừng về đây họp.",
+     "stage": "tan_trao:delegates"
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "memory": true,
+     "bg": "tan_trao",
+     "fx": [
+      "drum"
+     ],
+     "cite": [
+      "c_vk_1945",
+      "c_ls_1945"
+     ],
+     "text": "Đại hội ở đình Tân Trào, 16 và 17 tháng 8. Tán thành lệnh tổng khởi nghĩa, lập Uỷ ban Dân tộc giải phóng do cụ Hồ đứng đầu, chọn cờ đỏ sao vàng và bài Tiến quân ca.",
+     "stage": "tan_trao:congress"
+    },
+    {
+     "speaker": "Ghi chú",
+     "portrait": "tu_lieu",
+     "text": "Nhân vật bác cựu binh là hư cấu, được tạo ra để dẫn chuyện. Trò chơi không vẽ chân dung các nhân vật lịch sử hiện đại, thay vào đó dùng biểu tượng tư liệu."
+    }
+   ]
+  },
+  {
+   "id": "d_bd_1945",
+   "bg": "ba_dinh",
+   "unlocks": [
+    "e_1945_hn",
+    "p_ba_dinh"
+   ],
+   "nodes": [
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "drum"
+     ],
+     "cite": [
+      "c_ls_1945"
+     ],
+     "text": "Ngày 19/8, mít tinh ở Nhà hát Lớn biến thành biểu tình. Người ta ào ào kéo đi, chiếm Bắc Bộ phủ, không tốn bao nhiêu đạn. Huế ngày 23, Sài Gòn ngày 25. Bảo Đại thoái vị ngày 30.",
+     "stage": "ha_noi:uprising"
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "cite": [
+      "c_bd_1945",
+    "c_ls_1945"
+     ],
+     "text": "Trước đó, ngày 17/8, ông vua cuối cùng ra Chiếu động viên quốc dân, có câu: “Trẫm ưng làm dân một nước độc lập hơn làm vua một nước nô lệ”. Câu ấy không nằm trong chiếu thoái vị như nhiều người vẫn tưởng."
+    }
+   ]
+  },
+  {
+   "id": "d_bd_29",
+   "bg": "ba_dinh",
+   "unlocks": [
+    "e_1945_td"
+   ],
+   "nodes": [
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "memory": true,
+     "cite": [
+      "c_tuyen_ngon"
+     ],
+     "text": "Chiều 2/9 Hà Nội đông nghịt. Một người gầy gò, đi dép cao su, bước lên lễ đài và hỏi: “Tôi nói, đồng bào nghe rõ không?”. Cả quảng trường đáp lại, bác cũng hét đến rát họng.",
+     "stage": "ba_dinh:crowd"
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "memory": true,
+     "cite": [
+      "c_tuyen_ngon"
+     ],
+     "text": "Người đọc bản Tuyên ngôn Độc lập. Ngay sau đó, đất nước bước vào những ngày khó khăn mới: đói kém, giặc dốt, ngân khố trống rỗng, bốn phía đều là áp lực của nước ngoài.",
+     "stage": "ba_dinh:after"
+    }
+   ]
+  },
+  {
+   "id": "d_bd_1946",
+   "bg": "ba_dinh",
+   "unlocks": [
+    "e_1946",
+    "e_1947"
+   ],
+   "nodes": [
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "fire",
+      "blast"
+     ],
+     "shake": 7,
+     "cite": [
+      "c_loi_keu_goi",
+      "c_ls_1945"
+     ],
+     "text": "Đêm 19/12/1946, đèn thành phố bỗng tắt phụt. Súng nổ từ các ngả. Bác cùng đồng đội giữ từng căn nhà, đục tường qua nhà nọ sang nhà kia. Liên khu I đánh nhau từng góc phố.",
+     "stage": "ha_noi:night1946"
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "smoke",
+      "blast"
+     ],
+     "shake": 5,
+     "cite": [
+      "c_ls_1945"
+     ],
+     "text": "Sáu mươi ngày đêm như vậy. Nhiều người bạn của bác nằm lại trong những phố ấy, nhiều người mới mười sáu, mười bảy tuổi. Rồi trung đoàn rút qua sông Hồng lên chiến khu.",
+     "stage": "ha_noi:withdraw"
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "memory": true,
+     "bg": "tan_trao",
+     "fx": [
+      "blast",
+      "smoke"
+     ],
+     "cite": [
+      "c_qs_vb"
+     ],
+     "text": "Thu đông 1947, Pháp đổ quân lên Việt Bắc hòng bắt gọn cơ quan đầu não. Tàu chiến trên sông Lô bị đánh chìm, Việt Bắc đứng vững. Giờ cháu thử nhớ xem những mốc này nối nhau thế nào.",
+     "stage": "song_lo:ships"
+    }
+   ]
+  },
+  {
+   "id": "d_bg_1",
+   "bg": "tan_trao",
+   "unlocks": [
+    "e_1950",
+    "p_dong_khe"
+   ],
+   "nodes": [
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "cite": [
+      "c_qs_bg"
+     ],
+     "text": "Pháp khoá chặt biên giới Việt – Trung trên đường số 4, lập thêm hành lang Đông – Tây để cô lập căn cứ Việt Bắc. Năm 1950 ta mở chiến dịch đánh vào tuyến đường số 4. Lần đầu tiên ta không chờ địch, mà tự chọn nơi đánh."
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "blast",
+      "smoke"
+     ],
+     "shake": 6,
+     "cite": [
+      "c_qs_bg"
+     ],
+     "text": "Tháng 9, Đông Khê bị bao vây và phá vỡ. Trên đường số 4, các đoàn quân Pháp bị chặn đánh giữa rừng núi. Bác vẫn nhớ tiếng súng dội đi dội lại giữa hai bên núi đá.",
+     "stage": "bien_gioi:ambush"
+    }
+   ]
+  },
+  {
+   "id": "d_db_1",
+   "bg": "dien_bien",
+   "unlocks": [
+    "vo_nguyen_giap",
+    "be_van_dan",
+    "p_dien_bien"
+   ],
+   "nodes": [
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "cite": [
+      "c_qs_dbp"
+     ],
+     "text": "Cuối năm 1953, Pháp nhảy dù xuống Điện Biên Phủ, dựng một tập đoàn cứ điểm được xem là rất khó công phá. Họ muốn ta lao vào đánh mà tiêu hao, hoặc không dám đánh thì mất Tây Bắc."
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "smoke"
+     ],
+     "cite": [
+      "c_qs_dbp",
+      "c_bt_dbp"
+     ],
+     "text": "Đường hành quân khổ lắm cháu. Dân công gùi gạo, thồ xe đạp xuyên rừng. Trên đường đánh địch ở Mường Pồn tháng 12/1953, anh Bế Văn Đàn đã lấy vai mình làm giá súng cho đồng đội bắn đến khi ngã xuống.",
+     "stage": "dien_bien:porters"
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "text": "Đấy, nơi ấy ở chỗ nào trên bản đồ đất nước? Cháu chỉ thử xem nào."
+    }
+   ]
+  },
+  {
+   "id": "d_db_2",
+   "bg": "dien_bien",
+   "unlocks": [
+    "to_vinh_dien",
+    "e_1954_pc"
+   ],
+   "nodes": [
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "rain"
+     ],
+     "cite": [
+      "c_qs_dbp"
+     ],
+     "text": "Pháo đã kéo vào gần xong, chỉ chờ lệnh. Đại tướng nhiều đêm không ngủ được. Rồi một buổi sáng có lệnh: lùi ngày, kéo pháo ra. Bác nói thật, nghe tin ai cũng ngã ngửa, đã kéo cực như vậy.",
+     "stage": "dien_bien:pull_out"
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "rain",
+      "smoke"
+     ],
+     "cite": [
+      "c_qs_dbp",
+      "c_bt_dbp"
+     ],
+     "text": "Khi kéo pháo, có người đã không còn trở lại. Anh Tô Vĩnh Diện lao vào lấy thân mình chèn bánh pháo khi dây kéo bị đứt giữa dốc. Pháo còn, người mất.",
+     "stage": "dien_bien:to_vinh_dien"
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "text": "Về sau mới thấy, nếu cứ đánh theo cách cũ, không biết bao nhiêu người sẽ nằm lại trong một đêm. Nào, giờ cháu thử đặt mình vào cái lều chỉ huy năm ấy."
+    }
+   ]
+  },
+  {
+   "id": "d_db_3",
+   "bg": "dien_bien",
+   "unlocks": [
+    "phan_dinh_giot",
+    "e_1954_him",
+    "e_1954_tt",
+    "de_castries"
+   ],
+   "nodes": [
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "blast",
+      "smoke"
+     ],
+     "shake": 8,
+     "cite": [
+      "c_qs_dbp",
+      "c_bt_dbp"
+     ],
+     "text": "Chiều 13/3/1954, pháo ta nổ vào Him Lam. Anh Phan Đình Giót, người đầy thương tích, đã lao thân mình vào lỗ châu mai để đồng đội xung phong. Cụm cứ điểm Him Lam bị tiêu diệt ngay trong đêm.",
+     "stage": "dien_bien:him_lam"
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "rain",
+      "smoke"
+     ],
+     "cite": [
+      "c_qs_dbp"
+     ],
+     "text": "Rồi đào hào, đào hào, đào mãi. Đường hào cứ thế dài ra, siết dần lấy cánh đồng Mường Thanh. Mưa rừng ngập đến bụng, ta vẫn đào, sát đến mức nghe tiếng địch nói chuyện.",
+     "stage": "dien_bien:trenches"
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "blast"
+     ],
+     "shake": 10,
+     "cite": [
+      "c_qs_dbp",
+      "c_bt_dbp"
+     ],
+     "text": "Đêm 6/5, khối bộc phá gần một tấn nổ trong lòng đồi A1, cả vùng rung lên. Chiều hôm sau, lá cờ đã cắm trên nóc hầm De Castries. Tiếng súng im, bác ngồi phịch xuống, chỉ biết khóc.",
+     "stage": "dien_bien:a1"
+    }
+   ]
+  },
+  {
+   "id": "d_db_4",
+   "bg": "geneve",
+   "unlocks": [
+    "e_1954_gv"
+   ],
+   "nodes": [
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "cite": [
+      "c_ls_1945"
+     ],
+     "text": "Đúng sau trận ấy một ngày, Hội nghị Genève bắt đầu bàn về Đông Dương. Thắng lợi ngoài chiến trường đã đặt lên bàn đàm phán một sức nặng mới."
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "cite": [
+      "c_ls_1945"
+     ],
+     "text": "Ngày 21/7/1954, hiệp định được ký. Chiến sự kết thúc. Đất nước tạm chia tại vĩ tuyến 17, chờ tổng tuyển cử năm 1956. Bác đã nghĩ chỉ hai năm là gặp lại người thân. Nhưng rồi... thôi, câu chuyện đó dài lắm, để lần sau."
+    }
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "q_tt_1",
+   "kind": "single",
+   "difficulty": 2,
+   "prompt": "Điều gì tạo nên “thời cơ” của Cách mạng tháng Tám năm 1945?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Nhật đầu hàng Đồng minh, trong khi quân Đồng minh chưa vào Đông Dương"
+    },
+    {
+     "id": "b",
+     "text": "Pháp đồng ý rút quân theo hiệp ước"
+    },
+    {
+     "id": "c",
+     "text": "Vua Bảo Đại mời Việt Minh về Huế"
+    },
+    {
+     "id": "d",
+     "text": "Liên Xô đã có quân đóng tại Hà Nội"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Đây là “khoảng trống” quyền lực rất ngắn và cần được tận dụng kịp thời.",
+   "citations": [
+    "c_vk_1945",
+    "c_ls_1945"
+   ]
+  },
+  {
+   "id": "q_tt_2",
+   "kind": "multi",
+   "style": "Chọn nhiều đáp án",
+   "difficulty": 2,
+   "prompt": "Quốc dân Đại hội Tân Trào (16–17/8/1945) đã quyết định những việc nào?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Tán thành chủ trương tổng khởi nghĩa"
+    },
+    {
+     "id": "b",
+     "text": "Lập Uỷ ban Dân tộc giải phóng"
+    },
+    {
+     "id": "c",
+     "text": "Quy định Quốc kỳ, Quốc ca"
+    },
+    {
+     "id": "d",
+     "text": "Ký kết Hiệp định Genève"
+    }
+   ],
+   "correct_answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "explanation": "Hiệp định Genève là việc của năm 1954, gần chín năm sau.",
+   "citations": [
+    "c_vk_1945"
+   ]
+  },
+  {
+   "id": "q_ba_1",
+   "kind": "order",
+   "style": "Sắp xếp sự kiện",
+   "difficulty": 2,
+   "prompt": "Sắp xếp các sự kiện tháng 8 và tháng 9 năm 1945 theo đúng trình tự.",
+   "items": [
+    {
+     "id": "a",
+     "text": "Quốc dân Đại hội ở Tân Trào"
+    },
+    {
+     "id": "b",
+     "text": "Khởi nghĩa thắng lợi ở Hà Nội"
+    },
+    {
+     "id": "c",
+     "text": "Bảo Đại thoái vị"
+    },
+    {
+     "id": "d",
+     "text": "Tuyên ngôn Độc lập ở Ba Đình"
+    }
+   ],
+   "correct_answer": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ],
+   "explanation": "16–17/8, 19/8, 30/8 rồi 2/9. Các sự kiện diễn ra chỉ trong hơn hai tuần.",
+   "citations": [
+    "c_ls_1945"
+   ]
+  },
+  {
+   "id": "q_ba_2",
+   "kind": "single",
+   "style": "Đúng hay Sai?",
+   "difficulty": 1,
+   "keep_order": true,
+   "prompt": "Nhận định: “Bản Tuyên ngôn Độc lập năm 1945 được đọc tại Quảng trường Ba Đình.”",
+   "options": [
+    {
+     "id": "a",
+     "text": "Đúng"
+    },
+    {
+     "id": "b",
+     "text": "Sai"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Lễ độc lập diễn ra tại vườn hoa Ba Đình, nay là Quảng trường Ba Đình, Hà Nội.",
+   "citations": [
+    "c_tuyen_ngon"
+   ]
+  },
+  {
+   "id": "q_ba_3",
+   "kind": "single",
+   "difficulty": 2,
+   "prompt": "Việc Hà Nội chiến đấu 60 ngày đêm (từ cuối 1946) đem lại ý nghĩa chiến lược gì?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Giam chân địch, tạo thời gian đưa cơ quan đầu não và lực lượng lên chiến khu"
+    },
+    {
+     "id": "b",
+     "text": "Buộc Pháp ký hiệp định và rút quân ngay lập tức"
+    },
+    {
+     "id": "c",
+     "text": "Mở đầu Chiến dịch Điện Biên Phủ"
+    },
+    {
+     "id": "d",
+     "text": "Giải phóng hoàn toàn miền Bắc"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Cuộc chiến đấu trong lòng Thủ đô đã đạt được mục tiêu chiến lược, rồi lực lượng rút ra an toàn.",
+   "citations": [
+    "c_ls_1945"
+   ]
+  },
+  {
+   "id": "q_bg_1",
+   "kind": "single",
+   "difficulty": 2,
+   "prompt": "Điểm nổi bật của chiến dịch Biên giới 1950 so với giai đoạn trước là gì?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Quân ta lần đầu chủ động mở chiến dịch tiến công lớn và giành thắng lợi"
+    },
+    {
+     "id": "b",
+     "text": "Đây là trận đánh cuối cùng của cuộc kháng chiến"
+    },
+    {
+     "id": "c",
+     "text": "Pháp đã đầu hàng toàn bộ tại Cao Bằng"
+    },
+    {
+     "id": "d",
+     "text": "Quân ta lần đầu sử dụng cọc trên sông"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Sau chiến dịch này, quân ta giành được thế chủ động trên chiến trường chính Bắc Bộ.",
+   "citations": [
+    "c_qs_bg"
+   ]
+  },
+  {
+   "id": "q_db_1",
+   "kind": "map_pick",
+   "style": "Chỉ trên bản đồ",
+   "difficulty": 2,
+   "prompt": "Điện Biên Phủ nằm ở vùng Tây Bắc nước ta. Bấm vào vị trí của lòng chảo Điện Biên Phủ trên bản đồ.",
+   "correct_answer": {
+    "lat": 21.39,
+    "lon": 103.02
+   },
+   "tolerance_km": 60,
+   "place_label": "Điện Biên Phủ",
+   "view": {
+    "lat": 20.5,
+    "lon": 104.8,
+    "zoom": 2.2
+   },
+   "explanation": "Điện Biên Phủ nằm ở cực Tây Bắc, gần biên giới với Lào, cách Hà Nội hàng trăm km đường núi.",
+   "citations": [
+    "c_qs_dbp"
+   ]
+  },
+  {
+   "id": "q_db_2",
+   "kind": "single",
+   "difficulty": 2,
+   "prompt": "Vì sao phương châm “đánh chắc, tiến chắc” được xem là đúng đắn trong chiến dịch Điện Biên Phủ?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Tập đoàn cứ điểm rất mạnh: cần chuẩn bị kỹ, đánh từng bước để bảo đảm chắc thắng"
+    },
+    {
+     "id": "b",
+     "text": "Vì địch đã rút hết khỏi lòng chảo"
+    },
+    {
+     "id": "c",
+     "text": "Vì bộ đội muốn nghỉ ngơi đến hết chiến tranh"
+    },
+    {
+     "id": "d",
+     "text": "Vì thời tiết mùa khô không cho phép đánh"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Đánh nhanh trong vài đêm có nguy cơ thất bại nặng. Chuẩn bị kỹ giúp giành thắng lợi hoàn toàn.",
+   "citations": [
+    "c_qs_dbp"
+   ]
+  },
+  {
+   "id": "q_db_3",
+   "kind": "match",
+   "style": "Nối cặp",
+   "difficulty": 2,
+   "prompt": "Nối tên anh hùng với hành động được ghi nhớ.",
+   "left": [
+    {
+     "id": "l1",
+     "text": "Bế Văn Đàn"
+    },
+    {
+     "id": "l2",
+     "text": "Tô Vĩnh Diện"
+    },
+    {
+     "id": "l3",
+     "text": "Phan Đình Giót"
+    }
+   ],
+   "right": [
+    {
+     "id": "r1",
+     "text": "Lấy thân mình làm giá súng"
+    },
+    {
+     "id": "r2",
+     "text": "Lấy thân mình chèn pháo"
+    },
+    {
+     "id": "r3",
+     "text": "Lấy thân mình lấp lỗ châu mai"
+    }
+   ],
+   "correct_answer": {
+    "l1": "r1",
+    "l2": "r2",
+    "l3": "r3"
+   },
+   "explanation": "Ba tấm gương tiêu biểu được ghi nhớ trong chiến dịch Điện Biên Phủ.",
+   "citations": [
+    "c_bt_dbp",
+    "c_qs_dbp"
+   ]
+  },
+  {
+   "id": "q_db_4",
+   "kind": "single",
+   "style": "Đọc hiểu văn kiện",
+   "difficulty": 3,
+   "prompt": "Theo Hiệp định Genève, vĩ tuyến 17 là gì?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Giới tuyến quân sự tạm thời, không phải biên giới quốc gia"
+    },
+    {
+     "id": "b",
+     "text": "Biên giới vĩnh viễn giữa hai quốc gia"
+    },
+    {
+     "id": "c",
+     "text": "Con đường Trường Sơn đi vào miền Nam"
+    },
+    {
+     "id": "d",
+     "text": "Ranh giới giữa Việt Nam và Lào"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Hiệp định ghi rõ đây là giới tuyến quân sự tạm thời và không thể coi là ranh giới chính trị hay lãnh thổ.",
+   "citations": [
+    "c_ls_1945"
+   ]
+  }
+ ],
+ "battles": [
+  {
+   "id": "b_dien_bien",
+   "kind": "siege",
+   "year": 1954,
+   "title": "Chiến dịch Điện Biên Phủ năm 1954",
+   "ally": "Quân đội Nhân dân Việt Nam",
+   "enemy": "Quân viễn chinh Pháp",
+   "enemy_general": "De Castries",
+   "intro": "Bạn đứng ở cái lều chỉ huy năm 1954. Đầu tiên là quyết định khó khăn nhất, tiếp đến là kéo pháo qua sườn núi trong đêm, rồi đánh từng cứ điểm theo ba đợt của chiến dịch.",
+   "victory": "Chiều 7/5/1954, quân ta tiến vào sở chỉ huy, bắt tướng De Castries. Sau 56 ngày đêm, tập đoàn cứ điểm Điện Biên Phủ bị tiêu diệt hoàn toàn.",
+   "citations": [
+    "c_qs_dbp",
+    "c_bt_dbp"
+   ]
+  }
+ ],
+ "artifacts": [
+  {
+   "id": "a_co_tan_trao",
+   "name": "Cờ đỏ sao vàng",
+   "icon": "co_sao",
+   "desc": "Được Quốc dân Đại hội Tân Trào quy định là Quốc kỳ."
+  },
+  {
+   "id": "a_tuyen_ngon",
+   "name": "Bản chép Tuyên ngôn",
+   "icon": "hich",
+   "desc": "Văn kiện khai sinh nước Việt Nam Dân chủ Cộng hoà."
+  },
+  {
+   "id": "a_no_bien_gioi",
+   "name": "Chiếc nỏ biên giới",
+   "icon": "no",
+   "desc": "Minh hoạ thời kỳ quân ta vừa đánh, vừa tự trang bị trong rừng núi."
+  },
+  {
+   "id": "a_phao",
+   "name": "Khẩu pháo kéo tay",
+   "icon": "phao",
+   "desc": "Biểu tượng của những con người đã kéo pháo qua núi rừng Tây Bắc."
+  }
+ ]
+}

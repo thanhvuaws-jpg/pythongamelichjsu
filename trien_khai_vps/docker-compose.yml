@@ -1,0 +1,63 @@
+# Game "Sử Ký Điều Tra" trên VPS, nằm RIÊNG ở /opt/sukydieutra: không dùng chung container, mạng,
+# volume hay cấu hình nào với đồ án trên cùng máy.
+# Ra Internet bằng Cloudflare Tunnel (container tunnel kết nối RA tới Cloudflare), nên không mở cổng
+# nào trên VPS và không đụng Caddy / tường lửa của đồ án. Tên miền (game.*, admin.*) gắn ở trang
+# Cloudflare → Networking → Tunnels → sukydieutra, trỏ vào http://sukydieutra_app:8000.
+#
+# Biến: .env (POSTGRES_PASSWORD, TUNNEL_TOKEN — chỉ compose đọc) và app.env (cấu hình máy chủ game).
+# Gỡ: xem HUONG_DAN.md.
+name: sukydieutra
+
+services:
+  db:
+    image: postgres:16
+    container_name: sukydieutra_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: sukydieutra
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?thieu POSTGRES_PASSWORD trong .env}
+      POSTGRES_DB: sukydieutra
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sukydieutra"]
+      interval: 5s
+      retries: 20
+    networks: [noi_bo]
+    mem_limit: 512m
+
+  app:
+    build: ./src
+    image: sukydieutra_app
+    container_name: sukydieutra_app
+    restart: unless-stopped
+    env_file: app.env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://sukydieutra:${POSTGRES_PASSWORD}@db:5432/sukydieutra
+      MEDIA_LOCAL_DIR: /srv/media
+    volumes:
+      - media:/srv/media
+    depends_on:
+      db:
+        condition: service_healthy
+    networks: [noi_bo]
+    mem_limit: 1g
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: sukydieutra_tunnel
+    restart: unless-stopped
+    # http2 (TCP 443): VPS này không ra được QUIC/UDP 7844 tới Cloudflare (thử 14/11: timeout).
+    command: tunnel --no-autoupdate --protocol http2 run
+    environment:
+      TUNNEL_TOKEN: ${TUNNEL_TOKEN:?thieu TUNNEL_TOKEN trong .env}
+    depends_on: [app]
+    networks: [noi_bo]
+    mem_limit: 256m
+
+volumes:
+  pgdata:
+  media:
+
+networks:
+  noi_bo:

@@ -1,0 +1,15 @@
+line-length = 100
+target-version = "py312"
+extend-exclude = ["game/build", "backend/alembic/versions"]
+
+[lint]
+select = ["E", "F", "W", "I", "B", "UP", "ASYNC"]
+
+[lint.per-file-ignores]
+# Code vẽ giao diện và chuỗi tiếng Việt thường dài, tách dòng làm khó đọc hơn
+"game/**" = ["E501"]
+"tools/**" = ["E501"]
+
+[lint.isort]
+known-first-party = ["app", "shared"]
+known-third-party = ["alembic"]

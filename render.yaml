@@ -1,0 +1,32 @@
+# Bản thiết kế cho Render: tạo một dịch vụ web chạy Dockerfile và một cơ sở dữ liệu PostgreSQL.
+# Các bước làm trên trang Render xem trong DEPLOY.md.
+services:
+  - type: web
+    name: sukydieutra
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: sukydieutra-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      # Chưa có dịch vụ gửi email thì đăng ký xong dùng được ngay. Có rồi thì đổi thành false.
+      - key: SKIP_EMAIL_VERIFICATION
+        value: "true"
+      # Địa chỉ trang sau khi deploy, ví dụ https://sukydieutra.onrender.com
+      - key: WEB_BASE_URL
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      # Tài khoản quản trị đầu tiên
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+
+databases:
+  - name: sukydieutra-db
+    plan: free

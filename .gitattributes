@@ -1,0 +1,4 @@
+# Script chạy trong Docker phải giữ xuống dòng kiểu Linux dù commit từ Windows
+*.sh text eol=lf
+# File chạy trên Windows phải giữ xuống dòng kiểu Windows
+*.bat text eol=crlf

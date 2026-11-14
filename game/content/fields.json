@@ -1,0 +1,2867 @@
+{
+ "f_dong_bo_dau": {
+  "id": "f_dong_bo_dau",
+  "parent": "man1",
+  "requires": "r_den_tran",
+  "name": "Bến Đông Bộ Đầu",
+  "title": "Bến Đông Bộ Đầu năm 1258",
+  "sub": "Vùng luyện · bến sông Hồng phía đông kinh thành Thăng Long",
+  "gate": [
+   46,
+   50
+  ],
+  "gate_name": "Đường ra bến Đông Bộ Đầu",
+  "size": [
+   76,
+   46
+  ],
+  "spawn": [
+   7,
+   23
+  ],
+  "portal": [
+   3,
+   23
+  ],
+  "mentor": [
+   11,
+   20
+  ],
+  "trees": "song",
+  "forest": 0.42,
+  "weather": "leaf",
+  "sound": "river",
+  "music": "road",
+  "rivers": [
+   {
+    "pts": [
+     [
+      63,
+      -1
+     ],
+     [
+      60,
+      12
+     ],
+     [
+      63,
+      24
+     ],
+     [
+      59,
+      36
+     ],
+     [
+      61,
+      47
+     ]
+    ],
+    "w": 9
+   }
+  ],
+  "roads": [
+   [
+    [
+     7,
+     23
+    ],
+    [
+     20,
+     23
+    ],
+    [
+     32,
+     23
+    ],
+    [
+     46,
+     23
+    ]
+   ],
+   [
+    [
+     20,
+     23
+    ],
+    [
+     21,
+     14
+    ],
+    [
+     24,
+     11
+    ]
+   ],
+   [
+    [
+     20,
+     23
+    ],
+    [
+     22,
+     31
+    ],
+    [
+     26,
+     34
+    ]
+   ]
+  ],
+  "zones": {
+   "c1": {
+    "at": [
+     26,
+     11
+    ],
+    "theme": "trai"
+   },
+   "c2": {
+    "at": [
+     27,
+     35
+    ],
+    "theme": "trai"
+   },
+   "c3": {
+    "at": [
+     46,
+     23
+    ],
+    "theme": "ben"
+   }
+  },
+  "camps": {
+   "c1": [
+    "linh_mong_co",
+    "cung_thu_mong_co",
+    "linh_mong_co"
+   ],
+   "c2": [
+    "ky_binh_mong_co",
+    "linh_mong_co",
+    "cung_thu_mong_co"
+   ],
+   "c3": [
+    "ky_binh_mong_co",
+    "cung_thu_mong_co",
+    "ky_binh_mong_co"
+   ]
+  },
+  "elite_zone": "c3",
+  "npcs": [
+   {
+    "at": [
+     15,
+     27
+    ],
+    "char": "LinhDaiViet",
+    "lines": [
+     "Thuyền đã sẵn, chỉ chờ lệnh là ngược sông về bến Đông.",
+     "Giữ chặt mái chèo, nước sông Hồng chảy xiết lắm."
+    ]
+   },
+   {
+    "at": [
+     14,
+     18
+    ],
+    "char": "LinhDaiViet2",
+    "lines": [
+     "Kỵ binh của giặc phi nhanh lắm, đứng lệch khỏi đường lao của chúng mà đánh.",
+     "Cung thủ giặc bắn từ xa, phải áp sát mới hạ được."
+    ]
+   }
+  ],
+  "elder": {
+   "name": "Ông lái đò bến Đông",
+   "char": "OldMan3",
+   "portrait": "lai_do",
+   "lines": [
+    {
+     "text": "Cháu đến bến Đông à? Năm 1258, quân Mông Cổ tràn xuống, vua Trần Thái Tông lui quân để giữ sức, giặc vào được kinh thành Thăng Long.",
+     "cite": [
+      "c_tt_1258"
+     ]
+    },
+    {
+     "text": "Lúc nguy nhất, vua hỏi ý Thái sư Trần Thủ Độ. Ông đáp: “Đầu thần chưa rơi xuống đất, xin bệ hạ đừng lo”.",
+     "cite": [
+      "c_tt_1258"
+     ]
+    },
+    {
+     "text": "Chẳng bao lâu sau, vua cùng Thái tử ngự lâu thuyền ngược sông, đánh vào bến Đông Bộ Đầu. Quân Mông Cổ thua, rút khỏi Thăng Long.",
+     "cite": [
+      "c_tt_1258",
+      "c_lsvn_1258"
+     ]
+    },
+    {
+     "text": "Bến ấy ở phía đông kinh thành, bên sông Hồng. Ghi chú sử học: vị trí chính xác còn được nghiên cứu, nhiều người cho là quanh khu Hòe Nhai – Hàng Than, gần cầu Long Biên của Hà Nội bây giờ.",
+     "cite": [
+      "c_lsvn_1258"
+     ]
+    },
+    {
+     "text": "Bóng giặc trong ký ức còn quanh quẩn ở bờ sông đấy. Đánh được chúng thì cháu cứng tay lên. Nhưng nhớ cho: đó là phần trò chơi, chuyện thật là chuyện ông vừa kể."
+    }
+   ],
+   "question": {
+    "id": "q_f_dbd",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Năm 1258, trận đánh nào đã đẩy quân Mông Cổ ra khỏi Thăng Long?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Trận Đông Bộ Đầu"
+     },
+     {
+      "id": "b",
+      "text": "Trận Bạch Đằng"
+     },
+     {
+      "id": "c",
+      "text": "Trận Chi Lăng"
+     },
+     {
+      "id": "d",
+      "text": "Trận Như Nguyệt"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Đầu năm 1258, vua Trần Thái Tông ngự lâu thuyền tiến đánh ở bến Đông Bộ Đầu, quân Mông Cổ thua chạy, kết thúc cuộc kháng chiến lần thứ nhất.",
+    "citations": [
+     "c_tt_1258"
+    ]
+   }
+  }
+ },
+ "f_xuong_giang": {
+  "id": "f_xuong_giang",
+  "parent": "man2",
+  "requires": "r_tot_dong",
+  "name": "Thành Xương Giang",
+  "title": "Thành Xương Giang năm 1427",
+  "sub": "Vùng luyện · thành đất của quân Minh bên sông Thương",
+  "gate": [
+   60,
+   40
+  ],
+  "gate_name": "Đường lên thành Xương Giang",
+  "size": [
+   76,
+   46
+  ],
+  "spawn": [
+   7,
+   22
+  ],
+  "portal": [
+   3,
+   22
+  ],
+  "mentor": [
+   11,
+   19
+  ],
+  "trees": "rung",
+  "forest": 0.45,
+  "weather": "leaf",
+  "sound": "wind",
+  "music": "temple",
+  "rivers": [
+   {
+    "pts": [
+     [
+      -1,
+      41
+     ],
+     [
+      18,
+      42
+     ],
+     [
+      40,
+      40
+     ],
+     [
+      60,
+      42
+     ],
+     [
+      77,
+      41
+     ]
+    ],
+    "w": 5
+   }
+  ],
+  "roads": [
+   [
+    [
+     7,
+     22
+    ],
+    [
+     22,
+     22
+    ],
+    [
+     34,
+     22
+    ],
+    [
+     46,
+     22
+    ]
+   ],
+   [
+    [
+     22,
+     22
+    ],
+    [
+     22,
+     14
+    ],
+    [
+     24,
+     11
+    ]
+   ],
+   [
+    [
+     22,
+     22
+    ],
+    [
+     23,
+     30
+    ],
+    [
+     25,
+     33
+    ]
+   ]
+  ],
+  "zones": {
+   "c1": {
+    "at": [
+     25,
+     11
+    ],
+    "theme": "trai"
+   },
+   "c2": {
+    "at": [
+     26,
+     33
+    ],
+    "theme": "trai"
+   },
+   "c3": {
+    "at": [
+     48,
+     22
+    ],
+    "theme": "thanh"
+   }
+  },
+  "camps": {
+   "c1": [
+    "linh_giu_thanh_minh",
+    "cung_thu_minh",
+    "linh_minh"
+   ],
+   "c2": [
+    "ky_binh_minh",
+    "linh_minh",
+    "cung_thu_minh"
+   ],
+   "c3": [
+    "linh_giu_thanh_minh",
+    "ky_binh_minh",
+    "cung_thu_minh"
+   ]
+  },
+  "elite_zone": "c3",
+  "npcs": [
+   {
+    "at": [
+     15,
+     25
+    ],
+    "char": "NghiaQuan",
+    "lines": [
+     "Vây thành mấy tháng rồi, anh em vẫn giữ vững vòng vây.",
+     "Lính giữ thành giơ khiên đỡ đòn, phải chờ hắn hạ khiên mới đánh."
+    ]
+   },
+   {
+    "at": [
+     14,
+     16
+    ],
+    "char": "NghiaQuan",
+    "lines": [
+     "Kỵ binh Minh lao rất mạnh, thấy vạch đỏ thì tránh sang bên.",
+     "Nỏ của giặc bắn chậm mà nặng, né được phát đầu là áp sát được."
+    ]
+   }
+  ],
+  "elder": {
+   "name": "Người lính già Lam Sơn",
+   "char": "NghiaQuan",
+   "portrait": "nghia_si",
+   "lines": [
+    {
+     "text": "Thành Xương Giang do quân Minh đắp, nằm trên đường từ Lạng Sơn về thành Đông Quan. Đất ấy trước tháng 7/2025 thuộc thành phố Bắc Giang, nay thuộc tỉnh Bắc Ninh.",
+     "cite": [
+      "c_xuong_giang"
+     ]
+    },
+    {
+     "text": "Năm 1427, nghĩa quân Lam Sơn vây thành nhiều tháng. Ngày 28 tháng 9 năm 1427 thành bị hạ, trước khi đạo viện binh của Liễu Thăng kịp tới.",
+     "cite": [
+      "c_xuong_giang",
+      "c_tt_1427"
+     ]
+    },
+    {
+     "text": "Mất Xương Giang, viện binh mất chỗ dựa giữa đường. Sau trận Chi Lăng, đạo quân ấy bị vây và đánh tan ở cánh đồng Xương Giang.",
+     "cite": [
+      "c_tt_1427"
+     ]
+    },
+    {
+     "text": "Bóng giặc vẫn còn quanh thành trong ký ức của ta. Cháu cứ luyện tay ở đây, nhưng đừng quên đó chỉ là trò chơi."
+    }
+   ],
+   "question": {
+    "id": "q_f_xg",
+    "kind": "single",
+    "difficulty": 2,
+    "prompt": "Vì sao việc hạ thành Xương Giang trước khi viện binh Minh tới lại quan trọng?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Viện binh mất chỗ dựa giữa đường tiến về Đông Quan"
+     },
+     {
+      "id": "b",
+      "text": "Nghĩa quân có thêm thuyền chiến để đánh trên biển"
+     },
+     {
+      "id": "c",
+      "text": "Quân Minh phải rút khỏi Đông Quan ngay lập tức"
+     },
+     {
+      "id": "d",
+      "text": "Lê Lợi đóng đô luôn ở Xương Giang"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Xương Giang nằm trên đường viện binh từ Lạng Sơn về Đông Quan. Thành mất trước, viện binh của Liễu Thăng không còn nơi dựa, rồi bị đánh tan ở Chi Lăng và Xương Giang cuối năm 1427.",
+    "citations": [
+     "c_xuong_giang",
+     "c_tt_1427"
+    ]
+   }
+  }
+ },
+ "f_muong_thanh": {
+  "id": "f_muong_thanh",
+  "parent": "man3",
+  "requires": "r_ba_dinh",
+  "name": "Cánh đồng Mường Thanh",
+  "title": "Cánh đồng Mường Thanh năm 1954",
+  "sub": "Vùng luyện · lòng chảo Điện Biên Phủ, sông Nậm Rốm chảy qua",
+  "gate": [
+   60,
+   44
+  ],
+  "gate_name": "Đường lên lòng chảo Điện Biên",
+  "size": [
+   76,
+   46
+  ],
+  "spawn": [
+   7,
+   22
+  ],
+  "portal": [
+   3,
+   22
+  ],
+  "mentor": [
+   11,
+   19
+  ],
+  "trees": "bac",
+  "forest": 0.4,
+  "weather": "fog",
+  "sound": "wind",
+  "music": "sad",
+  "rivers": [
+   {
+    "pts": [
+     [
+      36,
+      -1
+     ],
+     [
+      38,
+      14
+     ],
+     [
+      35,
+      30
+     ],
+     [
+      39,
+      47
+     ]
+    ],
+    "w": 4
+   }
+  ],
+  "roads": [
+   [
+    [
+     7,
+     22
+    ],
+    [
+     20,
+     22
+    ],
+    [
+     36,
+     22
+    ],
+    [
+     50,
+     22
+    ]
+   ],
+   [
+    [
+     20,
+     22
+    ],
+    [
+     22,
+     14
+    ],
+    [
+     24,
+     11
+    ]
+   ],
+   [
+    [
+     20,
+     22
+    ],
+    [
+     22,
+     30
+    ],
+    [
+     25,
+     33
+    ]
+   ]
+  ],
+  "zones": {
+   "c1": {
+    "at": [
+     24,
+     11
+    ],
+    "theme": "doi"
+   },
+   "c2": {
+    "at": [
+     25,
+     33
+    ],
+    "theme": "doi"
+   },
+   "c3": {
+    "at": [
+     52,
+     22
+    ],
+    "theme": "dien_bien"
+   }
+  },
+  "camps": {
+   "c1": [
+    "u_sung",
+    "don_bot",
+    "u_sung"
+   ],
+   "c2": [
+    "xe_tang",
+    "u_sung",
+    "don_bot"
+   ],
+   "c3": [
+    "xe_tang",
+    "lo_cot",
+    "u_sung"
+   ]
+  },
+  "elite_zone": "c3",
+  "npcs": [
+   {
+    "at": [
+     15,
+     25
+    ],
+    "char": "BoDoi",
+    "lines": [
+     "Đường hào cứ đào sát dần vào cứ điểm, đêm nào cũng đào.",
+     "Khẩu hiệu bây giờ là đánh chắc, tiến chắc."
+    ]
+   },
+   {
+    "at": [
+     14,
+     16
+    ],
+    "char": "BoDoi",
+    "lines": [
+     "Xe tăng chạy chậm mà bắn đau, đứng lệch khỏi nòng pháo của nó.",
+     "Ụ súng bắn liên tục, phải né rồi áp sát mà phá."
+    ]
+   }
+  ],
+  "elder": {
+   "name": "Cựu chiến binh Điện Biên",
+   "char": "OldMan",
+   "portrait": "cuu_binh",
+   "lines": [
+    {
+     "text": "Điện Biên Phủ là một thung lũng lòng chảo, sông Nậm Rốm chảy qua cánh đồng Mường Thanh.",
+     "cite": [
+      "c_dbp_tap_doan"
+     ]
+    },
+    {
+     "text": "Quân Pháp xây ở đây một tập đoàn cứ điểm gồm 49 cứ điểm, chia thành ba phân khu: Bắc, Trung tâm và Nam, có cả sân bay Mường Thanh.",
+     "cite": [
+      "c_dbp_tap_doan"
+     ]
+    },
+    {
+     "text": "Họ còn chở xe tăng tháo rời bằng máy bay lên rồi lắp lại trong lòng chảo.",
+     "cite": [
+      "c_dbp_tap_doan"
+     ]
+    },
+    {
+     "text": "Chiến dịch kéo dài 56 ngày đêm, từ 13 tháng 3 đến 7 tháng 5 năm 1954.",
+     "cite": [
+      "c_dbp_tap_doan"
+     ]
+    },
+    {
+     "text": "Ở vùng này trò chơi chỉ cho cháu phá ụ súng, đồn bốt, xe tăng. Ông không muốn vẽ người ngã xuống ở trận đánh mà đồng đội ông đã nằm lại."
+    }
+   ],
+   "question": {
+    "id": "q_f_mt",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Tập đoàn cứ điểm Điện Biên Phủ được chia thành mấy phân khu?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Ba phân khu"
+     },
+     {
+      "id": "b",
+      "text": "Hai phân khu"
+     },
+     {
+      "id": "c",
+      "text": "Bốn phân khu"
+     },
+     {
+      "id": "d",
+      "text": "Năm phân khu"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Tập đoàn cứ điểm gồm 49 cứ điểm, chia thành ba phân khu: phân khu Bắc, phân khu Trung tâm và phân khu Nam.",
+    "citations": [
+     "c_dbp_tap_doan"
+    ]
+   }
+  }
+ },
+ "f_chuong_duong": {
+  "id": "f_chuong_duong",
+  "parent": "man1",
+  "requires": "r_kiep_bac",
+  "name": "Bến Chương Dương",
+  "title": "Chương Dương – Hàm Tử năm 1285",
+  "sub": "Vùng luyện · bến sông Hồng, nơi quân Trần đánh thuyền giặc năm 1285",
+  "gate": [
+   64,
+   24
+  ],
+  "gate_name": "Đường ra bến Chương Dương",
+  "size": [
+   76,
+   46
+  ],
+  "spawn": [
+   7,
+   23
+  ],
+  "portal": [
+   3,
+   23
+  ],
+  "mentor": [
+   11,
+   20
+  ],
+  "trees": "song",
+  "forest": 0.42,
+  "weather": "leaf",
+  "sound": "river",
+  "music": "road",
+  "rivers": [
+   {
+    "pts": [
+     [
+      61,
+      -1
+     ],
+     [
+      59,
+      14
+     ],
+     [
+      62,
+      28
+     ],
+     [
+      59,
+      47
+     ]
+    ],
+    "w": 10
+   }
+  ],
+  "roads": [
+   [
+    [
+     7,
+     23
+    ],
+    [
+     20,
+     23
+    ],
+    [
+     34,
+     23
+    ],
+    [
+     44,
+     16
+    ]
+   ],
+   [
+    [
+     34,
+     23
+    ],
+    [
+     40,
+     33
+    ]
+   ],
+   [
+    [
+     20,
+     23
+    ],
+    [
+     22,
+     14
+    ],
+    [
+     24,
+     11
+    ]
+   ]
+  ],
+  "zones": {
+   "c1": {
+    "at": [
+     24,
+     11
+    ],
+    "theme": "trai"
+   },
+   "c2": {
+    "at": [
+     40,
+     34
+    ],
+    "theme": "ben"
+   },
+   "c3": {
+    "at": [
+     44,
+     15
+    ],
+    "theme": "ben"
+   }
+  },
+  "camps": {
+   "c1": [
+    "linh_nguyen",
+    "cung_thu_nguyen",
+    "linh_nguyen"
+   ],
+   "c2": [
+    "thuyen_chien_nguyen",
+    "linh_nguyen",
+    "thuyen_chien_nguyen"
+   ],
+   "c3": [
+    "thuyen_chien_nguyen",
+    "cung_thu_nguyen",
+    "thuyen_chien_nguyen"
+   ]
+  },
+  "elite_zone": "c3",
+  "npcs": [
+   {
+    "at": [
+     15,
+     27
+    ],
+    "char": "LinhDaiViet",
+    "lines": [
+     "Thuyền giặc bắn tên từ xa, cứ đứng sát bờ mà đánh.",
+     "Nước lên rồi, thuyền ta sẵn sàng xuất bến."
+    ]
+   },
+   {
+    "at": [
+     14,
+     18
+    ],
+    "char": "LinhDaiViet2",
+    "lines": [
+     "Giặc đông nhưng xa nhà, thiếu lương. Giữ vững là thắng.",
+     "Đánh xong bến này là về kinh thành được rồi."
+    ]
+   }
+  ],
+  "elder": {
+   "name": "Ông lão làng Chương Dương",
+   "char": "OldMan",
+   "portrait": "cuu_binh",
+   "lines": [
+    {
+     "text": "Năm 1285 quân Nguyên kéo sang lần thứ hai. Đầu năm ấy giặc chiếm được Thăng Long, nhà Trần lui ra để giữ sức.",
+     "cite": [
+      "c_tt_1285",
+      "c_sgk_khang_chien"
+     ]
+    },
+    {
+     "text": "Giữa năm 1285 quân Trần phản công. Trần Nhật Duật đánh tan binh thuyền của Toa Đô ở bến Hàm Tử.",
+     "cite": [
+      "c_tt_1285",
+      "c_sgk_khang_chien"
+     ]
+    },
+    {
+     "text": "Tiếp đó, Trần Quang Khải đánh tan giặc ở bến Chương Dương rồi kéo về giải phóng kinh thành Thăng Long.",
+     "cite": [
+      "c_tt_1285",
+      "c_sgk_khang_chien"
+     ]
+    },
+    {
+     "text": "Phò giá về kinh, Trần Quang Khải làm bài thơ có câu: “Chương Dương cướp giáo giặc, Hàm Tử bắt quân thù.”",
+     "cite": [
+      "c_nv_pgvk"
+     ]
+    },
+    {
+     "text": "Bến Chương Dương nay ở vùng Thường Tín, Hà Nội; bến Hàm Tử ở vùng Khoái Châu, Hưng Yên.",
+     "cite": [
+      "c_sgk_khang_chien"
+     ]
+    },
+    {
+     "text": "Bóng giặc trong ký ức còn quanh quẩn nơi này. Cháu cứ luyện tay, nhưng nhớ cho: đó là phần trò chơi, chuyện thật là chuyện ta vừa kể."
+    }
+   ],
+   "question": {
+    "id": "q_f_cd",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Năm 1285, ai chỉ huy trận đánh thắng quân Nguyên ở bến Chương Dương?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Trần Quang Khải"
+     },
+     {
+      "id": "b",
+      "text": "Trần Nhật Duật"
+     },
+     {
+      "id": "c",
+      "text": "Lý Thường Kiệt"
+     },
+     {
+      "id": "d",
+      "text": "Ngô Quyền"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Trần Quang Khải thắng ở Chương Dương rồi giải phóng Thăng Long; trước đó Trần Nhật Duật thắng ở Hàm Tử. Bài Phò giá về kinh nhắc cả hai trận.",
+    "citations": [
+     "c_tt_1285",
+     "c_nv_pgvk"
+    ]
+   }
+  }
+ },
+ "f_dong_quan": {
+  "id": "f_dong_quan",
+  "parent": "man2",
+  "requires": "r_chi_lang",
+  "name": "Vòng vây Đông Quan",
+  "title": "Vây thành Đông Quan năm 1427",
+  "sub": "Vùng luyện · bến Bồ Đề bờ bắc sông Nhị, nhìn sang thành Đông Quan",
+  "gate": [
+   70,
+   16
+  ],
+  "gate_name": "Đường xuống bến Bồ Đề",
+  "size": [
+   76,
+   46
+  ],
+  "spawn": [
+   7,
+   8
+  ],
+  "portal": [
+   3,
+   8
+  ],
+  "mentor": [
+   11,
+   6
+  ],
+  "trees": "song",
+  "forest": 0.4,
+  "weather": "leaf",
+  "sound": "river",
+  "music": "temple",
+  "rivers": [
+   {
+    "pts": [
+     [
+      -1,
+      17
+     ],
+     [
+      20,
+      18
+     ],
+     [
+      40,
+      16
+     ],
+     [
+      60,
+      18
+     ],
+     [
+      77,
+      17
+     ]
+    ],
+    "w": 5
+   }
+  ],
+  "roads": [
+   [
+    [
+     7,
+     8
+    ],
+    [
+     20,
+     8
+    ],
+    [
+     37,
+     8
+    ],
+    [
+     38,
+     24
+    ],
+    [
+     40,
+     28
+    ]
+   ],
+   [
+    [
+     38,
+     24
+    ],
+    [
+     22,
+     32
+    ]
+   ],
+   [
+    [
+     38,
+     24
+    ],
+    [
+     56,
+     32
+    ]
+   ]
+  ],
+  "zones": {
+   "c1": {
+    "at": [
+     21,
+     34
+    ],
+    "theme": "trai"
+   },
+   "c2": {
+    "at": [
+     58,
+     34
+    ],
+    "theme": "trai"
+   },
+   "c3": {
+    "at": [
+     40,
+     31
+    ],
+    "theme": "thanh"
+   }
+  },
+  "camps": {
+   "c1": [
+    "linh_khien_minh",
+    "cung_thu_minh",
+    "linh_minh"
+   ],
+   "c2": [
+    "linh_khien_minh",
+    "linh_giu_thanh_minh",
+    "cung_thu_minh"
+   ],
+   "c3": [
+    "linh_khien_minh",
+    "cung_thu_minh",
+    "tran_thu_minh"
+   ]
+  },
+  "elite_zone": "c3",
+  "npcs": [
+   {
+    "at": [
+     15,
+     10
+    ],
+    "char": "NghiaQuan",
+    "lines": [
+     "Vây chặt bốn mặt, giặc trong thành chỉ còn trông vào viện binh.",
+     "Lính khiên giơ khiên lên thì khoan đánh, chờ hắn hạ khiên."
+    ]
+   },
+   {
+    "at": [
+     24,
+     6
+    ],
+    "char": "NghiaQuan",
+    "lines": [
+     "Thư dụ hàng gửi vào thành rồi, giờ chờ xem Vương Thông trả lời ra sao.",
+     "Qua cầu là tới chân thành, cẩn thận cung nỏ trên mặt luỹ."
+    ]
+   }
+  ],
+  "elder": {
+   "name": "Bà cụ bán nước bến Bồ Đề",
+   "char": "OldWoman",
+   "portrait": "ba_cu",
+   "lines": [
+    {
+     "text": "Cuối năm 1426, Lê Lợi và Nguyễn Trãi dời đại bản doanh từ Đông Phù Liệt về bến Bồ Đề, bờ bắc sông Nhị, nhìn sang thành Đông Quan.",
+     "cite": [
+      "c_tt_1426",
+      "c_xuong_giang"
+     ]
+    },
+    {
+     "text": "Quân Minh do Vương Thông cầm đầu đóng chặt cửa thành. Nghĩa quân vừa vây đánh, vừa gửi thư dụ hàng.",
+     "cite": [
+      "c_tt_1426"
+     ]
+    },
+    {
+     "text": "Nhiều bức thư ấy do Nguyễn Trãi viết thay Lê Lợi, nay còn trong Quân trung từ mệnh tập.",
+     "cite": [
+      "c_nt_qttm"
+     ]
+    },
+    {
+     "text": "Viện binh bị đánh tan ở Chi Lăng, Xương Giang, Vương Thông hết đường cứu. Ngày 10 tháng 12 năm 1427, Hội thề Đông Quan diễn ra; cuối tháng ấy quân Minh bắt đầu rút về nước.",
+     "cite": [
+      "c_tt_1427",
+      "c_sgk_khang_chien"
+     ]
+    },
+    {
+     "text": "Bến Bồ Đề nay ở vùng Long Biên, Hà Nội.",
+     "cite": [
+      "c_xuong_giang"
+     ]
+    },
+    {
+     "text": "Bóng giặc trong ký ức còn quanh quẩn nơi này. Cháu cứ luyện tay, nhưng nhớ cho: đó là phần trò chơi, chuyện thật là chuyện ta vừa kể."
+    }
+   ],
+   "question": {
+    "id": "q_f_dq",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Khi vây thành Đông Quan, Lê Lợi và Nguyễn Trãi đặt đại bản doanh ở đâu?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Bến Bồ Đề"
+     },
+     {
+      "id": "b",
+      "text": "Ải Chi Lăng"
+     },
+     {
+      "id": "c",
+      "text": "Núi Côn Sơn"
+     },
+     {
+      "id": "d",
+      "text": "Thành Cổ Loa"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Cuối năm 1426 đại bản doanh nghĩa quân dời về bến Bồ Đề, bờ bắc sông Nhị, đối diện thành Đông Quan.",
+    "citations": [
+     "c_tt_1426"
+    ]
+   }
+  }
+ },
+ "f_song_lo": {
+  "id": "f_song_lo",
+  "parent": "man3",
+  "requires": "r_tan_trao",
+  "name": "Sông Lô",
+  "title": "Sông Lô năm 1947",
+  "sub": "Vùng luyện · khúc sông Lô vùng Đoan Hùng, thu đông năm 1947",
+  "gate": [
+   70,
+   20
+  ],
+  "gate_name": "Đường ra bờ sông Lô",
+  "size": [
+   76,
+   46
+  ],
+  "spawn": [
+   7,
+   22
+  ],
+  "portal": [
+   3,
+   22
+  ],
+  "mentor": [
+   11,
+   19
+  ],
+  "trees": "rung",
+  "forest": 0.45,
+  "weather": "fog",
+  "sound": "river",
+  "music": "sad",
+  "rivers": [
+   {
+    "pts": [
+     [
+      52,
+      -1
+     ],
+     [
+      49,
+      12
+     ],
+     [
+      53,
+      26
+     ],
+     [
+      50,
+      47
+     ]
+    ],
+    "w": 7
+   }
+  ],
+  "roads": [
+   [
+    [
+     7,
+     22
+    ],
+    [
+     20,
+     22
+    ],
+    [
+     30,
+     14
+    ]
+   ],
+   [
+    [
+     20,
+     22
+    ],
+    [
+     22,
+     31
+    ],
+    [
+     24,
+     33
+    ]
+   ],
+   [
+    [
+     20,
+     22
+    ],
+    [
+     34,
+     26
+    ],
+    [
+     37,
+     30
+    ]
+   ]
+  ],
+  "zones": {
+   "c1": {
+    "at": [
+     32,
+     12
+    ],
+    "theme": "ben"
+   },
+   "c2": {
+    "at": [
+     22,
+     34
+    ],
+    "theme": "doi"
+   },
+   "c3": {
+    "at": [
+     37,
+     30
+    ],
+    "theme": "ben"
+   }
+  },
+  "camps": {
+   "c1": [
+    "tau_chien",
+    "ca_no",
+    "don_bot"
+   ],
+   "c2": [
+    "don_bot",
+    "u_sung",
+    "don_bot"
+   ],
+   "c3": [
+    "ca_no",
+    "tau_chien",
+    "ca_no"
+   ]
+  },
+  "elite_zone": "c3",
+  "npcs": [
+   {
+    "at": [
+     15,
+     25
+    ],
+    "char": "BoDoi",
+    "lines": [
+     "Pháo đặt sẵn trên bờ rồi, chờ tàu địch lọt vào khúc sông này.",
+     "Ca nô chạy nhanh, bắn liên tục; né rồi hãy áp sát."
+    ]
+   },
+   {
+    "at": [
+     14,
+     17
+    ],
+    "char": "BoDoi",
+    "lines": [
+     "Tàu chiến bắn đạn pháo chậm mà đau, đứng lệch khỏi nòng.",
+     "Giữ kín, chưa có lệnh thì chưa bắn."
+    ]
+   }
+  ],
+  "elder": {
+   "name": "Cựu chiến binh pháo binh",
+   "char": "OldMan",
+   "portrait": "cuu_binh",
+   "lines": [
+    {
+     "text": "Thu đông năm 1947, quân Pháp tiến công lên Việt Bắc, mong đánh nhanh thắng nhanh, phá cơ quan đầu não kháng chiến.",
+     "cite": [
+      "c_sgk_vb1947"
+     ]
+    },
+    {
+     "text": "Một cánh quân thuỷ bộ theo đường sông, ngược sông Hồng vào sông Lô, tiến lên Tuyên Quang.",
+     "cite": [
+      "c_ls_song_lo",
+      "c_sgk_vb1947"
+     ]
+    },
+    {
+     "text": "Ngày 24 tháng 10 năm 1947, ở Chí Đám vùng Đoan Hùng, quân dân ta phục kích, đánh tan đoàn tàu chiến của địch.",
+     "cite": [
+      "c_ls_song_lo"
+     ]
+    },
+    {
+     "text": "Nhạc sĩ Văn Cao viết Trường ca Sông Lô sau chiến thắng ấy; bài hát công bố năm 1948.",
+     "cite": [
+      "c_van_cao"
+     ]
+    },
+    {
+     "text": "Đoan Hùng nay thuộc tỉnh Phú Thọ.",
+     "cite": [
+      "c_ls_song_lo"
+     ]
+    },
+    {
+     "text": "Ở vùng này trò chơi chỉ có tàu, ca nô, đồn bốt để phá, không vẽ người. Chuyện thật là chuyện bác vừa kể."
+    }
+   ],
+   "question": {
+    "id": "q_f_sl",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Trong chiến dịch Việt Bắc thu – đông 1947, bộ đội ta phục kích đoàn tàu chiến Pháp trên con sông nào?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sông Lô"
+     },
+     {
+      "id": "b",
+      "text": "Sông Bạch Đằng"
+     },
+     {
+      "id": "c",
+      "text": "Sông Như Nguyệt"
+     },
+     {
+      "id": "d",
+      "text": "Sông Gianh"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Cánh quân thuỷ của Pháp ngược sông Hồng vào sông Lô; ngày 24/10/1947 bộ đội ta phục kích ở Chí Đám, vùng Đoan Hùng.",
+    "citations": [
+     "c_ls_song_lo",
+     "c_sgk_vb1947"
+    ]
+   }
+  }
+ },
+ "f_nhu_nguyet": {
+  "id": "f_nhu_nguyet",
+  "parent": "man1",
+  "requires": "r_nhu_nguyet",
+  "name": "Phòng tuyến Như Nguyệt",
+  "title": "Sông Như Nguyệt năm 1077",
+  "sub": "Vùng luyện · bờ bắc sông Như Nguyệt, nơi quân Tống đóng trại",
+  "gate": [
+   50,
+   7
+  ],
+  "gate_name": "Đường ra phòng tuyến Như Nguyệt",
+  "size": [
+   76,
+   46
+  ],
+  "spawn": [
+   7,
+   38
+  ],
+  "portal": [
+   3,
+   38
+  ],
+  "mentor": [
+   11,
+   35
+  ],
+  "trees": "song",
+  "forest": 0.4,
+  "weather": "leaf",
+  "sound": "river",
+  "music": "road",
+  "rivers": [
+   {
+    "pts": [
+     [
+      -1,
+      25
+     ],
+     [
+      20,
+      27
+     ],
+     [
+      40,
+      25
+     ],
+     [
+      60,
+      27
+     ],
+     [
+      77,
+      26
+     ]
+    ],
+    "w": 5
+   }
+  ],
+  "roads": [
+   [
+    [
+     7,
+     38
+    ],
+    [
+     24,
+     38
+    ],
+    [
+     26,
+     26
+    ],
+    [
+     18,
+     14
+    ]
+   ],
+   [
+    [
+     24,
+     38
+    ],
+    [
+     44,
+     38
+    ],
+    [
+     42,
+     26
+    ],
+    [
+     40,
+     17
+    ]
+   ],
+   [
+    [
+     40,
+     17
+    ],
+    [
+     61,
+     12
+    ]
+   ]
+  ],
+  "zones": {
+   "c1": {
+    "at": [
+     17,
+     12
+    ],
+    "theme": "trai"
+   },
+   "c2": {
+    "at": [
+     40,
+     15
+    ],
+    "theme": "trai"
+   },
+   "c3": {
+    "at": [
+     61,
+     11
+    ],
+    "theme": "trai"
+   }
+  },
+  "camps": {
+   "c1": [
+    "linh_tong",
+    "cung_thu_tong",
+    "linh_tong"
+   ],
+   "c2": [
+    "may_ban_da_tong",
+    "linh_tong",
+    "may_ban_da_tong"
+   ],
+   "c3": [
+    "may_ban_da_tong",
+    "cung_thu_tong",
+    "linh_tong"
+   ]
+  },
+  "elite_zone": "c3",
+  "npcs": [
+   {
+    "at": [
+     15,
+     40
+    ],
+    "char": "LinhDaiViet",
+    "lines": [
+     "Luỹ đất bờ nam cao lắm, ngoài luỹ còn cọc tre dày.",
+     "Giặc bắc cầu phao sang là ta đánh bật lại."
+    ]
+   },
+   {
+    "at": [
+     16,
+     33
+    ],
+    "char": "LinhDaiViet2",
+    "lines": [
+     "Máy bắn đá của giặc ném đá qua sông, thấy đá bay tới thì tránh sang bên.",
+     "Sang bờ bắc phải đánh nhanh, đừng để giặc kịp dàn trận."
+    ]
+   }
+  ],
+  "elder": {
+   "name": "Cụ từ giữ đền bên sông Cầu",
+   "char": "OldMan",
+   "portrait": "cu_tu",
+   "lines": [
+    {
+     "text": "Năm 1077, quân Tống kéo sang theo hai đường: Quách Quỳ chỉ huy cánh quân bộ, Hoà Mâu chỉ huy cánh quân thuỷ.",
+     "cite": [
+      "c_tt_1077",
+      "c_sgk_khang_chien"
+     ]
+    },
+    {
+     "text": "Lý Thường Kiệt chọn sông Như Nguyệt vì khúc sông này chặn ngang các ngả đường bộ từ phía bắc về Thăng Long. Bờ nam đắp luỹ đất, ngoài luỹ cắm cọc tre dày.",
+     "cite": [
+      "c_tt_1077",
+      "c_ls_lytran"
+     ]
+    },
+    {
+     "text": "Quân Tống đóng ở bờ bắc, dựng máy bắn đá, bắc cầu phao, nhiều lần vượt sông đều bị đánh lui.",
+     "cite": [
+      "c_tt_1077"
+     ]
+    },
+    {
+     "text": "Cánh quân thuỷ của giặc bị thuỷ quân nhà Lý chặn đánh ở vùng ven biển Đông Bắc, không vào hợp được với quân bộ.",
+     "cite": [
+      "c_sgk_khang_chien"
+     ]
+    },
+    {
+     "text": "Có lần quân ta lặng lẽ vượt sông, đánh úp doanh trại giặc. Quân Tống lại khổ vì khí hậu, bệnh tật, hao mất rất nhiều người.",
+     "cite": [
+      "c_tt_1077",
+      "c_ls_lytran"
+     ]
+    },
+    {
+     "text": "Rồi Lý Thường Kiệt chủ động đề nghị giảng hoà, quân Tống rút về nước.",
+     "cite": [
+      "c_sgk_khang_chien"
+     ]
+    },
+    {
+     "text": "Sông Như Nguyệt là khúc sông Cầu chảy qua vùng Yên Phong, Bắc Ninh ngày nay.",
+     "cite": [
+      "c_ls_lytran"
+     ]
+    },
+    {
+     "text": "Bóng giặc trong ký ức còn quanh quẩn nơi này. Cháu cứ luyện tay, nhưng nhớ cho: đó là phần trò chơi, chuyện thật là chuyện ta vừa kể."
+    }
+   ],
+   "question": {
+    "id": "q_f_nn",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Năm 1077, quân Tống dựng máy bắn đá, bắc cầu phao để vượt con sông nào nhưng đều bị đánh lui?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sông Như Nguyệt"
+     },
+     {
+      "id": "b",
+      "text": "Sông Bạch Đằng"
+     },
+     {
+      "id": "c",
+      "text": "Sông Lô"
+     },
+     {
+      "id": "d",
+      "text": "Sông Gianh"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Phòng tuyến sông Như Nguyệt (khúc sông Cầu) chặn bước tiến của quân Tống năm 1077. Bờ nam có luỹ đất, cọc tre; quân Tống vượt sông nhiều lần đều bị đánh lui.",
+    "citations": [
+     "c_tt_1077",
+     "c_sgk_khang_chien"
+    ]
+   }
+  }
+ },
+ "f_dien_chau": {
+  "id": "f_dien_chau",
+  "parent": "man2",
+  "requires": "r_tra_lan",
+  "name": "Phục binh Diễn Châu",
+  "title": "Diễn Châu năm 1425",
+  "sub": "Vùng luyện · bến sông và thành Diễn Châu của quân Minh",
+  "gate": [
+   56,
+   52
+  ],
+  "gate_name": "Đường ra Diễn Châu",
+  "size": [
+   76,
+   46
+  ],
+  "spawn": [
+   7,
+   22
+  ],
+  "portal": [
+   3,
+   22
+  ],
+  "mentor": [
+   11,
+   19
+  ],
+  "trees": "song",
+  "forest": 0.42,
+  "weather": "leaf",
+  "sound": "river",
+  "music": "temple",
+  "rivers": [
+   {
+    "pts": [
+     [
+      63,
+      -1
+     ],
+     [
+      61,
+      14
+     ],
+     [
+      64,
+      30
+     ],
+     [
+      62,
+      47
+     ]
+    ],
+    "w": 9
+   }
+  ],
+  "roads": [
+   [
+    [
+     7,
+     22
+    ],
+    [
+     18,
+     22
+    ],
+    [
+     18,
+     31
+    ]
+   ],
+   [
+    [
+     18,
+     22
+    ],
+    [
+     34,
+     22
+    ],
+    [
+     34,
+     15
+    ]
+   ],
+   [
+    [
+     34,
+     22
+    ],
+    [
+     44,
+     27
+    ],
+    [
+     46,
+     30
+    ]
+   ]
+  ],
+  "zones": {
+   "c1": {
+    "at": [
+     18,
+     33
+    ],
+    "theme": "trai"
+   },
+   "c2": {
+    "at": [
+     46,
+     31
+    ],
+    "theme": "ben"
+   },
+   "c3": {
+    "at": [
+     34,
+     12
+    ],
+    "theme": "thanh"
+   }
+  },
+  "camps": {
+   "c1": [
+    "linh_minh",
+    "cung_thu_minh",
+    "linh_minh"
+   ],
+   "c2": [
+    "thuyen_luong_minh",
+    "linh_minh",
+    "thuyen_luong_minh"
+   ],
+   "c3": [
+    "linh_giu_thanh_minh",
+    "cung_thu_minh",
+    "linh_giu_thanh_minh"
+   ]
+  },
+  "elite_zone": "c3",
+  "npcs": [
+   {
+    "at": [
+     15,
+     25
+    ],
+    "char": "NghiaQuan",
+    "lines": [
+     "Thuyền lương giặc neo ngoài bến, đứng ở mép bờ mà đánh.",
+     "Thu được thuyền lương là nghĩa quân có thêm cái ăn."
+    ]
+   },
+   {
+    "at": [
+     14,
+     18
+    ],
+    "char": "NghiaQuan",
+    "lines": [
+     "Giặc trong thành Diễn Châu còn đóng chặt cửa, ta vây dần.",
+     "Nghệ An đã về tay nghĩa quân, giờ đến lượt Diễn Châu."
+    ]
+   }
+  ],
+  "elder": {
+   "name": "Bà cụ làng chài Diễn Châu",
+   "char": "OldWoman",
+   "portrait": "ba_cu",
+   "lines": [
+    {
+     "text": "Cuối năm 1424, nghĩa quân Lam Sơn vào Nghệ An, vây thành Trà Lân hơn một tháng; tướng giữ thành là Cầm Bành phải ra hàng.",
+     "cite": [
+      "c_tt_1424"
+     ]
+    },
+    {
+     "text": "Ở cửa Khả Lưu, nghĩa quân nhử quân Minh vào chỗ phục kích; ở Bồ Ải lại đặt phục binh nơi hiểm, đánh tan giặc, bắt sống Đô ty Chu Kiệt.",
+     "cite": [
+      "c_tt_1424"
+     ]
+    },
+    {
+     "text": "Tháng 5 năm Ất Tỵ (1425), Tư không Lê Lễ (vốn họ Đinh, tức Đinh Lễ) đi tuần ở Diễn Châu, đặt sẵn phục binh. Đô ty nhà Minh là Trương Hùng đem hơn 300 thuyền chở lương từ Đông Quan đến.",
+     "cite": [
+      "c_tt_1425"
+     ]
+    },
+    {
+     "text": "Quân phục bất ngờ đánh ra, Trương Hùng tháo chạy. Lê Lễ cướp được thuyền lương, đuổi đánh đến tận thành Tây Đô. Đến giữa năm 1425, nghĩa quân đã làm chủ Thanh Hoá, Diễn Châu và Nghệ An.",
+     "cite": [
+      "c_tt_1425"
+     ]
+    },
+    {
+     "text": "Tháng 8 năm ấy, Trần Nguyên Hãn đem hơn nghìn quân cùng voi chiến theo đường bộ, Lê Ngân đem thuyền chiến theo đường biển, tiến vào giải phóng Tân Bình, Thuận Hoá.",
+     "cite": [
+      "c_tt_1425",
+      "c_sgk_khang_chien"
+     ]
+    },
+    {
+     "text": "Diễn Châu nay là vùng Diễn Châu, tỉnh Nghệ An.",
+     "cite": [
+      "c_tt_1425"
+     ]
+    },
+    {
+     "text": "Bóng giặc trong ký ức còn quanh quẩn nơi này. Cháu cứ luyện tay, nhưng nhớ cho: đó là phần trò chơi, chuyện thật là chuyện bà vừa kể."
+    }
+   ],
+   "question": {
+    "id": "q_f_dc",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Năm 1425, tướng nào của nghĩa quân Lam Sơn phục binh ở Diễn Châu, cướp được đoàn thuyền lương của Đô ty Trương Hùng?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Đinh Lễ"
+     },
+     {
+      "id": "b",
+      "text": "Trần Lựu"
+     },
+     {
+      "id": "c",
+      "text": "Lê Lai"
+     },
+     {
+      "id": "d",
+      "text": "Trần Quốc Tuấn"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Đinh Lễ (Toàn thư chép là Lê Lễ, vì ông được ban họ vua) phục binh ở Diễn Châu tháng 5 năm Ất Tỵ (1425). Trần Lựu nhử Liễu Thăng vào Chi Lăng năm 1427, Lê Lai cứu chủ tướng những năm đầu khởi nghĩa, Trần Quốc Tuấn là tướng thời Trần.",
+    "citations": [
+     "c_tt_1425"
+    ]
+   }
+  }
+ },
+ "f_bong_lau": {
+  "id": "f_bong_lau",
+  "parent": "man3",
+  "requires": "r_ba_dinh",
+  "name": "Đèo Bông Lau",
+  "title": "Đường số 4 năm 1947",
+  "sub": "Vùng luyện · đèo Bông Lau trên đường số 4, thu đông năm 1947",
+  "gate": [
+   30,
+   44
+  ],
+  "gate_name": "Đường lên đèo Bông Lau",
+  "size": [
+   76,
+   46
+  ],
+  "spawn": [
+   7,
+   30
+  ],
+  "portal": [
+   3,
+   30
+  ],
+  "mentor": [
+   11,
+   27
+  ],
+  "trees": "rung",
+  "forest": 0.5,
+  "weather": "fog",
+  "sound": "wind",
+  "music": "sad",
+  "rivers": [],
+  "roads": [
+   [
+    [
+     7,
+     30
+    ],
+    [
+     14,
+     30
+    ],
+    [
+     22,
+     25
+    ],
+    [
+     32,
+     27
+    ],
+    [
+     42,
+     21
+    ],
+    [
+     51,
+     25
+    ],
+    [
+     61,
+     22
+    ],
+    [
+     70,
+     24
+    ]
+   ]
+  ],
+  "zones": {
+   "c1": {
+    "at": [
+     23,
+     25
+    ],
+    "theme": "deo"
+   },
+   "c2": {
+    "at": [
+     42,
+     21
+    ],
+    "theme": "deo"
+   },
+   "c3": {
+    "at": [
+     61,
+     22
+    ],
+    "theme": "deo"
+   }
+  },
+  "camps": {
+   "c1": [
+    "don_bot",
+    "u_sung",
+    "xe_van_tai"
+   ],
+   "c2": [
+    "xe_van_tai",
+    "xe_boc_thep",
+    "xe_van_tai"
+   ],
+   "c3": [
+    "xe_boc_thep",
+    "xe_van_tai",
+    "u_sung"
+   ]
+  },
+  "elite_zone": "c3",
+  "npcs": [
+   {
+    "at": [
+     15,
+     33
+    ],
+    "char": "BoDoi",
+    "lines": [
+     "Đoàn xe địch phải chạy chậm qua khúc đèo này, đường quanh co lắm.",
+     "Xe bọc thép bắn liên tục, né rồi hãy áp sát."
+    ]
+   },
+   {
+    "at": [
+     14,
+     24
+    ],
+    "char": "BoDoi",
+    "lines": [
+     "Chặn được xe đầu là cả đoàn phải dừng lại.",
+     "Giữ kín, chưa có lệnh thì chưa bắn."
+    ]
+   }
+  ],
+  "elder": {
+   "name": "Cựu chiến binh đường số 4",
+   "char": "OldMan",
+   "portrait": "cuu_binh",
+   "lines": [
+    {
+     "text": "Thu đông 1947, Pháp đánh lên Việt Bắc. Một binh đoàn bộ của chúng theo đường số 4 từ Lạng Sơn đánh lên Cao Bằng, chiếm các cứ điểm dọc đường.",
+     "cite": [
+      "c_sgk_vb1947",
+      "c_ls_bong_lau"
+     ]
+    },
+    {
+     "text": "Ngày 30 tháng 10 năm 1947, bộ đội phục kích ở đèo Bông Lau trên đường số 4, tiêu diệt gọn một đoàn xe cơ giới của địch, có cả xe bọc thép, thu nhiều vũ khí. Đó là trận phục kích đầu tiên trên đường số 4 trong chiến dịch.",
+     "cite": [
+      "c_ls_bong_lau"
+     ]
+    },
+    {
+     "text": "Đường đèo quanh co, một bên núi dựng, một bên khe sâu. Từ đó đường số 4 thành nỗi khiếp sợ của các đoàn xe Pháp. Đèo nay thuộc vùng Tràng Định, Lạng Sơn, giáp Cao Bằng.",
+     "cite": [
+      "c_ls_bong_lau"
+     ]
+    },
+    {
+     "text": "Đến cuối năm 1947, cuộc tiến công lên Việt Bắc của Pháp thất bại.",
+     "cite": [
+      "c_sgk_vb1947"
+     ]
+    },
+    {
+     "text": "Ba năm sau, chiến dịch Biên giới 1950 mở màn ở Đông Khê, cũng trên con đường này.",
+     "cite": [
+      "c_qs_bg"
+     ]
+    },
+    {
+     "text": "Ở vùng này trò chơi chỉ có xe, đồn bốt, ụ súng để phá, không vẽ người. Chuyện thật là chuyện bác vừa kể."
+    }
+   ],
+   "question": {
+    "id": "q_f_bl",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Ngày 30/10/1947, bộ đội ta phục kích tiêu diệt cả một đoàn xe Pháp ở đâu?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Đèo Bông Lau trên đường số 4"
+     },
+     {
+      "id": "b",
+      "text": "Đèo Hải Vân"
+     },
+     {
+      "id": "c",
+      "text": "Đèo Pha Đin"
+     },
+     {
+      "id": "d",
+      "text": "Đèo Ngang"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Trận phục kích đèo Bông Lau (30/10/1947) diễn ra trên đường số 4, đoạn qua vùng Tràng Định (Lạng Sơn) giáp Cao Bằng, trong chiến dịch Việt Bắc thu – đông 1947.",
+    "citations": [
+     "c_ls_bong_lau",
+     "c_sgk_vb1947"
+    ]
+   }
+  }
+ },
+ "f_bien_van_don": {
+  "id": "f_bien_van_don",
+  "parent": "man1",
+  "requires": "r_van_don",
+  "name": "Biển Vân Đồn",
+  "title": "Vân Đồn năm 1288",
+  "sub": "Vùng luyện · vùng biển đảo Vân Đồn, nơi đoàn thuyền lương Nguyên bị chặn đánh",
+  "gate": [
+   27,
+   52
+  ],
+  "gate_name": "Đường ra biển Vân Đồn",
+  "size": [
+   76,
+   46
+  ],
+  "spawn": [
+   7,
+   22
+  ],
+  "portal": [
+   3,
+   22
+  ],
+  "mentor": [
+   11,
+   19
+  ],
+  "trees": "song",
+  "forest": 0.36,
+  "weather": "fog",
+  "sound": "river",
+  "music": "road",
+  "rivers": [
+   {
+    "pts": [
+     [
+      64,
+      -1
+     ],
+     [
+      62,
+      12
+     ],
+     [
+      65,
+      26
+     ],
+     [
+      62,
+      47
+     ]
+    ],
+    "w": 16
+   }
+  ],
+  "roads": [
+   [
+    [
+     7,
+     22
+    ],
+    [
+     20,
+     22
+    ],
+    [
+     23,
+     14
+    ],
+    [
+     24,
+     11
+    ]
+   ],
+   [
+    [
+     20,
+     22
+    ],
+    [
+     34,
+     20
+    ],
+    [
+     46,
+     18
+    ]
+   ],
+   [
+    [
+     20,
+     22
+    ],
+    [
+     24,
+     30
+    ],
+    [
+     28,
+     33
+    ]
+   ]
+  ],
+  "zones": {
+   "c1": {
+    "at": [
+     24,
+     11
+    ],
+    "theme": "trai"
+   },
+   "c2": {
+    "at": [
+     30,
+     34
+    ],
+    "theme": "dao"
+   },
+   "c3": {
+    "at": [
+     46,
+     18
+    ],
+    "theme": "ben"
+   }
+  },
+  "camps": {
+   "c1": [
+    "linh_nguyen",
+    "cung_thu_nguyen",
+    "thuy_binh_nguyen"
+   ],
+   "c2": [
+    "thuy_binh_nguyen",
+    "thuyen_luong_nguyen",
+    "thuyen_chien_nguyen"
+   ],
+   "c3": [
+    "thuyen_luong_nguyen",
+    "thuyen_chien_nguyen",
+    "thuyen_luong_nguyen"
+   ]
+  },
+  "elite_zone": "c3",
+  "npcs": [
+   {
+    "at": [
+     15,
+     25
+    ],
+    "char": "LinhDaiViet",
+    "lines": [
+     "Thuyền lương chở nặng, chạy chậm lắm. Đứng ở mép bờ mà đánh.",
+     "Đừng lội ra xa, sóng biển ở đây mạnh hơn sóng sông."
+    ]
+   },
+   {
+    "at": [
+     14,
+     17
+    ],
+    "char": "LinhDaiViet2",
+    "lines": [
+     "Sương biển dày quá, nhìn kỹ kẻo lạc đường.",
+     "Đánh được thuyền lương là giặc phải nhịn đói."
+    ]
+   }
+  ],
+  "elder": {
+   "name": "Ông lão làng chài Vân Đồn",
+   "char": "OldMan3",
+   "portrait": "lai_do",
+   "lines": [
+    {
+     "text": "Cuối năm 1287, quân Nguyên sang đánh nước ta lần thứ ba. Thuỷ quân của chúng theo đường biển kéo vào, đoàn thuyền chở lương đi sau.",
+     "cite": [
+      "c_tt_1287"
+     ]
+    },
+    {
+     "text": "Hưng Đạo Vương giao việc giữ vùng biên này cho phó tướng Vân Đồn là Nhân Huệ Vương Trần Khánh Dư.",
+     "cite": [
+      "c_tt_1287"
+     ]
+    },
+    {
+     "text": "Trận đầu, Khánh Dư đánh không lại, thuyền chiến giặc vượt qua. Thượng hoàng sai sứ triệu ông về kinh xét tội. Ông xin chịu tội theo quân luật, nhưng xin hoãn cho vài ba ngày.",
+     "cite": [
+      "c_tt_1287"
+     ]
+    },
+    {
+     "text": "Rồi đoàn thuyền lương của giặc kéo đến. Khánh Dư đánh, giặc thua. Sử chép ông bắt được “lương thực khí giới của giặc không xiết kể, bắt sống quân giặc rất nhiều”. Thượng hoàng tha tội cho ông.",
+     "cite": [
+      "c_tt_1287"
+     ]
+    },
+    {
+     "text": "Người cầm đầu đoàn thuyền lương phía Nguyên là Trương Văn Hổ. Sách vở ghi số thuyền, số lương khác nhau nên ông không kể con số.",
+     "cite": [
+      "c_ls_lytran"
+     ]
+    },
+    {
+     "text": "Mất lương, quân Nguyên lâm vào cảnh thiếu ăn, phải tính đường rút. Tháng 4 năm 1288, chúng rút theo sông Bạch Đằng thì bị đánh tan.",
+     "cite": [
+      "c_tt_1287",
+      "c_sgk_khang_chien"
+     ]
+    },
+    {
+     "text": "Ở đây chỉ còn bóng thuyền giặc trong ký ức. Đứng ở mép bờ là đánh được thuyền neo ngoài biển."
+    }
+   ],
+   "question": {
+    "id": "q_f_vd",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Đầu năm 1288, vị tướng nào phá đoàn thuyền lương của quân Nguyên ở Vân Đồn?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Trần Khánh Dư"
+     },
+     {
+      "id": "b",
+      "text": "Trần Quốc Toản"
+     },
+     {
+      "id": "c",
+      "text": "Lý Thường Kiệt"
+     },
+     {
+      "id": "d",
+      "text": "Lê Lai"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Phó tướng Vân Đồn là Nhân Huệ Vương Trần Khánh Dư. Sau trận thua đầu, ông chặn đánh đoàn thuyền lương đi sau của quân Nguyên, thu được rất nhiều lương thực, khí giới. Quân Nguyên thiếu lương, phải rút về.",
+    "citations": [
+     "c_tt_1287"
+    ]
+   }
+  }
+ },
+ "f_le_hoa": {
+  "id": "f_le_hoa",
+  "parent": "man2",
+  "requires": "r_chi_lang",
+  "name": "Ải Lê Hoa",
+  "title": "Ải Lê Hoa năm 1427",
+  "sub": "Vùng luyện · cửa ải chặn đạo viện binh Minh từ Vân Nam sang",
+  "gate": [
+   50,
+   8
+  ],
+  "gate_name": "Đường lên ải Lê Hoa",
+  "size": [
+   76,
+   46
+  ],
+  "spawn": [
+   7,
+   22
+  ],
+  "portal": [
+   3,
+   22
+  ],
+  "mentor": [
+   11,
+   19
+  ],
+  "trees": "rung",
+  "forest": 0.5,
+  "weather": "leaf",
+  "sound": "wind",
+  "music": "temple",
+  "rivers": [
+   {
+    "pts": [
+     [
+      40,
+      -1
+     ],
+     [
+      42,
+      12
+     ],
+     [
+      39,
+      30
+     ],
+     [
+      41,
+      47
+     ]
+    ],
+    "w": 3
+   }
+  ],
+  "roads": [
+   [
+    [
+     7,
+     22
+    ],
+    [
+     22,
+     22
+    ],
+    [
+     25,
+     14
+    ],
+    [
+     26,
+     12
+    ]
+   ],
+   [
+    [
+     22,
+     22
+    ],
+    [
+     40,
+     22
+    ],
+    [
+     54,
+     22
+    ],
+    [
+     70,
+     22
+    ]
+   ],
+   [
+    [
+     22,
+     22
+    ],
+    [
+     26,
+     30
+    ],
+    [
+     30,
+     34
+    ]
+   ]
+  ],
+  "zones": {
+   "c1": {
+    "at": [
+     26,
+     11
+    ],
+    "theme": "trai"
+   },
+   "c2": {
+    "at": [
+     30,
+     35
+    ],
+    "theme": "deo"
+   },
+   "c3": {
+    "at": [
+     55,
+     22
+    ],
+    "theme": "ai"
+   }
+  },
+  "camps": {
+   "c1": [
+    "linh_minh",
+    "cung_thu_minh",
+    "linh_minh"
+   ],
+   "c2": [
+    "linh_khien_minh",
+    "cung_thu_minh",
+    "ky_binh_minh"
+   ],
+   "c3": [
+    "ky_binh_minh",
+    "linh_khien_minh",
+    "tran_thu_minh"
+   ]
+  },
+  "elite_zone": "c3",
+  "npcs": [
+   {
+    "at": [
+     15,
+     25
+    ],
+    "char": "NghiaQuan",
+    "lines": [
+     "Giữ chặt cửa ải. Chưa có lệnh thì chưa ra đánh.",
+     "Kỵ binh giặc lao nhanh lắm, né sang bên rồi hãy đánh."
+    ]
+   },
+   {
+    "at": [
+     14,
+     17
+    ],
+    "char": "NghiaQuan",
+    "lines": [
+     "Lệnh trên dặn cứ đặt phục binh mà chờ, đừng vội giao chiến.",
+     "Nghe nói đạo giặc bên Lạng Sơn đã thua to ở Chi Lăng."
+    ]
+   }
+  ],
+  "elder": {
+   "name": "Người lính già giữ ải Lê Hoa",
+   "char": "NghiaQuan",
+   "portrait": "nghia_si",
+   "lines": [
+    {
+     "text": "Năm 1427, nhà Minh sai hai đạo viện binh sang cứu Vương Thông. Đạo chính do Liễu Thăng cầm đầu qua Lạng Sơn, đạo thứ hai do Tổng binh Vân Nam là Mộc Thạnh tiến sang.",
+     "cite": [
+      "c_tt_1427"
+     ]
+    },
+    {
+     "text": "Từ tháng 4 năm ấy, Lê Lợi đã sai phòng ngự sứ Trần Ban đôn đốc tu sửa ải Lê Hoa.",
+     "cite": [
+      "c_tt_1427"
+     ]
+    },
+    {
+     "text": "Tháng 10, quân Mộc Thạnh kéo đến cửa ải. Phạm Văn Xảo, Lê Khả đem quân chặn giữ, hai bên cầm cự nhau ở Lê Hoa.",
+     "cite": [
+      "c_tt_1427"
+     ]
+    },
+    {
+     "text": "Lê Lợi liệu rằng Mộc Thạnh tuổi đã già, từng trải nhiều, thế nào cũng chờ xem đạo Liễu Thăng thắng hay thua rồi mới tiến. Vua mật dặn các tướng chỉ đặt phục binh, chớ giao chiến.",
+     "cite": [
+      "c_tt_1427"
+     ]
+    },
+    {
+     "text": "Liễu Thăng thua rồi, Lê Lợi sai đưa người bị bắt cùng ấn tín của Liễu Thăng đến cho quân Mộc Thạnh xem. Quân Minh hoảng sợ, tan vỡ. Phạm Văn Xảo, Lê Khả đuổi đánh ở Lãnh Câu, Đan Xá; Mộc Thạnh chỉ còn một mình một ngựa chạy thoát.",
+     "cite": [
+      "c_tt_1427"
+     ]
+    },
+    {
+     "text": "Bình Ngô đại cáo cũng nhắc chuyện quân Vân Nam bị chặn ở Lê Hoa, nghe tin Liễu Thăng thua thì giẫm lên nhau mà chạy.",
+     "cite": [
+      "c_bndc",
+      "c_tt_1427"
+     ]
+    },
+    {
+     "text": "Bóng giặc ở đây chỉ là ký ức. Giữ chắc cửa ải, chờ đúng lúc mới đánh."
+    }
+   ],
+   "question": {
+    "id": "q_f_lh",
+    "kind": "single",
+    "difficulty": 2,
+    "prompt": "Năm 1427, đạo viện binh Minh từ Vân Nam do Mộc Thạnh chỉ huy bị nghĩa quân Lam Sơn chặn ở đâu?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Ải Lê Hoa"
+     },
+     {
+      "id": "b",
+      "text": "Ải Chi Lăng"
+     },
+     {
+      "id": "c",
+      "text": "Thành Xương Giang"
+     },
+     {
+      "id": "d",
+      "text": "Bến Chương Dương"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Đạo Liễu Thăng qua Lạng Sơn bị đánh ở Chi Lăng. Đạo Mộc Thạnh từ Vân Nam sang bị chặn ở ải Lê Hoa; nghe tin Liễu Thăng thua, quân Mộc Thạnh tan vỡ, bị đuổi đánh ở Lãnh Câu, Đan Xá.",
+    "citations": [
+     "c_tt_1427",
+     "c_bndc"
+    ]
+   }
+  }
+ },
+ "f_dong_khe": {
+  "id": "f_dong_khe",
+  "parent": "man3",
+  "requires": "r_bien_gioi",
+  "name": "Cứ điểm Đông Khê",
+  "title": "Đông Khê năm 1950",
+  "sub": "Vùng luyện · cụm cứ điểm Đông Khê trên đường số 4, mở màn chiến dịch Biên giới",
+  "gate": [
+   82,
+   11
+  ],
+  "gate_name": "Đường lên cứ điểm Đông Khê",
+  "size": [
+   76,
+   46
+  ],
+  "spawn": [
+   7,
+   30
+  ],
+  "portal": [
+   3,
+   30
+  ],
+  "mentor": [
+   11,
+   27
+  ],
+  "trees": "rung",
+  "forest": 0.46,
+  "weather": "fog",
+  "sound": "wind",
+  "music": "sad",
+  "rivers": [],
+  "roads": [
+   [
+    [
+     7,
+     30
+    ],
+    [
+     20,
+     30
+    ],
+    [
+     32,
+     24
+    ],
+    [
+     46,
+     27
+    ],
+    [
+     58,
+     27
+    ],
+    [
+     72,
+     26
+    ]
+   ],
+   [
+    [
+     20,
+     30
+    ],
+    [
+     26,
+     20
+    ],
+    [
+     30,
+     14
+    ]
+   ],
+   [
+    [
+     20,
+     30
+    ],
+    [
+     28,
+     36
+    ],
+    [
+     34,
+     39
+    ]
+   ]
+  ],
+  "zones": {
+   "c1": {
+    "at": [
+     30,
+     13
+    ],
+    "theme": "doi"
+   },
+   "c2": {
+    "at": [
+     34,
+     39
+    ],
+    "theme": "doi"
+   },
+   "c3": {
+    "at": [
+     58,
+     27
+    ],
+    "theme": "don"
+   }
+  },
+  "camps": {
+   "c1": [
+    "don_bot",
+    "u_sung",
+    "u_phao"
+   ],
+   "c2": [
+    "u_phao",
+    "u_sung",
+    "lo_cot"
+   ],
+   "c3": [
+    "lo_cot",
+    "u_phao",
+    "u_sung"
+   ]
+  },
+  "elite_zone": "c3",
+  "npcs": [
+   {
+    "at": [
+     15,
+     33
+    ],
+    "char": "BoDoi",
+    "lines": [
+     "Đồn nằm trên đồi cao, hàng rào mấy lớp, phải phá từng lớp một.",
+     "Pháo trong đồn bắn mạnh, nấp rồi hãy tiến."
+    ]
+   },
+   {
+    "at": [
+     14,
+     24
+    ],
+    "char": "BoDoi",
+    "lines": [
+     "Đánh xong Đông Khê, ta còn chờ đánh quân địch kéo lên ứng cứu.",
+     "Đường số 4 này, ba năm trước đã có trận Bông Lau."
+    ]
+   }
+  ],
+  "elder": {
+   "name": "Cựu chiến binh Biên giới",
+   "char": "OldMan",
+   "portrait": "cuu_binh",
+   "lines": [
+    {
+     "text": "Thu đông 1950, quân ta mở chiến dịch Biên giới. Sáng sớm ngày 16 tháng 9 năm 1950, bộ đội nổ súng đánh cụm cứ điểm Đông Khê, mở màn chiến dịch.",
+     "cite": [
+      "c_ls_dong_khe",
+      "c_qs_bg"
+     ]
+    },
+    {
+     "text": "Đông Khê nằm trên một ngọn đồi cao ở vùng Thạch An, Cao Bằng, ngay trên đường số 4. Giữ đồn có hai đại đội lính lê dương và một trung đội ngụy quân, có pháo 105 ly, pháo cối, lô cốt, hầm ngầm và hàng rào.",
+     "cite": [
+      "c_ls_dong_khe"
+     ]
+    },
+    {
+     "text": "Tổng Tham mưu trưởng Hoàng Văn Thái trực tiếp chỉ huy trận này. Địch chống cự quyết liệt, bộ đội xung phong nhiều đợt. Sáng ngày 18 tháng 9, ta làm chủ toàn bộ cụm cứ điểm.",
+     "cite": [
+      "c_ls_dong_khe"
+     ]
+    },
+    {
+     "text": "Mất Đông Khê, Thất Khê bị uy hiếp, thị xã Cao Bằng bị cô lập. Pháp phải rút quân khỏi Cao Bằng theo đường số 4, lại cho binh đoàn Lơ Pa-giơ từ Thất Khê lên đón.",
+     "cite": [
+      "c_qs_bg"
+     ]
+    },
+    {
+     "text": "Binh đoàn Lơ Pa-giơ định chiếm lại Đông Khê để đón binh đoàn Sác-tông từ Cao Bằng rút về, nhưng bị chặn đánh, phải dồn vào vùng núi đá Cốc Xá rồi bị bắt gọn.",
+     "cite": [
+      "c_qs_bg"
+     ]
+    },
+    {
+     "text": "Đó là lần đầu tiên sau bốn năm kháng chiến, quân ta mở một chiến dịch tiến công lớn.",
+     "cite": [
+      "c_qs_bg"
+     ]
+    },
+    {
+     "text": "Di tích Đông Khê, với lô cốt và hầm ngầm còn lại, nay là di tích lịch sử cách mạng cấp quốc gia.",
+     "cite": [
+      "c_ls_dong_khe"
+     ]
+    },
+    {
+     "text": "Ở vùng này trò chơi chỉ có lô cốt, ụ pháo, ụ súng để phá, không vẽ người. Chuyện thật là chuyện bác vừa kể."
+    }
+   ],
+   "question": {
+    "id": "q_f_dk",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Chiến dịch Biên giới thu – đông 1950 mở màn bằng trận đánh cụm cứ điểm nào?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Đông Khê"
+     },
+     {
+      "id": "b",
+      "text": "Him Lam"
+     },
+     {
+      "id": "c",
+      "text": "Thất Khê"
+     },
+     {
+      "id": "d",
+      "text": "Chí Đám"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Sáng 16/9/1950, quân ta đánh cụm cứ điểm Đông Khê trên đường số 4, mở màn chiến dịch Biên giới; sáng 18/9 ta làm chủ Đông Khê. Him Lam là trận mở màn chiến dịch Điện Biên Phủ năm 1954.",
+    "citations": [
+     "c_ls_dong_khe",
+     "c_qs_bg"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xác minh email: Sử Ký Điều Tra</title>
+  <link rel="icon" href="img/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=Noto+Serif:wght@400;700&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css?v=10">
+</head>
+<body class="backdrop">
+  <nav class="bar" id="bar"></nav>
+  <main>
+    <div class="sheet box paper">
+      <h1>Xác minh email</h1>
+      <p class="notice" id="msg" role="status">Đang xác minh...</p>
+      <p class="after"><a href="login.html">Đến trang đăng nhập</a></p>
+    </div>
+  </main>
+  <script src="js/api.js?v=8"></script>
+  <script>
+    SK.renderBar(null);
+    const token = new URLSearchParams(location.search).get("token") || "";
+    SK.call("/auth/verify-email", { method: "POST", body: { token } })
+      .then((out) => SK.show("msg", out.message))
+      .catch((err) => SK.show("msg", err.status === 422 ? "Liên kết không đúng, hãy mở lại từ email." : err.message, true));
+  </script>
+</body>
+</html>

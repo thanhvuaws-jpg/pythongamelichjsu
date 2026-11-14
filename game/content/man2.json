@@ -1,0 +1,1573 @@
+{
+ "level": {
+  "id": "man2",
+  "order_no": 2,
+  "title": "Mười năm nếm mật nằm gai",
+  "period_label": "1418 – 1428",
+  "intro": "Từ một vùng núi Thanh Hoá đến kinh thành Đông Quan: mười năm khởi nghĩa Lam Sơn, kết thúc bằng một áng văn được gọi là thiên cổ hùng văn.",
+  "unlock_rule": {
+   "level_done": "man1"
+  },
+  "badge": "Nghĩa sĩ Lam Sơn",
+  "cover": "lam_son",
+  "map_view": {
+   "lat": 20.45,
+   "lon": 105.75,
+   "zoom": 3.7
+  }
+ },
+ "places": [
+  {
+   "id": "p_lam_kinh",
+   "name": "Lam Sơn – Lam Kinh",
+   "names": [
+    {
+     "period": "Đầu thế kỷ XV",
+     "name": "Lam Sơn"
+    },
+    {
+     "period": "Thời Lê",
+     "name": "Lam Kinh"
+    }
+   ],
+   "modern_name": "Khu di tích Lam Kinh, vùng Thọ Xuân, Thanh Hoá",
+   "lat": 19.92,
+   "lon": 105.4,
+   "summary": "Quê hương của Lê Lợi, nơi dựng cờ khởi nghĩa năm 1418. Sau này các vua Lê dựng điện miếu tại đây."
+  },
+  {
+   "id": "p_le_lai",
+   "name": "Đền Lê Lai",
+   "names": [
+    {
+     "period": "Đầu thế kỷ XV",
+     "name": "Vùng núi Chí Linh, Thanh Hoá"
+    }
+   ],
+   "modern_name": "Đền thờ Lê Lai, vùng Ngọc Lặc, Thanh Hoá",
+   "lat": 20.07,
+   "lon": 105.37,
+   "summary": "Nơi thờ Lê Lai, người đóng giả chủ tướng và hy sinh để cứu nghĩa quân khỏi vòng vây."
+  },
+  {
+   "id": "p_tra_lan",
+   "name": "Trà Lân",
+   "names": [
+    {
+     "period": "Đầu thế kỷ XV",
+     "name": "Châu Trà Lân, Nghệ An"
+    }
+   ],
+   "modern_name": "Vùng Con Cuông, Nghệ An",
+   "lat": 19.05,
+   "lon": 104.88,
+   "summary": "Cửa ngõ của bước ngoặt năm 1424: nghĩa quân rời núi rừng Thanh Hoá, tiến vào Nghệ An để có đất đứng chân."
+  },
+  {
+   "id": "p_tot_dong",
+   "name": "Tốt Động",
+   "names": [
+    {
+     "period": "Đầu thế kỷ XV",
+     "name": "Tốt Động – Chúc Động"
+    }
+   ],
+   "modern_name": "Vùng Chương Mỹ, Hà Nội",
+   "lat": 20.88,
+   "lon": 105.65,
+   "label": "left",
+   "summary": "Cánh đồng lầy nơi quân Vương Thông bị phục kích và thua lớn cuối năm 1426."
+  },
+  {
+   "id": "p_chi_lang",
+   "name": "Ải Chi Lăng",
+   "names": [
+    {
+     "period": "Đầu thế kỷ XV",
+     "name": "Ải Chi Lăng"
+    }
+   ],
+   "modern_name": "Chi Lăng, Lạng Sơn",
+   "lat": 21.7,
+   "lon": 106.5,
+   "summary": "Thung lũng hẹp nằm giữa hai dãy núi đá trên đường từ biên giới về Thăng Long, nơi Liễu Thăng tử trận năm 1427."
+  },
+  {
+   "id": "p_ho_guom",
+   "name": "Hồ Gươm – Đông Quan",
+   "names": [
+    {
+     "period": "Thời Minh thuộc",
+     "name": "Thành Đông Quan"
+    },
+    {
+     "period": "Thời Lê",
+     "name": "Đông Kinh"
+    }
+   ],
+   "modern_name": "Hồ Hoàn Kiếm, Hà Nội",
+   "lat": 21.0287,
+   "lon": 105.8522,
+   "summary": "Hồ giữa kinh thành, gắn với truyền thuyết trả gươm. Hội thề Đông Quan cuối năm 1427 diễn ra ở phía nam thành."
+  }
+ ],
+ "relics": [
+  {
+   "id": "r_lam_kinh",
+   "title": "Dựng cờ ở Lam Sơn",
+   "place": "p_lam_kinh",
+   "stamp": "LAM KINH",
+   "scene": "lam_son",
+   "keeper": "cu_tu",
+   "keeper_name": "Cụ từ Lam Kinh",
+   "artifact": "a_co_lam_son",
+   "summary": "Khi nước mất, một hào trưởng đất Lam Sơn đã bỏ hết gia sản, chiêu mộ người tài và dựng cờ.",
+   "central_question": "Vì sao Lê Lợi khởi nghĩa ở vùng núi, không phải ngay kinh thành?",
+   "keeper_line": "Cháu đi từ sông Bạch Đằng về đây à? Đất này khác hẳn: chỉ có rừng núi và lòng người.",
+   "keeper_done": "Khởi đầu thì oai hùng đấy, nhưng năm đầu nghĩa quân suýt mất cả. Đi Ngọc Lặc mà nghe.",
+   "steps": [
+    {
+     "story": "d_lk_1"
+    },
+    {
+     "question": "q_lk_1"
+    },
+    {
+     "fragment": "f_minh_thuoc"
+    },
+    {
+     "story": "d_lk_2"
+    },
+    {
+     "fragment": "f_lung_nhai"
+    },
+    {
+     "question": "q_lk_2"
+    }
+   ]
+  },
+  {
+   "id": "r_le_lai",
+   "title": "Người mặc áo bào chủ tướng",
+   "place": "p_le_lai",
+   "stamp": "LÊ LAI",
+   "scene": "lam_son",
+   "requires": [
+    "r_lam_kinh"
+   ],
+   "keeper": "ba_cu",
+   "keeper_name": "Bà cụ giữ đền",
+   "artifact": "a_ao_bao",
+   "summary": "Nghĩa quân bị vây nguy cấp. Phải có người mặc áo chủ tướng lao vào trận địch, và đã có người đứng ra.",
+   "central_question": "Sử sách và lời truyền đã ghi nhớ Lê Lai như thế nào?",
+   "keeper_line": "Ngày hăm mốt tháng Tám âm lịch người ta về đây đông lắm. Bà kể cháu nghe vì sao giỗ ông lại trước giỗ vua một ngày.",
+   "keeper_done": "Thế mới biết, có những người không được làm tướng lâu, mà thành tên muôn đời.",
+   "steps": [
+    {
+     "story": "d_ll_1"
+    },
+    {
+     "fragment": "f_le_lai"
+    },
+    {
+     "question": "q_ll_1"
+    },
+    {
+     "question": "q_ll_2"
+    }
+   ]
+  },
+  {
+   "id": "r_tra_lan",
+   "title": "Kế vào Nghệ An",
+   "place": "p_tra_lan",
+   "stamp": "TRÀ LÂN",
+   "scene": "lam_son",
+   "requires": [
+    "r_le_lai"
+   ],
+   "keeper": "lai_do",
+   "keeper_name": "Ông lái đò sông Lam",
+   "artifact": "a_noc",
+   "summary": "Sau nhiều năm kẹt trên núi, một đề nghị làm đổi hướng cả cuộc khởi nghĩa.",
+   "central_question": "Vì sao chuyển vào Nghệ An được xem là bước ngoặt?",
+   "keeper_line": "Sông Lam đoạn này chảy xiết lắm. Năm 1424 thuyền nghĩa quân cũng qua đây đấy.",
+   "keeper_done": "Có đất, có người, có lương. Từ giờ không phải trốn nữa, mà là tiến ra.",
+   "steps": [
+    {
+     "story": "d_tl_1"
+    },
+    {
+     "fragment": "f_tra_lan"
+    },
+    {
+     "question": "q_tl_1"
+    },
+    {
+     "question": "q_tl_2"
+    }
+   ]
+  },
+  {
+   "id": "r_tot_dong",
+   "title": "Cánh đồng Tốt Động",
+   "place": "p_tot_dong",
+   "stamp": "TỐT ĐỘNG",
+   "scene": "den_tran",
+   "requires": [
+    "r_tra_lan"
+   ],
+   "keeper": "cu_do",
+   "keeper_name": "Cụ Đồ Sử",
+   "artifact": "a_binh_ngo_sach",
+   "summary": "Vương Thông cậy quân đông, tiến ra đánh. Cánh đồng lầy thành nơi quyết định số phận của quân Minh trong thành.",
+   "central_question": "Thắng lợi ở Tốt Động đã làm thay đổi cục diện thế nào?",
+   "keeper_line": "Cánh đồng này giờ lúa tốt lắm. Ngày ấy thì chỗ nào cũng là bùn, máu và tiếng kêu.",
+   "keeper_done": "Vương Thông rút vào thành Đông Quan rồi xin viện binh. Mà viện binh thì phải qua Chi Lăng.",
+   "steps": [
+    {
+     "story": "d_td_1"
+    },
+    {
+     "fragment": "f_tot_dong"
+    },
+    {
+     "question": "q_td_1"
+    },
+    {
+     "question": "q_td_2"
+    }
+   ]
+  },
+  {
+   "id": "r_chi_lang",
+   "title": "Ải Chi Lăng năm 1427",
+   "place": "p_chi_lang",
+   "stamp": "CHI LĂNG",
+   "scene": "chi_lang",
+   "requires": [
+    "r_tot_dong"
+   ],
+   "keeper": "cu_tu",
+   "keeper_name": "Cụ từ ải Chi Lăng",
+   "artifact": "a_dao_chi_lang",
+   "summary": "Đạo viện binh lớn của Liễu Thăng tiến vào thung lũng. Hãy bày phục binh và ra hiệu đúng lúc.",
+   "central_question": "Vì sao trận Chi Lăng quyết định số phận của quân Minh?",
+   "keeper_line": "Cháu đứng trên gò mà nhìn xem: hai bên núi đá, giữa là đường. Đoàn quân vào đây thì dài ra như con rắn.",
+   "keeper_done": "Mất đạo viện binh chủ lực, quân Minh trong thành hết hi vọng. Chiến tranh đã ngã ngũ.",
+   "steps": [
+    {
+     "story": "d_ci_1"
+    },
+    {
+     "question": "q_ci_1"
+    },
+    {
+     "battle": "b_chi_lang"
+    },
+    {
+     "story": "d_ci_2"
+    },
+    {
+     "fragment": "f_chi_lang"
+    },
+    {
+     "question": "q_ci_2"
+    }
+   ]
+  },
+  {
+   "id": "r_ho_guom",
+   "title": "Hồ Gươm và áng văn thiên cổ",
+   "place": "p_ho_guom",
+   "stamp": "HỒ GƯƠM",
+   "scene": "ho_guom",
+   "requires": [
+    "r_chi_lang"
+   ],
+   "keeper": "ba_cu",
+   "keeper_name": "Bà cụ bán hàng ven hồ",
+   "artifact": "a_guom",
+   "summary": "Không giết kẻ đã thua mà cho về nước. Rồi một áng văn và một chuyện gươm thiêng được kể đến ngày nay.",
+   "central_question": "Đâu là sử, đâu là truyền thuyết trong câu chuyện Hồ Gươm?",
+   "keeper_line": "Mặt hồ phẳng lặng thế này, ai biết được bao nhiêu chuyện đã chìm xuống đấy.",
+   "keeper_done": "Mở Dòng thời gian mà ghép đi cháu, bà còn phải về nhặt rau đây.",
+   "steps": [
+    {
+     "story": "d_hg_1"
+    },
+    {
+     "fragment": "f_dong_quan"
+    },
+    {
+     "question": "q_hg_1"
+    },
+    {
+     "story": "d_hg_2"
+    },
+    {
+     "fragment": "f_binh_ngo"
+    },
+    {
+     "question": "q_hg_2"
+    },
+    {
+     "story": "d_hg_3"
+    },
+    {
+     "question": "q_hg_3"
+    },
+    {
+     "question": "q_hg_4"
+    }
+   ],
+   "extra_prompt": "Cháu còn hỏi gì về chuyện cũ nữa nào?",
+   "extra_talk": [
+    {
+     "id": "t_hg_tt",
+     "label": "Bà ơi, cháu vừa đọc tư liệu về Liễu Thăng. Sao chuyện gươm thiêng lại được kể nhiều hơn?",
+     "needs": "f_chi_lang",
+     "locked_hint": "Cần mảnh ghép về trận Chi Lăng",
+     "lines": [
+      {
+       "speaker": "Bà cụ bán hàng ven hồ",
+       "portrait": "ba_cu",
+       "fiction": true,
+       "text": "Vì chuyện gươm thì trẻ con nghe được, nhớ được. Còn chuyện tính toán ở Chi Lăng phải đọc sách mới hiểu. Người dân giữ lịch sử bằng cách của mình cháu ạ."
+      },
+      {
+       "speaker": "Ghi chú sử học",
+       "portrait": "tu_lieu",
+       "text": "Truyền thuyết không phải sử liệu chính xác về sự kiện, nhưng là tư liệu quý về cách người đời sau tôn vinh và ghi nhớ quá khứ."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "persons": [
+  {
+   "id": "le_loi",
+   "name": "Lê Lợi (Lê Thái Tổ)",
+   "years": "1385 – 1433",
+   "portrait": "vua",
+   "bio": "Hào trưởng đất Lam Sơn, năm 1418 dựng cờ khởi nghĩa, xưng Bình Định Vương. Sau mười năm kháng chiến, năm 1428 lên ngôi, lập ra nhà Hậu Lê."
+  },
+  {
+   "id": "nguyen_trai",
+   "name": "Nguyễn Trãi",
+   "years": "1380 – 1442",
+   "portrait": "quan_van",
+   "bio": "Nhà chính trị, nhà văn lớn, mưu sĩ của Lê Lợi. Tác giả Bình Ngô đại cáo và Quân trung từ mệnh tập, người đề cao tư tưởng nhân nghĩa và “tâm công”."
+  },
+  {
+   "id": "le_lai",
+   "name": "Lê Lai",
+   "years": "? – khoảng 1419",
+   "portrait": "tuong",
+   "bio": "Tướng của nghĩa quân Lam Sơn, người đóng giả Lê Lợi xông vào quân địch để nghĩa quân thoát vòng vây. Năm mất được các nguồn ghi không thống nhất."
+  },
+  {
+   "id": "nguyen_chich",
+   "name": "Nguyễn Chích",
+   "years": "1382 – 1448",
+   "portrait": "tuong",
+   "bio": "Tướng của nghĩa quân, năm 1424 đề xuất chuyển hướng vào Nghệ An, giúp cuộc khởi nghĩa có đất đứng chân vững chắc."
+  },
+  {
+   "id": "vuong_thong",
+   "name": "Vương Thông",
+   "years": "Thế kỷ XV",
+   "portrait": "giac_minh",
+   "bio": "Tướng nhà Minh, thua lớn ở Tốt Động – Chúc Động cuối năm 1426, sau đó bị vây trong thành Đông Quan và phải xin hoà."
+  },
+  {
+   "id": "lieu_thang",
+   "name": "Liễu Thăng",
+   "years": "? – 1427",
+   "portrait": "giac_minh",
+   "bio": "Tướng nhà Minh chỉ huy đạo viện binh lớn năm 1427, bị phục kích và tử trận tại gò Mã Yên, ải Chi Lăng."
+  },
+  {
+   "id": "tran_luu",
+   "name": "Trần Lựu",
+   "years": "Thế kỷ XV",
+   "portrait": "tuong",
+   "bio": "Tướng Lam Sơn trấn giữ mặt Lạng Sơn năm 1427, có vai trò vừa đánh vừa lui để nhử quân Liễu Thăng vào Chi Lăng."
+  }
+ ],
+ "events": [
+  {
+   "id": "e_1407",
+   "title": "Nhà Minh đặt ách đô hộ",
+   "date": {
+    "start": "1407-01-01",
+    "precision": "year",
+    "label": "1407"
+   },
+   "place": "p_ho_guom",
+   "summary": "Sau khi đánh bại nhà Hồ, nhà Minh đặt ách đô hộ, chia lại đơn vị hành chính, vơ vét sản vật và sách vở.",
+   "significance": "Là nguyên nhân sâu xa dẫn đến các cuộc khởi nghĩa, trong đó có Lam Sơn.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_minh_thuoc"
+   ],
+   "citations": [
+    "c_tt_le",
+    "c_ls_le"
+   ]
+  },
+  {
+   "id": "e_1416",
+   "title": "Hội thề Lũng Nhai",
+   "date": {
+    "start": "1416-01-01",
+    "precision": "year",
+    "label": "1416"
+   },
+   "place": "p_lam_kinh",
+   "summary": "Lê Lợi cùng những người đồng chí hướng làm lễ thề ở Lũng Nhai, nguyện đồng lòng cứu nước.",
+   "significance": "Hình thành hạt nhân của nghĩa quân trước ngày khởi sự.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_lung_nhai"
+   ],
+   "citations": [
+    "c_lsTL"
+   ],
+   "historian_note": "Năm và danh sách người dự Hội thề được các tài liệu ghi không hoàn toàn thống nhất."
+  },
+  {
+   "id": "e_1418",
+   "title": "Lê Lợi dựng cờ khởi nghĩa ở Lam Sơn",
+   "date": {
+    "start": "1418-01-01",
+    "precision": "year",
+    "label": "1418"
+   },
+   "place": "p_lam_kinh",
+   "summary": "Đầu năm Mậu Tuất, Lê Lợi xưng Bình Định Vương, truyền hịch đánh quân Minh.",
+   "significance": "Mở đầu cuộc khởi nghĩa kéo dài mười năm.",
+   "in_timeline": true,
+   "citations": [
+    "c_tt_le",
+    "c_lsTL"
+   ]
+  },
+  {
+   "id": "e_le_lai",
+   "title": "Lê Lai liều mình cứu chủ tướng",
+   "date": {
+    "start": "1418-01-01",
+    "end": "1419-12-31",
+    "precision": "year_range",
+    "label": "1418–19"
+   },
+   "place": "p_le_lai",
+   "summary": "Nghĩa quân bị vây nguy cấp. Lê Lai mặc áo chủ tướng xông vào trận địch, nghĩa quân nhờ đó thoát được.",
+   "significance": "Hành động hy sinh trở thành tấm gương được đời đời ghi nhớ.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_le_lai"
+   ],
+   "citations": [
+    "c_lsTL"
+   ],
+   "historian_note": "Các nguồn ghi năm khác nhau, thường gặp là khoảng 1418–1419; game để khoảng năm thay vì chọn một mốc cố định."
+  },
+  {
+   "id": "e_1424",
+   "title": "Chuyển hướng tiến vào Nghệ An",
+   "date": {
+    "start": "1424-01-01",
+    "precision": "year",
+    "label": "1424"
+   },
+   "place": "p_tra_lan",
+   "summary": "Theo đề nghị của Nguyễn Chích, nghĩa quân chuyển vào Nghệ An, hạ Trà Lân và mở rộng vùng kiểm soát.",
+   "significance": "Bước ngoặt: có đất đứng chân, nguồn người và lương thực dồi dào.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_tra_lan"
+   ],
+   "citations": [
+    "c_tt_le"
+   ]
+  },
+  {
+   "id": "e_1426",
+   "title": "Trận Tốt Động – Chúc Động",
+   "date": {
+    "start": "1426-01-01",
+    "precision": "year",
+    "label": "1426"
+   },
+   "place": "p_tot_dong",
+   "summary": "Quân Vương Thông tiến ra đánh, sa vào trận địa phục kích trên cánh đồng lầy và bị tổn thất nặng.",
+   "significance": "Đẩy địch vào thế bị vây trong thành Đông Quan, phải xin viện binh.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_tot_dong"
+   ],
+   "citations": [
+    "c_tt_le",
+    "c_bndc"
+   ]
+  },
+  {
+   "id": "e_1427_cl",
+   "title": "Trận Chi Lăng – Xương Giang",
+   "date": {
+    "start": "1427-10-01",
+    "precision": "month",
+    "label": "10/1427"
+   },
+   "place": "p_chi_lang",
+   "summary": "Đạo viện binh của Liễu Thăng bị phục kích tại Chi Lăng, Liễu Thăng tử trận. Tàn quân bị đánh tan ở Xương Giang.",
+   "significance": "Trận quyết chiến chiến lược, làm sụp đổ hi vọng của quân Minh.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_chi_lang"
+   ],
+   "citations": [
+    "c_tt_le",
+    "c_lsTL"
+   ]
+  },
+  {
+   "id": "e_1427_dq",
+   "title": "Hội thề Đông Quan",
+   "date": {
+    "start": "1427-12-01",
+    "precision": "month",
+    "label": "12/1427"
+   },
+   "place": "p_ho_guom",
+   "summary": "Vương Thông buộc phải giảng hoà, làm lễ thề ở phía nam thành Đông Quan rồi rút quân về nước.",
+   "significance": "Chấm dứt ách đô hộ của nhà Minh, thể hiện chủ trương kết thúc chiến tranh ít đổ máu.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_dong_quan"
+   ],
+   "citations": [
+    "c_tt_le",
+    "c_qttm"
+   ]
+  },
+  {
+   "id": "e_1428",
+   "title": "Bình Ngô đại cáo",
+   "date": {
+    "start": "1428-01-01",
+    "precision": "year",
+    "label": "1428"
+   },
+   "place": "p_ho_guom",
+   "summary": "Nguyễn Trãi thừa lệnh Lê Lợi viết bài đại cáo tuyên bố việc bình giặc Ngô, đất nước độc lập.",
+   "significance": "Được xem như một bản tuyên ngôn về độc lập, chủ quyền và tư tưởng nhân nghĩa.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_binh_ngo"
+   ],
+   "citations": [
+    "c_bndc"
+   ]
+  }
+ ],
+ "causal_links": [
+  {
+   "from_event_id": "e_1407",
+   "to_event_id": "e_1418",
+   "kind": "cause_of",
+   "note": "Ách đô hộ tàn bạo là nguyên nhân của các cuộc khởi nghĩa."
+  },
+  {
+   "from_event_id": "e_1416",
+   "to_event_id": "e_1418",
+   "kind": "leads_to",
+   "note": "Hội thề Lũng Nhai tạo hạt nhân cho cuộc khởi nghĩa."
+  },
+  {
+   "from_event_id": "e_1424",
+   "to_event_id": "e_1426",
+   "kind": "context_of",
+   "note": "Có Nghệ An làm căn cứ, nghĩa quân tiến ra Bắc."
+  },
+  {
+   "from_event_id": "e_1426",
+   "to_event_id": "e_1427_cl",
+   "kind": "leads_to",
+   "note": "Vương Thông bị vây phải xin viện binh, dẫn đến đạo quân của Liễu Thăng."
+  },
+  {
+   "from_event_id": "e_1427_cl",
+   "to_event_id": "e_1427_dq",
+   "kind": "leads_to",
+   "note": "Mất viện binh, Vương Thông buộc phải xin hoà."
+  },
+  {
+   "from_event_id": "e_1427_dq",
+   "to_event_id": "e_1428",
+   "kind": "leads_to",
+   "note": "Đất nước sạch bóng quân thù, công bố đại cáo."
+  }
+ ],
+ "fragments": [
+  {
+   "id": "f_minh_thuoc",
+   "event_id": "e_1407",
+   "title": "Hai mươi năm đen tối",
+   "kind_label": "Bối cảnh",
+   "icon": "sach",
+   "body": "Nhà Minh đặt quận huyện, bắt dân nộp sản vật, đưa thợ khéo và người tài về phương Bắc, thu gom sách vở của nước ta. Văn bản đời sau kể lại nỗi đau này bằng những lời lẽ rất nặng nề.",
+   "citations": [
+    "c_tt_le",
+    "c_bndc"
+   ]
+  },
+  {
+   "id": "f_lung_nhai",
+   "event_id": "e_1416",
+   "title": "Lời thề trong rừng",
+   "kind_label": "Sự kiện",
+   "icon": "co",
+   "body": "Theo sử cũ, trước ngày khởi sự, Lê Lợi và những người đồng chí hướng đã thề ở Lũng Nhai, nguyện sống chết có nhau vì việc nước. Năm và danh sách người dự được các tài liệu ghi không hoàn toàn giống nhau.",
+   "citations": [
+    "c_lsTL"
+   ]
+  },
+  {
+   "id": "f_le_lai",
+   "event_id": "e_le_lai",
+   "title": "Hăm mốt Lê Lai, hăm hai Lê Lợi",
+   "kind_label": "Sử và truyền tụng",
+   "icon": "guom",
+   "body": "Khi vòng vây khép chặt, Lê Lai xin mặc áo bào, cưỡi ngựa, đánh thẳng vào trận địch. Địch tưởng bắt được chủ tướng nên buông lơi, nghĩa quân nhờ đó thoát được. Lời truyền kể Lê Lợi dặn con cháu cúng giỗ Lê Lai trước mình một ngày.",
+   "quote": "Hăm mốt Lê Lai, hăm hai Lê Lợi.",
+   "citations": [
+    "c_lsTL"
+   ]
+  },
+  {
+   "id": "f_tra_lan",
+   "event_id": "e_1424",
+   "title": "Lời khuyên của Nguyễn Chích",
+   "kind_label": "Kế sách",
+   "icon": "no",
+   "body": "Năm 1424, Nguyễn Chích đề nghị, đại ý: Nghệ An là nơi hiểm yếu, đất rộng người đông; trước hãy lấy Trà Lân, bình định Nghệ An làm chỗ đứng chân, rồi xoay ra Đông Đô thì việc lớn có thể thành.",
+   "citations": [
+    "c_tt_le"
+   ]
+  },
+  {
+   "id": "f_tot_dong",
+   "event_id": "e_1426",
+   "title": "Máu ở Ninh Kiều, xác ở Tốt Động",
+   "kind_label": "Văn bản",
+   "icon": "hich",
+   "body": "Cuối năm 1426, quân của Vương Thông tiến về phía tây Đông Quan. Nghĩa quân bày phục binh ở Tốt Động, Chúc Động, đánh tan đội hình giữa ruộng lầy. Trần Hiệp, Lý Lượng tử trận. Bình Ngô đại cáo đã ghi lại trận này.",
+   "quote": "Tốt Động thây chất đầy nội, nhơ để ngàn năm.",
+   "citations": [
+    "c_bndc",
+    "c_tt_le"
+   ]
+  },
+  {
+   "id": "f_chi_lang",
+   "event_id": "e_1427_cl",
+   "title": "Gò Mã Yên",
+   "kind_label": "Diễn biến",
+   "icon": "guom",
+   "body": "Tháng 10/1427, Liễu Thăng đem đại quân tiến vào. Trần Lựu vừa đánh vừa lui, nhử địch. Liễu Thăng khinh thường, đem kỵ binh đuổi gấp, đến gần gò Mã Yên thì sa vào trận phục binh và bị chém. Đạo quân mất chủ soái, bị đánh tan dần cho đến Xương Giang.",
+   "citations": [
+    "c_tt_le",
+    "c_lsTL"
+   ]
+  },
+  {
+   "id": "f_dong_quan",
+   "event_id": "e_1427_dq",
+   "title": "Mở đường về",
+   "kind_label": "Quyết định",
+   "icon": "an",
+   "body": "Nghĩa quân có thể đánh thẳng vào thành, nhưng chọn vây và dụ. Sau Hội thề Đông Quan, quân Minh được cấp thuyền, ngựa, lương để về nước. Đây là cách đánh “tâm công” mà các thư từ của Nguyễn Trãi đã nhiều lần thể hiện.",
+   "citations": [
+    "c_qttm",
+    "c_tt_le"
+   ]
+  },
+  {
+   "id": "f_binh_ngo",
+   "event_id": "e_1428",
+   "title": "Bình Ngô đại cáo",
+   "kind_label": "Văn bản",
+   "icon": "hich",
+   "body": "Bài đại cáo nêu rõ tư tưởng nhân nghĩa, khẳng định nền văn hiến, cương vực, phong tục riêng và các triều đại sánh ngang phương Bắc, tố cáo tội ác giặc, kể lại quá trình khởi nghĩa, rồi tuyên bố nền hoà bình.",
+   "quote": "Việc nhân nghĩa cốt ở yên dân.",
+   "citations": [
+    "c_bndc"
+   ]
+  }
+ ],
+ "dialogues": [
+  {
+   "id": "d_lk_1",
+   "bg": "lam_son",
+   "unlocks": [
+    "le_loi",
+    "e_1407",
+    "e_1418",
+    "p_lam_kinh"
+   ],
+   "nodes": [
+    {
+     "speaker": "Cụ từ Lam Kinh",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Hơn một trăm năm sau trận Bạch Đằng, nước ta lại mất. Nhà Hồ thua, nhà Minh đặt quận huyện. Nhiều cuộc nổi dậy nổ ra rồi bị dập tắt cả."
+    },
+    {
+     "speaker": "Cụ từ Lam Kinh",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "fire",
+      "smoke"
+     ],
+     "cite": [
+      "c_tt_le"
+     ],
+     "text": "Làng xóm cháy, thợ giỏi bị đưa đi, người ta mất cả sách vở của tổ tiên. Trong rừng Lam Sơn, ông hào trưởng Lê Lợi đem hết của cải chiêu mộ người tài.",
+     "stage": "minh:loot"
+    },
+    {
+     "speaker": "Cụ từ Lam Kinh",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "drum"
+     ],
+     "shake": 5,
+     "cite": [
+      "c_tt_le",
+      "c_lsTL"
+     ],
+     "text": "Đầu năm Mậu Tuất, 1418, tiếng trống trận vang lên. Lê Lợi xưng Bình Định Vương, truyền hịch khắp nơi. Quân còn ít, lương thiếu, bốn bề là giặc.",
+     "stage": "lam_son:rise"
+    },
+    {
+     "speaker": "Cụ từ Lam Kinh",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Vì sao chọn núi rừng làm nơi khởi đầu? Cháu trả lời ta câu này đã."
+    }
+   ]
+  },
+  {
+   "id": "d_lk_2",
+   "bg": "lam_son",
+   "unlocks": [
+    "nguyen_trai",
+    "e_1416"
+   ],
+   "nodes": [
+    {
+     "speaker": "Cụ từ Lam Kinh",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Trước ngày dựng cờ có một lời thề ở Lũng Nhai. Ông Lê Lợi không đi một mình. Và ở nơi khác, có một người học trò đỗ đạt, từng bị giam lỏng, đang tìm đường đến Lam Sơn."
+    },
+    {
+     "speaker": "Cụ từ Lam Kinh",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "cite": [
+      "c_ls_le"
+     ],
+     "text": "Đó là Nguyễn Trãi, người dâng bản Bình Ngô sách, đề ra mưu đánh vào lòng người. Cháu sẽ còn gặp lại ông trong những dòng chữ cuối màn này."
+    }
+   ]
+  },
+  {
+   "id": "d_ll_1",
+   "bg": "lam_son",
+   "unlocks": [
+    "le_lai",
+    "e_le_lai",
+    "p_le_lai"
+   ],
+   "nodes": [
+    {
+     "speaker": "Bà cụ giữ đền",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "arrows",
+      "clash"
+     ],
+     "shake": 7,
+     "cite": [
+      "c_lsTL"
+     ],
+     "text": "Năm ấy nghĩa quân bị vây ở vùng núi Chí Linh, cạn lương, lính đói phải đào củ mài. Giặc siết vòng vây ngày một chặt. Lê Lợi hỏi các tướng: ai có thể mặc áo bào của ta đi phá vây?",
+     "stage": "chi_linh:siege"
+    },
+    {
+     "speaker": "Bà cụ giữ đền",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "clash",
+      "arrows",
+      "fire"
+     ],
+     "shake": 9,
+     "cite": [
+      "c_lsTL"
+     ],
+     "text": "Lê Lai đứng ra, mặc áo chủ tướng, cưỡi ngựa, cầm cờ đem quân đánh thẳng vào đại trại giặc. Giặc tưởng đó là Lê Lợi, dồn sức vây bắt. Ông bị giặc bắt rồi giết hại; các sách chép chi tiết này không hoàn toàn giống nhau.",
+     "stage": "chi_linh:le_lai"
+    },
+    {
+     "speaker": "Bà cụ giữ đền",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "smoke"
+     ],
+     "text": "Giặc lơi lỏng. Đoàn quân của Lê Lợi nhân đó thoát khỏi vòng vây trong đêm. Người ta truyền rằng sau này ông dặn: đến ngày giỗ, cúng Lê Lai trước ta một ngày.",
+     "stage": "chi_linh:escape"
+    },
+    {
+     "speaker": "Bà cụ giữ đền",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "text": "Làng này cứ đến ngày đó lại nói câu “Hăm mốt Lê Lai, hăm hai Lê Lợi”. Lời đó có từ bao giờ thì bà không biết, nhưng cả vùng đều thuộc."
+    }
+   ]
+  },
+  {
+   "id": "d_tl_1",
+   "bg": "lam_son",
+   "unlocks": [
+    "nguyen_chich",
+    "e_1424",
+    "p_tra_lan"
+   ],
+   "nodes": [
+    {
+     "speaker": "Ông lái đò sông Lam",
+     "portrait": "lai_do",
+     "fiction": true,
+     "text": "Sáu năm trời trong núi Thanh Hoá. Có lúc tạm hoà để lấy hơi. Nghĩa quân biết rằng cứ chỗ này mãi thì sẽ tàn. Nguyễn Chích bước vào lều, nói với chủ tướng một ý rất mới."
+    },
+    {
+     "speaker": "Ông lái đò sông Lam",
+     "portrait": "lai_do",
+     "fiction": true,
+     "memory": true,
+     "bg": "lam_son",
+     "fx": [
+      "arrows",
+      "fire"
+     ],
+     "shake": 5,
+     "cite": [
+      "c_tt_le"
+     ],
+     "text": "Năm 1424 nghĩa quân tiến vào Nghệ An, vây thành Trà Lân ở miền thượng du. Dân nhiều nơi kéo đến theo nghĩa quân. Vùng đất mới như mở ra trước mắt.",
+     "stage": "tra_lan:advance"
+    },
+    {
+     "speaker": "Ông lái đò sông Lam",
+     "portrait": "lai_do",
+     "fiction": true,
+     "text": "Một bước đi hay, thắng cả chục trận đánh. Sử quan phải nhìn cả những lúc ấy, chứ không chỉ có những trận có máu và lửa."
+    }
+   ]
+  },
+  {
+   "id": "d_td_1",
+   "bg": "den_tran",
+   "unlocks": [
+    "vuong_thong",
+    "e_1426",
+    "p_tot_dong"
+   ],
+   "nodes": [
+    {
+     "speaker": "Cụ Đồ Sử",
+     "portrait": "cu_do",
+     "fiction": true,
+     "text": "Cuối năm 1426, Vương Thông vừa đem viện binh đến Đông Quan, muốn đánh một trận thật lớn. Hắn chia quân kéo về hướng tây nam, đi qua những cánh đồng bùn lầy."
+    },
+    {
+     "speaker": "Cụ Đồ Sử",
+     "portrait": "cu_do",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "clash",
+      "arrows"
+     ],
+     "shake": 8,
+     "cite": [
+      "c_tt_le"
+     ],
+     "text": "Phục binh đổ ra. Ngựa địch sa lầy, quân ùn lại trên đường hẹp, nhiều người chết khi tháo chạy qua sông. Thượng thư Trần Hiệp, nội quan Lý Lượng tử trận.",
+     "stage": "tot_dong:ambush"
+    },
+    {
+     "speaker": "Cụ Đồ Sử",
+     "portrait": "cu_do",
+     "fiction": true,
+     "cite": [
+      "c_tt_le"
+     ],
+     "text": "Vương Thông tháo chạy về thành Đông Quan rồi cố thủ. Từ đây thế trận đổi chiều: kẻ bị vây bây giờ là quân Minh, và họ chỉ có thể trông vào viện binh."
+    }
+   ]
+  },
+  {
+   "id": "d_ci_1",
+   "bg": "chi_lang",
+   "unlocks": [
+    "lieu_thang",
+    "tran_luu",
+    "p_chi_lang"
+   ],
+   "nodes": [
+    {
+     "speaker": "Cụ từ ải Chi Lăng",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Năm 1427 nhà Minh gửi hai đạo viện binh sang cứu Vương Thông. Một đạo qua Vân Nam do Mộc Thạnh chỉ huy, một đạo qua Lạng Sơn do Liễu Thăng cầm đầu. Đạo Liễu Thăng là chủ lực."
+    },
+    {
+     "speaker": "Cụ từ ải Chi Lăng",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "cite": [
+      "c_tt_le"
+     ],
+     "text": "Nghĩa quân tính rằng: đánh tan đạo Liễu Thăng thì đạo kia cũng phải lui. Liễu Thăng tiến theo đường Lạng Sơn, tướng Trần Lựu vừa đánh vừa lùi. Thắng liền mấy trận, Liễu Thăng càng thêm kiêu."
+    }
+   ]
+  },
+  {
+   "id": "d_ci_2",
+   "bg": "chi_lang",
+   "unlocks": [
+    "e_1427_cl"
+   ],
+   "nodes": [
+    {
+     "speaker": "Cụ từ ải Chi Lăng",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "clash",
+      "arrows"
+     ],
+     "shake": 9,
+     "cite": [
+      "c_tt_le",
+      "c_lsTL"
+     ],
+     "text": "Sử chép Liễu Thăng đuổi đến Mã Yên thì sa vào phục binh, bị chém ngay tại trận. Quân lính vỡ tan, dẫm lên nhau mà chạy. Tiếng trống trên núi át cả tiếng người.",
+     "stage": "chi_lang:ma_yen"
+    },
+    {
+     "speaker": "Cụ từ ải Chi Lăng",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "fire",
+      "smoke"
+     ],
+     "cite": [
+      "c_tt_le"
+     ],
+     "text": "Tàn quân cố về Xương Giang thì thành đã bị nghĩa quân chiếm. Họ đóng trại ngoài đồng, bị vây đánh, nhiều tướng bị bắt. Đạo Mộc Thạnh nghe tin thì rút thẳng về nước.",
+     "stage": "xuong_giang:siege"
+    },
+    {
+     "speaker": "Cụ từ ải Chi Lăng",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Thắng trận này, mười năm khởi nghĩa coi như đã đến đích. Nhưng còn một việc khó nữa: đánh thành Đông Quan, hay mở cho họ một con đường về?"
+    }
+   ]
+  },
+  {
+   "id": "d_hg_1",
+   "bg": "ho_guom",
+   "unlocks": [
+    "e_1427_dq",
+    "p_ho_guom"
+   ],
+   "nodes": [
+    {
+     "speaker": "Bà cụ bán hàng ven hồ",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "text": "Năm ấy thành Đông Quan vẫn còn quân Minh. Bà đoán nếu cháu là tướng thì muốn đánh cho hả giận phải không? Nhưng người xưa tính xa hơn thế."
+    },
+    {
+     "speaker": "Bà cụ bán hàng ven hồ",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "smoke"
+     ],
+     "cite": [
+      "c_tt_le",
+      "c_qttm"
+     ],
+     "text": "Tháng 12/1427, Vương Thông họp thề phía nam thành. Nghĩa quân cấp thuyền, ngựa, lương cho đoàn quân về nước. Nguyễn Trãi viết thư cho tướng giặc rất nhiều lần trước ngày đó.",
+     "stage": "hoi_the:oath"
+    }
+   ]
+  },
+  {
+   "id": "d_hg_2",
+   "bg": "ho_guom",
+   "unlocks": [
+    "e_1428"
+   ],
+   "nodes": [
+    {
+     "speaker": "Bà cụ bán hàng ven hồ",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "drum"
+     ],
+     "cite": [
+      "c_bndc"
+     ],
+     "text": "Năm 1428, Lê Lợi lên ngôi. Nguyễn Trãi vâng mệnh viết bài đại cáo để cả nước cùng biết. Người ta đọc to ở các nơi: giặc đã tan, ta đã có hoà bình.",
+     "stage": "binh_ngo:proclaim"
+    },
+    {
+     "speaker": "Ghi chú sử học",
+     "portrait": "tu_lieu",
+     "cite": [
+      "c_bndc"
+     ],
+     "text": "Bài văn dùng chữ “Ngô” để chỉ giặc Minh, theo cách gọi của người đương thời. Nhiều sử gia và nhà văn học xem đây như một bản tuyên ngôn về độc lập của Đại Việt."
+    }
+   ]
+  },
+  {
+   "id": "d_hg_3",
+   "bg": "ho_guom",
+   "nodes": [
+    {
+     "speaker": "Bà cụ bán hàng ven hồ",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "text": "Giờ đến chuyện bà thích nhất. Người ta kể một lần vua đi chơi thuyền trên hồ, có con rùa vàng nổi lên, đòi lại thanh gươm Long Quân cho mượn. Vua trả, rùa ngậm gươm lặn xuống."
+    },
+    {
+     "speaker": "Ghi chú sử học",
+     "portrait": "tu_lieu",
+     "text": "Đây là truyền thuyết. Không thấy bằng chứng rằng sự kiện này diễn ra như lời kể. Truyền thuyết có giá trị về văn hoá, phản ánh khát vọng hoà bình của người xưa, và cũng là lý do của tên gọi Hoàn Kiếm."
+    }
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "q_lk_1",
+   "kind": "single",
+   "difficulty": 1,
+   "prompt": "Vì sao Lê Lợi chọn vùng núi rừng làm nơi khởi đầu cuộc khởi nghĩa?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Địa hình hiểm trở, dễ giấu quân, có thể đánh rồi rút và xây dựng lực lượng"
+    },
+    {
+     "id": "b",
+     "text": "Vì ở đó có nhiều thành cao hào sâu của nhà Minh"
+    },
+    {
+     "id": "c",
+     "text": "Vì đó là kinh đô của nhà Trần"
+    },
+    {
+     "id": "d",
+     "text": "Vì nhà Minh đã đồng ý cho ông đóng quân"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Quân nhỏ, thiếu lương thực nên cần địa thế có lợi trong giai đoạn đầu của cuộc khởi nghĩa.",
+   "citations": [
+    "c_ls_le"
+   ]
+  },
+  {
+   "id": "q_lk_2",
+   "kind": "order",
+   "style": "Sắp xếp sự kiện",
+   "difficulty": 2,
+   "prompt": "Sắp xếp các sự kiện đầu thế kỷ XV theo thứ tự thời gian.",
+   "items": [
+    {
+     "id": "a",
+     "text": "Nhà Minh đặt ách đô hộ"
+    },
+    {
+     "id": "b",
+     "text": "Hội thề Lũng Nhai"
+    },
+    {
+     "id": "c",
+     "text": "Lê Lợi dựng cờ khởi nghĩa"
+    }
+   ],
+   "correct_answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "explanation": "1407, 1416 (theo cách ghi phổ biến), rồi 1418.",
+   "citations": [
+    "c_tt_le",
+    "c_lsTL"
+   ]
+  },
+  {
+   "id": "q_ll_1",
+   "kind": "single",
+   "difficulty": 1,
+   "prompt": "Lê Lai đã làm gì để cứu nghĩa quân?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Mặc áo chủ tướng xông vào trận địch để nhử giặc, giúp nghĩa quân thoát vòng vây"
+    },
+    {
+     "id": "b",
+     "text": "Đem vàng bạc đi mua chuộc tướng giặc"
+    },
+    {
+     "id": "c",
+     "text": "Xin giảng hoà với nhà Minh"
+    },
+    {
+     "id": "d",
+     "text": "Đào hầm cho quân thoát ra"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Hành động của ông giúp cuộc khởi nghĩa thoát khỏi một trong những thời khắc nguy nan nhất.",
+   "citations": [
+    "c_lsTL"
+   ]
+  },
+  {
+   "id": "q_ll_2",
+   "kind": "single",
+   "style": "Đối chiếu nguồn",
+   "difficulty": 3,
+   "prompt": "Các tài liệu ghi năm Lê Lai hy sinh không hoàn toàn giống nhau. Cách ghi nào của sử quan là thích hợp nhất?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Ghi khoảng thời gian có thể, kèm chú thích rằng các nguồn khác nhau"
+    },
+    {
+     "id": "b",
+     "text": "Chọn đại một năm và không cần nói gì thêm"
+    },
+    {
+     "id": "c",
+     "text": "Kết luận rằng Lê Lai là nhân vật không có thật"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Nguồn khác nhau về năm không có nghĩa sự kiện là giả. Sử quan cần nói rõ độ chắc chắn của thông tin.",
+   "citations": [
+    "c_lsTL"
+   ]
+  },
+  {
+   "id": "q_tl_1",
+   "kind": "single",
+   "difficulty": 2,
+   "prompt": "Ai là người đề xuất chuyển hướng hoạt động của nghĩa quân vào Nghệ An năm 1424?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Nguyễn Chích"
+    },
+    {
+     "id": "b",
+     "text": "Nguyễn Trãi"
+    },
+    {
+     "id": "c",
+     "text": "Lê Lai"
+    },
+    {
+     "id": "d",
+     "text": "Trần Lựu"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Nguyễn Chích là người đề nghị lấy Nghệ An làm chỗ đứng chân rồi mới xoay ra Đông Đô.",
+   "citations": [
+    "c_tt_le"
+   ]
+  },
+  {
+   "id": "q_tl_2",
+   "kind": "multi",
+   "style": "Chọn nhiều đáp án",
+   "difficulty": 2,
+   "prompt": "Việc chuyển vào Nghệ An đem lại những lợi thế nào?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Vùng đất rộng, đông người, nhiều nguồn quân và lương"
+    },
+    {
+     "id": "b",
+     "text": "Địa thế hiểm yếu để làm chỗ đứng chân"
+    },
+    {
+     "id": "c",
+     "text": "Từ đó có thể tiến dần ra Bắc"
+    },
+    {
+     "id": "d",
+     "text": "Đã có viện trợ súng hoả mai từ châu Âu"
+    }
+   ],
+   "correct_answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "explanation": "Đầu thế kỷ XV không có chuyện viện trợ vũ khí từ châu Âu. Đây là chi tiết sai về bối cảnh thời đại.",
+   "citations": [
+    "c_tt_le",
+    "c_ls_le"
+   ]
+  },
+  {
+   "id": "q_td_1",
+   "kind": "single",
+   "difficulty": 2,
+   "prompt": "Sau khi thua ở Tốt Động – Chúc Động, Vương Thông đã làm gì?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Rút về thành Đông Quan cố thủ và chờ viện binh"
+    },
+    {
+     "id": "b",
+     "text": "Tiến quân đánh chiếm Nghệ An"
+    },
+    {
+     "id": "c",
+     "text": "Lập tức đầu hàng và về nước"
+    },
+    {
+     "id": "d",
+     "text": "Đi đường biển vòng ra đánh Vân Đồn"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Thua trận lớn, quân Minh chuyển sang thế cố thủ, nên nhà Minh phải gửi các đạo viện binh sang.",
+   "citations": [
+    "c_tt_le"
+   ]
+  },
+  {
+   "id": "q_td_2",
+   "kind": "single",
+   "style": "Đúng hay Sai?",
+   "difficulty": 1,
+   "keep_order": true,
+   "prompt": "Nhận định: “Trận Tốt Động – Chúc Động được nhắc đến trong Bình Ngô đại cáo.”",
+   "options": [
+    {
+     "id": "a",
+     "text": "Đúng"
+    },
+    {
+     "id": "b",
+     "text": "Sai"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Câu “Ninh Kiều máu chảy thành sông, Tốt Động thây chất đầy nội” lấy từ chính bài đại cáo.",
+   "citations": [
+    "c_bndc"
+   ]
+  },
+  {
+   "id": "q_ci_1",
+   "kind": "map_pick",
+   "style": "Chỉ trên bản đồ",
+   "difficulty": 2,
+   "prompt": "Liễu Thăng đi từ biên giới phía bắc về Đông Quan. Bấm vào vị trí của ải Chi Lăng trên bản đồ.",
+   "correct_answer": {
+    "lat": 21.7,
+    "lon": 106.5
+   },
+   "tolerance_km": 40,
+   "place_label": "Ải Chi Lăng",
+   "view": {
+    "lat": 21.3,
+    "lon": 106.2,
+    "zoom": 3.6
+   },
+   "explanation": "Chi Lăng nằm ở Lạng Sơn, trên trục đường từ biên giới về Thăng Long.",
+   "citations": [
+    "c_dat_nuoc"
+   ]
+  },
+  {
+   "id": "q_ci_2",
+   "kind": "match",
+   "style": "Nối nhân vật với vai trò",
+   "difficulty": 2,
+   "prompt": "Nối mỗi nhân vật với vai trò của họ trong khởi nghĩa Lam Sơn.",
+   "left": [
+    {
+     "id": "l1",
+     "text": "Nguyễn Trãi"
+    },
+    {
+     "id": "l2",
+     "text": "Nguyễn Chích"
+    },
+    {
+     "id": "l3",
+     "text": "Lê Lai"
+    },
+    {
+     "id": "l4",
+     "text": "Trần Lựu"
+    }
+   ],
+   "right": [
+    {
+     "id": "r1",
+     "text": "Soạn Bình Ngô đại cáo, mưu sĩ của Lê Lợi"
+    },
+    {
+     "id": "r2",
+     "text": "Đề xuất chuyển hướng vào Nghệ An"
+    },
+    {
+     "id": "r3",
+     "text": "Đóng giả chủ tướng để cứu nghĩa quân"
+    },
+    {
+     "id": "r4",
+     "text": "Vừa đánh vừa lui, nhử Liễu Thăng vào Chi Lăng"
+    }
+   ],
+   "correct_answer": {
+    "l1": "r1",
+    "l2": "r2",
+    "l3": "r3",
+    "l4": "r4"
+   },
+   "explanation": "Cuộc khởi nghĩa thành công nhờ sự góp sức của nhiều con người, mỗi người một vai trò.",
+   "citations": [
+    "c_tt_le",
+    "c_lsTL"
+   ]
+  },
+  {
+   "id": "q_hg_1",
+   "kind": "single",
+   "difficulty": 2,
+   "prompt": "Vì sao nghĩa quân chọn cách cho quân Minh về nước thay vì đánh đến người cuối cùng?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Tránh thêm đổ máu, giảm nguy cơ một cuộc chiến mới, thể hiện tư tưởng nhân nghĩa"
+    },
+    {
+     "id": "b",
+     "text": "Vì nghĩa quân đã thua và phải hàng"
+    },
+    {
+     "id": "c",
+     "text": "Vì vua Minh đã xin thần phục Đại Việt"
+    },
+    {
+     "id": "d",
+     "text": "Vì không biết quân Minh đang ở trong thành"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Đây là tư tưởng “tâm công”: đánh vào lòng người, kết thúc chiến tranh bằng cách có lợi nhất cho đất nước.",
+   "citations": [
+    "c_qttm",
+    "c_bndc"
+   ]
+  },
+  {
+   "id": "q_hg_2",
+   "kind": "single",
+   "difficulty": 1,
+   "prompt": "“Việc nhân nghĩa cốt ở yên dân” là câu mở đầu nổi tiếng của tác phẩm nào?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Bình Ngô đại cáo"
+    },
+    {
+     "id": "b",
+     "text": "Hịch tướng sĩ"
+    },
+    {
+     "id": "c",
+     "text": "Nam quốc sơn hà"
+    },
+    {
+     "id": "d",
+     "text": "Đại Việt sử ký toàn thư"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Câu mở đầu thể hiện tư tưởng xuyên suốt tác phẩm của Nguyễn Trãi.",
+   "citations": [
+    "c_bndc"
+   ]
+  },
+  {
+   "id": "q_hg_3",
+   "kind": "single",
+   "style": "Sử hay truyền thuyết?",
+   "difficulty": 1,
+   "prompt": "Chuyện rùa vàng nổi lên đòi lại gươm thần ở hồ Tả Vọng thuộc loại nào?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Truyền thuyết dân gian, có giá trị văn hoá"
+    },
+    {
+     "id": "b",
+     "text": "Sự kiện lịch sử đã được chứng minh bằng hiện vật"
+    },
+    {
+     "id": "c",
+     "text": "Sự kiện được ghi trong điều khoản Hội thề Đông Quan"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Truyền thuyết phản ánh ước vọng hoà bình của người xưa, khác với sự kiện lịch sử có ghi chép.",
+   "citations": [
+    "c_sgk"
+   ]
+  },
+  {
+   "id": "q_hg_4",
+   "kind": "multi",
+   "style": "Sử hay truyền thuyết?",
+   "difficulty": 3,
+   "prompt": "Chọn tất cả những sự kiện được sử liệu ghi chép (không phải truyền thuyết).",
+   "options": [
+    {
+     "id": "a",
+     "text": "Hội thề Đông Quan cuối năm 1427"
+    },
+    {
+     "id": "b",
+     "text": "Liễu Thăng tử trận gần gò Mã Yên"
+    },
+    {
+     "id": "c",
+     "text": "Nguyễn Trãi viết Bình Ngô đại cáo"
+    },
+    {
+     "id": "d",
+     "text": "Rùa vàng ngậm gươm lặn xuống hồ"
+    }
+   ],
+   "correct_answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "explanation": "Ba sự kiện đầu có ghi chép trong sử liệu. Chuyện trả gươm thuộc về truyền thuyết.",
+   "citations": [
+    "c_tt_le",
+    "c_bndc"
+   ]
+  }
+ ],
+ "battles": [
+  {
+   "id": "b_chi_lang",
+   "kind": "ambush",
+   "year": 1427,
+   "title": "Trận Chi Lăng năm 1427",
+   "ally": "Nghĩa quân Lam Sơn",
+   "enemy": "Viện binh nhà Minh",
+   "enemy_general": "Liễu Thăng",
+   "intro": "Đại quân của Liễu Thăng tiến vào đất Lạng Sơn. Trần Lựu đã nhận lệnh vừa đánh vừa lui. Phía sau, các tướng Lam Sơn chờ tại thung lũng Chi Lăng: đường hẹp, núi đá hai bên, gò Mã Yên giữa đường.",
+   "victory": "Liễu Thăng tử trận tại gò Mã Yên. Đạo viện binh chủ lực của nhà Minh tan vỡ dần đến tận Xương Giang, chiến tranh đi đến hồi kết.",
+   "citations": [
+    "c_tt_le",
+    "c_lsTL"
+   ]
+  }
+ ],
+ "artifacts": [
+  {
+   "id": "a_co_lam_son",
+   "name": "Cờ nghĩa Lam Sơn",
+   "icon": "co",
+   "desc": "Biểu tượng của ngày dựng cờ năm 1418."
+  },
+  {
+   "id": "a_ao_bao",
+   "name": "Thanh gươm Lê Lai",
+   "icon": "guom",
+   "desc": "Vật phẩm minh hoạ tưởng nhớ người đã liều mình cứu nghĩa quân."
+  },
+  {
+   "id": "a_noc",
+   "name": "Chiếc nỏ Nghệ An",
+   "icon": "no",
+   "desc": "Minh hoạ cho những binh sĩ mới từ vùng đất Nghệ An."
+  },
+  {
+   "id": "a_binh_ngo_sach",
+   "name": "Bản Bình Ngô sách (minh hoạ)",
+   "icon": "sach",
+   "desc": "Gợi lại mưu kế của Nguyễn Trãi, không phải hiện vật có thật."
+  },
+  {
+   "id": "a_dao_chi_lang",
+   "name": "Ấn tín Chi Lăng",
+   "icon": "an",
+   "desc": "Vật phẩm minh hoạ ghi nhớ trận quyết chiến năm 1427."
+  },
+  {
+   "id": "a_guom",
+   "name": "Gươm trả Hồ Tả Vọng",
+   "icon": "guom",
+   "desc": "Theo truyền thuyết, biểu tượng khát vọng hoà bình của người Việt."
+  }
+ ]
+}

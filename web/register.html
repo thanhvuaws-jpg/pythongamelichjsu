@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tạo tài khoản: Sử Ký Điều Tra</title>
+  <link rel="icon" href="img/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=Noto+Serif:wght@400;700&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css?v=10">
+</head>
+<body class="backdrop">
+  <nav class="bar" id="bar"></nav>
+  <main>
+    <form class="sheet box paper" id="form" novalidate>
+      <h1>Tạo tài khoản</h1>
+      <p class="notice" id="msg" role="alert" hidden></p>
+      <label class="field">Tên hiển thị
+        <span class="hint">Tên này hiện trên bảng xếp hạng.</span>
+        <input name="display_name" maxlength="64" autocomplete="nickname" required>
+      </label>
+      <label class="field">Email
+        <input name="email" type="email" autocomplete="email" required>
+      </label>
+      <label class="field">Mật khẩu
+        <span class="hint">Tối thiểu 8 ký tự.</span>
+        <input name="password" type="password" minlength="8" autocomplete="new-password" required>
+      </label>
+      <label class="field">Năm sinh
+        <input name="birth_year" type="number" inputmode="numeric" min="1900" required>
+      </label>
+      <label class="field" id="guardian" hidden>Email phụ huynh hoặc giáo viên
+        <span class="hint">Người từ 16 tuổi trở xuống cần người lớn xác nhận tài khoản.</span>
+        <input name="guardian_email" type="email">
+      </label>
+      <label class="check">
+        <input name="accept_policy" type="checkbox" required>
+        <span>Tôi đã đọc và đồng ý <a href="privacy.html" target="_blank">chính sách quyền riêng tư</a>.</span>
+      </label>
+      <button class="btn gold" type="submit">Tạo tài khoản</button>
+      <p class="after">Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+    </form>
+  </main>
+  <script src="js/api.js?v=8"></script>
+  <script>
+    SK.renderBar(null);
+    const form = document.getElementById("form");
+    const guardian = document.getElementById("guardian");
+    // Khớp với quy tắc ở máy chủ: chỉ biết năm sinh nên từ 16 tuổi trở xuống đều cần người lớn xác nhận
+    form.birth_year.addEventListener("input", () => {
+      const year = Number(form.birth_year.value);
+      guardian.hidden = !(year > 1900 && new Date().getFullYear() - year <= 16);
+    });
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      SK.show("msg", "");
+      if (!form.display_name.value.trim()) return SK.show("msg", "Hãy nhập tên hiển thị.", true);
+      if (form.password.value.length < 8) return SK.show("msg", "Mật khẩu cần tối thiểu 8 ký tự.", true);
+      if (!form.accept_policy.checked) return SK.show("msg", "Hãy đọc và đồng ý chính sách quyền riêng tư.", true);
+      const button = form.querySelector("button");
+      button.disabled = true;
+      try {
+        const out = await SK.call("/auth/register", {
+          method: "POST",
+          body: {
+            display_name: form.display_name.value.trim(),
+            email: form.email.value,
+            password: form.password.value,
+            birth_year: Number(form.birth_year.value),
+            accept_policy: true,
+            guardian_email: guardian.hidden ? null : form.guardian_email.value || null,
+          },
+        });
+        if (out.ready) return location.replace("login.html?created=1");
+        SK.show("msg", out.message);
+      } catch (err) {
+        SK.show("msg", err.status === 422 ? "Hãy kiểm tra lại email và năm sinh." : err.message, true);
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

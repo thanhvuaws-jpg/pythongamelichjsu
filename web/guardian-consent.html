@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xác nhận cho học sinh: Sử Ký Điều Tra</title>
+  <link rel="icon" href="img/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=Noto+Serif:wght@400;700&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css?v=10">
+</head>
+<body class="backdrop">
+  <nav class="bar" id="bar"></nav>
+  <main>
+    <div class="sheet box paper">
+      <h1>Xác nhận cho học sinh</h1>
+      <p class="lead">Một học sinh đã ghi email của bạn khi đăng ký chơi game học lịch sử này. Bấm nút bên dưới nếu bạn đồng ý cho học sinh dùng tài khoản.</p>
+      <p class="notice" id="msg" role="status" hidden></p>
+      <button class="btn gold" id="ok" type="button">Đồng ý cho dùng tài khoản</button>
+      <p class="after"><a href="privacy.html">Đọc chính sách quyền riêng tư</a></p>
+    </div>
+  </main>
+  <script src="js/api.js?v=8"></script>
+  <script>
+    SK.renderBar(null);
+    const token = new URLSearchParams(location.search).get("token") || "";
+    document.getElementById("ok").addEventListener("click", async (event) => {
+      event.target.disabled = true;
+      try {
+        const out = await SK.call("/auth/guardian-consent/" + encodeURIComponent(token), { method: "POST" });
+        SK.show("msg", out.message);
+      } catch (err) {
+        SK.show("msg", err.message, true);
+        event.target.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bảng xếp hạng: Sử Ký Điều Tra</title>
+  <link rel="icon" href="img/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css?v=10">
+</head>
+<body>
+  <nav class="bar" id="bar"></nav>
+  <main class="page">
+    <h1>Bảng xếp hạng</h1>
+    <p class="mine" id="mine"></p>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="box paper panel" id="board" role="tabpanel"></div>
+  </main>
+  <script src="js/api.js?v=8"></script>
+  <script>
+    (async () => {
+      const { h } = SK;
+      const PERIODS = [["week", "Tuần này"], ["month", "Tháng này"], ["all", "Mọi lúc"]];
+      const user = await SK.renderBar();
+      if (!user) return SK.toLogin();
+      const tabs = document.getElementById("tabs");
+      const board = document.getElementById("board");
+      const mine = document.getElementById("mine");
+
+      async function load(period) {
+        for (const button of tabs.children) button.setAttribute("aria-selected", String(button.dataset.period === period));
+        try {
+          const out = await SK.call("/leaderboard?period=" + period);
+          mine.textContent = out.me ? `Bạn đang hạng ${out.me.rank} với ${out.me.points} điểm.` : "Bạn chưa có điểm trong khoảng thời gian này.";
+          if (!out.entries.length) {
+            board.replaceChildren(h("p", { class: "empty" }, "Chưa ai ghi điểm trong khoảng thời gian này. Trả lời đúng một câu hỏi là bạn đứng đầu ngay."));
+            return;
+          }
+          const rows = out.entries.map((row) => h("tr", { class: row.user_id === user.id ? "me" : "" },
+            h("td", { class: "rank" }, String(row.rank)),
+            h("td", {}, row.display_name),
+            h("td", { class: "num" }, String(row.points)),
+          ));
+          board.replaceChildren(h("div", { class: "tablewrap" }, h("table", {},
+            h("thead", {}, h("tr", {}, h("th", {}, "Hạng"), h("th", {}, "Người chơi"), h("th", { class: "num" }, "Điểm"))),
+            h("tbody", {}, rows),
+          )));
+        } catch (err) {
+          board.replaceChildren(h("p", { class: "empty" }, err.message));
+        }
+      }
+
+      for (const [period, label] of PERIODS) {
+        tabs.append(h("button", { class: "btn ghost small", type: "button", role: "tab", onclick: () => load(period), "data-period": period }, label));
+      }
+      load("week");
+    })();
+  </script>
+</body>
+</html>

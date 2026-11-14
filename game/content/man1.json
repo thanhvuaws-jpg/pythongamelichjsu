@@ -1,0 +1,2408 @@
+{
+ "level": {
+  "id": "man1",
+  "order_no": 1,
+  "title": "Những khúc sông giữ nước",
+  "period_label": "938 – 1288",
+  "intro": "Từ bãi cọc Ngô Quyền năm 938 đến bãi cọc Yên Giang năm 1288: hơn ba trăm năm dựng nước và giữ nước qua các đời Ngô, Lý, Trần.",
+  "unlock_rule": null,
+  "badge": "Người giữ sông",
+  "cover": "bach_dang",
+  "map_view": {
+   "lat": 20.85,
+   "lon": 106.4,
+   "zoom": 7.0
+  }
+ },
+ "places": [
+  {
+   "id": "p_duong_lam",
+   "name": "Đường Lâm",
+   "names": [
+    {
+     "period": "Thời Ngô",
+     "name": "Đường Lâm"
+    }
+   ],
+   "modern_name": "Làng cổ Đường Lâm, vùng Sơn Tây, Hà Nội",
+   "lat": 21.155,
+   "lon": 105.47,
+   "label": "bottom",
+   "summary": "Vùng đất được sử cũ ghi là quê của Ngô Quyền, ngày nay còn lăng và đền thờ ông giữa làng cổ đá ong."
+  },
+  {
+   "id": "p_trang_kenh",
+   "name": "Cửa sông Bạch Đằng",
+   "names": [
+    {
+     "period": "Thời Ngô",
+     "name": "Sông Bạch Đằng"
+    }
+   ],
+   "modern_name": "Sông Bạch Đằng, vùng Hải Phòng – Quảng Ninh",
+   "lat": 20.92,
+   "lon": 106.72,
+   "label": "left",
+   "summary": "Khúc sông nối vịnh biển với vùng đồng bằng, nơi thuỷ triều lên xuống rất mạnh. Vị trí chính xác của bãi cọc năm 938 đến nay vẫn còn được nghiên cứu."
+  },
+  {
+   "id": "p_co_loa",
+   "name": "Cổ Loa",
+   "names": [
+    {
+     "period": "Thời Âu Lạc",
+     "name": "Thành Cổ Loa"
+    },
+    {
+     "period": "Thời Ngô",
+     "name": "Kinh đô Cổ Loa"
+    }
+   ],
+   "modern_name": "Cổ Loa, vùng Đông Anh, Hà Nội",
+   "lat": 21.115,
+   "lon": 105.873,
+   "label": "top",
+   "summary": "Thành cổ nhiều vòng từ thời An Dương Vương. Năm 939 Ngô Quyền chọn nơi đây làm kinh đô."
+  },
+  {
+   "id": "p_nhu_nguyet",
+   "name": "Phòng tuyến Như Nguyệt",
+   "names": [
+    {
+     "period": "Thời Lý",
+     "name": "Sông Như Nguyệt"
+    }
+   ],
+   "modern_name": "Sông Cầu, đoạn qua vùng Yên Phong, Bắc Ninh",
+   "lat": 21.2,
+   "lon": 106.1,
+   "summary": "Phòng tuyến chặn đường tiến xuống Thăng Long của quân Tống trong các năm 1076–1077."
+  },
+  {
+   "id": "p_den_tran",
+   "name": "Đền Trần",
+   "names": [
+    {
+     "period": "Thời Trần",
+     "name": "Tức Mặc, phủ Thiên Trường"
+    }
+   ],
+   "modern_name": "Khu di tích đền Trần ở Tức Mặc (trước tháng 7/2025 thuộc thành phố Nam Định, nay thuộc tỉnh Ninh Bình)",
+   "lat": 20.44,
+   "lon": 106.18,
+   "summary": "Đất phát tích của nhà Trần, nơi thờ các vua Trần và các công thần. Tại đây kể lại ba lần chống Mông – Nguyên."
+  },
+  {
+   "id": "p_kiep_bac",
+   "name": "Kiếp Bạc",
+   "names": [
+    {
+     "period": "Thời Trần",
+     "name": "Kiếp Bạc"
+    }
+   ],
+   "modern_name": "Đền Kiếp Bạc, vùng Chí Linh (trước tháng 7/2025 thuộc tỉnh Hải Dương, nay thuộc thành phố Hải Phòng)",
+   "lat": 21.08,
+   "lon": 106.43,
+   "summary": "Căn cứ quân sự thời Trần gắn với Hưng Đạo Đại Vương Trần Quốc Tuấn, nay là đền thờ ông."
+  },
+  {
+   "id": "p_van_don",
+   "name": "Vân Đồn",
+   "names": [
+    {
+     "period": "Thời Lý – Trần",
+     "name": "Trang Vân Đồn"
+    }
+   ],
+   "modern_name": "Vùng Vân Đồn, Quảng Ninh",
+   "lat": 21.07,
+   "lon": 107.42,
+   "summary": "Thương cảng cổ giữa đảo và vịnh. Nơi Trần Khánh Dư phá đoàn thuyền lương của quân Nguyên."
+  },
+  {
+   "id": "p_bai_coc",
+   "name": "Bãi cọc Yên Giang",
+   "names": [
+    {
+     "period": "Thời Trần",
+     "name": "Sông Bạch Đằng"
+    }
+   ],
+   "modern_name": "Bãi cọc Yên Giang, vùng Quảng Yên, Quảng Ninh",
+   "lat": 20.93,
+   "lon": 106.8,
+   "summary": "Bãi cọc gỗ còn lại đến ngày nay của trận Bạch Đằng năm 1288, được khảo cổ học phát hiện và nghiên cứu."
+  }
+ ],
+ "relics": [
+  {
+   "id": "r_duong_lam",
+   "title": "Đất hai vua Đường Lâm",
+   "place": "p_duong_lam",
+   "stamp": "ĐƯỜNG LÂM",
+   "scene": "lang_co",
+   "keeper": "ba_cu",
+   "keeper_name": "Bà cụ bán nước",
+   "artifact": "a_so_lang",
+   "summary": "Đầu mối đầu tiên của cuốn sử rách: người con đất Đường Lâm sau này làm thay đổi lịch sử nước ta.",
+   "central_question": "Ngô Quyền là ai trước khi trở thành người chiến thắng trên sông Bạch Đằng?",
+   "keeper_line": "Ngồi xuống đây cháu, uống bát nước chè đã. Bà kể cho nghe chuyện đất này.",
+   "keeper_done": "Cháu đi tiếp về phía biển đi. Hỏi ông lái đò ở cửa sông, ông ấy biết chuyện cọc.",
+   "steps": [
+    {
+     "story": "d_dl_1"
+    },
+    {
+     "question": "q_dl_1"
+    },
+    {
+     "fragment": "f_ngo_quyen"
+    },
+    {
+     "question": "q_dl_2"
+    }
+   ],
+   "extra_prompt": "Cháu quay lại à? Nước chè vẫn còn nóng đây.",
+   "extra_talk": [
+    {
+     "id": "t_dl_coc",
+     "label": "Bà ơi, cháu vừa thấy tờ chép về cọc Bạch Đằng. Ngô Quyền học cách đó ở đâu?",
+     "needs": "f_coc_938",
+     "locked_hint": "Cần mảnh ghép về cọc Bạch Đằng",
+     "lines": [
+      {
+       "speaker": "Bà cụ bán nước",
+       "portrait": "ba_cu",
+       "fiction": true,
+       "text": "Sử không chép ông học từ ai. Nhưng người làng bà vẫn bảo: dân sông nước biết con nước lên xuống từ thuở lọt lòng. Mưu lớn thường bắt đầu từ những điều người dân đã biết."
+      },
+      {
+       "speaker": "Bà cụ bán nước",
+       "portrait": "ba_cu",
+       "fiction": true,
+       "text": "Đó là lời truyền miệng của người già thôi cháu, đừng chép vào sử làm gì. Chép thì nhớ ghi rõ là lời truyền miệng."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "r_trang_kenh",
+   "title": "Cửa sông Bạch Đằng năm 938",
+   "place": "p_trang_kenh",
+   "stamp": "BẠCH ĐẰNG 938",
+   "scene": "bach_dang",
+   "requires": [
+    "r_duong_lam"
+   ],
+   "keeper": "lai_do",
+   "keeper_name": "Ông lái đò",
+   "artifact": "a_coc_lim",
+   "summary": "Nghìn năm Bắc thuộc khép lại ở khúc sông này. Hãy tự tay cắm cọc và chọn con nước phản công.",
+   "central_question": "Vì sao một đội quân mới họp có thể đánh tan thuỷ quân Nam Hán?",
+   "keeper_line": "Lên đò đi cháu. Nước đang xuống, ta chèo chậm thôi, kẻo vướng phải chuyện cũ.",
+   "keeper_done": "Con nước vẫn lên xuống như nghìn năm trước. Chỉ người đọc được nước mới thắng được trên sông.",
+   "steps": [
+    {
+     "story": "d_bd_1"
+    },
+    {
+     "question": "q_bd_1"
+    },
+    {
+     "story": "d_bd_2"
+    },
+    {
+     "fragment": "f_coc_938"
+    },
+    {
+     "battle": "b_bach_dang_938"
+    },
+    {
+     "question": "q_bd_2"
+    },
+    {
+     "story": "d_bd_3"
+    },
+    {
+     "fragment": "f_bach_dang_938"
+    },
+    {
+     "question": "q_bd_3"
+    }
+   ],
+   "extra_prompt": "Lại muốn nghe chuyện sông nước à?",
+   "extra_talk": [
+    {
+     "id": "t_bd_ke_lai",
+     "label": "Ông kể lại trận Bạch Đằng năm 938 cho cháu nghe đi",
+     "replay": "d_bd_3"
+    },
+    {
+     "id": "t_bd_vitri",
+     "label": "Bãi cọc năm 938 nằm chính xác ở đâu hả ông?",
+     "lines": [
+      {
+       "speaker": "Ông lái đò",
+       "portrait": "lai_do",
+       "fiction": true,
+       "text": "Câu đó thì đến các nhà nghiên cứu còn đang tìm cháu ạ. Sử cũ chỉ chép là sông Bạch Đằng. Dòng sông sau hơn nghìn năm đã đổi khác nhiều."
+      },
+      {
+       "speaker": "Ghi chú sử học",
+       "portrait": "tu_lieu",
+       "text": "Bãi cọc còn thấy được ở Quảng Yên hiện nay thuộc trận năm 1288. Vị trí trận năm 938 vẫn đang được nghiên cứu, nên bản đồ trong game chỉ mang tính minh hoạ.",
+       "cite": [
+        "c_ls_ngo"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "r_co_loa",
+   "title": "Kinh đô mới ở Cổ Loa",
+   "place": "p_co_loa",
+   "stamp": "CỔ LOA",
+   "scene": "thanh_co",
+   "requires": [
+    "r_trang_kenh"
+   ],
+   "keeper": "cu_tu",
+   "keeper_name": "Cụ từ đền Cổ Loa",
+   "artifact": "a_an_ngo",
+   "summary": "Thắng trận rồi còn phải dựng nước. Vì sao Ngô Quyền không đóng đô ở Đại La mà trở về thành xưa?",
+   "central_question": "Việc đóng đô ở Cổ Loa nói lên điều gì?",
+   "keeper_line": "Thành cổ này đã có từ đời An Dương Vương. Mời cháu vào, ta mở sổ đền cho xem.",
+   "keeper_done": "Dòng thời gian của cháu đã có những mốc đầu tiên rồi đấy. Đi tiếp đến sông Như Nguyệt đi.",
+   "steps": [
+    {
+     "story": "d_cl_1"
+    },
+    {
+     "question": "q_cl_1"
+    },
+    {
+     "story": "d_cl_2"
+    },
+    {
+     "fragment": "f_co_loa"
+    },
+    {
+     "question": "q_cl_2"
+    }
+   ]
+  },
+  {
+   "id": "r_nhu_nguyet",
+   "title": "Phòng tuyến Như Nguyệt",
+   "place": "p_nhu_nguyet",
+   "stamp": "NHƯ NGUYỆT",
+   "scene": "nhu_nguyet",
+   "requires": [
+    "r_co_loa"
+   ],
+   "keeper": "cu_tu",
+   "keeper_name": "Cụ từ đền Xà",
+   "artifact": "a_nam_quoc",
+   "summary": "Tiến công để tự vệ, chặn giặc trên sông, rồi chủ động giảng hoà: một cuộc chiến được tính toán từ đầu đến cuối.",
+   "central_question": "Vì sao đã thắng thế mà Lý Thường Kiệt lại đề nghị giảng hoà?",
+   "keeper_line": "Đêm yên, nghe rõ tiếng nước sông Cầu. Ngày xưa ở đây có người ngâm thơ trong đền đấy cháu.",
+   "keeper_done": "Có người bảo thơ ấy của Lý Thường Kiệt, có người bảo chưa chắc. Cháu nhớ ghi cả hai.",
+   "steps": [
+    {
+     "story": "d_nn_1"
+    },
+    {
+     "question": "q_nn_1"
+    },
+    {
+     "story": "d_nn_2"
+    },
+    {
+     "fragment": "f_nam_quoc"
+    },
+    {
+     "question": "q_nn_2"
+    },
+    {
+     "story": "d_nn_3"
+    },
+    {
+     "fragment": "f_giang_hoa"
+    },
+    {
+     "question": "q_nn_3"
+    }
+   ]
+  },
+  {
+   "id": "r_den_tran",
+   "title": "Đền Trần và lời thề giữ nước",
+   "place": "p_den_tran",
+   "stamp": "ĐỀN TRẦN",
+   "scene": "den_tran",
+   "requires": [
+    "r_nhu_nguyet"
+   ],
+   "keeper": "cu_tu",
+   "keeper_name": "Cụ từ đền Trần",
+   "artifact": "a_qua_cam",
+   "summary": "Ba lần quân Mông – Nguyên kéo sang, ba lần vua tôi nhà Trần hỏi kế và đồng lòng. Một quả cam đã bị bóp nát ở Bình Than.",
+   "central_question": "Nhà Trần đã làm gì để cả nước cùng đánh?",
+   "keeper_line": "Nơi này thờ các vua Trần. Cháu đốt nén hương rồi ngồi đây, ta kể từ năm Mậu Ngọ.",
+   "keeper_done": "“Đánh” chỉ một chữ thôi, nhưng cả một nước đã nói cùng lúc. Lên Kiếp Bạc đi, Hưng Đạo Vương đợi cháu ở đó.",
+   "steps": [
+    {
+     "story": "d_dt_1"
+    },
+    {
+     "fragment": "f_1258"
+    },
+    {
+     "question": "q_dt_1"
+    },
+    {
+     "story": "d_dt_2"
+    },
+    {
+     "fragment": "f_binh_than"
+    },
+    {
+     "question": "q_dt_2"
+    },
+    {
+     "story": "d_dt_3"
+    },
+    {
+     "question": "q_dt_3"
+    }
+   ]
+  },
+  {
+   "id": "r_kiep_bac",
+   "title": "Kiếp Bạc và bài hịch thức tỉnh",
+   "place": "p_kiep_bac",
+   "stamp": "KIẾP BẠC",
+   "scene": "thanh_co",
+   "requires": [
+    "r_den_tran"
+   ],
+   "keeper": "cu_do",
+   "keeper_name": "Cụ Đồ Sử",
+   "artifact": "a_hich",
+   "summary": "Từ căn cứ này Trần Quốc Tuấn chỉ huy kháng chiến. Những câu nói giữa khói lửa năm 1285 còn vang đến nay.",
+   "central_question": "Hịch tướng sĩ có sức mạnh gì khiến người ta còn đọc đến ngày nay?",
+   "keeper_line": "Cuộn hịch này ta chép lại từ thuở còn trẻ, đọc đến đâu nóng ruột đến đấy.",
+   "keeper_done": "Sắp đến khúc cuối của màn này rồi. Xuống Vân Đồn nếu muốn, còn không thì đến thẳng Yên Giang.",
+   "steps": [
+    {
+     "story": "d_kb_1"
+    },
+    {
+     "fragment": "f_hich"
+    },
+    {
+     "question": "q_kb_1"
+    },
+    {
+     "story": "d_kb_2"
+    },
+    {
+     "fragment": "f_1285"
+    },
+    {
+     "question": "q_kb_2"
+    },
+    {
+     "question": "q_kb_3"
+    }
+   ]
+  },
+  {
+   "id": "r_van_don",
+   "title": "Đoàn thuyền lương Vân Đồn",
+   "place": "p_van_don",
+   "stamp": "VÂN ĐỒN",
+   "scene": "van_don",
+   "requires": [
+    "r_kiep_bac"
+   ],
+   "optional": true,
+   "keeper": "lai_do",
+   "keeper_name": "Ông lái đò đảo",
+   "artifact": "a_thuyen_luong",
+   "summary": "Di tích phụ: một trận đánh vào lương thực đã làm đổi cục diện kháng chiến lần ba.",
+   "central_question": "Vì sao phá thuyền lương lại quan trọng với cả cuộc chiến?",
+   "keeper_line": "Đảo này nhỏ, nhưng bữa cơm của mấy vạn quân Nguyên đã mất ở đây đấy.",
+   "keeper_done": "Hết lương thì quân phải rút. Rút là phải đi qua sông Bạch Đằng. Cháu hiểu chưa?",
+   "steps": [
+    {
+     "story": "d_vd_1"
+    },
+    {
+     "fragment": "f_van_don"
+    },
+    {
+     "question": "q_vd_1"
+    }
+   ]
+  },
+  {
+   "id": "r_bai_coc",
+   "title": "Bãi cọc Yên Giang năm 1288",
+   "place": "p_bai_coc",
+   "stamp": "BẠCH ĐẰNG 1288",
+   "scene": "bach_dang",
+   "requires": [
+    "r_kiep_bac"
+   ],
+   "keeper": "lai_do",
+   "keeper_name": "Ông lái đò",
+   "artifact": "a_co_1288",
+   "summary": "Hơn ba trăm năm sau Ngô Quyền, cũng dòng sông này, cũng là cọc và thuỷ triều. Lần này những chiếc cọc vẫn còn đến hôm nay.",
+   "central_question": "Trận Bạch Đằng 1288 kế thừa và phát triển trận 938 như thế nào?",
+   "keeper_line": "Ta lại gặp nhau rồi. Cháu cúi xuống mà xem, những chiếc cọc này là thật đấy.",
+   "keeper_done": "Khi đã đủ mảnh ghép, cháu hãy mở Dòng thời gian trên bản đồ mà ghép lại hơn ba trăm năm này.",
+   "steps": [
+    {
+     "story": "d_bc_1"
+    },
+    {
+     "question": "q_bc_1"
+    },
+    {
+     "battle": "b_bach_dang_1288"
+    },
+    {
+     "story": "d_bc_2"
+    },
+    {
+     "fragment": "f_1288"
+    },
+    {
+     "question": "q_bc_2"
+    },
+    {
+     "question": "q_bc_3"
+    }
+   ],
+   "extra_talk": [
+    {
+     "id": "t_bc_ke_lai",
+     "label": "Ông kể lại trận Bạch Đằng năm 1288 cho cháu nghe đi",
+     "replay": "d_bc_2"
+    }
+   ],
+   "extra_prompt": "Lại muốn nghe chuyện năm Mậu Tý à?"
+  }
+ ],
+ "persons": [
+  {
+   "id": "ngo_quyen",
+   "name": "Ngô Quyền",
+   "years": "898 – 944",
+   "portrait": "vua",
+   "bio": "Người đất Đường Lâm, con châu mục Ngô Mân. Năm 938 đánh tan quân Nam Hán trên sông Bạch Đằng, năm 939 xưng vương và đóng đô ở Cổ Loa, mở ra thời kỳ độc lập lâu dài."
+  },
+  {
+   "id": "duong_dinh_nghe",
+   "name": "Dương Đình Nghệ",
+   "years": "? – 937",
+   "portrait": "tuong",
+   "bio": "Hào trưởng đất Ái Châu. Năm 931 đem quân đuổi thứ sử Nam Hán, nắm quyền tiết độ sứ, sau bị Kiều Công Tiễn sát hại. Ngô Quyền là con rể của ông."
+  },
+  {
+   "id": "kieu_cong_tien",
+   "name": "Kiều Công Tiễn",
+   "years": "? – 938",
+   "portrait": "giac",
+   "bio": "Nha tướng của Dương Đình Nghệ. Năm 937 giết chủ để đoạt quyền; khi Ngô Quyền ra hỏi tội thì cầu cứu Nam Hán, bị Ngô Quyền giết năm 938."
+  },
+  {
+   "id": "luu_hoang_thao",
+   "name": "Lưu Hoằng Tháo",
+   "years": "? – 938",
+   "portrait": "giac_tong",
+   "bio": "Con vua Nam Hán, chỉ huy đoàn thuyền chiến vào nước ta năm 938 và tử trận trên sông Bạch Đằng."
+  },
+  {
+   "id": "ly_thuong_kiet",
+   "name": "Lý Thường Kiệt",
+   "years": "1019 – 1105",
+   "portrait": "tuong",
+   "bio": "Danh tướng thời Lý. Năm 1075 đem quân đánh các châu Ung, Khâm, Liêm để phá thế chuẩn bị xâm lược của Tống; năm 1076–1077 giữ phòng tuyến Như Nguyệt rồi chủ động giảng hoà."
+  },
+  {
+   "id": "tran_thu_do",
+   "name": "Trần Thủ Độ",
+   "years": "1194 – 1264",
+   "portrait": "quan_van",
+   "bio": "Thái sư đầu triều Trần, người nổi tiếng với lời khẳng định vững vàng trước quân Mông Cổ năm 1258."
+  },
+  {
+   "id": "tran_quoc_tuan",
+   "name": "Trần Quốc Tuấn (Hưng Đạo Đại Vương)",
+   "years": "? – 1300",
+   "portrait": "tuong",
+   "bio": "Tổng chỉ huy quân đội trong hai cuộc kháng chiến chống Nguyên năm 1285 và 1287–1288, tác giả Hịch tướng sĩ và Binh thư yếu lược."
+  },
+  {
+   "id": "tran_quoc_toan",
+   "name": "Trần Quốc Toản",
+   "years": "1267 – 1285",
+   "portrait": "nghia_si",
+   "bio": "Thiếu niên thuộc dòng tôn thất. Hội nghị Bình Than năm 1282 không cho dự vì nhỏ tuổi, sử chép Quốc Toản bóp nát quả cam vua ban, rồi lập đội quân riêng với cờ sáu chữ."
+  },
+  {
+   "id": "tran_binh_trong",
+   "name": "Trần Bình Trọng",
+   "years": "1259 – 1285",
+   "portrait": "tuong",
+   "bio": "Tướng nhà Trần, năm 1285 bị bắt ở Thiên Mạc khi đang chặn giặc cho vua rút lui, không chịu đầu hàng và bị giết."
+  },
+  {
+   "id": "tran_quang_khai",
+   "name": "Trần Quang Khải",
+   "years": "1241 – 1294",
+   "portrait": "quan_van",
+   "bio": "Thượng tướng thái sư, chỉ huy trận Chương Dương năm 1285 và là tác giả bài thơ mừng thắng trận khi đưa vua về kinh."
+  },
+  {
+   "id": "tran_khanh_du",
+   "name": "Trần Khánh Dư",
+   "years": "? – 1339",
+   "portrait": "tuong",
+   "bio": "Phó tướng trấn giữ Vân Đồn trong kháng chiến lần ba. Sau khi để thuyền chiến giặc vượt qua, ông chặn đánh và phá đoàn thuyền lương phía sau."
+  },
+  {
+   "id": "o_ma_nhi",
+   "name": "Ô Mã Nhi",
+   "years": "? – 1288",
+   "portrait": "giac",
+   "bio": "Tướng thuỷ quân Nguyên, bị bắt sống trong trận Bạch Đằng năm 1288."
+  }
+ ],
+ "events": [
+  {
+   "id": "e_931",
+   "title": "Dương Đình Nghệ đuổi quân Nam Hán",
+   "date": {
+    "start": "0931-01-01",
+    "precision": "year",
+    "label": "931"
+   },
+   "place": "p_trang_kenh",
+   "summary": "Dương Đình Nghệ từ Ái Châu đem quân ra đánh đuổi thứ sử Nam Hán, nắm quyền tự chủ.",
+   "significance": "Tiếp nối công cuộc tự chủ, tạo nền cho thắng lợi về sau.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_ngo_quyen"
+   ],
+   "citations": [
+    "c_tt_ngo"
+   ]
+  },
+  {
+   "id": "e_937",
+   "title": "Kiều Công Tiễn giết Dương Đình Nghệ",
+   "date": {
+    "start": "0937-01-01",
+    "precision": "year",
+    "label": "937"
+   },
+   "place": "p_trang_kenh",
+   "summary": "Nha tướng Kiều Công Tiễn giết chủ đoạt quyền, gây nên biến loạn.",
+   "significance": "Là nguyên cớ khiến Nam Hán có cơ hội can thiệp.",
+   "in_timeline": true,
+   "citations": [
+    "c_tt_ngo"
+   ]
+  },
+  {
+   "id": "e_938",
+   "title": "Chiến thắng Bạch Đằng của Ngô Quyền",
+   "date": {
+    "start": "0938-01-01",
+    "precision": "year",
+    "label": "938"
+   },
+   "place": "p_trang_kenh",
+   "summary": "Ngô Quyền dùng cọc nhọn và thuỷ triều đánh tan thuỷ quân Nam Hán, Lưu Hoằng Tháo tử trận.",
+   "significance": "Chấm dứt thời kỳ Bắc thuộc kéo dài hơn một nghìn năm.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_coc_938",
+    "f_bach_dang_938"
+   ],
+   "citations": [
+    "c_tt_ngo",
+    "c_ls_ngo"
+   ],
+   "historian_note": "Vị trí chính xác của bãi cọc năm 938 vẫn đang được các nhà nghiên cứu tìm hiểu."
+  },
+  {
+   "id": "e_939",
+   "title": "Ngô Quyền xưng vương, đóng đô ở Cổ Loa",
+   "date": {
+    "start": "0939-01-01",
+    "precision": "year",
+    "label": "939"
+   },
+   "place": "p_co_loa",
+   "summary": "Ngô Quyền xưng vương, chọn Cổ Loa làm kinh đô, đặt trăm quan.",
+   "significance": "Khẳng định nền độc lập và ý thức kế thừa từ thời Âu Lạc.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_co_loa"
+   ],
+   "citations": [
+    "c_tt_ngo"
+   ]
+  },
+  {
+   "id": "e_1075",
+   "title": "Lý Thường Kiệt đánh các châu Ung, Khâm, Liêm",
+   "date": {
+    "start": "1075-01-01",
+    "precision": "year",
+    "label": "1075"
+   },
+   "place": "p_nhu_nguyet",
+   "summary": "Biết Tống chuẩn bị xâm lược, Lý Thường Kiệt đem quân thuỷ bộ đánh trước vào các căn cứ hậu cần của địch.",
+   "significance": "Tiến công để tự vệ, làm chậm kế hoạch xâm lược của Tống.",
+   "in_timeline": true,
+   "citations": [
+    "c_tt_ly",
+    "c_cm_ly"
+   ]
+  },
+  {
+   "id": "e_1077",
+   "title": "Trận tuyến sông Như Nguyệt và giảng hoà",
+   "date": {
+    "start": "1076-01-01",
+    "end": "1077-12-31",
+    "precision": "year_range",
+    "label": "1076–1077"
+   },
+   "place": "p_nhu_nguyet",
+   "summary": "Quân Tống do Quách Quỳ, Triệu Tiết chỉ huy bị chặn ở sông Như Nguyệt, hao tổn nặng. Lý Thường Kiệt chủ động đề nghị giảng hoà.",
+   "significance": "Bảo vệ độc lập và giữ được hoà bình lâu dài với phương Bắc.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_nam_quoc",
+    "f_giang_hoa"
+   ],
+   "citations": [
+    "c_tt_ly",
+    "c_ls_lytran"
+   ]
+  },
+  {
+   "id": "e_1258",
+   "title": "Kháng chiến chống Mông Cổ lần thứ nhất",
+   "date": {
+    "start": "1258-01-01",
+    "precision": "year",
+    "label": "1258"
+   },
+   "place": "p_den_tran",
+   "summary": "Quân Mông Cổ tiến vào Thăng Long. Vua Trần Thái Tông và Trần Thủ Độ tổ chức phản công ở Đông Bộ Đầu.",
+   "significance": "Trận mở đầu cho kinh nghiệm “vườn không nhà trống” rồi phản công.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_1258"
+   ],
+   "citations": [
+    "c_tt_tran_tt"
+   ]
+  },
+  {
+   "id": "e_1282",
+   "title": "Hội nghị Bình Than",
+   "date": {
+    "start": "1282-01-01",
+    "precision": "year",
+    "label": "1282"
+   },
+   "place": "p_den_tran",
+   "summary": "Vua Trần họp vương hầu, tướng lĩnh ở Bình Than bàn kế chống giặc. Trần Quốc Toản không được dự vì nhỏ tuổi.",
+   "significance": "Thống nhất ý chí trong hàng ngũ chỉ huy trước chiến tranh.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_binh_than"
+   ],
+   "citations": [
+    "c_tt_tran_nt"
+   ]
+  },
+  {
+   "id": "e_1285",
+   "title": "Chiến thắng Chương Dương, Hàm Tử, Tây Kết",
+   "date": {
+    "start": "1285-01-01",
+    "precision": "year",
+    "label": "1285"
+   },
+   "place": "p_kiep_bac",
+   "summary": "Sau giai đoạn rút lui chiến lược, quân Trần phản công mạnh, đánh tan quân Nguyên ở nhiều trận lớn và giải phóng Thăng Long.",
+   "significance": "Đánh bại cuộc xâm lược lần thứ hai của Nguyên.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_hich",
+    "f_1285"
+   ],
+   "citations": [
+    "c_tt_tran_nt",
+    "c_annam"
+   ]
+  },
+  {
+   "id": "e_1287",
+   "title": "Trần Khánh Dư phá thuyền lương ở Vân Đồn",
+   "date": {
+    "start": "1287-12-01",
+    "end": "1288-01-31",
+    "precision": "month",
+    "label": "1287–88"
+   },
+   "place": "p_van_don",
+   "summary": "Đoàn thuyền lương của Trương Văn Hổ bị đánh phá, quân Nguyên lâm vào cảnh thiếu lương.",
+   "significance": "Đẩy quân Nguyên vào thế phải rút lui, mở đường cho trận Bạch Đằng.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_van_don"
+   ],
+   "citations": [
+    "c_tt_tran_nt"
+   ],
+   "historian_note": "Sử cũ chép theo âm lịch (tháng 12 năm Đinh Hợi), khi quy đổi đã sang đầu năm 1288 dương lịch, nên game ghi 1287–88."
+  },
+  {
+   "id": "e_1288",
+   "title": "Chiến thắng Bạch Đằng của nhà Trần",
+   "date": {
+    "start": "1288-04-09",
+    "precision": "day",
+    "label": "9/4/1288"
+   },
+   "place": "p_bai_coc",
+   "summary": "Trần Quốc Tuấn dùng bãi cọc và thuỷ triều phá tan đoàn thuyền rút lui của quân Nguyên, bắt sống Ô Mã Nhi.",
+   "significance": "Kết thúc thắng lợi cuộc kháng chiến lần thứ ba chống Nguyên.",
+   "in_timeline": true,
+   "fragment_ids": [
+    "f_1288"
+   ],
+   "citations": [
+    "c_tt_tran_nt",
+    "c_ls_lytran"
+   ],
+   "historian_note": "Sử chép ngày 8 tháng 3 năm Mậu Tý; ngày 9/4/1288 là cách quy đổi phổ biến, các bảng lịch có thể chênh nhau đôi chút."
+  }
+ ],
+ "causal_links": [
+  {
+   "from_event_id": "e_937",
+   "to_event_id": "e_938",
+   "kind": "cause_of",
+   "note": "Kiều Công Tiễn cầu cứu Nam Hán nên quân Nam Hán kéo sang."
+  },
+  {
+   "from_event_id": "e_931",
+   "to_event_id": "e_937",
+   "kind": "context_of",
+   "note": "Quyền lực do Dương Đình Nghệ xây dựng trở thành mục tiêu tranh đoạt."
+  },
+  {
+   "from_event_id": "e_938",
+   "to_event_id": "e_939",
+   "kind": "leads_to",
+   "note": "Thắng trận tạo điều kiện để Ngô Quyền xưng vương."
+  },
+  {
+   "from_event_id": "e_1075",
+   "to_event_id": "e_1077",
+   "kind": "context_of",
+   "note": "Tống bị đánh phá hậu cần trước khi tiến quân."
+  },
+  {
+   "from_event_id": "e_1282",
+   "to_event_id": "e_1285",
+   "kind": "context_of",
+   "note": "Các hội nghị quân sự chuẩn bị cho kháng chiến."
+  },
+  {
+   "from_event_id": "e_1287",
+   "to_event_id": "e_1288",
+   "kind": "cause_of",
+   "note": "Mất lương buộc quân Nguyên rút lui qua sông Bạch Đằng."
+  }
+ ],
+ "fragments": [
+  {
+   "id": "f_ngo_quyen",
+   "event_id": "e_931",
+   "title": "Con châu mục, con rể Ái Châu",
+   "kind_label": "Lý lịch nhân vật",
+   "icon": "sach",
+   "body": "Ngô Quyền sinh năm 898 ở Đường Lâm, con của châu mục Ngô Mân. Ông làm nha tướng và được Dương Đình Nghệ, người năm 931 đã đuổi quân Nam Hán, gả con gái rồi giao trấn giữ Ái Châu.",
+   "citations": [
+    "c_tt_ngo"
+   ]
+  },
+  {
+   "id": "f_coc_938",
+   "event_id": "e_938",
+   "title": "Những chiếc cọc đầu bịt sắt",
+   "kind_label": "Kế sách",
+   "icon": "coc",
+   "body": "Biết thuyền Nam Hán sẽ vào sông, Ngô Quyền cho đóng cọc lớn đầu nhọn bịt sắt xuống lòng sông. Triều lên nước che kín cọc; triều xuống, cọc nhô lên đâm thủng thuyền lớn.",
+   "citations": [
+    "c_tt_ngo"
+   ]
+  },
+  {
+   "id": "f_bach_dang_938",
+   "event_id": "e_938",
+   "title": "Mùa đông năm 938",
+   "kind_label": "Diễn biến",
+   "icon": "thuyen",
+   "body": "Thuyền nhẹ của ta ra khiêu chiến rồi giả thua, nhử địch vào sâu. Đợi nước rút, quân ta đánh quật lại. Thuyền địch vỡ trên bãi cọc, quân chết quá nửa, Lưu Hoằng Tháo bị giết. Vua Nam Hán đành thu quân về.",
+   "citations": [
+    "c_tt_ngo",
+    "c_cm_ngo"
+   ]
+  },
+  {
+   "id": "f_co_loa",
+   "event_id": "e_939",
+   "title": "Sử thần bàn về Tiền Ngô Vương",
+   "kind_label": "Lời bình trong sử",
+   "icon": "an",
+   "body": "Năm 939 Ngô Quyền xưng vương, đóng đô ở Cổ Loa. Sử thần Lê Văn Hưu nhận xét, đại ý: Ngô Quyền dùng quân mới họp mà phá được đại quân của Lưu Hoằng Tháo, mở nước xưng vương, khiến phương Bắc không dám sang nữa.",
+   "citations": [
+    "c_tt_ngo"
+   ]
+  },
+  {
+   "id": "f_nam_quoc",
+   "event_id": "e_1077",
+   "title": "Bài thơ trong đền",
+   "kind_label": "Văn bản",
+   "icon": "sach",
+   "body": "Tương truyền trong cuộc kháng Tống, giữa đêm có tiếng ngâm thơ từ đền thờ bên sông, khiến quân ta thêm phấn chấn, quân địch sợ hãi. Bài thơ khẳng định nước Nam có chủ, kẻ xâm phạm tất chuốc lấy thất bại.",
+   "quote": "Nam quốc sơn hà Nam đế cư / Tiệt nhiên định phận tại thiên thư / Như hà nghịch lỗ lai xâm phạm / Nhữ đẳng hành khan thủ bại hư.",
+   "citations": [
+    "c_tt_ly",
+    "c_ls_lytran"
+   ]
+  },
+  {
+   "id": "f_giang_hoa",
+   "event_id": "e_1077",
+   "title": "Đánh đến thế thì thôi",
+   "kind_label": "Quyết định",
+   "icon": "an",
+   "body": "Khi quân Tống đã kiệt sức, Lý Thường Kiệt không đánh đến cùng mà chủ động đề nghị giảng hoà. Cách kết thúc này giữ được thể diện cho đối phương, tránh một cuộc chiến mới và đem lại hoà bình lâu dài.",
+   "citations": [
+    "c_tt_ly"
+   ]
+  },
+  {
+   "id": "f_1258",
+   "event_id": "e_1258",
+   "title": "Lời của Thái sư",
+   "kind_label": "Lời nói trong sử",
+   "icon": "sach",
+   "body": "Năm 1258, quân Mông Cổ tràn vào, vua Trần Thái Tông đi thuyền đến hỏi Thái sư Trần Thủ Độ có nên lo không. Ông đáp một câu khiến vua yên lòng. Ít lâu sau quân Trần phản công ở Đông Bộ Đầu và thắng.",
+   "quote": "Đầu thần chưa rơi xuống đất, xin bệ hạ đừng lo.",
+   "citations": [
+    "c_tt_tran_tt"
+   ]
+  },
+  {
+   "id": "f_binh_than",
+   "event_id": "e_1282",
+   "title": "Quả cam ở Bình Than",
+   "kind_label": "Chuyện trong sử",
+   "icon": "qua_cam",
+   "body": "Năm 1282 vua họp bàn việc nước ở Bình Than. Trần Quốc Toản còn nhỏ không được dự, được ban một quả cam. Uất ức vì không được bàn việc nước, cậu bóp nát quả cam lúc nào không biết, rồi về chiêu mộ quân, dựng cờ sáu chữ.",
+   "quote": "Phá cường địch, báo hoàng ân.",
+   "citations": [
+    "c_tt_tran_nt"
+   ]
+  },
+  {
+   "id": "f_hich",
+   "event_id": "e_1285",
+   "title": "Hịch tướng sĩ",
+   "kind_label": "Văn bản",
+   "icon": "hich",
+   "body": "Bài hịch của Trần Quốc Tuấn nêu gương trung nghĩa xưa, tố cáo sự ngang ngược của sứ giặc, phê phán thói ham chơi của tướng sĩ và kêu gọi học binh thư, luyện quân. Năm soạn thường được ghi là khoảng 1284, có ý kiến khác nhau.",
+   "quote": "Ta thường tới bữa quên ăn, nửa đêm vỗ gối.",
+   "citations": [
+    "c_ls_lytran"
+   ]
+  },
+  {
+   "id": "f_1285",
+   "event_id": "e_1285",
+   "title": "Khói lửa năm Ất Dậu",
+   "kind_label": "Diễn biến",
+   "icon": "guom",
+   "body": "Năm 1285, sau khi tránh thế giặc mạnh, quân Trần phản công ở Tây Kết, Hàm Tử, Chương Dương rồi vào lại Thăng Long. Toa Đô tử trận, Thoát Hoan phải chạy về nước. Trần Bình Trọng trước đó đã không chịu khuất phục khi bị bắt.",
+   "quote": "Ta thà làm ma nước Nam chứ không thèm làm vương đất Bắc.",
+   "citations": [
+    "c_tt_tran_nt"
+   ]
+  },
+  {
+   "id": "f_van_don",
+   "event_id": "e_1287",
+   "title": "Mất lương là mất quân",
+   "kind_label": "Diễn biến",
+   "icon": "thuyen",
+   "body": "Thuyền chiến Nguyên vượt qua trước, đoàn thuyền lương của Trương Văn Hổ theo sau. Trần Khánh Dư chặn đánh, nhiều thuyền lương bị đánh chìm hoặc bị thu. Quân Nguyên ở Vạn Kiếp và Thăng Long lâm vào cảnh đói.",
+   "citations": [
+    "c_tt_tran_nt"
+   ]
+  },
+  {
+   "id": "f_1288",
+   "event_id": "e_1288",
+   "title": "Những chiếc cọc còn lại",
+   "kind_label": "Hiện vật khảo cổ",
+   "icon": "coc",
+   "body": "Bãi cọc ở Yên Giang và nhiều nơi quanh sông Chanh, sông Bạch Đằng được phát hiện vào thời hiện đại. Khảo cổ cho thấy cọc được đóng thành từng hàng ở nơi lòng sông hiểm, gắn trực tiếp với trận năm 1288.",
+   "citations": [
+    "c_ls_lytran"
+   ]
+  }
+ ],
+ "dialogues": [
+  {
+   "id": "d_dl_1",
+   "bg": "lang_co",
+   "unlocks": [
+    "ngo_quyen",
+    "e_931",
+    "duong_dinh_nghe"
+   ],
+   "nodes": [
+    {
+     "speaker": "Bà cụ bán nước",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "text": "Đất này người ta gọi là đất hai vua đấy cháu ạ: một là Phùng Hưng, hai là Ngô Quyền. Tường đá ong, cổng làng này còn cũ hơn cả bà nội của bà nội bà."
+    },
+    {
+     "speaker": "Bà cụ bán nước",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "cite": [
+      "c_tt_ngo"
+     ],
+     "text": "Ngô Quyền sinh năm 898, con của ông Ngô Mân làm châu mục ở đây. Sử chép lúc ông ra đời có ánh sáng lạ đầy nhà, lưng có ba nốt ruồi, thầy tướng bảo sẽ làm chủ một phương."
+    },
+    {
+     "speaker": "Bà cụ bán nước",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "bg": "lam_son",
+     "memory": true,
+     "text": "Lớn lên ông khỏe mạnh, đi đứng khác người, sau về dưới trướng Dương Đình Nghệ ở Ái Châu. Ông Nghệ quý tài, gả con gái cho và giao giữ đất ấy.",
+     "stage": "ai_chau:join"
+    },
+    {
+     "speaker": "Bà cụ bán nước",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "memory": true,
+     "bg": "bach_dang",
+     "fx": [
+      "smoke"
+     ],
+     "cite": [
+      "c_tt_ngo"
+     ],
+     "text": "Năm 931 ông Nghệ đem quân đuổi thứ sử Nam Hán. Nước ta tự chủ được mấy năm. Nhưng cái ghế quyền lực ấy, đâu phải ai cũng ngồi yên được...",
+     "stage": "ai_chau:drive_931"
+    },
+    {
+     "speaker": "Bà cụ bán nước",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "text": "Thôi, uống đi rồi trả lời bà một câu. Trả lời đúng, bà cho xem tờ giấy cụ Đồ đánh rơi ở đây."
+    }
+   ]
+  },
+  {
+   "id": "d_bd_1",
+   "bg": "bach_dang",
+   "unlocks": [
+    "kieu_cong_tien",
+    "luu_hoang_thao",
+    "e_937",
+    "p_trang_kenh"
+   ],
+   "nodes": [
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "text": "Nghe tiếng mái chèo chưa? Năm xưa đoàn thuyền chiến Nam Hán cũng vào qua cửa này. Chúng đến được đây là vì một kẻ phản chủ."
+    },
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "memory": true,
+     "bg": "thanh_co",
+     "fx": [
+      "fire",
+      "clash"
+     ],
+     "shake": 5,
+     "cite": [
+      "c_tt_ngo"
+     ],
+     "text": "Năm 937, Kiều Công Tiễn giết Dương Đình Nghệ để đoạt quyền. Máu của chủ tướng còn chưa khô thì hào kiệt các nơi đã căm phẫn. Ngô Quyền từ Ái Châu kéo quân ra hỏi tội.",
+     "stage": "ai_chau:betray"
+    },
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "memory": true,
+     "bg": "thanh_co",
+     "fx": [
+      "smoke"
+     ],
+     "cite": [
+      "c_tt_ngo"
+     ],
+     "text": "Sợ quá, Công Tiễn sai người sang cầu cứu Nam Hán. Vua Nam Hán mừng như bắt được vàng: có cớ để đánh chiếm lại. Ông sai con là Lưu Hoằng Tháo đem thuyền chiến sang.",
+     "stage": "bien:nam_han"
+    },
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "cite": [
+      "c_tt_ngo"
+     ],
+     "text": "Năm 938, Ngô Quyền vào giết Kiều Công Tiễn trước. Một mối lo đã xong. Giờ chỉ còn đoàn thuyền đang vượt biển. Cháu thử nhớ xem mọi chuyện đi theo thứ tự nào?"
+    }
+   ]
+  },
+  {
+   "id": "d_bd_2",
+   "bg": "bach_dang",
+   "nodes": [
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "cite": [
+      "c_tt_ngo"
+     ],
+     "text": "Ngô Quyền nói đại ý với các tướng rằng: Hoằng Tháo chỉ là đứa trẻ khờ, đem quân từ xa đến, quân mệt, lại nghe tin Công Tiễn đã chết, không có người làm nội ứng, nên đã mất vía."
+    },
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "cite": [
+      "c_tt_ngo"
+     ],
+     "text": "Rồi ông bày kế: thuyền họ to, cậy nhanh; ta cho đóng cọc lớn đầu nhọn bịt sắt ở cửa sông. Đợi nước triều lên, cho thuyền nhẹ ra nhử họ vào. Nước rút, cọc nhô lên: thuyền nào thoát được?"
+    },
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "text": "Này, ta có mẩu gỗ vớt được dưới sông, cháu cầm lấy, rồi ta thử bày lại trận thế cho biết. Xem cháu có đọc được con nước không."
+    }
+   ]
+  },
+  {
+   "id": "d_bd_3",
+   "bg": "bach_dang",
+   "unlocks": [
+    "e_938"
+   ],
+   "nodes": [
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "memory": true,
+     "bg": "bach_dang",
+     "cine": "lure",
+     "cite": [
+      "c_tt_ngo"
+     ],
+     "text": "Hôm ấy nước triều lên, mặt sông phẳng lặng, che kín bãi cọc. Thuyền nhẹ của ta ra khiêu chiến rồi giả thua chạy về. Đoàn thuyền lớn Nam Hán hăm hở đuổi theo, vượt qua bãi cọc mà không hay biết."
+    },
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "memory": true,
+     "bg": "bach_dang",
+     "cine": "ebb",
+     "cite": [
+      "c_tt_ngo"
+     ],
+     "text": "Chờ đến lúc nước triều rút, cọc nhô dần khỏi mặt sông, quân ta mới đánh quật lại. Bên kia hoảng hốt, vội quay đầu chạy ra biển."
+    },
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "memory": true,
+     "shake": 8,
+     "cite": [
+      "c_tt_ngo"
+     ],
+     "text": "Thực ra hôm đó đáng sợ lắm cháu ạ. Thuyền địch đâm vào cọc, gỗ vỡ tung. Lính ngã ùn xuống nước, máu loang trên sóng đục. Lưu Hoằng Tháo chết ngay giữa dòng.",
+     "cine": "crash"
+    },
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "memory": true,
+     "cite": [
+      "c_tt_ngo"
+     ],
+     "text": "Vua Nam Hán đang đóng quân ở cửa biển để tiếp ứng, nghe tin con chết, khóc không thành tiếng, thu nhặt tàn quân mà về. Từ đó chúng không dám nhòm ngó nữa.",
+     "cine": "after"
+    },
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "text": "Hơn một nghìn năm phương Bắc đô hộ, kết thúc trong một con nước. Nhớ lấy nhé: không chỉ là cái mưu hay, mà là biết cả sông, cả người, cả lúc."
+    }
+   ]
+  },
+  {
+   "id": "d_cl_1",
+   "bg": "thanh_co",
+   "unlocks": [
+    "e_939",
+    "p_co_loa"
+   ],
+   "nodes": [
+    {
+     "speaker": "Cụ từ đền Cổ Loa",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Cháu thử đoán xem: thắng trận xong, Ngô Quyền có thể về Đại La là trung tâm đô hộ cũ, nhưng ông lại chọn thành Cổ Loa của An Dương Vương. Vì sao?"
+    },
+    {
+     "speaker": "Cụ từ đền Cổ Loa",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "cite": [
+      "c_tt_ngo"
+     ],
+     "text": "Năm 939, Ngô Quyền xưng vương, đặt trăm quan, chế định triều nghi phẩm phục. Nhưng trước hết, cháu có biết Cổ Loa ở đâu trên bản đồ không?"
+    }
+   ]
+  },
+  {
+   "id": "d_cl_2",
+   "bg": "thanh_co",
+   "nodes": [
+    {
+     "speaker": "Cụ từ đền Cổ Loa",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Đóng đô ở thành cũ của Âu Lạc là một cách nói rằng: ta không phải kẻ mới đến, ta nối tiếp một quốc gia đã có từ xưa."
+    },
+    {
+     "speaker": "Cụ từ đền Cổ Loa",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "cite": [
+      "c_tt_ngo"
+     ],
+     "text": "Ông làm vua chẳng được bao lâu, năm 944 thì mất. Con cháu tranh nhau, rồi đất nước rơi vào cảnh mười hai sứ quân. Giữ nước khó, mà giữ được người kế tục còn khó hơn."
+    }
+   ]
+  },
+  {
+   "id": "d_nn_1",
+   "bg": "nhu_nguyet",
+   "unlocks": [
+    "ly_thuong_kiet",
+    "e_1075",
+    "p_nhu_nguyet"
+   ],
+   "nodes": [
+    {
+     "speaker": "Cụ từ đền Xà",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Một trăm năm trôi qua, nhà Lý đã vững. Bên kia biên giới, nhà Tống đang rục rịch: tích trữ lương thực, luyện quân ở các châu sát nước ta. Ông Lý Thường Kiệt hiểu rõ."
+    },
+    {
+     "speaker": "Cụ từ đền Xà",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "memory": true,
+     "bg": "bach_dang",
+     "fx": [
+      "fire",
+      "arrows"
+     ],
+     "shake": 4,
+     "cite": [
+      "c_tt_ly",
+      "c_ls_lytran"
+     ],
+     "text": "Cuối năm 1075 ông không đợi. Quân thuỷ bộ đánh sang đất Tống, phá các căn cứ ở Ung, Khâm, Liêm rồi rút về. Ông bảo, đại ý: ngồi yên đợi giặc không bằng đem quân ra trước để chặn mũi nhọn của giặc.",
+     "stage": "tong:raid"
+    },
+    {
+     "speaker": "Cụ từ đền Xà",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Đánh rồi về ngay, không tham đất. Cháu thử xem mình hiểu chuyện này đến đâu."
+    }
+   ]
+  },
+  {
+   "id": "d_nn_2",
+   "bg": "nhu_nguyet",
+   "nodes": [
+    {
+     "speaker": "Cụ từ đền Xà",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "arrows",
+      "clash"
+     ],
+     "shake": 5,
+     "cite": [
+      "c_tt_ly"
+     ],
+     "text": "Rồi Quách Quỳ, Triệu Tiết cũng kéo quân sang. Ông Kiệt đã đắp đê dày dọc bờ nam sông Như Nguyệt. Quân Tống đóng đối diện, bắc cầu phao, vượt sông mấy lần đều bị đánh bật lại.",
+     "stage": "nhu_nguyet:cross"
+    },
+    {
+     "speaker": "Cụ từ đền Xà",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "smoke"
+     ],
+     "text": "Đêm khuya, trong đền thờ bên sông vang lên tiếng ngâm thơ. Người ta truyền lại rằng lính ta nghe mà thêm hăng, lính Tống nghe mà rụng rời.",
+     "stage": "nhu_nguyet:poem"
+    },
+    {
+     "speaker": "Ghi chú sử học",
+     "portrait": "tu_lieu",
+     "cite": [
+      "c_ls_lytran"
+     ],
+     "text": "Bài Nam quốc sơn hà được xem như một bản tuyên ngôn về chủ quyền. Tuy nhiên ai là tác giả và thời điểm ra đời vẫn còn nhiều ý kiến. Sách vở hiện nay thường ghi “tương truyền của Lý Thường Kiệt”."
+    }
+   ]
+  },
+  {
+   "id": "d_nn_3",
+   "bg": "nhu_nguyet",
+   "unlocks": [
+    "e_1077"
+   ],
+   "nodes": [
+    {
+     "speaker": "Cụ từ đền Xà",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "clash",
+      "smoke"
+     ],
+     "cite": [
+      "c_tt_ly"
+     ],
+     "text": "Có lần quân Lý đánh trận lớn ở bến Như Nguyệt, quân Tống chết nhiều, tướng địch hoảng. Bên kia khí hậu độc địa, bệnh tật lan tràn, lương thực dần cạn.",
+     "stage": "nhu_nguyet:counter"
+    },
+    {
+     "speaker": "Cụ từ đền Xà",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Đến đây, cháu mà là tướng thì có đánh tiếp không? Ông Kiệt thì không. Ông sai người sang nói chuyện giảng hoà, cho địch một lối về."
+    },
+    {
+     "speaker": "Cụ từ đền Xà",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "cite": [
+      "c_tt_ly"
+     ],
+     "text": "Đánh giỏi là một chuyện. Biết lúc nào dừng còn giỏi hơn, vì đằng sau cuộc chiến còn cả một đất nước phải sống bên cạnh một nước lớn suốt nhiều đời."
+    }
+   ]
+  },
+  {
+   "id": "d_dt_1",
+   "bg": "den_tran",
+   "unlocks": [
+    "tran_thu_do",
+    "e_1258",
+    "p_den_tran"
+   ],
+   "nodes": [
+    {
+     "speaker": "Cụ từ đền Trần",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Năm 1258, đạo quân từng làm nghiêng ngả nửa thế giới đã đến. Vua Trần Thái Tông đi đầu trận, nhưng thế giặc mạnh quá, quân ta phải lui. Thăng Long bỏ ngỏ."
+    },
+    {
+     "speaker": "Cụ từ đền Trần",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "memory": true,
+     "bg": "thanh_co",
+     "fx": [
+      "fire",
+      "smoke"
+     ],
+     "shake": 4,
+     "cite": [
+      "c_tt_tran_tt"
+     ],
+     "text": "Vua đi thuyền đến hỏi Thái uý Nhật Hiệu thì ông ấy chỉ viết hai chữ “nhập Tống”. Hỏi đến Thái sư Trần Thủ Độ, ông đáp một câu mà đời đời còn nhắc.",
+     "stage": "ha_song:ask"
+    },
+    {
+     "speaker": "Cụ từ đền Trần",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "memory": true,
+     "bg": "bach_dang",
+     "fx": [
+      "arrows",
+      "clash"
+     ],
+     "shake": 6,
+     "cite": [
+      "c_tt_tran_tt"
+     ],
+     "text": "Ít ngày sau, vua tôi ngược dòng đánh thẳng vào Đông Bộ Đầu. Quân địch vỡ trận, bỏ Thăng Long rút về phía bắc. Kinh thành mất chưa được bao lâu đã được lấy lại.",
+     "stage": "dong_bo_dau:counter"
+    }
+   ]
+  },
+  {
+   "id": "d_dt_2",
+   "bg": "dien_hong",
+   "unlocks": [
+    "tran_quoc_toan",
+    "e_1282"
+   ],
+   "nodes": [
+    {
+     "speaker": "Cụ từ đền Trần",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Hai mươi lăm năm sau, nhà Nguyên ngày một ngang ngược. Năm 1282, vua Trần Nhân Tông họp vương hầu, bách quan ở Bình Than bàn kế đánh hay giữ."
+    },
+    {
+     "speaker": "Cụ từ đền Trần",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "memory": true,
+     "bg": "bach_dang",
+     "cite": [
+      "c_tt_tran_nt"
+     ],
+     "text": "Bên ngoài bến có một cậu bé mười lăm, mười sáu tuổi, Trần Quốc Toản. Cậu xin vào, người ta không cho vì nhỏ quá. Vua thương, ban cho quả cam. Cậu đứng đó, tay nắm chặt, lòng sôi lên.",
+     "stage": "binh_than:orange"
+    },
+    {
+     "speaker": "Cụ từ đền Trần",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "memory": true,
+     "bg": "bach_dang",
+     "fx": [
+      "smoke"
+     ],
+     "cite": [
+      "c_tt_tran_nt"
+     ],
+     "text": "Lúc mở tay ra, quả cam đã nát từ bao giờ. Về nhà, cậu tập hợp gia nô và người thân được hơn nghìn người, sắm khí giới, dựng lá cờ đề sáu chữ “Phá cường địch, báo hoàng ân”. Trận mạc sau này, nơi nào có cờ ấy, giặc phải dè.",
+     "stage": "binh_than:banner"
+    }
+   ]
+  },
+  {
+   "id": "d_dt_3",
+   "bg": "dien_hong",
+   "unlocks": [],
+   "nodes": [
+    {
+     "speaker": "Cụ từ đền Trần",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "drum"
+     ],
+     "cite": [
+      "c_tt_tran_nt"
+     ],
+     "text": "Tháng Chạp năm Giáp Thân (cuối năm 1284), trước họa lớn, Thượng hoàng Thánh Tông cho mời các bô lão trong cả nước về thềm điện Diên Hồng, ban yến rồi hỏi kế: nên hoà hay nên đánh?",
+     "stage": "dien_hong:gather"
+    },
+    {
+     "speaker": "Cụ từ đền Trần",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "drum"
+     ],
+     "shake": 7,
+     "cite": [
+      "c_tt_tran_nt"
+     ],
+     "text": "Muôn miệng một lời: “Đánh!”. Sử chép muôn người cùng hô một tiếng, như bật ra từ một cái miệng.",
+     "stage": "dien_hong:shout"
+    },
+    {
+     "speaker": "Cụ từ đền Trần",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Vua có thể ra lệnh cho lính đánh giặc. Nhưng muốn cả nước đánh giặc thì phải hỏi dân đã. Bình Than hỏi tướng, Diên Hồng hỏi dân. Hiểu rồi thì trả lời ta nào."
+    }
+   ]
+  },
+  {
+   "id": "d_kb_1",
+   "bg": "thanh_co",
+   "unlocks": [
+    "tran_quoc_tuan",
+    "p_kiep_bac"
+   ],
+   "nodes": [
+    {
+     "speaker": "Cụ Đồ Sử",
+     "portrait": "cu_do",
+     "fiction": true,
+     "text": "Cháu đã đến Kiếp Bạc. Hưng Đạo Đại Vương Trần Quốc Tuấn đặt căn cứ ở đây vì đường thuỷ, đường bộ về Thăng Long, ra biển, lên biên giới đều thuận."
+    },
+    {
+     "speaker": "Cụ Đồ Sử",
+     "portrait": "cu_do",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "drum",
+      "smoke"
+     ],
+     "cite": [
+      "c_ls_lytran"
+     ],
+     "text": "Thấy tướng sĩ có người ham chọi gà, đánh bạc, yên hưởng thái bình, ông viết bài hịch. Không phải bảng quy định, mà là lời người đứng đầu nói thật lòng với thuộc hạ về nỗi nhục mất nước.",
+     "stage": "kiep_bac:hich"
+    }
+   ]
+  },
+  {
+   "id": "d_kb_2",
+   "bg": "bach_dang",
+   "unlocks": [
+    "tran_binh_trong",
+    "tran_quang_khai",
+    "e_1285"
+   ],
+   "nodes": [
+    {
+     "speaker": "Cụ Đồ Sử",
+     "portrait": "cu_do",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "clash",
+      "fire",
+      "arrows"
+     ],
+     "shake": 7,
+     "cite": [
+      "c_tt_tran_nt"
+     ],
+     "text": "Đầu năm 1285, quân Thoát Hoan từ phía bắc, Toa Đô từ phía nam ép tới. Trần Bình Trọng chặn giặc ở Thiên Mạc cho vua rút lui, bị bắt. Giặc dụ, ông không ăn, lại hỏi muốn làm vương đất Bắc không.",
+     "stage": "thien_mac:hold"
+    },
+    {
+     "speaker": "Cụ Đồ Sử",
+     "portrait": "cu_do",
+     "fiction": true,
+     "memory": true,
+     "bg": "bach_dang",
+     "fx": [
+      "clash"
+     ],
+     "shake": 9,
+     "cite": [
+      "c_tt_tran_nt"
+     ],
+     "text": "Ông đáp thẳng, rồi bị giết. Máu ấy không uổng: chỉ ít tháng sau, quân Trần phản công từ Tây Kết đến Hàm Tử, Chương Dương. Toa Đô tử trận. Thoát Hoan phải tháo chạy về nước; sách vở thường kể ông phải chui vào ống đồng cho quân khiêng chạy.",
+     "stage": "thien_mac:counter"
+    },
+    {
+     "speaker": "Cụ Đồ Sử",
+     "portrait": "cu_do",
+     "fiction": true,
+     "cite": [
+      "c_tt_tran_nt"
+     ],
+     "text": "Trần Quang Khải đưa vua về kinh, ngâm hai câu “Đoạt sáo Chương Dương độ, Cầm Hồ Hàm Tử quan”: giành giáo giặc ở bến Chương Dương, bắt quân Hồ ở cửa Hàm Tử."
+    }
+   ]
+  },
+  {
+   "id": "d_vd_1",
+   "bg": "van_don",
+   "unlocks": [
+    "tran_khanh_du",
+    "e_1287",
+    "p_van_don"
+   ],
+   "nodes": [
+    {
+     "speaker": "Ông lái đò đảo",
+     "portrait": "lai_do",
+     "fiction": true,
+     "text": "Lần thứ ba sang đánh, quân Nguyên chở lương bằng đường biển. Thuyền chiến Ô Mã Nhi đi trước, thuyền lương Trương Văn Hổ đi sau."
+    },
+    {
+     "speaker": "Ông lái đò đảo",
+     "portrait": "lai_do",
+     "fiction": true,
+     "memory": true,
+     "fx": [
+      "fire",
+      "clash",
+      "arrows"
+     ],
+     "shake": 6,
+     "cite": [
+      "c_tt_tran_nt"
+     ],
+     "text": "Trần Khánh Dư trấn thủ Vân Đồn đã để lọt đoàn thuyền chiến, bị Thượng hoàng khiển trách nặng. Ông xin được lập công. Đoàn thuyền lương vừa đến, trận đánh đã bùng lên giữa sóng biển và lửa.",
+     "stage": "van_don:grain"
+    },
+    {
+     "speaker": "Ông lái đò đảo",
+     "portrait": "lai_do",
+     "fiction": true,
+     "text": "Lúa gạo đổ xuống biển, thuyền cháy đỏ cả một góc trời. Đội quân đang đóng ở Vạn Kiếp đợi cơm mà không có cơm."
+    }
+   ]
+  },
+  {
+   "id": "d_bc_1",
+   "bg": "bach_dang",
+   "unlocks": [
+    "o_ma_nhi",
+    "p_bai_coc"
+   ],
+   "nodes": [
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "text": "Quân Nguyên mất lương, buộc phải rút. Đạo thuỷ quân của Ô Mã Nhi sẽ đi qua sông Bạch Đằng ra biển. Thế là chiếc bẫy của hơn ba trăm năm trước lại được giương lên."
+    },
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "cite": [
+      "c_tt_tran_nt"
+     ],
+     "text": "Hưng Đạo Vương cho đóng cọc, bố trí phục binh các nhánh sông, nghiên cứu lịch triều từng ngày. Quân ta nhử thuyền Ô Mã Nhi vào đúng lúc triều xuống mạnh. Câu hỏi đầu tiên dành cho cháu đây."
+    }
+   ]
+  },
+  {
+   "id": "d_bc_2",
+   "bg": "bach_dang",
+   "unlocks": [
+    "e_1288"
+   ],
+   "nodes": [
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "memory": true,
+     "bg": "bach_dang",
+     "cine": "lure",
+     "cine_dark": true,
+     "cite": [
+      "c_tt_tran_nt"
+     ],
+     "text": "Thuyền nhẹ của ta ra đánh rồi giả thua, nhử đoàn thuyền Ô Mã Nhi đi sâu vào khúc sông đã đóng cọc. Hưng Đạo Vương tính sẵn cả con nước: triều lên che cọc thì nhử, triều xuống thì đánh."
+    },
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "memory": true,
+     "bg": "bach_dang",
+     "cine": "ebb",
+     "cine_dark": true,
+     "cite": [
+      "c_tt_tran_nt"
+     ],
+     "text": "Nước rút rất nhanh. Bãi cọc lộ dần giữa dòng, hai bên bờ phục binh đồng loạt đổ ra. Đoàn thuyền Nguyên vội vã tháo chạy về phía biển."
+    },
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "memory": true,
+     "shake": 9,
+     "cite": [
+      "c_tt_tran_nt"
+     ],
+     "text": "Ngày mồng 8 tháng 3 năm Mậu Tý. Khói phủ kín khúc sông, tiếng reo át cả tiếng sóng. Thuyền Nguyên vướng cọc hàng loạt, đắm, cháy, người rơi như lá. Nước đỏ một đoạn sông dài.",
+     "cine": "crash",
+     "cine_dark": true
+    },
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "memory": true,
+     "cite": [
+      "c_tt_tran_nt"
+     ],
+     "text": "Ô Mã Nhi bị bắt sống. Trên bộ, đạo quân của Thoát Hoan chạy về biên giới bị chặn đánh dọc đường, một lần nữa thoát thân trong nhục nhã.",
+     "cine": "after",
+     "cine_dark": true
+    },
+    {
+     "speaker": "Ông lái đò",
+     "portrait": "lai_do",
+     "fiction": true,
+     "text": "Cháu sờ thử mà xem, gỗ ngâm hơn bảy trăm năm vẫn cứng. Sử sách có thể rách, nhưng khúc sông này thì còn nhớ."
+    }
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "q_dl_1",
+   "kind": "single",
+   "difficulty": 1,
+   "prompt": "Trước khi Ngô Quyền nổi danh, ai là người đã đuổi quân Nam Hán năm 931 và gả con gái cho ông?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Dương Đình Nghệ"
+    },
+    {
+     "id": "b",
+     "text": "Kiều Công Tiễn"
+    },
+    {
+     "id": "c",
+     "text": "Phùng Hưng"
+    },
+    {
+     "id": "d",
+     "text": "Khúc Thừa Dụ"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Dương Đình Nghệ, hào trưởng Ái Châu, năm 931 đuổi thứ sử Nam Hán và trọng dụng Ngô Quyền.",
+   "citations": [
+    "c_tt_ngo"
+   ]
+  },
+  {
+   "id": "q_dl_2",
+   "kind": "single",
+   "style": "Sử hay truyền thuyết?",
+   "difficulty": 2,
+   "prompt": "Sử cũ chép khi Ngô Quyền ra đời có ánh sáng lạ đầy nhà, lưng có ba nốt ruồi. Một sử quan nên hiểu chi tiết này thế nào?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Là chi tiết truyền tụng được sử cũ ghi lại, thể hiện sự tôn vinh, khó kiểm chứng"
+    },
+    {
+     "id": "b",
+     "text": "Là sự kiện khoa học đã được chứng minh"
+    },
+    {
+     "id": "c",
+     "text": "Là chi tiết nhóm làm game tự nghĩ ra, sử cũ không có"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Sử cũ có ghi, nhưng đây là kiểu chi tiết thường dùng để tôn vinh người khai sáng, không dùng làm dữ kiện lịch sử chắc chắn.",
+   "citations": [
+    "c_tt_ngo"
+   ]
+  },
+  {
+   "id": "q_bd_1",
+   "kind": "order",
+   "style": "Sắp xếp sự kiện",
+   "difficulty": 2,
+   "prompt": "Hãy xếp các sự kiện sau theo đúng thứ tự xảy ra.",
+   "items": [
+    {
+     "id": "a",
+     "text": "Dương Đình Nghệ đuổi thứ sử Nam Hán"
+    },
+    {
+     "id": "b",
+     "text": "Kiều Công Tiễn giết Dương Đình Nghệ"
+    },
+    {
+     "id": "c",
+     "text": "Công Tiễn cầu cứu Nam Hán, Ngô Quyền ra hỏi tội"
+    },
+    {
+     "id": "d",
+     "text": "Trận Bạch Đằng, Lưu Hoằng Tháo tử trận"
+    }
+   ],
+   "correct_answer": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ],
+   "explanation": "931 – 937 – đầu 938 – cuối 938: mỗi sự kiện kéo theo sự kiện tiếp theo.",
+   "citations": [
+    "c_tt_ngo"
+   ]
+  },
+  {
+   "id": "q_bd_2",
+   "kind": "multi",
+   "style": "Chọn nhiều đáp án",
+   "difficulty": 2,
+   "prompt": "Những yếu tố nào đã góp phần làm nên chiến thắng Bạch Đằng năm 938?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Cọc lớn đầu nhọn bịt sắt đóng dưới lòng sông"
+    },
+    {
+     "id": "b",
+     "text": "Tính toán thời điểm thuỷ triều lên xuống"
+    },
+    {
+     "id": "c",
+     "text": "Thuyền nhẹ giả thua nhử địch vào sâu"
+    },
+    {
+     "id": "d",
+     "text": "Súng thần công bắn từ hai bên bờ"
+    }
+   ],
+   "correct_answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "explanation": "Súng thần công không xuất hiện trong trận này: đó là vũ khí của các thời sau. Sai niên đại là lỗi thường gặp, cần để ý.",
+   "citations": [
+    "c_tt_ngo"
+   ]
+  },
+  {
+   "id": "q_bd_3",
+   "kind": "single",
+   "difficulty": 1,
+   "prompt": "Ý nghĩa lớn nhất của chiến thắng Bạch Đằng năm 938 là gì?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Chấm dứt thời kỳ Bắc thuộc hơn một nghìn năm, mở ra thời đại độc lập lâu dài"
+    },
+    {
+     "id": "b",
+     "text": "Giúp nước ta chiếm được đất Nam Hán"
+    },
+    {
+     "id": "c",
+     "text": "Mở đầu cho thời kỳ mười hai sứ quân"
+    },
+    {
+     "id": "d",
+     "text": "Chấm dứt mọi cuộc xâm lược từ phương Bắc về sau"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Sau trận này, nước ta bước vào thời kỳ độc lập lâu dài, dù sau đó còn phải chống nhiều cuộc xâm lược khác.",
+   "citations": [
+    "c_ls_ngo",
+    "c_sgk"
+   ]
+  },
+  {
+   "id": "q_cl_1",
+   "kind": "map_pick",
+   "style": "Chỉ trên bản đồ",
+   "difficulty": 2,
+   "prompt": "Năm 939 Ngô Quyền chọn thành Cổ Loa làm kinh đô. Bấm vào vị trí của Cổ Loa trên bản đồ.",
+   "correct_answer": {
+    "lat": 21.115,
+    "lon": 105.873
+   },
+   "tolerance_km": 25,
+   "place_label": "Cổ Loa",
+   "view": {
+    "lat": 20.9,
+    "lon": 106.0,
+    "zoom": 4.5
+   },
+   "explanation": "Cổ Loa nằm ở phía bắc sông Hồng, thuộc vùng Đông Anh, Hà Nội ngày nay.",
+   "citations": [
+    "c_dat_nuoc"
+   ]
+  },
+  {
+   "id": "q_cl_2",
+   "kind": "single",
+   "style": "Đúng hay Sai?",
+   "difficulty": 1,
+   "keep_order": true,
+   "prompt": "Nhận định: “Năm 939, Ngô Quyền xưng Hoàng đế, lấy niên hiệu riêng.”",
+   "options": [
+    {
+     "id": "a",
+     "text": "Đúng"
+    },
+    {
+     "id": "b",
+     "text": "Sai"
+    }
+   ],
+   "correct_answer": "b",
+   "explanation": "Ngô Quyền xưng vương chứ không xưng đế. Người xưng đế đầu tiên sau thời Bắc thuộc là Đinh Tiên Hoàng năm 968.",
+   "citations": [
+    "c_tt_ngo"
+   ]
+  },
+  {
+   "id": "q_nn_1",
+   "kind": "single",
+   "difficulty": 2,
+   "prompt": "Vì sao cuối năm 1075 Lý Thường Kiệt lại đem quân đánh sang đất Tống?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Để phá các căn cứ tập kết quân và lương của địch, làm chậm kế hoạch xâm lược"
+    },
+    {
+     "id": "b",
+     "text": "Để chiếm vĩnh viễn ba châu Ung, Khâm, Liêm"
+    },
+    {
+     "id": "c",
+     "text": "Vì quân Tống đã chiếm Thăng Long"
+    },
+    {
+     "id": "d",
+     "text": "Vì nhà Lý muốn lật đổ nhà Tống"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Đây là tiến công để tự vệ: đánh xong quân Lý rút về, không tham đất.",
+   "citations": [
+    "c_tt_ly",
+    "c_cm_ly"
+   ]
+  },
+  {
+   "id": "q_nn_2",
+   "kind": "single",
+   "style": "Đối chiếu nguồn",
+   "difficulty": 3,
+   "prompt": "Một sách ghi “Tác giả Nam quốc sơn hà: Lý Thường Kiệt”, sách khác ghi “tương truyền”. Sử quan nên ghi thế nào?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Ghi “tương truyền của Lý Thường Kiệt”, kèm ghi chú rằng tác giả và thời điểm còn nhiều ý kiến"
+    },
+    {
+     "id": "b",
+     "text": "Chỉ ghi Lý Thường Kiệt vì câu chuyện hay hơn"
+    },
+    {
+     "id": "c",
+     "text": "Bỏ hẳn bài thơ khỏi cuốn sử"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Khi các nguồn khác nhau, cần nêu đúng mức chắc chắn. Không giấu đi và cũng không khẳng định quá mức.",
+   "citations": [
+    "c_ls_lytran"
+   ]
+  },
+  {
+   "id": "q_nn_3",
+   "kind": "single",
+   "difficulty": 2,
+   "prompt": "Vì sao khi đang có lợi thế, Lý Thường Kiệt lại chủ động đề nghị giảng hoà?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Để kết thúc chiến tranh có lợi, giữ thể diện cho đối phương và tránh một cuộc xâm lược mới"
+    },
+    {
+     "id": "b",
+     "text": "Vì quân Lý đã hết sạch lương và sắp thua"
+    },
+    {
+     "id": "c",
+     "text": "Vì vua Tống đã thoái vị"
+    },
+    {
+     "id": "d",
+     "text": "Vì Lý Thường Kiệt muốn sang làm quan cho nhà Tống"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Một nước lớn thua trận dễ quay lại phục thù. Giảng hoà đúng lúc giúp giữ độc lập và hoà bình lâu dài.",
+   "citations": [
+    "c_tt_ly",
+    "c_ls_lytran"
+   ]
+  },
+  {
+   "id": "q_dt_1",
+   "kind": "single",
+   "difficulty": 1,
+   "prompt": "Năm 1258, trước thế giặc mạnh, lời nói nổi tiếng “Đầu thần chưa rơi xuống đất, xin bệ hạ đừng lo” là của ai?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Trần Thủ Độ"
+    },
+    {
+     "id": "b",
+     "text": "Trần Quốc Tuấn"
+    },
+    {
+     "id": "c",
+     "text": "Trần Nhật Hiệu"
+    },
+    {
+     "id": "d",
+     "text": "Trần Quang Khải"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Trần Thủ Độ, Thái sư, đã nói câu này khi vua Trần Thái Tông đến hỏi kế.",
+   "citations": [
+    "c_tt_tran_tt"
+   ]
+  },
+  {
+   "id": "q_dt_2",
+   "kind": "single",
+   "difficulty": 1,
+   "prompt": "Trần Quốc Toản bóp nát quả cam lúc nào không hay vì sao?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Vì uất ức không được dự bàn việc nước ở Bình Than"
+    },
+    {
+     "id": "b",
+     "text": "Vì quả cam bị hỏng"
+    },
+    {
+     "id": "c",
+     "text": "Vì bị vua trách phạt"
+    },
+    {
+     "id": "d",
+     "text": "Để làm hiệu lệnh cho quân sĩ"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Cậu còn nhỏ nên không được vào họp. Sau đó cậu về chiêu mộ quân, dựng cờ “Phá cường địch, báo hoàng ân”.",
+   "citations": [
+    "c_tt_tran_nt"
+   ]
+  },
+  {
+   "id": "q_dt_3",
+   "kind": "match",
+   "style": "Nối cặp",
+   "difficulty": 2,
+   "prompt": "Nối mỗi hội nghị với thành phần tham dự và nội dung chính.",
+   "left": [
+    {
+     "id": "l1",
+     "text": "Hội nghị Bình Than (1282)"
+    },
+    {
+     "id": "l2",
+     "text": "Hội nghị Diên Hồng (cuối 1284)"
+    }
+   ],
+   "right": [
+    {
+     "id": "r1",
+     "text": "Vương hầu, bách quan bàn kế chống giặc"
+    },
+    {
+     "id": "r2",
+     "text": "Các bô lão cả nước, đồng thanh nói “Đánh”"
+    }
+   ],
+   "correct_answer": {
+    "l1": "r1",
+    "l2": "r2"
+   },
+   "explanation": "Bình Than là hội nghị của tầng lớp cầm quyền, còn Diên Hồng hỏi ý nguyện của dân qua các bô lão.",
+   "citations": [
+    "c_tt_tran_nt"
+   ]
+  },
+  {
+   "id": "q_kb_1",
+   "kind": "single",
+   "difficulty": 2,
+   "prompt": "Mục đích chính của Hịch tướng sĩ là gì?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Khích lệ tướng sĩ, phê phán thói hưởng lạc, kêu gọi học binh thư và luyện tập để đánh giặc"
+    },
+    {
+     "id": "b",
+     "text": "Thông báo Thăng Long đã bị chiếm"
+    },
+    {
+     "id": "c",
+     "text": "Ca ngợi chiến thắng Bạch Đằng năm 1288"
+    },
+    {
+     "id": "d",
+     "text": "Công bố luật lệ mới của triều đình"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Bài hịch được viết trước chiến tranh để thức tỉnh và chuẩn bị tinh thần cho tướng sĩ.",
+   "citations": [
+    "c_ls_lytran"
+   ]
+  },
+  {
+   "id": "q_kb_2",
+   "kind": "match",
+   "style": "Nối câu nói với nhân vật",
+   "difficulty": 2,
+   "prompt": "Nối mỗi câu nói hoặc câu thơ với người gắn liền với nó.",
+   "left": [
+    {
+     "id": "l1",
+     "text": "“Đầu thần chưa rơi xuống đất, xin bệ hạ đừng lo”"
+    },
+    {
+     "id": "l2",
+     "text": "“Ta thà làm ma nước Nam chứ không thèm làm vương đất Bắc”"
+    },
+    {
+     "id": "l3",
+     "text": "“Phá cường địch, báo hoàng ân”"
+    },
+    {
+     "id": "l4",
+     "text": "“Đoạt sáo Chương Dương độ, Cầm Hồ Hàm Tử quan”"
+    }
+   ],
+   "right": [
+    {
+     "id": "r1",
+     "text": "Trần Thủ Độ"
+    },
+    {
+     "id": "r2",
+     "text": "Trần Bình Trọng"
+    },
+    {
+     "id": "r3",
+     "text": "Trần Quốc Toản"
+    },
+    {
+     "id": "r4",
+     "text": "Trần Quang Khải"
+    }
+   ],
+   "correct_answer": {
+    "l1": "r1",
+    "l2": "r2",
+    "l3": "r3",
+    "l4": "r4"
+   },
+   "explanation": "Bốn con người, bốn hoàn cảnh, cùng một ý chí không chịu khuất phục.",
+   "citations": [
+    "c_tt_tran_tt",
+    "c_tt_tran_nt"
+   ]
+  },
+  {
+   "id": "q_kb_3",
+   "kind": "order",
+   "style": "Sắp xếp sự kiện",
+   "difficulty": 1,
+   "prompt": "Sắp xếp ba lần kháng chiến chống Mông – Nguyên theo thứ tự thời gian.",
+   "items": [
+    {
+     "id": "a",
+     "text": "Phản công ở Đông Bộ Đầu"
+    },
+    {
+     "id": "b",
+     "text": "Thắng Tây Kết, Hàm Tử, Chương Dương"
+    },
+    {
+     "id": "c",
+     "text": "Phá thuyền lương Vân Đồn, thắng Bạch Đằng"
+    }
+   ],
+   "correct_answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "explanation": "1258, 1285 và 1287–1288 là ba lần kháng chiến.",
+   "citations": [
+    "c_sgk"
+   ]
+  },
+  {
+   "id": "q_vd_1",
+   "kind": "single",
+   "difficulty": 2,
+   "prompt": "Việc phá đoàn thuyền lương ở Vân Đồn tác động đến cục diện chiến tranh thế nào?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Quân Nguyên thiếu lương trầm trọng, buộc phải tính đường rút lui"
+    },
+    {
+     "id": "b",
+     "text": "Quân Nguyên lập tức đầu hàng ngay tại Vân Đồn"
+    },
+    {
+     "id": "c",
+     "text": "Thoát Hoan phải đổi đường, đánh vào Thanh Hoá"
+    },
+    {
+     "id": "d",
+     "text": "Không ảnh hưởng gì vì họ còn thuyền chiến"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Mất lương buộc địch rút. Rút theo đường sông chính là bước đi vào bẫy Bạch Đằng.",
+   "citations": [
+    "c_tt_tran_nt"
+   ]
+  },
+  {
+   "id": "q_bc_1",
+   "kind": "multi",
+   "style": "So sánh hai trận",
+   "difficulty": 2,
+   "prompt": "Trận Bạch Đằng 1288 có những điểm nào giống trận Bạch Đằng 938?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Dùng bãi cọc dưới lòng sông"
+    },
+    {
+     "id": "b",
+     "text": "Lợi dụng thuỷ triều rút"
+    },
+    {
+     "id": "c",
+     "text": "Nhử thuyền địch vào trận địa đã chuẩn bị"
+    },
+    {
+     "id": "d",
+     "text": "Đối thủ là quân Nam Hán"
+    }
+   ],
+   "correct_answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "explanation": "Năm 1288 đối thủ là quân Nguyên, lúc này đoàn thuyền đang rút lui, còn năm 938 là quân Nam Hán tiến vào.",
+   "citations": [
+    "c_ls_lytran"
+   ]
+  },
+  {
+   "id": "q_bc_2",
+   "kind": "single",
+   "difficulty": 1,
+   "prompt": "Tướng thuỷ quân Nguyên nào bị bắt sống trong trận Bạch Đằng năm 1288?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Ô Mã Nhi"
+    },
+    {
+     "id": "b",
+     "text": "Lưu Hoằng Tháo"
+    },
+    {
+     "id": "c",
+     "text": "Quách Quỳ"
+    },
+    {
+     "id": "d",
+     "text": "Liễu Thăng"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Lưu Hoằng Tháo thuộc trận 938, Quách Quỳ thuộc kháng Tống 1076–1077, còn Liễu Thăng thuộc thời Minh.",
+   "citations": [
+    "c_tt_tran_nt"
+   ]
+  },
+  {
+   "id": "q_bc_3",
+   "kind": "single",
+   "style": "Đối chiếu nguồn",
+   "difficulty": 3,
+   "prompt": "Sử chép trận Bạch Đằng ngày 8 tháng 3 năm Mậu Tý, sách hiện đại ghi 9/4/1288. Vì sao lại có hai cách ghi?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Vì một bên ghi theo âm lịch thời đó, một bên quy đổi sang dương lịch"
+    },
+    {
+     "id": "b",
+     "text": "Vì có hai trận khác nhau"
+    },
+    {
+     "id": "c",
+     "text": "Vì sử cũ đã chép sai năm"
+    },
+    {
+     "id": "d",
+     "text": "Vì Việt Nam và Trung Quốc đánh vào hai ngày khác nhau"
+    }
+   ],
+   "correct_answer": "a",
+   "explanation": "Đây là cùng một ngày. Việc quy đổi lịch có thể tạo chênh lệch nhỏ giữa các bảng lịch khác nhau.",
+   "citations": [
+    "c_tt_tran_nt",
+    "c_ls_lytran"
+   ]
+  }
+ ],
+ "battles": [
+  {
+   "id": "b_bach_dang_938",
+   "kind": "tide",
+   "year": 938,
+   "title": "Trận Bạch Đằng năm 938",
+   "ally": "Quân của Ngô Quyền",
+   "enemy": "Thuỷ quân Nam Hán",
+   "enemy_general": "Lưu Hoằng Tháo",
+   "intro": "Đoàn thuyền Nam Hán sắp vào cửa sông. Ngô Quyền đã có kế: đóng cọc nhọn bịt sắt dưới lòng sông, đợi triều lên nhử địch vào, đợi triều xuống đánh quật lại.",
+   "victory": "Thuyền Nam Hán vỡ trên bãi cọc, Lưu Hoằng Tháo tử trận. Vua Nam Hán thu quân về nước. Thời Bắc thuộc kết thúc.",
+   "citations": [
+    "c_tt_ngo"
+   ]
+  },
+  {
+   "id": "b_bach_dang_1288",
+   "kind": "tide",
+   "year": 1288,
+   "title": "Trận Bạch Đằng năm 1288",
+   "ally": "Quân nhà Trần",
+   "enemy": "Thuỷ quân Nguyên",
+   "enemy_general": "Ô Mã Nhi",
+   "intro": "Hết lương, quân Nguyên phải rút. Trần Quốc Tuấn cho đóng bãi cọc ở các nhánh sông, nghiên cứu lịch nước triều, bố trí phục binh hai bên bờ.",
+   "victory": "Đoàn thuyền Nguyên bị phá tan, Ô Mã Nhi bị bắt sống. Cuộc kháng chiến lần thứ ba kết thúc thắng lợi.",
+   "citations": [
+    "c_tt_tran_nt"
+   ]
+  }
+ ],
+ "artifacts": [
+  {
+   "id": "a_so_lang",
+   "name": "Sổ chép làng Đường Lâm",
+   "icon": "sach",
+   "desc": "Tờ sổ cũ ghi lại lời truyền về người con đất Đường Lâm."
+  },
+  {
+   "id": "a_coc_lim",
+   "name": "Khúc cọc lim",
+   "icon": "coc",
+   "desc": "Biểu tượng cho kế cọc và thuỷ triều năm 938."
+  },
+  {
+   "id": "a_an_ngo",
+   "name": "Ấn Ngô Vương (minh hoạ)",
+   "icon": "an",
+   "desc": "Vật phẩm minh hoạ cho việc xưng vương, dựng triều năm 939, không phải hiện vật có thật."
+  },
+  {
+   "id": "a_nam_quoc",
+   "name": "Bản chép Nam quốc sơn hà",
+   "icon": "hich",
+   "desc": "Bài thơ được xem như một lời tuyên bố về chủ quyền."
+  },
+  {
+   "id": "a_qua_cam",
+   "name": "Quả cam Bình Than",
+   "icon": "qua_cam",
+   "desc": "Gợi nhớ tấm lòng của Trần Quốc Toản."
+  },
+  {
+   "id": "a_hich",
+   "name": "Cuộn Hịch tướng sĩ",
+   "icon": "hich",
+   "desc": "Lời kêu gọi vang lên trước ngày chiến tranh nổ ra."
+  },
+  {
+   "id": "a_thuyen_luong",
+   "name": "Thuyền lương đắm",
+   "icon": "thuyen",
+   "desc": "Nhắc nhớ trận đánh vào hậu cần ở Vân Đồn."
+  },
+  {
+   "id": "a_co_1288",
+   "name": "Cờ thắng trận Bạch Đằng",
+   "icon": "co",
+   "desc": "Biểu tượng cho thắng lợi năm 1288, khép lại ba lần chống Nguyên Mông."
+  }
+ ]
+}

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sử Ký Điều Tra: game nhập vai lịch sử Việt Nam</title>
+  <meta name="description" content="Đi bộ qua đất Việt xưa, nghe người giữ ký ức kể chuyện, nhặt mảnh tư liệu và tự dựng lại dòng thời gian. Chơi ngay trên trình duyệt.">
+  <link rel="icon" href="img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=Noto+Serif:wght@400;700&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css?v=10">
+</head>
+<body>
+  <nav class="bar" id="bar">
+    <a class="brand" href="index.html"><img src="img/icon.png" alt="">Sử Ký Điều Tra</a>
+  </nav>
+
+  <header class="hero">
+    <div class="stage">
+      <img class="pixel" src="img/hero.png" alt="Một góc map trong game: con đường đất, sân võ đài, dòng sông có cầu gỗ và tường thành Cổ Loa">
+      <div class="walker" aria-hidden="true"></div>
+    </div>
+    <div class="pitch box">
+      <svg class="drum" viewBox="-100 -100 200 200" aria-hidden="true">
+        <circle r="98" class="d-face"/>
+        <g class="d-lines"><circle r="96"/><circle r="86"/><circle r="62"/><circle r="36"/><circle r="26"/><circle r="17"/></g>
+        <g class="d-dots"></g>
+        <polygon class="d-star" points=""/>
+        <g class="d-birds"></g>
+      </svg>
+      <h1>Sử Ký<br>Điều Tra</h1>
+      <p>Đi bộ qua đất Việt xưa, nghe người giữ ký ức kể chuyện, nhặt từng mảnh tư liệu rồi tự tay dựng lại dòng thời gian. Học sử càng nhiều, nhân vật càng mạnh.</p>
+      <div class="actions">
+        <a class="btn gold" id="cta" href="play.html">Vào chơi</a>
+        <a class="btn ghost" href="/game/">Chơi thử không cần tài khoản</a>
+      </div>
+      <small>Chơi ngay trên trình duyệt máy tính, lần đầu tải khoảng 6 MB. Có tài khoản thì tiến trình được lưu và lên bảng xếp hạng.</small>
+    </div>
+  </header>
+
+  <section class="stats" aria-label="Game có gì">
+    <div class="stat reveal"><b data-count="3">3</b><span>thời kỳ giữ nước</span></div>
+    <div class="stat reveal"><b data-count="18">18</b><span>di tích có người kể chuyện</span></div>
+    <div class="stat reveal"><b data-count="12">12</b><span>vùng luyện gắn sự kiện thật</span></div>
+    <div class="stat reveal"><b data-count="29">29</b><span>loại quân có dòng sử riêng</span></div>
+    <div class="stat reveal live"><b id="online">0</b><span>người đang ở thế giới chung</span></div>
+  </section>
+
+  <section class="band guide">
+    <video controls preload="none" poster="img/trailer.png" src="video/trailer.mp4" aria-label="Video hướng dẫn cách chơi, gần ba phút"></video>
+    <div>
+      <h2>Người mới bắt đầu từ đâu</h2>
+      <ol class="route">
+        <li>Tạo tài khoản, hoặc chơi thử ngay không cần đăng ký.</li>
+        <li>Xem video hướng dẫn gần ba phút khi mở ván mới (xem lại được ở màn hình tựa đề). Video nói đủ: vòng chơi, các nhân vật, cách đánh, lên cấp, cảnh giới, lò rèn, vùng luyện, câu cá, chat.</li>
+        <li>Làm theo khung việc cần làm ở góc trái, mũi tên đỏ sẽ chỉ đường.</li>
+        <li>Ở mỗi di tích: nghe chuyện, trả lời câu hỏi, nhặt mảnh ghép, vào trận nếu có.</li>
+        <li>Đủ dấu thì về gặp Cụ Đồ Sử dựng dòng thời gian, rồi qua cổng sang giai đoạn mới.</li>
+      </ol>
+      <p class="tip">Phím hay dùng: J lộ trình · K tu luyện · F đánh quái · C câu cá · H gọi chiến mã · B túi đồ · G sổ bóng giặc · P bạn chơi · L chat. Mọi bảng khác nằm trong nút ba gạch ở góc phải trên.</p>
+    </div>
+  </section>
+
+  <section class="band people">
+    <h2 class="reveal">Những người bạn sẽ gặp</h2>
+    <p class="lead reveal">Đến gần, thấy chữ E hiện dưới chân thì bấm E để nói chuyện. Mỗi người giữ một việc.</p>
+    <div class="npc-grid">
+      <figure class="npc reveal"><img class="pixel" src="img/npc_cu_do.png" alt="Cụ Đồ Sử, ông đồ râu tóc bạc" loading="lazy">
+        <figcaption><h3>Cụ Đồ Sử</h3><p>Già làng ở chỗ xuất phát. Giao việc, nhận báo cáo sau mỗi chuyến đi, cùng bạn xếp dòng thời gian rồi mở cổng sang màn sau.</p></figcaption></figure>
+      <figure class="npc reveal"><img class="pixel" src="img/npc_giu_ky_uc.png" alt="Người giữ ký ức, một bà cụ" loading="lazy">
+        <figcaption><h3>Người giữ ký ức</h3><p>Đứng giữa mỗi di tích. Thấy dấu chấm than trên đầu là có chuyện để nghe; nghe xong mới mở các việc khác của di tích.</p></figcaption></figure>
+      <figure class="npc reveal"><img class="pixel" src="img/npc_bia_da.png" alt="Tấm bia đá" loading="lazy">
+        <figcaption><h3>Bia đá, người trong vùng</h3><p>Đặt câu hỏi về di tích: chọn đáp án, xếp thứ tự, nối cặp, chỉ trên bản đồ. Đúng ngay lần đầu được nhiều điểm nhất.</p></figcaption></figure>
+      <figure class="npc reveal"><img class="pixel" src="img/npc_tho_ren.png" alt="Thợ rèn" loading="lazy">
+        <figcaption><h3>Thợ rèn</h3><p>Đứng cạnh chỗ xuất phát, bán vũ khí, áo, mũ, giày, găng và cần câu tre bằng tiền quan.</p></figcaption></figure>
+      <figure class="npc reveal"><img class="pixel" src="img/npc_ke_chuyen.png" alt="Người kể chuyện ở vùng luyện" loading="lazy">
+        <figcaption><h3>Người kể chuyện vùng luyện</h3><p>Kể lại trận đánh có thật ở vùng đó, kèm nguồn, rồi hỏi một câu. Trả lời đúng được thưởng kinh nghiệm và tiền quan.</p></figcaption></figure>
+      <figure class="npc reveal"><img class="pixel" src="img/npc_cau_ca.png" alt="Ông lão câu cá" loading="lazy">
+        <figcaption><h3>Người câu cá</h3><p>Ngồi bên sông với bếp lửa. Kể chuyện sông nước trong sử, bán cần câu; mang cá tới bếp để nướng.</p></figcaption></figure>
+      <figure class="npc reveal"><img class="pixel" src="img/npc_di_duong.png" alt="Người đi đường" loading="lazy">
+        <figcaption><h3>Người đi đường, lính canh</h3><p>Nói vài câu về nơi bạn đang đứng, đôi khi là mẹo đánh quái ở vùng đó.</p></figcaption></figure>
+      <figure class="npc reveal"><img class="pixel" src="img/npc_vo_su.png" alt="Võ sư áo đỏ" loading="lazy">
+        <figcaption><h3>Võ sư, người thách đấu</h3><p>Ở võ đài có chín võ sinh để đấu tập. Trên đường có người mời đấu: bấm Y để nhận, N để thôi.</p></figcaption></figure>
+      <figure class="npc reveal"><img class="pixel" src="img/npc_bang_vang.png" alt="Bảng vàng sơn son" loading="lazy">
+        <figcaption><h3>Bảng vàng</h3><p>Dựng ở map đầu, ghi 20 người nhiều điểm học sử nhất và 20 người sức mạnh cao nhất trên máy chủ.</p></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="band paperband quests">
+    <h2>Nhiệm vụ trong game</h2>
+    <div class="quest-cols">
+      <div>
+        <h3>Nhiệm vụ chính: học từng di tích</h3>
+        <ol>
+          <li><b>Đi tới di tích</b> theo khung việc cần làm ở góc trái, mũi tên đỏ chỉ đường.</li>
+          <li><b>Nghe người giữ ký ức kể chuyện</b>, có khi chìm vào hồi ức để xem lại cảnh xưa.</li>
+          <li><b>Trả lời câu hỏi</b> ở bia đá và người trong vùng.</li>
+          <li><b>Nhặt mảnh ghép tư liệu</b>; mảnh cuối có bóng giặc canh, bấm F đánh thắng mới nhặt được.</li>
+          <li><b>Vào trận</b> ở chỗ có cờ đỏ, đánh đúng cách đánh của trận thật.</li>
+          <li><b>Đóng dấu Hộ chiếu, về báo cáo Cụ Đồ Sử</b> để nhận thưởng và việc tiếp theo.</li>
+          <li><b>Dựng dòng thời gian</b> khi đủ dấu, hạ trùm cuối màn, qua cổng sang giai đoạn mới.</li>
+        </ol>
+      </div>
+      <div>
+        <h3>Việc phụ: không bắt buộc, có thưởng</h3>
+        <ul>
+          <li><b>Khám phá</b> các dấu hỏi trên map: chuyện lạ, thêm tinh hoa.</li>
+          <li><b>Điều tra</b> trong căn nhà có dấu chấm than ở cửa: xem tư liệu, nêu kết luận.</li>
+          <li><b>Ghép tư liệu</b> (phím T): gom đủ mảnh để khôi phục văn kiện, được 2 tinh hoa.</li>
+          <li><b>Vùng luyện</b>: 12 vùng gắn trận đánh thật, mở dần khi học xong di tích.</li>
+          <li><b>Sổ bóng giặc</b> (phím G): hạ mỗi loại quân lần đầu để mở một trang sử.</li>
+          <li><b>Câu cá, nướng cá</b> (phím C), <b>võ đài</b>, <b>tổ đội và thách đấu</b> với bạn bè.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <h2>Ba chặng đường giữ nước</h2>
+    <ol class="eras">
+      <li>
+        <span class="years">938 đến 1288</span>
+        <h3>Những khúc sông giữ nước</h3>
+        <img class="pixel" src="img/era1.png" alt="Bãi cọc trên sông, thuyền neo gần bờ" loading="lazy">
+        <p>Từ Ngô Quyền trên sông Bạch Đằng đến ba lần đánh Mông Nguyên. Tám di tích, từ Đường Lâm tới bãi cọc Yên Giang.</p>
+      </li>
+      <li>
+        <span class="years">1418 đến 1428</span>
+        <h3>Mười năm nếm mật nằm gai</h3>
+        <img class="pixel" src="img/era2.png" alt="Một ngôi làng vừa bị đốt, khói còn bốc lên" loading="lazy">
+        <p>Khởi nghĩa Lam Sơn, từ những ngày thiếu lương trên núi đến ải Chi Lăng và áng văn Bình Ngô đại cáo.</p>
+      </li>
+      <li>
+        <span class="years">1945 đến 1954</span>
+        <h3>Từ Tân Trào đến Điện Biên</h3>
+        <img class="pixel" src="img/era3.png" alt="Lòng chảo Điện Biên với lán trại và hào giao thông" loading="lazy">
+        <p>Cây đa Tân Trào, Quảng trường Ba Đình, chiến dịch Biên giới và 56 ngày đêm ở lòng chảo Điện Biên.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="band paperband">
+    <h2>Đến mỗi di tích, bạn sẽ làm gì</h2>
+    <div class="steps">
+      <article class="step">
+        <img class="shot" src="img/memory.png" alt="Hồi ức trận Bạch Đằng: thuyền địch đâm vào cọc khi triều rút" loading="lazy">
+        <div>
+          <h3>Nghe chuyện, xem lại hồi ức</h3>
+          <p>Người giữ ký ức kể, cảnh xưa hiện ra màu nâu cũ: thuyền nhử địch vào sông, triều rút, cọc lộ, thuyền vỡ.</p>
+        </div>
+      </article>
+      <article class="step">
+        <img class="shot" src="img/question.png" alt="Một câu hỏi trong game kèm lời giải và nguồn" loading="lazy">
+        <div>
+          <h3>Trả lời để đi tiếp</h3>
+          <p>Chọn đáp án, xếp thứ tự sự kiện, nối cặp, chỉ vị trí trên bản đồ. Sai thì đọc lời giải, câu đó sẽ quay lại trong phần ôn tập.</p>
+        </div>
+      </article>
+      <article class="step">
+        <img class="shot" src="img/battle.png" alt="Trận Bạch Đằng: tự cắm cọc rồi phản công khi triều rút" loading="lazy">
+        <div>
+          <h3>Tự tay đánh trận</h3>
+          <p>Cắm cọc rồi chờ con nước ở Bạch Đằng, phục kích ở Chi Lăng, siết vòng vây ở Điện Biên. Mỗi trận diễn đúng cách đánh của trận thật.</p>
+        </div>
+      </article>
+      <article class="step">
+        <img class="shot" src="img/case.png" alt="Căn phòng điều tra với các manh mối cần xem" loading="lazy">
+        <div>
+          <h3>Điều tra trong căn gác, căn hầm</h3>
+          <p>Bước vào nhà 48 Hàng Ngang hay hầm chỉ huy ở Mường Thanh, xem từng tư liệu rồi nêu kết luận của bạn.</p>
+        </div>
+      </article>
+      <article class="step">
+        <img class="shot" src="img/arena.png" alt="Võ đài: đấu với bot bằng các kỹ năng đã học" loading="lazy">
+        <div>
+          <h3>Học càng nhiều càng mạnh</h3>
+          <p>Trả lời đúng, đóng dấu di tích thì có điểm kỹ năng để học chiêu; chìm vào hồi ức, ghép tư liệu thì có tinh hoa để đột phá cảnh giới.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="band rpg">
+    <h2 class="reveal">Lên cấp bằng cách học sử</h2>
+    <p class="lead reveal">Bóng giặc, cảnh giới, tiền quan là phần trò chơi. Thứ làm nhân vật mạnh lên thật sự là những gì bạn học được.</p>
+    <div class="cards">
+      <figure class="card reveal"><img src="img/rpg_field.jpg" alt="Vùng luyện bến Đông Bộ Đầu năm 1258 với kỵ binh Mông Cổ" loading="lazy">
+        <figcaption><h3>Vùng luyện gắn sự kiện thật</h3><p>Mười hai vùng mở dần theo bài học: sông Như Nguyệt 1077, bến Đông Bộ Đầu 1258, Chương Dương 1285, biển Vân Đồn 1288, Diễn Châu 1425, Xương Giang, vòng vây Đông Quan, ải Lê Hoa 1427, đèo Bông Lau và sông Lô 1947, Đông Khê 1950, Mường Thanh. Mỗi vùng có người kể chuyện kèm nguồn và một câu hỏi trước khi luyện tay.</p></figcaption></figure>
+      <figure class="card reveal"><img src="img/rpg_fight.jpg" alt="Trận đánh trên map, nhân vật đội nón lá cầm giáo" loading="lazy">
+        <figcaption><h3>Mặc gì, cầm gì cũng hiện lên người</h3><p>Nón lá, khăn chít, giáp vảy, ủng da; giáo đâm thẳng, đại đao bổ rộng, nỏ và cung bắn tên bay thật.</p></figcaption></figure>
+      <figure class="card reveal"><img src="img/rpg_bestiary.jpg" alt="Sổ bóng giặc với các trang đã mở" loading="lazy">
+        <figcaption><h3>Sổ bóng giặc</h3><p>Hạ mỗi loại quân lần đầu thì mở một dòng sử về đội quân ấy, có ghi nguồn: Nam Hán, Tống, Mông Cổ, Nguyên, Minh, đồn bốt, ụ pháo, tàu chiến và đoàn xe thời chống Pháp.</p></figcaption></figure>
+      <figure class="card reveal"><img src="img/rpg_shop.jpg" alt="Lò rèn bán vũ khí, áo giáp, mũ, giày, găng" loading="lazy">
+        <figcaption><h3>Lò rèn và cảnh giới</h3><p>Tiền quan mua đồ, tiềm năng tăng chỉ số. Muốn qua giới hạn cấp phải có tinh hoa, mà tinh hoa chỉ có khi học sử.</p></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="band together">
+    <div class="reveal">
+      <h2>Chơi cùng bạn bè</h2>
+      <ul class="ticks">
+        <li>Thấy bạn cùng lớp trên cùng một map, mặc đúng bộ đồ của bạn ấy.</li>
+        <li>Lập tổ đội tới bốn người: cùng đánh quái thì được chia một nửa kinh nghiệm.</li>
+        <li>Kết đồng minh để luôn biết bạn mình đang ở chặng nào.</li>
+        <li>Bấm vào bạn mình trên map để xem trạng thái, mời tổ đội, kết đồng minh hay thách đấu.</li>
+        <li>Thách đấu thật: bạn nhận lời là cả hai cùng vào võ đài đánh nhau, kết quả được ghi lại.</li>
+        <li>Chat bằng phím L: nói với người cùng map thì miễn phí; kênh thế giới hiện ở góc phải trên, mỗi tin tốn 10 quan. Tin nhắn tự che từ tục và chặn gửi dồn.</li>
+        <li>Bảng vàng ở map đầu ghi 20 người giỏi nhất: điểm học sử và sức mạnh.</li>
+        <li>Đang đánh quái thì người cùng map thấy bạn vung vũ khí, kèm dòng “đang đánh …”.</li>
+      </ul>
+    </div>
+    <img class="shot reveal" src="img/rpg_social.jpg" alt="Bảng Bạn chơi: người cùng map, tổ đội, đồng minh, lời mời" loading="lazy">
+  </section>
+
+  <section class="band sources">
+    <div>
+      <h2>Chuyện nào cũng có nguồn</h2>
+      <p>Lời giải của mỗi câu hỏi ghi rõ nguồn. Chỗ nào là truyền thuyết hay lời dẫn hư cấu, game ghi nhãn ngay trên màn hình để bạn không nhầm với sử.</p>
+    </div>
+    <ul>
+      <li>Đại Việt sử ký toàn thư</li>
+      <li>Khâm định Việt sử thông giám cương mục</li>
+      <li>Lam Sơn thực lục</li>
+      <li>Nguyễn Trãi toàn tập</li>
+      <li>Hồ Chí Minh toàn tập</li>
+      <li>Sách giáo khoa Lịch sử theo Chương trình 2018</li>
+    </ul>
+  </section>
+
+  <footer class="foot">
+    <span>Bài tập nhóm môn Lập trình Python.</span>
+    <span>Hình và nhạc từ bộ Ninja Adventure (CC0).</span>
+    <a href="privacy.html">Chính sách quyền riêng tư</a>
+  </footer>
+
+  <script src="js/api.js?v=8"></script>
+  <script src="js/landing.js?v=8"></script>
+  <script>
+    SK.renderBar().then((user) => {
+      if (user) document.getElementById("cta").textContent = "Chơi tiếp";
+    });
+  </script>
+</body>
+</html>

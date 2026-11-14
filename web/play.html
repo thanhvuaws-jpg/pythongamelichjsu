@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chơi: Sử Ký Điều Tra</title>
+  <link rel="icon" href="img/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css?v=10">
+</head>
+<body class="playpage">
+  <nav class="bar" id="bar"></nav>
+  <iframe id="game" title="Game Sử Ký Điều Tra" allow="autoplay; fullscreen"></iframe>
+  <form class="chatbar" id="chatbar" hidden autocomplete="off">
+    <div class="chat-tabs" role="tablist" aria-label="Kênh chat">
+      <button type="button" role="tab" data-ch="map" aria-selected="true">Thường · miễn phí</button>
+      <button type="button" role="tab" data-ch="world" aria-selected="false">Thế giới · 10 quan</button>
+    </div>
+    <div class="chat-row">
+      <input id="chatinput" maxlength="120" placeholder="Gõ tin nhắn rồi Enter. Tab đổi kênh, Esc để đóng." aria-label="Tin nhắn">
+      <button type="submit" class="btn gold small">Gửi</button>
+    </div>
+  </form>
+  <script src="js/api.js?v=8"></script>
+  <script src="js/play.js?v=9"></script>
+</body>
+</html>

@@ -1,0 +1,1156 @@
+{
+ "man1": {
+  "size": [
+   118,
+   62
+  ],
+  "spawn": [
+   7,
+   31
+  ],
+  "portal": [
+   82,
+   8
+  ],
+  "mentor": [
+   74,
+   12
+  ],
+  "trees": "song",
+  "forest": 0.5,
+  "rivers": [
+   {
+    "pts": [
+     [
+      14,
+      0
+     ],
+     [
+      18,
+      8
+     ],
+     [
+      32,
+      12
+     ],
+     [
+      50,
+      9
+     ],
+     [
+      62,
+      6
+     ],
+     [
+      66,
+      0
+     ]
+    ],
+    "w": 4
+   },
+   {
+    "pts": [
+     [
+      46,
+      61
+     ],
+     [
+      50,
+      52
+     ],
+     [
+      44,
+      42
+     ],
+     [
+      38,
+      36
+     ],
+     [
+      30,
+      37
+     ],
+     [
+      24,
+      46
+     ],
+     [
+      20,
+      61
+     ]
+    ],
+    "w": 3
+   }
+  ],
+  "roads": [
+   [
+    [
+     7,
+     31
+    ],
+    [
+     17,
+     31
+    ],
+    [
+     17,
+     19
+    ]
+   ],
+   [
+    [
+     17,
+     31
+    ],
+    [
+     40,
+     31
+    ],
+    [
+     40,
+     25
+    ]
+   ],
+   [
+    [
+     40,
+     25
+    ],
+    [
+     40,
+     6
+    ]
+   ],
+   [
+    [
+     40,
+     31
+    ],
+    [
+     60,
+     31
+    ],
+    [
+     60,
+     16
+    ]
+   ],
+   [
+    [
+     40,
+     31
+    ],
+    [
+     40,
+     47
+    ]
+   ],
+   [
+    [
+     60,
+     31
+    ],
+    [
+     70,
+     31
+    ],
+    [
+     70,
+     32
+    ]
+   ],
+   [
+    [
+     70,
+     32
+    ],
+    [
+     70,
+     50
+    ]
+   ],
+   [
+    [
+     60,
+     16
+    ],
+    [
+     74,
+     16
+    ],
+    [
+     74,
+     12
+    ]
+   ],
+   [
+    [
+     74,
+     12
+    ],
+    [
+     82,
+     12
+    ],
+    [
+     82,
+     8
+    ]
+   ],
+   [
+    [
+     40,
+     47
+    ],
+    [
+     18,
+     47
+    ],
+    [
+     18,
+     50
+    ]
+   ],
+   [
+    [
+     22,
+     32
+    ],
+    [
+     22,
+     34
+    ]
+   ],
+   [
+    [
+     82,
+     12
+    ],
+    [
+     92,
+     12
+    ],
+    [
+     92,
+     31
+    ],
+    [
+     99,
+     31
+    ]
+   ]
+  ],
+  "zones": {
+   "r_duong_lam": {
+    "at": [
+     17,
+     19
+    ],
+    "theme": "lang"
+   },
+   "r_co_loa": {
+    "at": [
+     40,
+     25
+    ],
+    "theme": "thanh"
+   },
+   "r_nhu_nguyet": {
+    "at": [
+     40,
+     6
+    ],
+    "theme": "den"
+   },
+   "r_den_tran": {
+    "at": [
+     40,
+     48
+    ],
+    "theme": "den"
+   },
+   "r_kiep_bac": {
+    "at": [
+     60,
+     15
+    ],
+    "theme": "trai"
+   },
+   "r_trang_kenh": {
+    "at": [
+     70,
+     32
+    ],
+    "theme": "ben",
+    "stakes": true
+   },
+   "r_bai_coc": {
+    "at": [
+     70,
+     50
+    ],
+    "theme": "coc",
+    "weather": "fog"
+   },
+   "r_van_don": {
+    "at": [
+     18,
+     50
+    ],
+    "theme": "dao",
+    "weather": "fog"
+   }
+  },
+  "npcs": [
+   {
+    "char": "Villager",
+    "at": [
+     10,
+     29
+    ],
+    "lines": [
+     "Đi đường thì cứ theo lối đất nện. Thấy dấu chấm than trên đầu ai thì người đó có chuyện muốn kể đấy."
+    ]
+   },
+   {
+    "char": "Woman",
+    "at": [
+     25,
+     30
+    ],
+    "lines": [
+     "Đất này xưa có câu: giặc đến nhà, đàn bà cũng đánh. Thế nên làng nào cũng có chuyện để kể."
+    ]
+   },
+   {
+    "char": "Boy",
+    "at": [
+     33,
+     33
+    ],
+    "lines": [
+     "Anh thử bấm phím M xem, có cả bản đồ Việt Nam với Hoàng Sa, Trường Sa đấy!"
+    ]
+   },
+   {
+    "char": "Villager3",
+    "at": [
+     52,
+     30
+    ],
+    "lines": [
+     "Con nước sông Bạch Đằng lên xuống rất mạnh, không phải tay chèo nào cũng đọc được."
+    ]
+   },
+   {
+    "char": "Villager4",
+    "at": [
+     66,
+     41
+    ],
+    "lines": [
+     "Khảo cổ đào được nhiều cọc gỗ ở vùng Quảng Yên đấy. Gỗ ngâm hơn bảy trăm năm vẫn cứng lắm."
+    ]
+   },
+   {
+    "char": "Monk2",
+    "at": [
+     68,
+     17
+    ],
+    "lines": [
+     "Cụ Đồ Sử đang ngồi dưới gốc đa kia. Đủ mảnh ghép rồi thì đến gặp cụ mà dựng lại dòng thời gian."
+    ]
+   }
+  ],
+  "arena": [
+   22,
+   36
+  ],
+  "horse": [
+   12,
+   33
+  ],
+  "piers": [
+   [
+    79,
+    33
+   ]
+  ],
+  "weather": "leaf",
+  "sound": "river",
+  "mills": [
+   [
+    34,
+    38
+   ]
+  ],
+  "life": [
+   {
+    "kind": "chicken",
+    "at": [
+     12,
+     25
+    ],
+    "n": 3
+   },
+   {
+    "kind": "dog",
+    "at": [
+     20,
+     26
+    ],
+    "n": 1
+   },
+   {
+    "kind": "cow",
+    "at": [
+     14,
+     34
+    ],
+    "n": 2
+   },
+   {
+    "kind": "chicken",
+    "at": [
+     58,
+     33
+    ],
+    "n": 2
+   },
+   {
+    "kind": "frog",
+    "at": [
+     33,
+     13
+    ],
+    "n": 2
+   },
+   {
+    "kind": "frog",
+    "at": [
+     42,
+     38
+    ],
+    "n": 2
+   },
+   {
+    "kind": "dog",
+    "at": [
+     40,
+     54
+    ],
+    "n": 1
+   }
+  ],
+  "annex": {
+   "id": "a_van_mieu",
+   "at": [
+    104,
+    31
+   ],
+   "theme": "van_mieu",
+   "name": "Văn Miếu – Quốc Tử Giám",
+   "keeper": [
+    107,
+    33
+   ],
+   "keeper_name": "Thầy giữ văn miếu",
+   "keeper_char": "Master"
+  }
+ },
+ "man2": {
+  "size": [
+   108,
+   60
+  ],
+  "spawn": [
+   8,
+   50
+  ],
+  "portal": [
+   76,
+   8
+  ],
+  "mentor": [
+   70,
+   14
+  ],
+  "back": [
+   8,
+   54
+  ],
+  "trees": "rung",
+  "forest": 0.62,
+  "rivers": [
+   {
+    "pts": [
+     [
+      0,
+      34
+     ],
+     [
+      14,
+      30
+     ],
+     [
+      30,
+      36
+     ],
+     [
+      46,
+      33
+     ],
+     [
+      60,
+      38
+     ],
+     [
+      83,
+      34
+     ],
+     [
+      107,
+      33
+     ]
+    ],
+    "w": 4
+   }
+  ],
+  "roads": [
+   [
+    [
+     8,
+     50
+    ],
+    [
+     20,
+     50
+    ]
+   ],
+   [
+    [
+     20,
+     50
+    ],
+    [
+     20,
+     22
+    ]
+   ],
+   [
+    [
+     20,
+     50
+    ],
+    [
+     44,
+     50
+    ],
+    [
+     44,
+     51
+    ]
+   ],
+   [
+    [
+     20,
+     40
+    ],
+    [
+     44,
+     40
+    ],
+    [
+     44,
+     24
+    ]
+   ],
+   [
+    [
+     44,
+     24
+    ],
+    [
+     60,
+     24
+    ],
+    [
+     60,
+     10
+    ]
+   ],
+   [
+    [
+     60,
+     24
+    ],
+    [
+     70,
+     24
+    ],
+    [
+     70,
+     14
+    ]
+   ],
+   [
+    [
+     70,
+     14
+    ],
+    [
+     76,
+     14
+    ],
+    [
+     76,
+     8
+    ]
+   ],
+   [
+    [
+     44,
+     24
+    ],
+    [
+     44,
+     12
+    ],
+    [
+     60,
+     12
+    ]
+   ],
+   [
+    [
+     34,
+     41
+    ],
+    [
+     34,
+     43
+    ]
+   ],
+   [
+    [
+     70,
+     24
+    ],
+    [
+     86,
+     24
+    ],
+    [
+     86,
+     18
+    ],
+    [
+     91,
+     18
+    ]
+   ]
+  ],
+  "zones": {
+   "r_lam_kinh": {
+    "at": [
+     20,
+     48
+    ],
+    "theme": "lam"
+   },
+   "r_le_lai": {
+    "at": [
+     20,
+     20
+    ],
+    "theme": "lam",
+    "weather": "rain"
+   },
+   "r_tra_lan": {
+    "at": [
+     44,
+     51
+    ],
+    "theme": "lam",
+    "weather": "rain"
+   },
+   "r_tot_dong": {
+    "at": [
+     44,
+     24
+    ],
+    "theme": "dong"
+   },
+   "r_chi_lang": {
+    "at": [
+     60,
+     10
+    ],
+    "theme": "ai",
+    "weather": "rain"
+   },
+   "r_ho_guom": {
+    "at": [
+     66,
+     42
+    ],
+    "theme": "ho",
+    "weather": "leaf_pink"
+   }
+  },
+  "npcs": [
+   {
+    "char": "Villager3",
+    "at": [
+     12,
+     48
+    ],
+    "lines": [
+     "Rừng Lam Sơn này, ngày ấy nghĩa quân phải đào củ mài mà ăn đấy."
+    ]
+   },
+   {
+    "char": "Woman",
+    "at": [
+     20,
+     37
+    ],
+    "lines": [
+     "Có người kể Lê Lai xin mặc áo bào của chủ tướng. Nghe mà rưng rưng cháu ạ."
+    ]
+   },
+   {
+    "char": "Villager4",
+    "at": [
+     34,
+     42
+    ],
+    "lines": [
+     "Vào được Nghệ An là có đất, có người, có lương. Từ đó mới tiến ra Bắc được."
+    ]
+   },
+   {
+    "char": "Boy",
+    "at": [
+     52,
+     26
+    ],
+    "lines": [
+     "Đồng Tốt Động lầy lắm, ngựa mà sa xuống là khỏi lên."
+    ]
+   },
+   {
+    "char": "Monk2",
+    "at": [
+     66,
+     16
+    ],
+    "lines": [
+     "Mười năm khởi nghĩa, chữ nhân nghĩa vẫn là gốc. Cụ Đồ Sử chờ cháu ở đầu đường đấy."
+    ]
+   }
+  ],
+  "arena": [
+   34,
+   45
+  ],
+  "horse": [
+   12,
+   52
+  ],
+  "piers": [
+   [
+    44,
+    34
+   ]
+  ],
+  "weather": "leaf",
+  "sound": "wind",
+  "mills": [
+   [
+    27,
+    38
+   ]
+  ],
+  "life": [
+   {
+    "kind": "chicken",
+    "at": [
+     14,
+     50
+    ],
+    "n": 2
+   },
+   {
+    "kind": "frog",
+    "at": [
+     26,
+     37
+    ],
+    "n": 2
+   },
+   {
+    "kind": "dog",
+    "at": [
+     60,
+     46
+    ],
+    "n": 1
+   },
+   {
+    "kind": "cow",
+    "at": [
+     40,
+     44
+    ],
+    "n": 2
+   },
+   {
+    "kind": "frog",
+    "at": [
+     56,
+     38
+    ],
+    "n": 2
+   },
+   {
+    "kind": "chicken",
+    "at": [
+     38,
+     54
+    ],
+    "n": 2
+   }
+  ],
+  "annex": {
+   "id": "a_con_son",
+   "at": [
+    96,
+    18
+   ],
+   "theme": "con_son",
+   "name": "Côn Sơn",
+   "keeper": [
+    99,
+    20
+   ],
+   "keeper_name": "Người giữ đền",
+   "keeper_char": "Monk"
+  }
+ },
+ "man3": {
+  "size": [
+   108,
+   56
+  ],
+  "spawn": [
+   74,
+   46
+  ],
+  "portal": [
+   8,
+   8
+  ],
+  "mentor": [
+   14,
+   14
+  ],
+  "back": [
+   78,
+   50
+  ],
+  "trees": "bac",
+  "forest": 0.62,
+  "rivers": [
+   {
+    "pts": [
+     [
+      107,
+      20
+     ],
+     [
+      83,
+      22
+     ],
+     [
+      66,
+      26
+     ],
+     [
+      52,
+      22
+     ],
+     [
+      38,
+      28
+     ],
+     [
+      24,
+      26
+     ],
+     [
+      0,
+      32
+     ]
+    ],
+    "w": 4
+   }
+  ],
+  "roads": [
+   [
+    [
+     74,
+     46
+    ],
+    [
+     62,
+     46
+    ],
+    [
+     62,
+     14
+    ]
+   ],
+   [
+    [
+     62,
+     40
+    ],
+    [
+     42,
+     40
+    ],
+    [
+     42,
+     37
+    ]
+   ],
+   [
+    [
+     62,
+     14
+    ],
+    [
+     72,
+     14
+    ],
+    [
+     72,
+     11
+    ]
+   ],
+   [
+    [
+     42,
+     40
+    ],
+    [
+     24,
+     40
+    ],
+    [
+     24,
+     19
+    ]
+   ],
+   [
+    [
+     24,
+     22
+    ],
+    [
+     14,
+     22
+    ],
+    [
+     14,
+     14
+    ]
+   ],
+   [
+    [
+     14,
+     14
+    ],
+    [
+     8,
+     14
+    ],
+    [
+     8,
+     8
+    ]
+   ],
+   [
+    [
+     63,
+     38
+    ],
+    [
+     64,
+     38
+    ]
+   ],
+   [
+    [
+     74,
+     46
+    ],
+    [
+     88,
+     46
+    ],
+    [
+     88,
+     40
+    ],
+    [
+     91,
+     40
+    ]
+   ]
+  ],
+  "zones": {
+   "r_tan_trao": {
+    "at": [
+     62,
+     14
+    ],
+    "theme": "cay_da"
+   },
+   "r_ba_dinh": {
+    "at": [
+     42,
+     37
+    ],
+    "theme": "quang_truong",
+    "weather": "none"
+   },
+   "r_bien_gioi": {
+    "at": [
+     72,
+     9
+    ],
+    "theme": "doi"
+   },
+   "r_dien_bien": {
+    "at": [
+     24,
+     13
+    ],
+    "theme": "dien_bien",
+    "weather": "rain"
+   }
+  },
+  "npcs": [
+   {
+    "char": "OldMan3",
+    "at": [
+     68,
+     44
+    ],
+    "lines": [
+     "Tháng Tám năm ấy, người ta lội suối qua rừng về Tân Trào họp, mà không ai than mệt."
+    ]
+   },
+   {
+    "char": "Woman",
+    "at": [
+     52,
+     41
+    ],
+    "lines": [
+     "Mùa thu năm ấy Hà Nội đông nghịt. Bà nội tôi kể mãi không hết."
+    ]
+   },
+   {
+    "char": "Villager",
+    "at": [
+     62,
+     30
+    ],
+    "lines": [
+     "Dân công gùi gạo, thồ xe đạp xuyên rừng. Một chuyến đi có khi mất cả tháng trời."
+    ]
+   },
+   {
+    "char": "Monk2",
+    "at": [
+     28,
+     38
+    ],
+    "lines": [
+     "Đi lên Tây Bắc thì đi cẩn thận. Những người nằm lại trên đường ấy nhiều lắm, cháu nhớ đi cho nhẹ bước."
+    ]
+   }
+  ],
+  "arena": [
+   70,
+   38
+  ],
+  "horse": [
+   70,
+   47
+  ],
+  "weather": "fog",
+  "sound": "wind",
+  "life": [
+   {
+    "kind": "chicken",
+    "at": [
+     58,
+     18
+    ],
+    "n": 2
+   },
+   {
+    "kind": "dog",
+    "at": [
+     66,
+     44
+    ],
+    "n": 1
+   },
+   {
+    "kind": "cow",
+    "at": [
+     58,
+     40
+    ],
+    "n": 2
+   },
+   {
+    "kind": "frog",
+    "at": [
+     50,
+     26
+    ],
+    "n": 2
+   },
+   {
+    "kind": "chicken",
+    "at": [
+     36,
+     42
+    ],
+    "n": 2
+   }
+  ],
+  "annex": {
+   "id": "a_atk",
+   "at": [
+    96,
+    40
+   ],
+   "theme": "atk",
+   "name": "ATK Định Hoá",
+   "keeper": [
+    99,
+    42
+   ],
+   "keeper_name": "Cán bộ giữ di tích",
+   "keeper_char": "OldMan"
+  }
+ }
+}

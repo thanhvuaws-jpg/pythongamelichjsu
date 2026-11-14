@@ -1,0 +1,6 @@
+# Chạy game trên desktop để phát triển/test và build WebAssembly bằng pygbag
+pygame-ce==2.5.8
+pygbag==0.9.3
+httpx==0.28.1
+pytest==9.2.0
+hypothesis==6.170.14

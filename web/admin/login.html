@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Đăng nhập quản trị: Sử Ký Điều Tra</title>
+  <link rel="icon" href="../img/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+  <main class="gate">
+    <form class="box" id="form" novalidate>
+      <h1>Cổng quản trị</h1>
+      <p class="lead">Chỉ dành cho quản trị viên của Sử Ký Điều Tra.</p>
+      <p class="notice" id="msg" role="alert" hidden></p>
+      <label class="field">Tài khoản
+        <input name="email" type="email" autocomplete="username" placeholder="Email quản trị" required>
+      </label>
+      <label class="field">Mật khẩu
+        <input name="password" type="password" autocomplete="current-password" required>
+      </label>
+      <button class="btn gold" type="submit">Đăng nhập</button>
+      <p class="after">Bạn là người chơi? <a href="/login.html">Đăng nhập ở trang người chơi</a></p>
+    </form>
+  </main>
+  <script src="../js/api.js"></script>
+  <script>
+    SK.me().then((user) => { if (SK.canAdmin(user)) location.replace("./"); }).catch(() => null);
+    document.getElementById("form").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const form = event.target;
+      const button = form.querySelector("button");
+      button.disabled = true;
+      SK.show("msg", "");
+      try {
+        await SK.login(form.email.value, form.password.value);
+        const user = await SK.me();
+        if (SK.canAdmin(user)) return location.replace("./");
+        // Mật khẩu đúng nhưng không phải quản trị viên: đăng xuất ngay, không để lại phiên ở cổng này
+        await SK.logout();
+        SK.show("msg", "Tài khoản này không có quyền quản trị.", true);
+      } catch (err) {
+        SK.show("msg", err.status === 422 ? "Hãy nhập đúng email của tài khoản quản trị." : err.message, true);
+      }
+      button.disabled = false;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,474 @@
+{
+ "sources": {
+  "toan_thu": {
+   "title": "Đại Việt sử ký toàn thư",
+   "translators": "Bản dịch: Viện Khoa học xã hội Việt Nam (Viện Nghiên cứu Hán Nôm)",
+   "publisher": "NXB Khoa học Xã hội",
+   "year": 1993,
+   "tier": 1,
+   "note": "Bộ quốc sử chính cho các màn thời trung đại."
+  },
+  "cuong_muc": {
+   "title": "Khâm định Việt sử thông giám cương mục",
+   "translators": "Bản dịch: Viện Sử học",
+   "publisher": "NXB Giáo dục",
+   "tier": 1,
+   "note": "Dùng đối chiếu niên đại và địa danh."
+  },
+  "lam_son_thuc_luc": {
+   "title": "Lam Sơn thực lục",
+   "tier": 1,
+   "note": "Nguồn chính về khởi nghĩa Lam Sơn. Nhóm cần chọn một bản dịch cụ thể để ghi số trang."
+  },
+  "nguyen_trai_tt": {
+   "title": "Nguyễn Trãi toàn tập",
+   "publisher": "NXB Khoa học Xã hội",
+   "tier": 1,
+   "note": "Văn bản Bình Ngô đại cáo, Quân trung từ mệnh tập."
+  },
+  "an_nam_chi_luoc": {
+   "title": "An Nam chí lược",
+   "authors": "Lê Tắc",
+   "tier": 1,
+   "note": "Góc nhìn đương thời để đối chiếu về kháng chiến chống Nguyên."
+  },
+  "lich_su_vn": {
+   "title": "Lịch sử Việt Nam",
+   "authors": "Viện Sử học",
+   "publisher": "NXB Khoa học Xã hội",
+   "tier": 1,
+   "note": "Bộ 15 tập, khung tổng quan và quan hệ nhân quả cho cả ba màn."
+  },
+  "dat_nuoc": {
+   "title": "Đất nước Việt Nam qua các đời",
+   "authors": "Đào Duy Anh",
+   "tier": 1,
+   "note": "Địa lý lịch sử, tên địa danh cổ."
+  },
+  "hcm_tt": {
+   "title": "Hồ Chí Minh toàn tập",
+   "tier": 1,
+   "note": "Văn bản Tuyên ngôn Độc lập, Lời kêu gọi toàn quốc kháng chiến."
+  },
+  "van_kien": {
+   "title": "Văn kiện Đảng toàn tập",
+   "publisher": "NXB Chính trị quốc gia",
+   "tier": 1,
+   "note": "Văn kiện giai đoạn 1945–1954."
+  },
+  "ls_quan_su": {
+   "title": "Công trình của Viện Lịch sử quân sự Việt Nam về kháng chiến chống Pháp",
+   "authors": "Viện Lịch sử quân sự Việt Nam",
+   "tier": 1,
+   "note": "Diễn biến các chiến dịch của Màn 3."
+  },
+  "bt_dien_bien": {
+   "title": "Bảo tàng Chiến thắng lịch sử Điện Biên Phủ; Bảo tàng Lịch sử Quân sự Việt Nam",
+   "tier": 2,
+   "note": "Hiện vật và tư liệu trưng bày cho Màn 3."
+  },
+  "sgk": {
+   "title": "Sách giáo khoa Lịch sử và Địa lí (lớp 6–9), Lịch sử (lớp 10–12) theo Chương trình GDPT 2018",
+   "publisher": "NXB Giáo dục Việt Nam",
+   "tier": 2,
+   "note": "Chuẩn mức độ kiến thức, căn cứ phân độ khó."
+  },
+  "viet_nam_su_luoc": {
+   "title": "Việt Nam sử lược",
+   "authors": "Trần Trọng Kim",
+   "tier": 3,
+   "note": "Văn phong dễ đọc, cần đối chiếu với nguồn cấp cao hơn."
+  },
+  "linh_nam": {
+   "title": "Lĩnh Nam chích quái",
+   "note": "Sưu tập truyện dân gian, không phải chính sử."
+  },
+  "khao_co_co_loa": {
+   "title": "Các công bố khảo cổ học về khu di tích Cổ Loa",
+   "note": "Nhóm cần đối chiếu số liệu trước khi nộp."
+  },
+  "khao_co_coc": {
+   "title": "Các công bố khảo cổ học về bãi cọc Bạch Đằng ở Quảng Yên",
+   "note": "Nhóm cần đối chiếu tên địa danh sau sáp nhập 2025."
+  },
+  "lam_kinh": {
+   "title": "Tư liệu giới thiệu Khu di tích lịch sử Lam Kinh",
+   "note": "Nhóm cần đối chiếu trước khi nộp."
+  },
+  "ho_guom": {
+   "title": "Truyền thuyết dân gian về Hồ Gươm",
+   "note": "Truyền thuyết, không phải chính sử."
+  },
+  "vng_hoi_ky": {
+   "title": "Võ Nguyên Giáp, Những chặng đường lịch sử (NXB Chính trị quốc gia, 2001)",
+   "note": "Lời dặn “dù phải đốt cháy cả dãy Trường Sơn” ở trang 196."
+  },
+  "di_tich_48": {
+   "title": "Tư liệu giới thiệu Di tích Nhà số 48 Hàng Ngang, Hà Nội",
+   "note": "Nhóm cần đối chiếu trước khi nộp."
+  },
+  "ngu_van": {
+   "title": "Sách giáo khoa Ngữ văn THCS: Sông núi nước Nam, Chiếu dời đô, Hịch tướng sĩ, Nước Đại Việt ta",
+   "publisher": "NXB Giáo dục Việt Nam",
+   "tier": 2,
+   "note": "Bản dịch dùng trong nhà trường. Các ấn bản có thể khác nhau vài chữ, nhóm cần đối chiếu từng câu với đúng ấn bản trước khi nộp."
+  },
+  "van_cao": {
+   "title": "Văn Cao, Trường ca Sông Lô",
+   "year": 1948,
+   "tier": 2,
+   "note": "Bài hát viết sau chiến thắng sông Lô tháng 10/1947, công bố tháng 3/1948; game chỉ nhắc tên bài, không trích lời."
+  }
+ },
+ "citations": {
+  "c_tt_ngo": {
+   "source": "toan_thu",
+   "locator": "Kỷ Nhà Ngô (Tiền Ngô Vương)"
+  },
+  "c_tt_ly": {
+   "source": "toan_thu",
+   "locator": "Kỷ Nhà Lý, Nhân Tông"
+  },
+  "c_tt_tran_tt": {
+   "source": "toan_thu",
+   "locator": "Kỷ Nhà Trần, Thái Tông"
+  },
+  "c_tt_tran_nt": {
+   "source": "toan_thu",
+   "locator": "Kỷ Nhà Trần, Nhân Tông"
+  },
+  "c_tt_le": {
+   "source": "toan_thu",
+   "locator": "Kỷ Nhà Lê, Thái Tổ"
+  },
+  "c_cm_ngo": {
+   "source": "cuong_muc",
+   "locator": "Phần chép về Ngô Quyền"
+  },
+  "c_cm_ly": {
+   "source": "cuong_muc",
+   "locator": "Phần chép về nhà Lý, việc đánh Tống"
+  },
+  "c_cm_le": {
+   "source": "cuong_muc",
+   "locator": "Phần chép về Lê Thái Tổ"
+  },
+  "c_annam": {
+   "source": "an_nam_chi_luoc",
+   "locator": "Phần chép về việc quân Nguyên sang đánh"
+  },
+  "c_ls_ngo": {
+   "source": "lich_su_vn",
+   "locator": "Giai đoạn Ngô – Đinh – Tiền Lê"
+  },
+  "c_ls_lytran": {
+   "source": "lich_su_vn",
+   "locator": "Giai đoạn Lý – Trần"
+  },
+  "c_ls_le": {
+   "source": "lich_su_vn",
+   "locator": "Giai đoạn khởi nghĩa Lam Sơn và đầu Lê"
+  },
+  "c_ls_1945": {
+   "source": "lich_su_vn",
+   "locator": "Giai đoạn 1945–1954"
+  },
+  "c_dat_nuoc": {
+   "source": "dat_nuoc",
+   "locator": "Phần địa danh theo các đời"
+  },
+  "c_lsTL": {
+   "source": "lam_son_thuc_luc",
+   "locator": "Phần chép việc khởi nghĩa"
+  },
+  "c_bndc": {
+   "source": "nguyen_trai_tt",
+   "locator": "Bình Ngô đại cáo"
+  },
+  "c_qttm": {
+   "source": "nguyen_trai_tt",
+   "locator": "Quân trung từ mệnh tập"
+  },
+  "c_tuyen_ngon": {
+   "source": "hcm_tt",
+   "locator": "Tuyên ngôn Độc lập (2/9/1945)"
+  },
+  "c_loi_keu_goi": {
+   "source": "hcm_tt",
+   "locator": "Lời kêu gọi toàn quốc kháng chiến (19/12/1946)"
+  },
+  "c_vk_1945": {
+   "source": "van_kien",
+   "locator": "Văn kiện năm 1945"
+  },
+  "c_qs_vb": {
+   "source": "ls_quan_su",
+   "locator": "Chiến dịch Việt Bắc 1947"
+  },
+  "c_qs_bg": {
+   "source": "ls_quan_su",
+   "locator": "Chiến dịch Biên giới 1950"
+  },
+  "c_qs_dbp": {
+   "source": "ls_quan_su",
+   "locator": "Chiến dịch Điện Biên Phủ 1954"
+  },
+  "c_bt_dbp": {
+   "source": "bt_dien_bien",
+   "locator": "Tư liệu trưng bày về chiến dịch"
+  },
+  "c_sgk": {
+   "source": "sgk",
+   "locator": "Các bài về kháng chiến chống ngoại xâm"
+  },
+  "c_lncq": {
+   "source": "linh_nam",
+   "locator": "Truyện Rùa Vàng"
+  },
+  "c_khao_co": {
+   "source": "khao_co_co_loa",
+   "locator": "Kho mũi tên đồng Cầu Vực, trống đồng Cổ Loa, các vòng thành"
+  },
+  "c_coc_quang_yen": {
+   "source": "khao_co_coc",
+   "locator": "Bãi cọc Yên Giang, Đồng Vạn Muối, Đồng Má Ngựa"
+  },
+  "c_lam_kinh": {
+   "source": "lam_kinh",
+   "locator": "Bia Vĩnh Lăng"
+  },
+  "c_ho_guom": {
+   "source": "ho_guom",
+   "locator": "Sự tích Hồ Gươm"
+  },
+  "c_vng": {
+   "source": "vng_hoi_ky",
+   "locator": "Phần viết về Tân Trào mùa hè năm 1945, trang 196"
+  },
+  "c_48": {
+   "source": "di_tich_48",
+   "locator": "Giới thiệu căn gác soạn Tuyên ngôn Độc lập"
+  },
+  "c_nqsh": {
+   "source": "ngu_van",
+   "locator": "Sông núi nước Nam (bản dịch thơ), tương truyền của Lý Thường Kiệt"
+  },
+  "c_chieu_doi_do": {
+   "source": "toan_thu",
+   "locator": "Kỷ Nhà Lý, Thái Tổ, năm Canh Tuất (1010): Chiếu dời đô"
+  },
+  "c_nv_chieu": {
+   "source": "ngu_van",
+   "locator": "Chiếu dời đô (bản dịch)"
+  },
+  "c_hich": {
+   "source": "ngu_van",
+   "locator": "Hịch tướng sĩ (bản dịch, đoạn trích)"
+  },
+  "c_nv_bndc": {
+   "source": "ngu_van",
+   "locator": "Nước Đại Việt ta, trích Bình Ngô đại cáo (bản dịch)"
+  },
+  "c_van_mieu": {
+   "source": "toan_thu",
+   "locator": "Kỷ Nhà Lý: Thánh Tông năm 1070 dựng Văn Miếu, Nhân Tông năm 1076 lập Quốc Tử Giám"
+  },
+  "c_con_son": {
+   "source": "nguyen_trai_tt",
+   "locator": "Côn Sơn ca"
+  },
+  "c_atk": {
+   "source": "lich_su_vn",
+   "locator": "Kháng chiến chống Pháp: căn cứ địa Việt Bắc, An toàn khu"
+  },
+  "c_tt_1258": {
+   "source": "toan_thu",
+   "locator": "Bản kỷ, Kỷ Nhà Trần, Thái Tông hoàng đế, các năm Đinh Tỵ (1257) và Mậu Ngọ (1258)"
+  },
+  "c_lsvn_1258": {
+   "source": "lich_su_vn",
+   "locator": "Phần cuộc kháng chiến chống quân xâm lược Mông Cổ lần thứ nhất (1258)"
+  },
+  "c_tt_1427": {
+   "source": "toan_thu",
+   "locator": "Bản kỷ, Kỷ Nhà Lê, Thái Tổ hoàng đế, năm Đinh Mùi (1427)"
+  },
+  "c_xuong_giang": {
+   "source": "lich_su_vn",
+   "locator": "Phần khởi nghĩa Lam Sơn: vây hạ thành Xương Giang, trận Chi Lăng – Xương Giang (1427)"
+  },
+  "c_dbp_tap_doan": {
+   "source": "bt_dien_bien",
+   "locator": "Tư liệu trưng bày về tập đoàn cứ điểm Điện Biên Phủ và chiến dịch năm 1954"
+  },
+  "c_sgk_khang_chien": {
+   "source": "sgk",
+   "locator": "Lịch sử 7, Lịch sử 10: kháng chiến chống Tống, chống Mông – Nguyên, khởi nghĩa Lam Sơn"
+  },
+  "c_sgk_dbp": {
+   "source": "sgk",
+   "locator": "Lịch sử 9, Lịch sử 12: kháng chiến chống thực dân Pháp, chiến dịch Điện Biên Phủ 1954"
+  },
+  "c_tt_1285": {
+   "source": "toan_thu",
+   "locator": "Bản kỷ, Kỷ Nhà Trần, Nhân Tông hoàng đế, năm Ất Dậu (1285)"
+  },
+  "c_tt_1426": {
+   "source": "toan_thu",
+   "locator": "Bản kỷ, Kỷ Nhà Lê, Thái Tổ hoàng đế, năm Bính Ngọ (1426)"
+  },
+  "c_nt_qttm": {
+   "source": "nguyen_trai_tt",
+   "locator": "Quân trung từ mệnh tập: các thư gửi Vương Thông khi vây thành Đông Quan"
+  },
+  "c_nv_pgvk": {
+   "source": "ngu_van",
+   "locator": "Ngữ văn 7: Phò giá về kinh (Tụng giá hoàn kinh sư) của Trần Quang Khải, bản dịch thơ của Trần Trọng Kim"
+  },
+  "c_ls_song_lo": {
+   "source": "ls_quan_su",
+   "locator": "Chiến dịch Việt Bắc thu – đông 1947: binh đoàn thuỷ bộ của Pháp theo sông Hồng, sông Lô; trận phục kích Chí Đám (24/10/1947)"
+  },
+  "c_sgk_vb1947": {
+   "source": "sgk",
+   "locator": "Lịch sử 9, Lịch sử 12: chiến dịch Việt Bắc thu – đông 1947"
+  },
+  "c_van_cao": {
+   "source": "van_cao",
+   "locator": "Trường ca Sông Lô"
+  },
+  "c_bd_1945": {
+   "source": "van_kien",
+   "locator": "Chiếu động viên quốc dân của vua Bảo Đại ngày 17/8/1945, nhắc lại trong chiếu gửi hoàng tộc ngày 25/8/1945; câu này không có trong chiếu thoái vị"
+  },
+  "c_tt_1077": {
+   "source": "toan_thu",
+   "locator": "Bản kỷ, Kỷ Nhà Lý, Nhân Tông hoàng đế, năm Đinh Tỵ (1077)"
+  },
+  "c_tt_1424": {
+   "source": "toan_thu",
+   "locator": "Bản kỷ, Kỷ Nhà Lê, Thái Tổ hoàng đế, năm Giáp Thìn (1424)"
+  },
+  "c_tt_1425": {
+   "source": "toan_thu",
+   "locator": "Bản kỷ, Kỷ Nhà Lê, Thái Tổ hoàng đế, năm Ất Tỵ (1425)"
+  },
+  "c_ls_bong_lau": {
+   "source": "ls_quan_su",
+   "locator": "Chiến dịch Việt Bắc thu – đông 1947: hướng đường số 4, trận phục kích đèo Bông Lau (30/10/1947)"
+  },
+  "c_tt_tran_goc": {
+   "source": "toan_thu",
+   "locator": "Kỷ Nhà Trần, Thái Tông: đoạn đầu chép gốc tích họ Trần ở hương Tức Mặc, làm nghề đánh cá"
+  },
+  "c_cp_1945": {
+   "source": "van_kien",
+   "locator": "Phiên họp đầu tiên của Chính phủ lâm thời ngày 3/9/1945: sáu vấn đề cấp bách, việc thứ nhất là giải quyết nạn đói"
+  },
+  "c_tt_1287": {
+   "source": "toan_thu",
+   "locator": "Bản kỷ, Kỷ Nhà Trần, Nhân Tông hoàng đế, năm Đinh Hợi (1287), tháng 12: Trần Khánh Dư ở Vân Đồn"
+  },
+  "c_ls_dong_khe": {
+   "source": "ls_quan_su",
+   "locator": "Chiến dịch Biên giới thu – đông 1950: trận Đông Khê (16 – 18/9/1950), cụm cứ điểm và lực lượng giữ đồn"
+  },
+  "c_gionevo_1954": {
+   "source": "lich_su_vn",
+   "locator": "Hội nghị Giơnevơ 1954: Hiệp định đình chỉ chiến sự ở Đông Dương (ký 20/7/1954), vĩ tuyến 17 là giới tuyến quân sự tạm thời, hẹn tổng tuyển cử tháng 7/1956"
+  },
+  "c_thu_do_1954": {
+   "source": "lich_su_vn",
+   "locator": "Tiếp quản Thủ đô Hà Nội ngày 10/10/1954: Đại đoàn 308 vào thành phố, 15 giờ lễ chào cờ ở sân Cột Cờ"
+  },
+  "c_sgk_1975": {
+   "source": "sgk",
+   "locator": "Lịch sử 12: cuộc Tổng tiến công và nổi dậy mùa Xuân 1975, giải phóng miền Nam, thống nhất đất nước (30/4/1975)"
+  }
+ },
+ "intro": {
+  "id": "d_intro",
+  "bg": "lang_co",
+  "nodes": [
+   {
+    "speaker": "Cụ Đồ Sử",
+    "portrait": "cu_do",
+    "fiction": true,
+    "text": "Cháu đến rồi đấy à? Ta là Cụ Đồ Sử, cả đời chỉ làm một việc: giữ cuốn Sử Ký của làng. Đêm qua mưa dột, gió lùa, sách bung chỉ, tờ rách, chữ nhoè cả."
+   },
+   {
+    "speaker": "Cụ Đồ Sử",
+    "portrait": "cu_do",
+    "fiction": true,
+    "text": "Những mảnh giấy ấy không mất hẳn đâu. Chúng nằm trong lời kể của ông lái đò, cụ từ giữ đền, bà cụ bán nước ven đường, người lính già còn nhớ tiếng pháo."
+   },
+   {
+    "speaker": "Cụ Đồ Sử",
+    "portrait": "cu_do",
+    "fiction": true,
+    "bg": "bach_dang",
+    "memory": true,
+    "fx": [
+     "smoke"
+    ],
+    "text": "Hãy đi qua các di tích, nghe họ kể. Mỗi câu chuyện là một lần ký ức sống dậy: khúc sông đầy cọc, tiếng trống trận, ánh lửa trên thuyền giặc."
+   },
+   {
+    "speaker": "Cụ Đồ Sử",
+    "portrait": "cu_do",
+    "fiction": true,
+    "text": "Nhưng người giữ ký ức sẽ thử cháu bằng câu hỏi. Trả lời đúng mới nhặt được mảnh ghép. Đủ mảnh thì dựng lại dòng thời gian, thế là cuốn sử được chép lại."
+   },
+   {
+    "speaker": "Cụ Đồ Sử",
+    "portrait": "cu_do",
+    "fiction": true,
+    "text": "Ký ức cũ còn vương cả bóng giặc: hình bóng quân xâm lược của từng thời, quanh quẩn bên các di tích. Kẻ cầm đầu của chúng canh tờ mật thư cuối cùng ở mỗi nơi. Bóng giặc là phần trò chơi, không phải chuyện sử, cháu đừng lẫn."
+   },
+   {
+    "speaker": "Cụ Đồ Sử",
+    "portrait": "cu_do",
+    "fiction": true,
+    "text": "Cháu mới là tân binh. Đánh bóng giặc thì lên cấp, có tiềm năng để luyện sức, có tiền quan mua đồ ở lò rèn đầu làng. Nhưng chỉ học sử mới có tinh hoa để đột phá: từ tân binh thành sử sinh, sử quan, rồi đại sử quan. Xong mỗi di tích thì về đây báo cáo ta."
+   },
+   {
+    "speaker": "Cụ Đồ Sử",
+    "portrait": "cu_do",
+    "fiction": true,
+    "text": "Một điều ta dặn trước: sử cũ có chỗ chắc, có chỗ còn tranh luận, có chỗ chỉ là lời truyền tụng. Sử quan giỏi không tin bừa, cũng không vội bác. Thấy chữ “Ghi chú sử học” thì đọc cho kỹ. Đi thôi cháu."
+   }
+  ]
+ },
+ "outro": {
+  "id": "d_outro",
+  "bg": "lang_co",
+  "nodes": [
+   {
+    "speaker": "Cụ Đồ Sử",
+    "portrait": "cu_do",
+    "fiction": true,
+    "text": "Cháu về rồi đấy à? Cuốn Sử Ký của làng đã được khâu lại, từ cọc gỗ Bạch Đằng đến lá cờ trên hầm Điện Biên."
+   },
+   {
+    "speaker": "Cụ Đồ Sử",
+    "portrait": "cu_do",
+    "fiction": true,
+    "memory": true,
+    "bg": "ba_dinh",
+    "text": "Trong sử có người được ghi tên, có muôn vạn người không tên. Nhặt lại từng mảnh ghép, cũng là một cách nhớ ơn họ."
+   },
+   {
+    "speaker": "Cụ Đồ Sử",
+    "portrait": "cu_do",
+    "fiction": true,
+    "text": "Một điều ta dặn: đừng tin cuốn sử nào một cách mù quáng, kể cả cuốn này. Muốn biết thật kỹ thì cháu hãy tìm đến những bộ sử có ghi trong Sổ tay."
+   },
+   {
+    "speaker": "Cụ Đồ Sử",
+    "portrait": "cu_do",
+    "fiction": true,
+    "text": "Thôi, cháu về nghỉ đi. Khi nào rảnh quay lại ôn bài, các câu đã sai vẫn đang đợi cháu đấy. Cảm ơn cháu đã đi cùng."
+   }
+  ]
+ }
+}

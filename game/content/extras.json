@@ -1,0 +1,2599 @@
+{
+ "arena": [
+  {
+   "id": "b_trai_lang",
+   "name": "Trai làng tập võ",
+   "char": "Villager3",
+   "desc": "Mới cầm gậy được mấy hôm, đánh chậm, chưa biết kỹ năng. Hợp để làm quen.",
+   "hp": 60,
+   "power": 0.6,
+   "speed": 150,
+   "aggro": 0.3,
+   "skills": [],
+   "smart": 0.1,
+   "style": "melee"
+  },
+  {
+   "id": "b_linh_tran",
+   "name": "Lính trấn thủ",
+   "char": "Knight",
+   "desc": "Biết ném giáo từ xa và giữ khiên. Đừng đứng yên một chỗ.",
+   "hp": 95,
+   "power": 0.85,
+   "speed": 175,
+   "aggro": 0.45,
+   "skills": [
+    "phong_lao"
+   ],
+   "needs": [
+    "relics",
+    2
+   ],
+   "smart": 0.3,
+   "style": "melee"
+  },
+  {
+   "id": "b_vo_sinh",
+   "name": "Võ sinh áo đỏ",
+   "char": "FighterRed",
+   "desc": "Lao vào rất nhanh rồi chém liên hoàn ba nhát. Thấy dấu chấm than thì né ngay.",
+   "hp": 115,
+   "power": 0.95,
+   "speed": 205,
+   "aggro": 0.55,
+   "skills": [
+    "dot_kich",
+    "lien_hoan"
+   ],
+   "needs": [
+    "answers",
+    8
+   ],
+   "smart": 0.45,
+   "style": "assassin"
+  },
+  {
+   "id": "b_tho_san",
+   "name": "Thợ săn mạn ngược",
+   "char": "Hunter",
+   "desc": "Giữ khoảng cách, rải chông, gọi mưa tên vào chỗ bạn sắp tới. Thấy vòng đỏ dưới đất thì chạy ra.",
+   "hp": 125,
+   "power": 1.0,
+   "speed": 195,
+   "aggro": 0.6,
+   "skills": [
+    "phong_lao",
+    "chong_ngam",
+    "mua_ten"
+   ],
+   "needs": [
+    "relics",
+    6
+   ],
+   "smart": 0.55,
+   "style": "ranged"
+  },
+  {
+   "id": "b_thich_khach",
+   "name": "Thích khách áo xám",
+   "char": "NinjaGray",
+   "desc": "Ném khói, biến mất rồi hiện ra sau lưng. Biết né đạn. Nên có từ hai kỹ năng trở lên.",
+   "hp": 140,
+   "power": 1.2,
+   "speed": 235,
+   "aggro": 0.7,
+   "skills": [
+    "dot_kich",
+    "ten_lua",
+    "khoi_mu",
+    "phi_tieu"
+   ],
+   "level": 2,
+   "needs": [
+    "answers",
+    22
+   ],
+   "smart": 0.7,
+   "style": "assassin"
+  },
+  {
+   "id": "b_vo_su",
+   "name": "Võ sư già",
+   "char": "Master",
+   "desc": "Đủ cả công lẫn thủ: dậm đất tạo sóng chấn động (lướt xuyên qua sóng để né), giơ khiên khi bị áp sát, hồi khí khi yếu.",
+   "hp": 210,
+   "power": 1.4,
+   "speed": 225,
+   "aggro": 0.8,
+   "skills": [
+    "xoay_kiem",
+    "the_thu",
+    "hoi_khi",
+    "ten_lua",
+    "chan_dia"
+   ],
+   "level": 2,
+   "needs": [
+    "relics",
+    12
+   ],
+   "smart": 0.8,
+   "style": "tank"
+  },
+  {
+   "id": "b_xa_thu",
+   "name": "Xạ thủ nỏ",
+   "char": "SamuraiRed",
+   "desc": "Bắn tên liên tục, gọi mưa tên. Cứ áp sát là hắn lùi lại, phải dồn vào góc.",
+   "hp": 160,
+   "power": 1.25,
+   "speed": 230,
+   "aggro": 0.75,
+   "smart": 0.75,
+   "style": "ranged",
+   "skills": [
+    "phi_tieu",
+    "mua_ten",
+    "phong_lao"
+   ],
+   "level": 2,
+   "needs": [
+    "answers",
+    28
+   ]
+  },
+  {
+   "id": "b_do_vat",
+   "name": "Đô vật làng",
+   "char": "Monk2",
+   "desc": "Máu rất dày. Lấy đà rồi húc thẳng theo vạch đỏ, dậm đất tạo sóng. Né sang ngang khỏi vạch, lướt xuyên qua sóng.",
+   "hp": 260,
+   "power": 1.35,
+   "speed": 205,
+   "aggro": 0.7,
+   "smart": 0.7,
+   "style": "tank",
+   "skills": [
+    "xung_phong",
+    "chan_dia",
+    "the_thu"
+   ],
+   "level": 2,
+   "needs": [
+    "relics",
+    14
+   ]
+  },
+  {
+   "id": "b_cao_thu",
+   "name": "Cao thủ ẩn danh",
+   "char": "GladiatorBlue",
+   "desc": "Đối thủ cuối cùng: biết hết các chiêu, né đạn, bắt sơ hở. Chỉ nên thử khi đã học đủ kỹ năng.",
+   "hp": 300,
+   "power": 1.55,
+   "speed": 245,
+   "aggro": 0.85,
+   "smart": 0.95,
+   "style": "assassin",
+   "skills": [
+    "lien_hoan",
+    "khoi_mu",
+    "mua_ten",
+    "chan_dia",
+    "hoi_khi",
+    "xung_phong"
+   ],
+   "level": 3,
+   "needs": [
+    "answers",
+    40
+   ]
+  }
+ ],
+ "discoveries": [
+  {
+   "id": "d_lang_ngo",
+   "level": "man1",
+   "at": [
+    26,
+    21
+   ],
+   "prop": "stele",
+   "name": "Bia đất hai vua",
+   "label": "Đọc bia đá",
+   "done": "Đất nhỏ mà người lớn, cháu nhớ nhé.",
+   "lines": [
+    {
+     "speaker": "Người giữ lăng",
+     "portrait": "cu_do",
+     "fiction": true,
+     "text": "Làng cổ Đường Lâm được gọi là đất hai vua. Cháu có biết vì sao không?"
+    },
+    {
+     "speaker": "Người giữ lăng",
+     "portrait": "cu_do",
+     "fiction": true,
+     "cite": [
+      "c_tt_ngo",
+      "c_dat_nuoc"
+     ],
+     "text": "Một vị là Phùng Hưng, thế kỷ VIII nổi dậy chống ách đô hộ nhà Đường, dân tôn là Bố Cái Đại Vương. Vị kia là Ngô Quyền, người phá quân Nam Hán trên sông Bạch Đằng năm 938."
+    },
+    {
+     "speaker": "Người giữ lăng",
+     "portrait": "cu_do",
+     "fiction": true,
+     "text": "Ngày nay lăng Ngô Quyền và đền thờ Phùng Hưng vẫn còn ở Đường Lâm, vùng Sơn Tây của Hà Nội."
+    }
+   ],
+   "question": {
+    "id": "q_x_ln",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Hai vị được nhắc đến trong tên gọi “đất hai vua” Đường Lâm là ai?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Phùng Hưng và Ngô Quyền"
+     },
+     {
+      "id": "b",
+      "text": "Lý Công Uẩn và Trần Thái Tông"
+     },
+     {
+      "id": "c",
+      "text": "Đinh Bộ Lĩnh và Lê Hoàn"
+     },
+     {
+      "id": "d",
+      "text": "Lê Lợi và Nguyễn Trãi"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Phùng Hưng và Ngô Quyền đều gắn với đất Đường Lâm nên nơi đây được gọi là đất hai vua.",
+    "citations": [
+     "c_tt_ngo",
+     "c_dat_nuoc"
+    ]
+   }
+  },
+  {
+   "id": "d_gieng_ngoc",
+   "level": "man1",
+   "at": [
+    36,
+    30
+   ],
+   "prop": "well",
+   "name": "Giếng Ngọc",
+   "label": "Xem giếng cổ",
+   "legend": true,
+   "done": "Truyền thuyết thì đẹp, nhưng cháu nhớ phân biệt với sử nhé.",
+   "lines": [
+    {
+     "speaker": "Cụ giữ giếng",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Cháu đang đứng trước Giếng Ngọc. Đây là chuyện truyền thuyết, không phải chính sử, nghe để biết dân gian nhớ về Cổ Loa thế nào."
+    },
+    {
+     "speaker": "Truyền thuyết",
+     "portrait": "tu_lieu",
+     "fiction": true,
+     "memory": true,
+     "bg": "thanh_co",
+     "fx": [
+      "arrows"
+     ],
+     "cite": [
+      "c_lncq"
+     ],
+     "text": "Chuyện kể An Dương Vương xây thành, đắp đến đâu lở đến đó. Rùa Vàng hiện lên giúp thành xong, lại để lại chiếc móng làm lẫy nỏ thần, bắn một phát chết rất nhiều giặc.",
+     "stage": "co_loa:build"
+    },
+    {
+     "speaker": "Truyền thuyết",
+     "portrait": "tu_lieu",
+     "fiction": true,
+     "memory": true,
+     "bg": "thanh_co",
+     "cite": [
+      "c_lncq"
+     ],
+     "text": "Trọng Thủy, con Triệu Đà, ở rể rồi đánh tráo lẫy nỏ. Thành mất, Mỵ Châu chết, máu hoá ngọc trai. Trọng Thủy thương vợ gieo mình xuống giếng, nên người xưa bảo ngọc rửa nước giếng này thì sáng hơn.",
+     "stage": "co_loa:fall"
+    },
+    {
+     "speaker": "Cụ giữ giếng",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "cite": [
+      "c_khao_co"
+     ],
+     "text": "Còn khảo cổ thì sao? Ở Cổ Loa người ta thực sự đào được kho mũi tên đồng. Chuyện nỏ thần có lẽ bắt nguồn từ tài làm nỏ của người Việt cổ."
+    }
+   ],
+   "question": {
+    "id": "q_x_gn",
+    "kind": "single",
+    "difficulty": 1,
+    "style": "Sử hay truyền thuyết?",
+    "prompt": "Chi tiết nào dưới đây là truyền thuyết, không phải phát hiện khảo cổ ở Cổ Loa?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rùa Vàng tặng móng làm lẫy nỏ thần"
+     },
+     {
+      "id": "b",
+      "text": "Kho mũi tên đồng tìm thấy ở Cổ Loa"
+     },
+     {
+      "id": "c",
+      "text": "Trống đồng tìm thấy ở Cổ Loa"
+     },
+     {
+      "id": "d",
+      "text": "Dấu vết các vòng thành đắp bằng đất"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Rùa Vàng và nỏ thần thuộc về truyền thuyết. Mũi tên đồng, trống đồng và các vòng thành là những dấu vết có thật.",
+    "citations": [
+     "c_lncq",
+     "c_khao_co"
+    ]
+   }
+  },
+  {
+   "id": "d_coc_yen_giang",
+   "level": "man1",
+   "at": [
+    84,
+    54
+   ],
+   "water": true,
+   "name": "Bãi cọc giữa dòng",
+   "label": "Xem bãi cọc",
+   "done": "Dòng sông đổi thay, nhưng cọc vẫn còn đó.",
+   "lines": [
+    {
+     "speaker": "Người đánh cá",
+     "portrait": "lai_do",
+     "fiction": true,
+     "text": "Cháu chèo giỏi đấy. Chỗ này xưa là một phần trận địa cọc. Sông bây giờ đã đổi dòng nhiều so với thời ấy."
+    },
+    {
+     "speaker": "Người đánh cá",
+     "portrait": "lai_do",
+     "fiction": true,
+     "cite": [
+      "c_coc_quang_yen"
+     ],
+     "text": "Ở vùng Quảng Yên, Quảng Ninh, người ta đã tìm thấy nhiều bãi cọc gỗ như Yên Giang, Đồng Vạn Muối, Đồng Má Ngựa. Cọc nằm lấp dưới ruộng và bùn vì sông đã bồi đắp qua nhiều thế kỷ."
+    }
+   ],
+   "question": {
+    "id": "q_x_cyg",
+    "kind": "single",
+    "difficulty": 2,
+    "prompt": "Vì sao ngày nay nhiều bãi cọc Bạch Đằng lại nằm dưới ruộng đồng, không còn ở giữa sông?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Dòng sông đổi thay và bồi lấp qua nhiều thế kỷ"
+     },
+     {
+      "id": "b",
+      "text": "Người xưa cắm cọc ở trên cạn"
+     },
+     {
+      "id": "c",
+      "text": "Cọc được chuyển vào ruộng để làm kỷ niệm"
+     },
+     {
+      "id": "d",
+      "text": "Cọc tự trôi vào bờ sau trận đánh"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Cọc vốn đóng dưới lòng sông; dòng chảy thay đổi và phù sa bồi đắp khiến nơi ấy thành đất ruộng.",
+    "citations": [
+     "c_coc_quang_yen"
+    ]
+   }
+  },
+  {
+   "id": "d_bia_vinh_lang",
+   "level": "man2",
+   "at": [
+    26,
+    43
+   ],
+   "prop": "stele",
+   "name": "Bia Vĩnh Lăng",
+   "label": "Đọc bia đá",
+   "done": "Tấm bia vẫn còn đó, trên lưng con rùa đá.",
+   "lines": [
+    {
+     "speaker": "Cụ từ Lam Kinh",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "cite": [
+      "c_lam_kinh"
+     ],
+     "text": "Tấm đá này gợi nhớ bia Vĩnh Lăng ở Lam Kinh, dựng năm 1433 sau khi Lê Thái Tổ mất."
+    },
+    {
+     "speaker": "Cụ từ Lam Kinh",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "cite": [
+      "c_lam_kinh"
+     ],
+     "text": "Văn bia thường được cho là của Nguyễn Trãi, kể lại thân thế và sự nghiệp của Lê Lợi. Bia đặt trên lưng một con rùa đá lớn, nay vẫn còn ở Lam Kinh, tỉnh Thanh Hoá."
+    }
+   ],
+   "question": {
+    "id": "q_x_vl",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Bia Vĩnh Lăng ở Lam Kinh ghi lại công lao của ai?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Lê Thái Tổ (Lê Lợi)"
+     },
+     {
+      "id": "b",
+      "text": "Trần Hưng Đạo"
+     },
+     {
+      "id": "c",
+      "text": "Ngô Quyền"
+     },
+     {
+      "id": "d",
+      "text": "Lý Thường Kiệt"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Bia Vĩnh Lăng dựng năm 1433, ghi lại thân thế và sự nghiệp của Lê Thái Tổ.",
+    "citations": [
+     "c_lam_kinh"
+    ]
+   }
+  },
+  {
+   "id": "d_lang_chay",
+   "level": "man2",
+   "at": [
+    55,
+    52
+   ],
+   "char": "OldWoman",
+   "burned": true,
+   "name": "Bà cụ sống sót",
+   "label": "Hỏi chuyện",
+   "done": "Cháu đi đi, đừng quên những gì đã thấy ở đây.",
+   "lines": [
+    {
+     "speaker": "Bà cụ sống sót",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "text": "Cháu đừng vào sâu, tro còn nóng đấy. Làng này vừa bị lính Minh đốt. Chuyện của bà do người đời sau dựng lại, nhưng tội ác thì sử sách có ghi."
+    },
+    {
+     "speaker": "Bà cụ sống sót",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "memory": true,
+     "bg": "lang_co",
+     "fx": [
+      "fire",
+      "smoke"
+     ],
+     "cite": [
+      "c_bndc"
+     ],
+     "text": "Nguyễn Trãi viết trong Bình Ngô đại cáo: “Nướng dân đen trên ngọn lửa hung tàn, vùi con đỏ xuống dưới hầm tai vạ”.",
+     "stage": "minh:burn"
+    },
+    {
+     "speaker": "Bà cụ sống sót",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "memory": true,
+     "bg": "lang_co",
+     "fx": [
+      "smoke"
+     ],
+     "cite": [
+      "c_ls_le"
+     ],
+     "text": "Nhà Minh bắt thợ giỏi đưa về phương Bắc, vơ vét sản vật, thu và đốt nhiều sách vở của người Việt, ép dân theo phong tục của họ.",
+     "stage": "minh:loot"
+    },
+    {
+     "speaker": "Bà cụ sống sót",
+     "portrait": "ba_cu",
+     "fiction": true,
+     "text": "Vì thế khi Lê Lợi dựng cờ ở Lam Sơn, dân khắp nơi đã tìm về."
+    }
+   ],
+   "question": {
+    "id": "q_x_lc",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Chính sách nào dưới đây đúng với thời nhà Minh đô hộ nước ta đầu thế kỷ XV?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Thu và đốt sách vở, bắt thợ giỏi đưa về phương Bắc"
+     },
+     {
+      "id": "b",
+      "text": "Miễn mọi thứ thuế cho dân Đại Việt"
+     },
+     {
+      "id": "c",
+      "text": "Trả thành Đông Quan cho người Việt tự quản"
+     },
+     {
+      "id": "d",
+      "text": "Mở khoa thi chữ Nôm cho người Việt"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Chính sách cai trị hà khắc và đồng hoá của nhà Minh là một nguyên nhân khiến dân khắp nơi hưởng ứng khởi nghĩa.",
+    "citations": [
+     "c_ls_le",
+     "c_bndc"
+    ]
+   }
+  },
+  {
+   "id": "d_long_quan",
+   "level": "man2",
+   "at": [
+    66,
+    33
+   ],
+   "water": true,
+   "legend": true,
+   "name": "Giữa hồ Tả Vọng",
+   "label": "Nghe truyền thuyết",
+   "done": "Mặt hồ lại yên ả như chưa có gì xảy ra.",
+   "lines": [
+    {
+     "speaker": "Truyền thuyết",
+     "portrait": "tu_lieu",
+     "fiction": true,
+     "memory": true,
+     "bg": "ho_guom",
+     "cine": "sword",
+     "cite": [
+      "c_ho_guom"
+     ],
+     "text": "Chuyện xưa kể: Long Quân thấy giặc Minh tàn ác, cho nghĩa quân mượn gươm thần. Lưỡi gươm Lê Thận kéo lưới được dưới nước, chuôi gươm Lê Lợi nhặt được trên ngọn đa."
+    },
+    {
+     "speaker": "Truyền thuyết",
+     "portrait": "tu_lieu",
+     "fiction": true,
+     "memory": true,
+     "bg": "ho_guom",
+     "cine": "turtle",
+     "cite": [
+      "c_ho_guom"
+     ],
+     "text": "Sau khi đuổi giặc, Lê Lợi dạo thuyền trên hồ Tả Vọng. Rùa Vàng nổi lên, xin hoàn gươm cho Long Quân. Gươm bay về phía rùa, rùa ngậm lấy rồi lặn xuống. Từ đó hồ mang tên Hoàn Kiếm."
+    },
+    {
+     "speaker": "Lời dẫn",
+     "portrait": "tu_lieu",
+     "fiction": true,
+     "text": "Đây là truyền thuyết, không phải chính sử. Sử sách ghi khởi nghĩa Lam Sơn thắng nhờ lòng dân, mưu lược và mười năm gian khổ."
+    }
+   ],
+   "question": {
+    "id": "q_x_lq",
+    "kind": "single",
+    "difficulty": 1,
+    "style": "Sử hay truyền thuyết?",
+    "prompt": "Theo truyền thuyết về Hồ Gươm, ai cho mượn gươm và con vật nào nổi lên đòi gươm?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Long Quân cho mượn, Rùa Vàng đòi lại"
+     },
+     {
+      "id": "b",
+      "text": "Rùa Vàng cho mượn, Long Quân đòi lại"
+     },
+     {
+      "id": "c",
+      "text": "Minh Thành Tổ cho mượn, cá chép đòi lại"
+     },
+     {
+      "id": "d",
+      "text": "Nguyễn Trãi cho mượn, rồng đòi lại"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Trong truyền thuyết, Long Quân cho mượn gươm và Rùa Vàng nổi lên đòi lại. Đây là chuyện dân gian, không phải ghi chép chính sử.",
+    "citations": [
+     "c_ho_guom"
+    ]
+   }
+  },
+  {
+   "id": "d_lan_na_nua",
+   "level": "man3",
+   "at": [
+    50,
+    10
+   ],
+   "char": "OldMan",
+   "building": {
+    "name": "hut",
+    "at": [
+     49,
+     8
+    ]
+   },
+   "name": "Bác giữ lán",
+   "label": "Hỏi chuyện",
+   "done": "Căn lán nhỏ mà giữ một lời dặn lớn.",
+   "lines": [
+    {
+     "speaker": "Bác giữ lán",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "cite": [
+      "c_vng"
+     ],
+     "text": "Đây là chỗ gợi lại lán Nà Nưa trong rừng Tân Trào (Đại tướng Võ Nguyên Giáp gọi là lán Nà Lừa). Mùa hè năm 1945, Bác Hồ ở trong một căn lán nhỏ như thế này."
+    },
+    {
+     "speaker": "Bác giữ lán",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "cite": [
+      "c_vng"
+     ],
+     "text": "Đại tướng Võ Nguyên Giáp kể: tháng 7 năm 1945, Bác ốm nặng mà vẫn dặn: “Lúc này thời cơ thuận lợi đã tới, dù hi sinh tới đâu, dù phải đốt cháy cả dãy Trường Sơn cũng phải cương quyết giành cho được độc lập”."
+    },
+    {
+     "speaker": "Bác giữ lán",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "text": "Bác qua được cơn nguy. Chỉ ít tuần sau, cả nước đứng lên giành chính quyền."
+    }
+   ],
+   "question": {
+    "id": "q_x_nn",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Lời dặn “dù phải đốt cháy cả dãy Trường Sơn” nói lên điều gì?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Quyết tâm giành độc lập khi thời cơ đã đến"
+     },
+     {
+      "id": "b",
+      "text": "Kế hoạch đốt rừng để ngăn quân Nhật"
+     },
+     {
+      "id": "c",
+      "text": "Ý định rút về Trường Sơn ẩn náu lâu dài"
+     },
+     {
+      "id": "d",
+      "text": "Đề nghị tạm ngừng đấu tranh vì sức khoẻ"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Câu nói là cách nói mạnh để nhấn mạnh quyết tâm giành độc lập bằng mọi giá.",
+    "citations": [
+     "c_vng"
+    ]
+   }
+  },
+  {
+   "id": "d_tuan_le_vang",
+   "level": "man3",
+   "at": [
+    33,
+    42
+   ],
+   "char": "Woman",
+   "name": "Chị bán hàng",
+   "label": "Bắt chuyện",
+   "done": "Nhà ít góp ít, nhà nhiều góp nhiều, cháu ạ.",
+   "lines": [
+    {
+     "speaker": "Chị bán hàng",
+     "portrait": "nu_si",
+     "fiction": true,
+     "cite": [
+      "c_ls_1945"
+     ],
+     "text": "Nước vừa độc lập mà ngân khố gần như trống rỗng, lại thêm nạn đói năm Ất Dậu (1945) còn chưa nguôi."
+    },
+    {
+     "speaker": "Chị bán hàng",
+     "portrait": "nu_si",
+     "fiction": true,
+     "cite": [
+      "c_ls_1945"
+     ],
+     "text": "Tháng 9 năm 1945 có “Tuần lễ vàng”, dân tự nguyện góp vàng, góp của giúp nước. Phong trào “Hũ gạo cứu đói” cũng lan khắp nơi, mỗi nhà bớt một nắm gạo giúp người thiếu ăn."
+    }
+   ],
+   "question": {
+    "id": "q_x_tlv",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "“Tuần lễ vàng” tháng 9 năm 1945 nhằm mục đích gì?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Dân góp vàng và của cải giúp đất nước vừa giành độc lập"
+     },
+     {
+      "id": "b",
+      "text": "Mở chợ mua bán vàng để làm giàu"
+     },
+     {
+      "id": "c",
+      "text": "Trả nợ cho chính quyền thực dân"
+     },
+     {
+      "id": "d",
+      "text": "Thưởng cho người đoạt giải thể thao"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Chính quyền non trẻ rất thiếu tài chính, Tuần lễ vàng dựa vào lòng dân để vượt khó.",
+    "citations": [
+     "c_ls_1945"
+    ]
+   }
+  },
+  {
+   "id": "d_doi_a1",
+   "level": "man3",
+   "at": [
+    34,
+    20
+   ],
+   "prop": "stele",
+   "name": "Bia đồi A1",
+   "label": "Đọc bia đá",
+   "done": "Xin đứng lại đây một phút, cháu nhé.",
+   "lines": [
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "cite": [
+      "c_qs_dbp"
+     ],
+     "text": "Đây là bia gợi nhớ đồi A1, quân Pháp gọi là Eliane 2. Hai bên giành giật nhau từng tấc đất ở đây trong nhiều tuần."
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "cite": [
+      "c_qs_dbp",
+      "c_bt_dbp"
+     ],
+     "text": "Công binh ta đào đường hầm vào lòng đồi, đặt khối bộc phá gần một tấn. Đêm 6 tháng 5 năm 1954, tiếng nổ vang lên, làm hiệu lệnh cho trận đánh cuối cùng vào đồi A1."
+    },
+    {
+     "speaker": "Bác cựu binh",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "cite": [
+      "c_bt_dbp"
+     ],
+     "text": "Rạng sáng hôm sau ta làm chủ đồi A1. Chiều 7 tháng 5, cờ đã tung bay trên nóc hầm chỉ huy."
+    }
+   ],
+   "question": {
+    "id": "q_x_a1",
+    "kind": "single",
+    "difficulty": 2,
+    "prompt": "Tiếng nổ của khối bộc phá trên đồi A1 đêm 6/5/1954 có vai trò gì?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Làm hiệu lệnh cho trận đánh cuối cùng vào đồi A1"
+     },
+     {
+      "id": "b",
+      "text": "Báo hiệu hai bên ngừng bắn"
+     },
+     {
+      "id": "c",
+      "text": "Phá huỷ sân bay Mường Thanh"
+     },
+     {
+      "id": "d",
+      "text": "Đánh dấu ngày khai mạc Hội nghị Genève"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Khối bộc phá đặt trong đường hầm đào vào lòng đồi là hiệu lệnh cho trận đánh cuối cùng vào đồi A1. Đợt tiến công thứ ba của chiến dịch đã bắt đầu từ ngày 1/5.",
+    "citations": [
+     "c_qs_dbp",
+     "c_bt_dbp"
+    ]
+   }
+  },
+  {
+   "id": "d_van_mieu",
+   "level": "man1",
+   "at": [
+    101,
+    33
+   ],
+   "prop": "stele",
+   "name": "Văn Miếu – Quốc Tử Giám",
+   "label": "Đọc bia",
+   "done": "Nơi này giữ chữ cho cả nước đấy cháu.",
+   "lines": [
+    {
+     "speaker": "Thầy giữ văn miếu",
+     "portrait": "cu_do",
+     "fiction": true,
+     "text": "Cháu đang đứng trong Văn Miếu – Quốc Tử Giám. Ta giữ ở đây những tờ văn bản cũ bị rách, cháu nhặt được mảnh nào thì mang lại cho ta."
+    },
+    {
+     "speaker": "Thầy giữ văn miếu",
+     "portrait": "cu_do",
+     "fiction": true,
+     "text": "Năm 1070, nhà Lý cho dựng Văn Miếu ở kinh thành Thăng Long để thờ Khổng Tử và các bậc hiền triết Nho gia.",
+     "cite": [
+      "c_van_mieu"
+     ]
+    },
+    {
+     "speaker": "Thầy giữ văn miếu",
+     "portrait": "cu_do",
+     "fiction": true,
+     "text": "Năm 1076, nhà Lý lập Quốc Tử Giám, thường được xem là trường đại học đầu tiên của nước ta.",
+     "cite": [
+      "c_van_mieu"
+     ]
+    },
+    {
+     "speaker": "Thầy giữ văn miếu",
+     "portrait": "cu_do",
+     "fiction": true,
+     "text": "Còn những tấm bia ghi tên tiến sĩ mà người ta hay nhắc là do các đời sau dựng, sớm nhất từ thời Lê sơ.",
+     "cite": [
+      "c_sgk"
+     ]
+    }
+   ],
+   "question": {
+    "id": "q_x_van_mieu",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Văn Miếu ở kinh thành Thăng Long được dựng vào năm nào?",
+    "options": [
+     {
+      "id": "a",
+      "text": "1010"
+     },
+     {
+      "id": "b",
+      "text": "1070"
+     },
+     {
+      "id": "c",
+      "text": "1076"
+     },
+     {
+      "id": "d",
+      "text": "1428"
+     }
+    ],
+    "correct_answer": "b",
+    "explanation": "Văn Miếu dựng năm 1070. Năm 1010 là năm dời đô ra Thăng Long, năm 1076 là năm lập Quốc Tử Giám.",
+    "citations": [
+     "c_van_mieu"
+    ]
+   }
+  },
+  {
+   "id": "d_con_son",
+   "level": "man2",
+   "at": [
+    93,
+    20
+   ],
+   "prop": "stele",
+   "name": "Côn Sơn",
+   "label": "Đọc bia",
+   "done": "Nghe tiếng suối mà nhớ người xưa, cháu nhé.",
+   "lines": [
+    {
+     "speaker": "Người giữ đền",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Đây là Côn Sơn ở vùng Chí Linh, trước tháng 7/2025 thuộc tỉnh Hải Dương, nay thuộc thành phố Hải Phòng. Ta giữ ở đây những tờ văn bản cũ, cháu nhặt được mảnh nào thì mang lại."
+    },
+    {
+     "speaker": "Người giữ đền",
+     "portrait": "cu_tu",
+     "fiction": true,
+     "text": "Ông ngoại của Nguyễn Trãi là Trần Nguyên Đán từng về ở Côn Sơn. Nguyễn Trãi gắn bó với nơi này, có bài Côn Sơn ca nổi tiếng, và những năm cuối đời ông lui về đây ở ẩn.",
+     "cite": [
+      "c_con_son",
+      "c_ls_le"
+     ]
+    }
+   ],
+   "question": {
+    "id": "q_x_con_son",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Bài Côn Sơn ca là của ai?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Lê Lợi"
+     },
+     {
+      "id": "b",
+      "text": "Nguyễn Trãi"
+     },
+     {
+      "id": "c",
+      "text": "Trần Nguyên Đán"
+     },
+     {
+      "id": "d",
+      "text": "Lê Lai"
+     }
+    ],
+    "correct_answer": "b",
+    "explanation": "Côn Sơn ca là bài thơ của Nguyễn Trãi viết khi ông lui về Côn Sơn. Trần Nguyên Đán là ông ngoại của ông.",
+    "citations": [
+     "c_con_son"
+    ]
+   }
+  },
+  {
+   "id": "d_atk",
+   "level": "man3",
+   "at": [
+    93,
+    42
+   ],
+   "prop": "stele",
+   "name": "ATK Định Hoá",
+   "label": "Đọc bảng",
+   "done": "“Rừng che bộ đội, rừng vây quân thù”, câu thơ ấy của Tố Hữu bác vẫn nhớ.",
+   "lines": [
+    {
+     "speaker": "Cán bộ giữ di tích",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "text": "Đây là An toàn khu Định Hoá ở Thái Nguyên, một phần của căn cứ địa Việt Bắc. Cháu nhặt được mảnh văn bản nào thì mang lại cho bác."
+    },
+    {
+     "speaker": "Cán bộ giữ di tích",
+     "portrait": "cuu_binh",
+     "fiction": true,
+     "text": "Trong những năm kháng chiến chống Pháp, nhiều cơ quan đầu não của Đảng, Chính phủ và quân đội đóng và làm việc trong vùng núi rừng này.",
+     "cite": [
+      "c_atk",
+      "c_qs_vb"
+     ]
+    }
+   ],
+   "question": {
+    "id": "q_x_atk",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "ATK Định Hoá thuộc căn cứ địa nào trong kháng chiến chống Pháp?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Việt Bắc"
+     },
+     {
+      "id": "b",
+      "text": "Tây Nguyên"
+     },
+     {
+      "id": "c",
+      "text": "Điện Biên Phủ"
+     },
+     {
+      "id": "d",
+      "text": "Đồng Tháp Mười"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Định Hoá (Thái Nguyên) nằm trong căn cứ địa Việt Bắc, nơi các cơ quan trung ương đóng trong kháng chiến chống Pháp.",
+    "citations": [
+     "c_atk"
+    ]
+   }
+  }
+ ],
+ "cases": [
+  {
+   "id": "c_co_loa",
+   "level": "man1",
+   "requires": "r_co_loa",
+   "building": {
+    "name": "house",
+    "at": [
+     47,
+     18
+    ]
+   },
+   "title": "Căn nhà tư liệu Cổ Loa",
+   "name": "Nhà tư liệu",
+   "floor": [
+    6,
+    14
+   ],
+   "wall": "brown",
+   "intro": "Trên bàn có các phát hiện khảo cổ ở Cổ Loa. Hãy xem từng món rồi nêu kết luận.",
+   "props": [
+    {
+     "name": "shelf",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "name": "shelf",
+     "at": [
+      13,
+      1
+     ]
+    },
+    {
+     "name": "table",
+     "at": [
+      7,
+      2
+     ]
+    },
+    {
+     "name": "jar",
+     "at": [
+      4,
+      1
+     ]
+    },
+    {
+     "name": "plant",
+     "at": [
+      11,
+      1
+     ]
+    }
+   ],
+   "clues": [
+    {
+     "at": [
+      3,
+      5
+     ],
+     "icon": "ui/arrow_item.png",
+     "title": "Kho mũi tên đồng",
+     "text": "Năm 1959, ở khu vực Cầu Vực thuộc Cổ Loa, người ta phát hiện một kho rất nhiều mũi tên đồng. Đây là bằng chứng cho nghề làm vũ khí phát triển.",
+     "cite": [
+      "c_khao_co"
+     ]
+    },
+    {
+     "at": [
+      8,
+      6
+     ],
+     "icon": "ui/cup.png",
+     "title": "Trống đồng Cổ Loa",
+     "text": "Năm 1982, ở khu Mả Tre, người ta tìm thấy một trống đồng, bên trong chứa nhiều hiện vật đồng. Trống đồng là di vật tiêu biểu của văn hoá Đông Sơn.",
+     "cite": [
+      "c_khao_co"
+     ]
+    },
+    {
+     "at": [
+      12,
+      5
+     ],
+     "icon": "ui/letter.png",
+     "title": "Sơ đồ các vòng thành",
+     "text": "Cổ Loa có ba vòng thành đắp bằng đất, kết hợp với sông và đầm nước làm hào. Thành vừa để ở, vừa là căn cứ phòng thủ lớn.",
+     "cite": [
+      "c_khao_co",
+      "c_dat_nuoc"
+     ]
+    }
+   ],
+   "question": {
+    "id": "q_x_cl",
+    "kind": "single",
+    "difficulty": 2,
+    "prompt": "Các phát hiện ở Cổ Loa cho thấy điều gì về người Việt cổ?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Đã có kỹ thuật đúc đồng, làm vũ khí và xây dựng công trình phòng thủ lớn"
+     },
+     {
+      "id": "b",
+      "text": "Chưa biết dùng kim loại"
+     },
+     {
+      "id": "c",
+      "text": "Chỉ sống trên thuyền, không định cư"
+     },
+     {
+      "id": "d",
+      "text": "Mọi hiện vật đều do người nơi khác mang đến"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Mũi tên đồng, trống đồng và hệ thống vòng thành đều cho thấy kỹ thuật và tổ chức xã hội khá phát triển.",
+    "citations": [
+     "c_khao_co"
+    ]
+   },
+   "outro": "Kết luận đúng hướng. Truyền thuyết nỏ thần có lẽ cũng bắt rễ từ những điều có thật này."
+  },
+  {
+   "id": "c_dien_hong",
+   "level": "man1",
+   "requires": "r_den_tran",
+   "building": {
+    "name": "cung_dien",
+    "at": [
+     51,
+     34
+    ]
+   },
+   "title": "Thềm Diên Hồng",
+   "name": "Điện Diên Hồng",
+   "floor": [
+    12,
+    1
+   ],
+   "wall": "orange",
+   "intro": "Dựng lại cảnh Diên Hồng năm 1284. Hãy đi hỏi các bô lão và xem bàn tiệc.",
+   "props": [
+    {
+     "name": "curtain",
+     "at": [
+      5,
+      1
+     ]
+    },
+    {
+     "name": "curtain",
+     "at": [
+      10,
+      1
+     ]
+    },
+    {
+     "name": "table",
+     "at": [
+      7,
+      2
+     ]
+    },
+    {
+     "name": "jar",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "name": "jar",
+     "at": [
+      13,
+      1
+     ]
+    }
+   ],
+   "clues": [
+    {
+     "at": [
+      3,
+      5
+     ],
+     "char": "OldMan3",
+     "title": "Lời vời của Thượng hoàng",
+     "text": "Tháng Chạp năm Giáp Thân (1284), trước nguy cơ quân Nguyên sang lần nữa, Thượng hoàng Trần Thánh Tông vời các phụ lão trong nước về họp ở thềm điện Diên Hồng.",
+     "cite": [
+      "c_tt_tran_nt"
+     ]
+    },
+    {
+     "at": [
+      8,
+      6
+     ],
+     "icon": "ui/book.png",
+     "title": "Mâm tiệc và câu hỏi",
+     "text": "Các bô lão được ban yến rồi được hỏi nên đánh hay nên hoà. Hỏi ý người dân thường về việc nước là điều hiếm có thời bấy giờ.",
+     "cite": [
+      "c_tt_tran_nt"
+     ]
+    },
+    {
+     "at": [
+      12,
+      5
+     ],
+     "char": "Master",
+     "title": "Tiếng hô đồng lòng",
+     "text": "Sử chép các phụ lão đều nói “Đánh”, muôn người như một. Tinh thần ấy giúp vua tôi nhà Trần vững lòng bước vào cuộc kháng chiến.",
+     "cite": [
+      "c_tt_tran_nt"
+     ]
+    }
+   ],
+   "question": {
+    "id": "q_x_dh",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Điều gì khiến Hội nghị Diên Hồng trở nên đặc biệt?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Triều đình hỏi ý các bô lão đại diện cho dân về việc đánh hay hoà"
+     },
+     {
+      "id": "b",
+      "text": "Đây là hội nghị bàn việc mở khoa thi"
+     },
+     {
+      "id": "c",
+      "text": "Vua nhường ngôi cho một bô lão"
+     },
+     {
+      "id": "d",
+      "text": "Các tướng tự họp không cho vua biết"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Diên Hồng cho thấy sức mạnh của lòng dân: việc nước được đem ra hỏi cả những người già trong dân.",
+    "citations": [
+     "c_tt_tran_nt"
+    ]
+   },
+   "outro": "Đúng vậy. Giặc chưa tới mà lòng người đã sẵn sàng, đó là thứ vũ khí mạnh nhất."
+  },
+  {
+   "id": "c_le_lai",
+   "level": "man2",
+   "requires": "r_le_lai",
+   "building": {
+    "name": "hut",
+    "at": [
+     11,
+     13
+    ]
+   },
+   "title": "Túp lều trên núi Chí Linh",
+   "name": "Lều chỉ huy",
+   "floor": [
+    1,
+    13
+   ],
+   "wall": "green",
+   "intro": "Dựng lại đêm nghĩa quân bị vây ở vùng núi Chí Linh. Những đồ vật trong lều kể gì?",
+   "props": [
+    {
+     "name": "table",
+     "at": [
+      7,
+      2
+     ]
+    },
+    {
+     "name": "jar",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "name": "jar",
+     "at": [
+      3,
+      1
+     ]
+    },
+    {
+     "name": "plant",
+     "at": [
+      13,
+      1
+     ]
+    }
+   ],
+   "clues": [
+    {
+     "at": [
+      3,
+      5
+     ],
+     "icon": "ui/letter.png",
+     "title": "Bản đồ vòng vây",
+     "text": "Nghĩa quân nhiều lần bị quân Minh vây ở vùng núi Chí Linh, thiếu lương, ít quân, thế rất nguy.",
+     "cite": [
+      "c_lsTL"
+     ]
+    },
+    {
+     "at": [
+      8,
+      6
+     ],
+     "icon": "ui/sword.png",
+     "title": "Áo bào chủ tướng",
+     "text": "Sử sách và dân gian đều nhớ việc Lê Lai xin đổi áo bào với Lê Lợi, cưỡi ngựa xông vào trận địch để nhử giặc.",
+     "cite": [
+      "c_lsTL",
+      "c_tt_le"
+     ]
+    },
+    {
+     "at": [
+      12,
+      5
+     ],
+     "icon": "ui/book.png",
+     "title": "Ngày giỗ Lê Lai",
+     "text": "Theo lời truyền, Lê Lợi dặn con cháu giỗ Lê Lai trước giỗ vua một ngày (ngày 21 và 22 tháng 8 âm lịch). Dân gian còn câu “Hăm mốt Lê Lai, hăm hai Lê Lợi”.",
+     "cite": [
+      "c_tt_le"
+     ]
+    }
+   ],
+   "question": {
+    "id": "q_x_ll",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Câu “Hăm mốt Lê Lai, hăm hai Lê Lợi” nhắc người đời sau điều gì?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Giỗ Lê Lai trước giỗ vua một ngày để ghi nhớ công lao cứu chúa"
+     },
+     {
+      "id": "b",
+      "text": "Lê Lai và Lê Lợi sinh cùng một ngày"
+     },
+     {
+      "id": "c",
+      "text": "Hai ông cùng lên ngôi một lúc"
+     },
+     {
+      "id": "d",
+      "text": "Hai trận đánh lớn nhất của nghĩa quân"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Lê Lợi ghi nhớ sự hy sinh của Lê Lai, truyền cho đời sau giỗ ông trước giỗ vua một ngày.",
+    "citations": [
+     "c_tt_le"
+    ]
+   },
+   "outro": "Một người mặc áo chủ tướng, cả cuộc khởi nghĩa được sống. Cháu đã hiểu vì sao dân nhớ ông đến giờ."
+  },
+  {
+   "id": "c_hang_ngang",
+   "level": "man3",
+   "requires": "r_ba_dinh",
+   "building": {
+    "name": "nha_pho",
+    "at": [
+     49,
+     26
+    ]
+   },
+   "title": "Căn gác số 48 Hàng Ngang",
+   "name": "Nhà 48 Hàng Ngang",
+   "floor": [
+    6,
+    7
+   ],
+   "wall": "cream",
+   "intro": "Tháng 8 năm 1945. Căn gác này gắn với bản Tuyên ngôn Độc lập. Hãy xem các tư liệu trong phòng.",
+   "props": [
+    {
+     "name": "shelf",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "name": "shelf_big",
+     "at": [
+      12,
+      1
+     ]
+    },
+    {
+     "name": "table",
+     "at": [
+      7,
+      2
+     ]
+    },
+    {
+     "name": "plant",
+     "at": [
+      5,
+      1
+     ]
+    }
+   ],
+   "clues": [
+    {
+     "at": [
+      3,
+      5
+     ],
+     "icon": "ui/letter.png",
+     "title": "Ngôi nhà của người yêu nước",
+     "text": "Đây là nhà của gia đình ông Trịnh Văn Bô và bà Hoàng Thị Minh Hồ, những người đã ủng hộ cách mạng rất nhiều.",
+     "cite": [
+      "c_48"
+     ]
+    },
+    {
+     "at": [
+      8,
+      6
+     ],
+     "icon": "ui/book.png",
+     "title": "Trên căn gác",
+     "text": "Cuối tháng 8 năm 1945, Chủ tịch Hồ Chí Minh ở trên căn gác của ngôi nhà này và soạn thảo bản Tuyên ngôn Độc lập.",
+     "cite": [
+      "c_48",
+      "c_tuyen_ngon"
+     ]
+    },
+    {
+     "at": [
+      12,
+      5
+     ],
+     "icon": "ui/scroll.png",
+     "title": "Câu mở đầu",
+     "text": "Bản Tuyên ngôn mở đầu bằng việc dẫn Tuyên ngôn Độc lập năm 1776 của Mỹ và Tuyên ngôn Nhân quyền và Dân quyền của Cách mạng Pháp năm 1791 (bản tuyên ngôn ấy thông qua năm 1789, rồi được đưa vào Hiến pháp Pháp năm 1791).",
+     "cite": [
+      "c_tuyen_ngon"
+     ]
+    }
+   ],
+   "question": {
+    "id": "q_x_hn",
+    "kind": "single",
+    "difficulty": 2,
+    "prompt": "Vì sao bản Tuyên ngôn Độc lập 1945 lại dẫn lời các bản tuyên ngôn của Mỹ và Pháp?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Dùng chính những giá trị được thế giới thừa nhận để khẳng định quyền độc lập của Việt Nam"
+     },
+     {
+      "id": "b",
+      "text": "Vì bản tuyên ngôn do người Mỹ viết hộ"
+     },
+     {
+      "id": "c",
+      "text": "Để xin Pháp trở lại cai trị"
+     },
+     {
+      "id": "d",
+      "text": "Vì Việt Nam không có truyền thống độc lập"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Dẫn hai bản tuyên ngôn nổi tiếng là cách lập luận: quyền sống, quyền tự do là của mọi dân tộc, không ai có quyền xâm phạm.",
+    "citations": [
+     "c_tuyen_ngon"
+    ]
+   },
+   "outro": "Một căn gác nhỏ giữa phố cổ đã góp phần làm nên một bản văn lớn của dân tộc."
+  },
+  {
+   "id": "c_ham",
+   "level": "man3",
+   "requires": "r_dien_bien",
+   "building": {
+    "name": "cellar",
+    "at": [
+     27,
+     9
+    ]
+   },
+   "title": "Hầm chỉ huy ở Mường Thanh",
+   "name": "Hầm chỉ huy",
+   "floor": [
+    12,
+    13
+   ],
+   "wall": "brown",
+   "intro": "Chiều 7 tháng 5 năm 1954. Căn hầm đã im tiếng súng. Hãy xem những gì còn lại.",
+   "props": [
+    {
+     "name": "table",
+     "at": [
+      7,
+      2
+     ]
+    },
+    {
+     "name": "crate",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "name": "crate",
+     "at": [
+      3,
+      1
+     ]
+    },
+    {
+     "name": "crate",
+     "at": [
+      13,
+      1
+     ]
+    }
+   ],
+   "clues": [
+    {
+     "at": [
+      3,
+      5
+     ],
+     "icon": "ui/letter.png",
+     "title": "Bản đồ tập đoàn cứ điểm",
+     "text": "Điện Biên Phủ có nhiều cứ điểm chia thành các phân khu. Sau 56 ngày đêm, vòng vây đã siết đến tận trung tâm Mường Thanh.",
+     "cite": [
+      "c_qs_dbp",
+      "c_bt_dbp"
+     ]
+    },
+    {
+     "at": [
+      8,
+      6
+     ],
+     "icon": "ui/stamp.png",
+     "title": "Lá cờ trên nóc hầm",
+     "text": "Chiều 7 tháng 5 năm 1954, lá cờ “Quyết chiến, Quyết thắng” tung bay trên nóc hầm. Tướng De Castries cùng bộ tham mưu bị bắt sống.",
+     "cite": [
+      "c_bt_dbp"
+     ]
+    },
+    {
+     "at": [
+      12,
+      5
+     ],
+     "icon": "ui/book.png",
+     "title": "Tin về Genève",
+     "text": "Đúng ngày hôm sau, 8 tháng 5, hội nghị Genève bắt đầu bàn về vấn đề Đông Dương. Chiến thắng trên chiến trường đã nặng cân trên bàn đàm phán.",
+     "cite": [
+      "c_qs_dbp",
+      "c_ls_1945"
+     ]
+    }
+   ],
+   "question": {
+    "id": "q_x_ham",
+    "kind": "single",
+    "difficulty": 2,
+    "prompt": "Vì sao thời điểm kết thúc trận Điện Biên Phủ lại có ý nghĩa lớn với Hội nghị Genève?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Chiến thắng ngày 7/5 đến ngay trước phiên bàn về Đông Dương ngày 8/5, tạo thế mạnh cho ta"
+     },
+     {
+      "id": "b",
+      "text": "Hội nghị đã kết thúc từ trước đó nên không liên quan"
+     },
+     {
+      "id": "c",
+      "text": "Hội nghị được tổ chức ngay tại Điện Biên Phủ"
+     },
+     {
+      "id": "d",
+      "text": "Pháp đã rút khỏi hội nghị từ năm 1953"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Thắng lợi quân sự vào đúng thời điểm trước phiên họp đã tạo thế mạnh trên bàn đàm phán.",
+    "citations": [
+     "c_qs_dbp",
+     "c_ls_1945"
+    ]
+   },
+   "outro": "Lừng lẫy năm châu, chấn động địa cầu. Xin cháu nhớ rằng sau mỗi chữ ấy là rất nhiều con người."
+  }
+ ],
+ "sides": [
+  {
+   "id": "s_go_coc",
+   "level": "man1",
+   "title": "Gỗ làm cọc",
+   "giver": {
+    "at": [
+     66,
+     45
+    ],
+    "char": "Villager4",
+    "name": "Thợ đẽo cọc"
+   },
+   "portrait": "lai_do",
+   "item": {
+    "name": "Khúc gỗ",
+    "icon": "ui/log.png"
+   },
+   "count": 5,
+   "spots": [
+    [
+     69,
+     37
+    ],
+    [
+     72,
+     39
+    ],
+    [
+     69,
+     41
+    ],
+    [
+     72,
+     42
+    ],
+    [
+     69,
+     44
+    ]
+   ],
+   "intro": [
+    {
+     "text": "Cháu đến đúng lúc! Kế của Hưng Đạo Vương là đóng cọc đón triều, mà gỗ thì chưa đủ."
+    },
+    {
+     "cite": [
+      "c_tt_tran_nt",
+      "c_sgk"
+     ],
+     "text": "Cọc phải là gỗ chắc, đầu vót nhọn, đóng sâu xuống lòng sông. Triều lên thì cọc khuất, triều rút thì nhô ra. Cháu nhặt giúp năm khúc gỗ dọc con đường phía bắc nhé."
+    }
+   ],
+   "waiting": "Vẫn chưa đủ gỗ đâu cháu. Đi dọc con đường phía bắc mà xem.",
+   "done": "Đủ gỗ rồi! Đêm nay anh em sẽ đóng cọc khi nước còn ròng.",
+   "question": {
+    "id": "q_x_gc",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Điều gì khiến bãi cọc trở thành cái bẫy với thuyền lớn của địch?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Cọc ẩn dưới nước khi triều lên, lộ ra và đâm thủng thuyền khi triều rút"
+     },
+     {
+      "id": "b",
+      "text": "Cọc có thể phun lửa khi thuyền đến gần"
+     },
+     {
+      "id": "c",
+      "text": "Cọc được thả trôi theo dòng nước"
+     },
+     {
+      "id": "d",
+      "text": "Cọc chỉ để buộc thuyền của quân ta"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Mấu chốt của kế là tính đúng con nước: nhử địch vào lúc triều lên, phản công khi triều rút.",
+    "citations": [
+     "c_tt_tran_nt",
+     "c_sgk"
+    ]
+   }
+  },
+  {
+   "id": "s_cu_mai",
+   "level": "man2",
+   "title": "Củ mài nuôi quân",
+   "giver": {
+    "at": [
+     17,
+     36
+    ],
+    "char": "Hunter",
+    "name": "Nghĩa sĩ giữ kho"
+   },
+   "portrait": "nghia_si",
+   "item": {
+    "name": "Củ mài",
+    "icon": "ui/yam.png"
+   },
+   "count": 5,
+   "spots": [
+    [
+     19,
+     28
+    ],
+    [
+     22,
+     29
+    ],
+    [
+     19,
+     26
+    ],
+    [
+     22,
+     25
+    ],
+    [
+     22,
+     37
+    ]
+   ],
+   "intro": [
+    {
+     "text": "Lương thực cạn rồi cháu ạ. Có những lúc nghĩa quân chẳng có bữa cơm no."
+    },
+    {
+     "cite": [
+      "c_bndc"
+     ],
+     "text": "Bình Ngô đại cáo còn nhắc những ngày “lương hết mấy tuần”. Cháu vào rừng đào giúp năm củ mài dọc đường này, đủ thì mang về đây."
+    }
+   ],
+   "waiting": "Chưa đủ đâu cháu. Củ mài mọc rải rác dọc con đường lên núi.",
+   "done": "Tốt lắm. Nhờ dân góp gạo, quân đào củ hái rau mà nghĩa quân cầm cự được qua ngày đói.",
+   "question": {
+    "id": "q_x_cm",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Những năm đầu ở vùng núi, khó khăn lớn của nghĩa quân Lam Sơn là gì?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Thiếu lương thực, quân số ít, nhiều lần bị vây"
+     },
+     {
+      "id": "b",
+      "text": "Thừa quân nhưng thiếu tướng"
+     },
+     {
+      "id": "c",
+      "text": "Không tìm được đất để xây thành lớn"
+     },
+     {
+      "id": "d",
+      "text": "Quân Minh đã rút hết nên không có ai để đánh"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Bình Ngô đại cáo và Lam Sơn thực lục đều nhắc những ngày thiếu lương, ít quân của giai đoạn đầu.",
+    "citations": [
+     "c_bndc",
+     "c_lsTL"
+    ]
+   }
+  },
+  {
+   "id": "s_gui_gao",
+   "level": "man3",
+   "title": "Gùi gạo ra mặt trận",
+   "giver": {
+    "at": [
+     26,
+     26
+    ],
+    "char": "Villager",
+    "name": "Anh dân công"
+   },
+   "portrait": "cuu_binh",
+   "carry": true,
+   "item": {
+    "name": "Bao gạo",
+    "icon": "ui/rice_bag.png"
+   },
+   "count": 3,
+   "spots": [
+    [
+     28,
+     42
+    ]
+   ],
+   "intro": [
+    {
+     "text": "Mặt trận cần gạo như cần đạn. Hàng chục vạn dân công đã gùi, gánh, đẩy xe qua đèo dốc suốt mấy tháng trời."
+    },
+    {
+     "cite": [
+      "c_qs_dbp",
+      "c_bt_dbp"
+     ],
+     "text": "Xe đạp thồ được gia cố có thể chở vài tạ hàng. Cháu giúp gùi ba bao gạo từ kho dưới đường lên đây nhé. Gùi nặng nên đi chậm hơn đấy."
+    }
+   ],
+   "waiting": "Kho gạo ở phía nam, theo con đường mà xuống. Mỗi lần chỉ gùi được một bao.",
+   "done": "Cảm ơn cháu. Mỗi bao gạo đến được đây là bao mồ hôi của cả hậu phương.",
+   "question": {
+    "id": "q_x_gg",
+    "kind": "single",
+    "difficulty": 1,
+    "prompt": "Phương tiện nào trở thành biểu tượng của công tác tiếp tế cho chiến dịch Điện Biên Phủ?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Xe đạp thồ"
+     },
+     {
+      "id": "b",
+      "text": "Tàu hoả chạy thẳng tới Mường Thanh"
+     },
+     {
+      "id": "c",
+      "text": "Máy bay vận tải của ta"
+     },
+     {
+      "id": "d",
+      "text": "Tàu chiến trên sông Nậm Rốm"
+     }
+    ],
+    "correct_answer": "a",
+    "explanation": "Xe đạp thồ cùng sức dân công đã đưa lương thực, đạn dược qua núi rừng ra mặt trận.",
+    "citations": [
+     "c_qs_dbp",
+     "c_bt_dbp"
+    ]
+   }
+  }
+ ],
+ "skirmishes": [
+  {
+   "id": "sk_sat_that",
+   "level": "man1",
+   "at": [
+    58,
+    26
+   ],
+   "requires": "r_den_tran",
+   "title": "Toán trinh sát quân Nguyên",
+   "scene": "trai_quan",
+   "lines": [
+    {
+     "speaker": "Lính Sát Thát",
+     "portrait": "nghia_si",
+     "fiction": true,
+     "text": "Lời dẫn hư cấu: cuộc đụng độ nhỏ này do game dựng để luyện tay, sử không chép riêng trận này."
+    },
+    {
+     "speaker": "Lính Sát Thát",
+     "portrait": "nghia_si",
+     "fiction": true,
+     "cite": [
+      "c_tt_tran_nt"
+     ],
+     "text": "Có toán trinh sát đang dò đường. Quân ta xăm hai chữ “Sát Thát” trên cánh tay, nghĩa là quyết giết giặc Mông Thát. Cùng đánh nào!"
+    }
+   ],
+   "foes": [
+    {
+     "name": "Trinh sát quân Nguyên",
+     "char": "LinhNguyen",
+     "hp": 70,
+     "power": 0.8,
+     "speed": 170,
+     "aggro": 0.4
+    },
+    {
+     "name": "Trinh sát quân Nguyên",
+     "char": "LinhNguyen",
+     "hp": 70,
+     "power": 0.8,
+     "speed": 170,
+     "aggro": 0.4
+    }
+   ],
+   "win": "Toán trinh sát đã tan. Giặc chưa dò được đường vào Kiếp Bạc."
+  },
+  {
+   "id": "sk_do_tham",
+   "level": "man2",
+   "at": [
+    46,
+    38
+   ],
+   "requires": "r_le_lai",
+   "title": "Toán lính do thám nhà Minh",
+   "scene": "lam_son",
+   "lines": [
+    {
+     "speaker": "Nghĩa sĩ",
+     "portrait": "nghia_si",
+     "fiction": true,
+     "text": "Lời dẫn hư cấu: cuộc đụng độ nhỏ này do game dựng để luyện tay, sử không chép riêng trận này."
+    },
+    {
+     "speaker": "Nghĩa sĩ",
+     "portrait": "nghia_si",
+     "fiction": true,
+     "cite": [
+      "c_lsTL"
+     ],
+     "text": "Một toán lính Minh đang dò đường vào rừng. Đánh nhanh rồi rút vào rừng là cách của nghĩa quân những năm đầu."
+    }
+   ],
+   "foes": [
+    {
+     "name": "Lính do thám nhà Minh",
+     "char": "LinhMinh",
+     "hp": 70,
+     "power": 0.85,
+     "speed": 175,
+     "aggro": 0.45
+    },
+    {
+     "name": "Lính do thám nhà Minh",
+     "char": "LinhMinh",
+     "hp": 70,
+     "power": 0.85,
+     "speed": 175,
+     "aggro": 0.45
+    },
+    {
+     "name": "Cung thủ nhà Minh",
+     "char": "LinhMinh",
+     "hp": 60,
+     "power": 0.8,
+     "speed": 160,
+     "aggro": 0.45,
+     "skills": [
+      "phong_lao"
+     ]
+    }
+   ],
+   "win": "Toán do thám không về được, chỗ ẩn của nghĩa quân vẫn an toàn thêm ít lâu."
+  }
+ ],
+ "documents": [
+  {
+   "id": "doc_chieu_doi_do",
+   "level": "man1",
+   "title": "Chiếu dời đô",
+   "author": "Lý Công Uẩn (Lý Thái Tổ)",
+   "year": "1010",
+   "kind": "Chiếu",
+   "legend": false,
+   "note": "Năm 1010, Lý Công Uẩn xuống chiếu dời đô từ Hoa Lư ra thành Đại La, rồi đổi tên thành là Thăng Long. Đoạn này nêu lý do chọn Đại La: ở giữa đất nước, thế đất tốt, tiện đường sông đường bộ.",
+   "hint": "Các mảnh nằm quanh Văn Miếu – Quốc Tử Giám.",
+   "cite": [
+    "c_chieu_doi_do",
+    "c_nv_chieu"
+   ],
+   "pieces": [
+    [
+     112,
+     32
+    ],
+    [
+     106,
+     30
+    ],
+    [
+     109,
+     31
+    ],
+    [
+     103,
+     29
+    ],
+    [
+     100,
+     28
+    ]
+   ],
+   "anchor": [
+    104,
+    31
+   ],
+   "question": {
+    "id": "q_doc_chieu_doi_do",
+    "kind": "order",
+    "style": "Phục dựng tư liệu",
+    "difficulty": 2,
+    "prompt": "Ghép các mảnh của “Chiếu dời đô” theo đúng thứ tự trong văn bản.",
+    "items": [
+     {
+      "id": "a",
+      "text": "Huống gì thành Đại La, kinh đô cũ của Cao Vương:"
+     },
+     {
+      "id": "b",
+      "text": "ở vào nơi trung tâm trời đất;"
+     },
+     {
+      "id": "c",
+      "text": "được cái thế rồng cuộn hổ ngồi."
+     },
+     {
+      "id": "d",
+      "text": "Đã đúng ngôi nam bắc đông tây;"
+     },
+     {
+      "id": "e",
+      "text": "lại tiện hướng nhìn sông dựa núi."
+     }
+    ],
+    "correct_answer": [
+     "a",
+     "b",
+     "c",
+     "d",
+     "e"
+    ],
+    "explanation": "Năm 1010, Lý Công Uẩn xuống chiếu dời đô từ Hoa Lư ra thành Đại La, rồi đổi tên thành là Thăng Long. Đoạn này nêu lý do chọn Đại La: ở giữa đất nước, thế đất tốt, tiện đường sông đường bộ.",
+    "citations": [
+     "c_chieu_doi_do",
+     "c_nv_chieu"
+    ]
+   }
+  },
+  {
+   "id": "doc_nqsh",
+   "level": "man1",
+   "title": "Sông núi nước Nam",
+   "author": "Tương truyền của Lý Thường Kiệt",
+   "year": "Thế kỷ XI (tương truyền)",
+   "kind": "Thơ",
+   "legend": true,
+   "note": "Bản dịch thơ dùng trong sách Ngữ văn. Ai là tác giả và bài thơ ra đời lúc nào vẫn còn nhiều ý kiến, nên chỉ ghi là tương truyền. Bài thơ thường được gắn với phòng tuyến sông Như Nguyệt.",
+   "hint": "Các mảnh nằm quanh bến sông Như Nguyệt.",
+   "cite": [
+    "c_nqsh",
+    "c_ls_lytran"
+   ],
+   "pieces": [
+    [
+     34,
+     5
+    ],
+    [
+     41,
+     9
+    ],
+    [
+     42,
+     2
+    ],
+    [
+     38,
+     2
+    ]
+   ],
+   "anchor": [
+    40,
+    6
+   ],
+   "question": {
+    "id": "q_doc_nqsh",
+    "kind": "order",
+    "style": "Phục dựng tư liệu",
+    "difficulty": 2,
+    "prompt": "Ghép các mảnh của “Sông núi nước Nam” theo đúng thứ tự trong văn bản.",
+    "items": [
+     {
+      "id": "a",
+      "text": "Sông núi nước Nam vua Nam ở,"
+     },
+     {
+      "id": "b",
+      "text": "Vằng vặc sách trời chia xứ sở."
+     },
+     {
+      "id": "c",
+      "text": "Giặc dữ cớ sao phạm đến đây,"
+     },
+     {
+      "id": "d",
+      "text": "Chúng mày nhất định phải tan vỡ."
+     }
+    ],
+    "correct_answer": [
+     "a",
+     "b",
+     "c",
+     "d"
+    ],
+    "explanation": "Bản dịch thơ dùng trong sách Ngữ văn. Ai là tác giả và bài thơ ra đời lúc nào vẫn còn nhiều ý kiến, nên chỉ ghi là tương truyền. Bài thơ thường được gắn với phòng tuyến sông Như Nguyệt.",
+    "citations": [
+     "c_nqsh",
+     "c_ls_lytran"
+    ]
+   }
+  },
+  {
+   "id": "doc_hich",
+   "level": "man1",
+   "title": "Hịch tướng sĩ (trích)",
+   "author": "Trần Quốc Tuấn (Hưng Đạo Đại Vương)",
+   "year": "Trước kháng chiến lần thứ hai (1285)",
+   "kind": "Hịch",
+   "legend": false,
+   "note": "Hưng Đạo Vương viết bài hịch để khích lệ tướng sĩ trước khi quân Nguyên sang lần thứ hai. Đoạn trích là lời ông bày tỏ nỗi lòng của chính mình.",
+   "hint": "Các mảnh nằm quanh Kiếp Bạc.",
+   "cite": [
+    "c_hich",
+    "c_ls_lytran"
+   ],
+   "pieces": [
+    [
+     53,
+     15
+    ],
+    [
+     67,
+     15
+    ],
+    [
+     61,
+     10
+    ],
+    [
+     65,
+     14
+    ]
+   ],
+   "anchor": [
+    60,
+    15
+   ],
+   "question": {
+    "id": "q_doc_hich",
+    "kind": "order",
+    "style": "Phục dựng tư liệu",
+    "difficulty": 2,
+    "prompt": "Ghép các mảnh của “Hịch tướng sĩ (trích)” theo đúng thứ tự trong văn bản.",
+    "items": [
+     {
+      "id": "a",
+      "text": "Ta thường tới bữa quên ăn, nửa đêm vỗ gối;"
+     },
+     {
+      "id": "b",
+      "text": "ruột đau như cắt, nước mắt đầm đìa;"
+     },
+     {
+      "id": "c",
+      "text": "chỉ căm tức chưa xả thịt lột da, nuốt gan uống máu quân thù."
+     },
+     {
+      "id": "d",
+      "text": "Dẫu cho trăm thân này phơi ngoài nội cỏ, nghìn xác này gói trong da ngựa, ta cũng vui lòng."
+     }
+    ],
+    "correct_answer": [
+     "a",
+     "b",
+     "c",
+     "d"
+    ],
+    "explanation": "Hưng Đạo Vương viết bài hịch để khích lệ tướng sĩ trước khi quân Nguyên sang lần thứ hai. Đoạn trích là lời ông bày tỏ nỗi lòng của chính mình.",
+    "citations": [
+     "c_hich",
+     "c_ls_lytran"
+    ]
+   }
+  },
+  {
+   "id": "doc_bndc_1",
+   "level": "man2",
+   "title": "Nước Đại Việt ta (trích Bình Ngô đại cáo)",
+   "author": "Nguyễn Trãi",
+   "year": "1428",
+   "kind": "Cáo",
+   "legend": false,
+   "note": "Năm 1428, sau khi đuổi quân Minh, Nguyễn Trãi vâng mệnh Lê Lợi viết bài cáo để cả nước cùng biết. Đoạn mở đầu khẳng định Đại Việt có văn hiến, bờ cõi và phong tục riêng.",
+   "hint": "Các mảnh nằm quanh Côn Sơn, nơi Nguyễn Trãi gắn bó.",
+   "cite": [
+    "c_nv_bndc",
+    "c_bndc"
+   ],
+   "pieces": [
+    [
+     101,
+     21
+    ],
+    [
+     92,
+     18
+    ],
+    [
+     89,
+     17
+    ],
+    [
+     94,
+     15
+    ],
+    [
+     103,
+     18
+    ],
+    [
+     97,
+     16
+    ]
+   ],
+   "anchor": [
+    96,
+    18
+   ],
+   "question": {
+    "id": "q_doc_bndc_1",
+    "kind": "order",
+    "style": "Phục dựng tư liệu",
+    "difficulty": 2,
+    "prompt": "Ghép các mảnh của “Nước Đại Việt ta (trích Bình Ngô đại cáo)” theo đúng thứ tự trong văn bản.",
+    "items": [
+     {
+      "id": "a",
+      "text": "Việc nhân nghĩa cốt ở yên dân,"
+     },
+     {
+      "id": "b",
+      "text": "Quân điếu phạt trước lo trừ bạo."
+     },
+     {
+      "id": "c",
+      "text": "Như nước Đại Việt ta từ trước,"
+     },
+     {
+      "id": "d",
+      "text": "Vốn xưng nền văn hiến đã lâu."
+     },
+     {
+      "id": "e",
+      "text": "Núi sông bờ cõi đã chia,"
+     },
+     {
+      "id": "f",
+      "text": "Phong tục Bắc Nam cũng khác."
+     }
+    ],
+    "correct_answer": [
+     "a",
+     "b",
+     "c",
+     "d",
+     "e",
+     "f"
+    ],
+    "explanation": "Năm 1428, sau khi đuổi quân Minh, Nguyễn Trãi vâng mệnh Lê Lợi viết bài cáo để cả nước cùng biết. Đoạn mở đầu khẳng định Đại Việt có văn hiến, bờ cõi và phong tục riêng.",
+    "citations": [
+     "c_nv_bndc",
+     "c_bndc"
+    ]
+   }
+  },
+  {
+   "id": "doc_bndc_2",
+   "level": "man2",
+   "title": "Tội ác giặc Minh (trích Bình Ngô đại cáo)",
+   "author": "Nguyễn Trãi",
+   "year": "1428",
+   "kind": "Cáo",
+   "legend": false,
+   "note": "Đoạn kể tội quân Minh trong hai mươi năm đô hộ, viết bằng lối đối từng cặp câu.",
+   "hint": "Các mảnh nằm quanh ngôi làng bị đốt.",
+   "cite": [
+    "c_nv_bndc",
+    "c_bndc"
+   ],
+   "pieces": [
+    [
+     58,
+     54
+    ],
+    [
+     52,
+     52
+    ],
+    [
+     54,
+     49
+    ],
+    [
+     60,
+     51
+    ]
+   ],
+   "anchor": [
+    55,
+    52
+   ],
+   "question": {
+    "id": "q_doc_bndc_2",
+    "kind": "order",
+    "style": "Phục dựng tư liệu",
+    "difficulty": 2,
+    "prompt": "Ghép các mảnh của “Tội ác giặc Minh (trích Bình Ngô đại cáo)” theo đúng thứ tự trong văn bản.",
+    "items": [
+     {
+      "id": "a",
+      "text": "Nướng dân đen trên ngọn lửa hung tàn,"
+     },
+     {
+      "id": "b",
+      "text": "Vùi con đỏ xuống dưới hầm tai vạ."
+     },
+     {
+      "id": "c",
+      "text": "Dối trời lừa dân đủ muôn nghìn kế,"
+     },
+     {
+      "id": "d",
+      "text": "Gây binh kết oán trải hai mươi năm."
+     }
+    ],
+    "correct_answer": [
+     "a",
+     "b",
+     "c",
+     "d"
+    ],
+    "explanation": "Đoạn kể tội quân Minh trong hai mươi năm đô hộ, viết bằng lối đối từng cặp câu.",
+    "citations": [
+     "c_nv_bndc",
+     "c_bndc"
+    ]
+   }
+  },
+  {
+   "id": "doc_tndl_1",
+   "level": "man3",
+   "title": "Tuyên ngôn Độc lập (mở đầu)",
+   "author": "Chủ tịch Hồ Chí Minh",
+   "year": "2/9/1945",
+   "kind": "Văn kiện",
+   "legend": false,
+   "note": "Câu mở đầu dẫn lời bản Tuyên ngôn Độc lập năm 1776 của nước Mỹ, để nói rằng quyền độc lập, tự do là quyền chung của mọi dân tộc.",
+   "hint": "Các mảnh nằm quanh quảng trường Ba Đình.",
+   "cite": [
+    "c_tuyen_ngon"
+   ],
+   "pieces": [
+    [
+     48,
+     37
+    ],
+    [
+     44,
+     32
+    ],
+    [
+     37,
+     36
+    ],
+    [
+     35,
+     37
+    ]
+   ],
+   "anchor": [
+    42,
+    37
+   ],
+   "question": {
+    "id": "q_doc_tndl_1",
+    "kind": "order",
+    "style": "Phục dựng tư liệu",
+    "difficulty": 2,
+    "prompt": "Ghép các mảnh của “Tuyên ngôn Độc lập (mở đầu)” theo đúng thứ tự trong văn bản.",
+    "items": [
+     {
+      "id": "a",
+      "text": "Hỡi đồng bào cả nước,"
+     },
+     {
+      "id": "b",
+      "text": "Tất cả mọi người đều sinh ra có quyền bình đẳng."
+     },
+     {
+      "id": "c",
+      "text": "Tạo hóa cho họ những quyền không ai có thể xâm phạm được;"
+     },
+     {
+      "id": "d",
+      "text": "trong những quyền ấy, có quyền được sống, quyền tự do và quyền mưu cầu hạnh phúc."
+     }
+    ],
+    "correct_answer": [
+     "a",
+     "b",
+     "c",
+     "d"
+    ],
+    "explanation": "Câu mở đầu dẫn lời bản Tuyên ngôn Độc lập năm 1776 của nước Mỹ, để nói rằng quyền độc lập, tự do là quyền chung của mọi dân tộc.",
+    "citations": [
+     "c_tuyen_ngon"
+    ]
+   }
+  },
+  {
+   "id": "doc_tndl_2",
+   "level": "man3",
+   "title": "Tuyên ngôn Độc lập (kết)",
+   "author": "Chủ tịch Hồ Chí Minh",
+   "year": "2/9/1945",
+   "kind": "Văn kiện",
+   "legend": false,
+   "note": "Đoạn kết vừa tuyên bố với thế giới, vừa nói lên quyết tâm giữ nền độc lập vừa giành được.",
+   "hint": "Các mảnh nằm quanh quảng trường Ba Đình.",
+   "cite": [
+    "c_tuyen_ngon"
+   ],
+   "pieces": [
+    [
+     42,
+     45
+    ],
+    [
+     47,
+     33
+    ],
+    [
+     51,
+     37
+    ],
+    [
+     39,
+     43
+    ]
+   ],
+   "anchor": [
+    42,
+    37
+   ],
+   "question": {
+    "id": "q_doc_tndl_2",
+    "kind": "order",
+    "style": "Phục dựng tư liệu",
+    "difficulty": 2,
+    "prompt": "Ghép các mảnh của “Tuyên ngôn Độc lập (kết)” theo đúng thứ tự trong văn bản.",
+    "items": [
+     {
+      "id": "a",
+      "text": "Nước Việt Nam có quyền hưởng tự do và độc lập,"
+     },
+     {
+      "id": "b",
+      "text": "và sự thật đã thành một nước tự do độc lập."
+     },
+     {
+      "id": "c",
+      "text": "Toàn thể dân tộc Việt Nam quyết đem tất cả tinh thần và lực lượng,"
+     },
+     {
+      "id": "d",
+      "text": "tính mạng và của cải để giữ vững quyền tự do, độc lập ấy."
+     }
+    ],
+    "correct_answer": [
+     "a",
+     "b",
+     "c",
+     "d"
+    ],
+    "explanation": "Đoạn kết vừa tuyên bố với thế giới, vừa nói lên quyết tâm giữ nền độc lập vừa giành được.",
+    "citations": [
+     "c_tuyen_ngon"
+    ]
+   }
+  },
+  {
+   "id": "doc_lkg",
+   "level": "man3",
+   "title": "Lời kêu gọi toàn quốc kháng chiến (trích)",
+   "author": "Chủ tịch Hồ Chí Minh",
+   "year": "19/12/1946",
+   "kind": "Lời kêu gọi",
+   "legend": false,
+   "note": "Chủ tịch Hồ Chí Minh viết Lời kêu gọi ở làng Vạn Phúc (Hà Đông), văn bản đề ngày 19/12/1946. Sáng 20/12/1946, Đài Tiếng nói Việt Nam phát lời kêu gọi đi cả nước.",
+   "hint": "Các mảnh nằm trên đường lên ATK Định Hoá.",
+   "cite": [
+    "c_loi_keu_goi"
+   ],
+   "pieces": [
+    [
+     89,
+     37
+    ],
+    [
+     89,
+     47
+    ],
+    [
+     92,
+     48
+    ],
+    [
+     86,
+     46
+    ]
+   ],
+   "anchor": [
+    88,
+    44
+   ],
+   "question": {
+    "id": "q_doc_lkg",
+    "kind": "order",
+    "style": "Phục dựng tư liệu",
+    "difficulty": 2,
+    "prompt": "Ghép các mảnh của “Lời kêu gọi toàn quốc kháng chiến (trích)” theo đúng thứ tự trong văn bản.",
+    "items": [
+     {
+      "id": "a",
+      "text": "Hỡi đồng bào toàn quốc!"
+     },
+     {
+      "id": "b",
+      "text": "Chúng ta muốn hòa bình, chúng ta phải nhân nhượng."
+     },
+     {
+      "id": "c",
+      "text": "Nhưng chúng ta càng nhân nhượng, thực dân Pháp càng lấn tới, vì chúng quyết tâm cướp nước ta lần nữa!"
+     },
+     {
+      "id": "d",
+      "text": "Không! Chúng ta thà hy sinh tất cả, chứ nhất định không chịu mất nước, nhất định không chịu làm nô lệ."
+     }
+    ],
+    "correct_answer": [
+     "a",
+     "b",
+     "c",
+     "d"
+    ],
+    "explanation": "Chủ tịch Hồ Chí Minh viết Lời kêu gọi ở làng Vạn Phúc (Hà Đông), văn bản đề ngày 19/12/1946. Sáng 20/12/1946, Đài Tiếng nói Việt Nam phát lời kêu gọi đi cả nước.",
+    "citations": [
+     "c_loi_keu_goi"
+    ]
+   }
+  }
+ ]
+}

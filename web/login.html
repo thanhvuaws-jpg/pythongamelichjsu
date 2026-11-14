@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng nhập: Sử Ký Điều Tra</title>
+  <link rel="icon" href="img/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=Noto+Serif:wght@400;700&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css?v=10">
+</head>
+<body class="backdrop">
+  <nav class="bar" id="bar"></nav>
+  <main>
+    <form class="sheet box paper" id="form" novalidate>
+      <h1>Đăng nhập</h1>
+      <p class="lead">Tiến trình của bạn được lưu theo tài khoản, chơi ở máy nào cũng tiếp tục được.</p>
+      <p class="notice" id="msg" role="alert" hidden></p>
+      <label class="field">Email
+        <input name="email" type="email" autocomplete="email" required>
+      </label>
+      <label class="field">Mật khẩu
+        <input name="password" type="password" autocomplete="current-password" required>
+      </label>
+      <button class="btn gold" type="submit">Đăng nhập</button>
+      <p class="after"><a href="forgot-password.html">Quên mật khẩu?</a></p>
+      <p class="after">Chưa có tài khoản? <a href="register.html">Tạo tài khoản</a></p>
+    </form>
+  </main>
+  <script src="js/api.js?v=8"></script>
+  <script>
+    SK.renderBar(null);
+    SK.me().then((user) => { if (user) location.replace(SK.nextPage()); }).catch(() => null);
+    const created = new URLSearchParams(location.search).get("created");
+    if (created) SK.show("msg", "Đã tạo tài khoản, mời bạn đăng nhập.");
+    document.getElementById("form").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const form = event.target;
+      const button = form.querySelector("button");
+      button.disabled = true;
+      SK.show("msg", "");
+      try {
+        await SK.login(form.email.value, form.password.value);
+        location.replace(SK.nextPage());
+      } catch (err) {
+        SK.show("msg", err.message, true);
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
