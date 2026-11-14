@@ -42,11 +42,9 @@
 Video hướng dẫn 2 phút 45 giây, quay thẳng từ cảnh hướng dẫn trong game (`tools/make_trailer_video.py`), nên luôn khớp với
 thứ người chơi thấy.
 
-<div align="center">
-<a href="web/video/trailer.mp4"><img src="docs/readme/video.png" alt="Bấm để xem video giới thiệu" width="85%"></a>
-<br>
-<sub>Bấm vào ảnh để xem video (<code>web/video/trailer.mp4</code>, 11 MB). Video cũng phát ngay ở trang chủ <a href="https://game.vtkt.online">game.vtkt.online</a>.</sub>
-</div>
+https://github.com/user-attachments/assets/8f33c440-58b6-497c-a96e-062cc5967504
+
+<sub>Bản 1440p nằm ở <code>web/video/trailer.mp4</code> (tải về để xem), và cũng phát ngay ở trang chủ <a href="https://game.vtkt.online">game.vtkt.online</a>.</sub>
 
 ## Game có gì
 
