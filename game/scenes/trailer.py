@@ -61,8 +61,9 @@ BEATS = (
     ("Câu cá, nướng cá", "Mua cần câu tre, đứng sát mép nước bấm C. Phao chìm, hiện dấu chấm than thì bấm C kéo lên. Nướng ở "
      "bếp lửa, vào trận bấm E ăn cho lại sức.", 8.0, "_b_fish", "huong_dan"),
     ("Còn nhiều thứ để khám phá", "Không bắt buộc, nhưng có thêm chuyện để nghe, thêm tinh hoa và điểm kỹ năng.", 6.0, "_b_extras", "huong_dan"),
-    ("Chơi cùng bạn bè", "Bấm P để lập tổ đội (chia kinh nghiệm), kết đồng minh, thách đấu. Bấm L để chat: cùng map thì miễn "
-     f"phí, kênh thế giới {rpg.WORLD_CHAT_COST} quan một tin. Bảng vàng ở map đầu ghi 20 người giỏi nhất.", 9.0, "_b_social", "huong_dan"),
+    ("Chơi cùng bạn bè", "Bấm vào người chơi khác để mời tổ đội (chia kinh nghiệm), kết đồng minh hay thách đấu thật trên võ đài. "
+     f"Bấm L để chat: cùng map miễn phí, kênh thế giới {rpg.WORLD_CHAT_COST} quan một tin. Bảng vàng ghi 20 người giỏi nhất.", 9.0,
+     "_b_social", "huong_dan"),
     ("Lạc đường thì bấm J", "Bảng Lộ trình cho biết bạn đang ở đâu và cần làm gì tiếp theo.", 5.0, "_b_end", "huong_dan"),
 )
 EXTRAS = (
@@ -560,14 +561,16 @@ class TrailerScene(Scene):
             fonts.text(screen, "+40% máu", fonts.font("bold", 20), theme.JADE_LIGHT, (px, y - 130 - (self.t % 1) * 20), "midbottom",
                        shadow=(24, 16, 14))
         self.fx.draw(screen)
-        panel = pygame.Rect(890, 70, 350, 420)
+        panel = pygame.Rect(850, 70, 390, 420)
         ui.lacquer_panel(screen, panel, 244)
-        rows = (("J", "Chém (hoặc phím cách)"), ("K", "Né (hoặc Shift)"), ("1–4", "Tung chiêu đã học"), ("Q", "Uống thuốc nam"),
+        rows = (("Chuột trái", "Chém (giữ để chém liền)"), ("Shift", "Né"), ("1–4", "Tung chiêu đã học"), ("Q", "Uống thuốc nam"),
                 ("E", "Ăn cá nướng"))
+        key_w = fonts.font("bold", 20).size(rows[0][0])[0] + 22
         for i, (key, text) in enumerate(rows):
             yy = panel.y + 22 + i * 78
-            self._key(screen, key, panel.x + 22, yy, i == stage, w=64 if len(key) > 1 else 46)
-            fonts.text(screen, text, fonts.font("semi", 17), theme.GOLD_LIGHT if i == stage else theme.PAPER, (panel.x + 104, yy + 12))
+            self._key(screen, key, panel.x + 22, yy, i == stage, w=max(46, fonts.font("bold", 20).size(key)[0] + 22))
+            fonts.text(screen, text, fonts.font("semi", 17), theme.GOLD_LIGHT if i == stage else theme.PAPER,
+                       (panel.x + 40 + key_w, yy + 12))
 
     def _b_grow(self, screen, k):
         mobs = (("LinhTong", "Lính Tống · cấp 5", (150, 220, 150), 300), ("LinhNguyen", "Lính Nguyên · cấp 8", (243, 212, 140), 640),
@@ -737,8 +740,18 @@ class TrailerScene(Scene):
         fonts.text(screen, "Minh An · cấp 9 · tổ đội", fonts.font("bold", 13), (150, 230, 160), (660, 400), "midbottom", shadow=(24, 16, 14))
         if k > 0.2:
             ui.tag(screen, "Cùng đi Chi Lăng không?", (660, 382), theme.PAPER, theme.INK, 13, "midbottom")
-        self._key(screen, "P", 520, 150, k < 0.4)
-        self._key(screen, "L", 580, 150, k >= 0.4)
+        self._key(screen, "Chuột trái", 470, 150, k < 0.4, w=fonts.font("bold", 20).size("Chuột trái")[0] + 22)
+        self._key(screen, "L", 620, 150, k >= 0.4)
+        if k < 0.4:  # bấm vào bạn: bảng trạng thái, lời mời hiện ở góc trên phải màn chơi của người kia
+            ui.tag(screen, "Bấm vào bạn mình", (660, 300), theme.GOLD, theme.INK, 14, "midbottom")
+            card = pygame.Rect(W - 412, 64, 400, 112)
+            ui.lacquer_panel(screen, card, 236)
+            fonts.text(screen, "THÁCH ĐẤU", fonts.font("bold", 14), theme.GOLD_LIGHT, (card.x + 14, card.y + 10))
+            fonts.text(screen, "Minh An · cấp 9", fonts.font("bold", 15), theme.PAPER, (card.x + 14, card.y + 30))
+            fonts.text(screen, "thách đấu bạn trên võ đài", fonts.font("ui", 13), theme.PAPER_3, (card.x + 14, card.y + 51))
+            ui.Button((card.right - 226, card.bottom - 40, 104, 32), "Đồng ý", None, "jade", size=14).draw(screen)
+            ui.Button((card.right - 116, card.bottom - 40, 104, 32), "Từ chối", None, "ghost", size=14).draw(screen)
+            ui.tag(screen, "Đồng ý là hai người cùng vào võ đài", (card.centerx, card.bottom + 8), theme.GOLD, theme.INK, 14, "midtop")
         if k > 0.4:
             box = pygame.Rect(W - 452, 64, 440, 118)
             ui.lacquer_panel(screen, box, 230)

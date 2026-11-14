@@ -123,7 +123,9 @@ class DbStore:
                 )
             await s.commit()
 
-    async def record_duel(self, reporter: str, opponent: str, win: bool, map_id: str) -> None:
+    async def record_duel(
+        self, reporter: str, opponent: str, win: bool, map_id: str, draw: bool = False
+    ) -> None:
         try:
             other = uuid.UUID(opponent)
         except ValueError:
@@ -133,7 +135,11 @@ class DbStore:
                 return
             s.add(
                 DuelRecord(
-                    reporter_id=uuid.UUID(reporter), opponent_id=other, win=win, map_id=map_id[:32]
+                    reporter_id=uuid.UUID(reporter),
+                    opponent_id=other,
+                    win=win and not draw,
+                    draw=draw,
+                    map_id=map_id[:32],
                 )
             )
             await s.commit()
@@ -254,6 +260,7 @@ class AllyOut(BaseModel):
 class DuelOut(BaseModel):
     opponent: str
     win: bool
+    draw: bool = False
     map_id: str
     created_at: str
 
@@ -311,6 +318,7 @@ async def my_duels(user: CurrentUser, session: Session) -> list[DuelOut]:
         DuelOut(
             opponent=names.get(r.opponent_id, ""),
             win=r.win,
+            draw=r.draw,
             map_id=r.map_id,
             created_at=r.created_at.isoformat(),
         )

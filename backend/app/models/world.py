@@ -56,7 +56,7 @@ class PartyMember(Base):
 
 
 class DuelRecord(Base):
-    """Kết quả một trận thách đấu, mỗi bên tự báo kết quả trận của mình."""
+    """Kết quả một trận thách đấu, ghi cho cả hai người; hết giờ mà máu ngang nhau thì là hoà."""
 
     __tablename__ = "duel_records"
 
@@ -68,6 +68,9 @@ class DuelRecord(Base):
         UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True
     )
     win: Mapped[bool] = mapped_column(Boolean, nullable=False)
+    draw: Mapped[bool] = mapped_column(
+        Boolean, nullable=False, default=False, server_default="false"
+    )
     map_id: Mapped[str] = mapped_column(String(32), nullable=False, default="")
     created_at: Mapped[datetime] = created_col()
 

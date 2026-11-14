@@ -38,6 +38,13 @@ PVP_TIME = 90.0  # thời gian một trận (giây), không kể đếm ngược
 PVP_GRACE = 8.0  # chờ thêm cho đếm ngược và mạng chậm rồi mới phân xử theo máu
 PVP_GAP = 0.03  # chuyển tối đa khoảng 33 tin trạng thái mỗi giây cho mỗi người
 PVP_MAX_HIT = 400.0  # một đòn trúng không thể quá mức này
+# Máy người ra đòn tự báo đòn trúng, nên máy chủ giới hạn sát thương theo "ngân sách" của
+# mỗi người, tính theo hệ số sức đánh lúc vào trận: sửa máy mình để gửi dồn đòn cũng không
+# hạ đối thủ ngay được.
+PVP_HIT_MAX = 50.0  # một đòn tối đa (nhân hệ số sức đánh)
+PVP_DPS = 60.0  # ngân sách hồi lại mỗi giây (nhân hệ số sức đánh)
+PVP_BURST = 150.0  # ngân sách dồn được tối đa (nhân hệ số sức đánh)
+PVP_HIT_COST = 5.0  # mỗi tin đòn tốn ít nhất chừng này, kể cả tin chỉ hất lùi, gây bỏng, làm chậm
 PVP_EVENTS = {"atk", "cast", "dodge"}
 
 
@@ -49,7 +56,9 @@ class Store(Protocol):
     async def create_party(self, leader: str, member: str) -> str: ...
     async def join_party(self, pid: str, uid: str) -> None: ...
     async def leave_party(self, uid: str) -> None: ...
-    async def record_duel(self, reporter: str, opponent: str, win: bool, map_id: str) -> None: ...
+    async def record_duel(
+        self, reporter: str, opponent: str, win: bool, map_id: str, draw: bool = False
+    ) -> None: ...
 
 
 @dataclass
@@ -86,6 +95,9 @@ class Duel:
     map: str
     until: float  # quá giờ này mà chưa ai gục thì phân xử theo máu
     hp: dict[str, float] = field(default_factory=dict)  # tỉ lệ máu mới nhất của mỗi bên
+    power: dict[str, float] = field(default_factory=dict)  # hệ số sức đánh lúc vào trận
+    budget: dict[str, float] = field(default_factory=dict)  # sát thương còn được gửi
+    budget_at: dict[str, float] = field(default_factory=dict)
 
     def other(self, uid: str) -> str:
         return self.b if uid == self.a else self.a
@@ -496,7 +508,12 @@ class Hub:
         của mình; máy chủ chỉ chuyển trạng thái, đòn trúng qua lại và phân xử khi có người gục,
         rút lui, rời game hoặc hết giờ."""
         self._duel_n += 1
-        d = Duel(f"d{self._duel_n}", a.uid, b.uid, a.map or "", self.clock() + PVP_TIME + PVP_GRACE)
+        now = self.clock()
+        d = Duel(f"d{self._duel_n}", a.uid, b.uid, a.map or "", now + PVP_TIME + PVP_GRACE)
+        for q in (a, b):
+            d.power[q.uid] = float((q.combat or {}).get("dmg", 1.0))
+            d.budget[q.uid] = PVP_BURST * d.power[q.uid]
+            d.budget_at[q.uid] = now
         self.duels[d.id] = d
         self.in_duel[a.uid] = self.in_duel[b.uid] = d.id
         for side, (me, vs) in enumerate(((a, b), (b, a))):
@@ -556,12 +573,21 @@ class Hub:
         other = self.people.get(d.other(p.uid)) if d else None
         if other is None:
             return
+        now, power = self.clock(), d.power.get(p.uid, 1.0)
+        refill = (now - d.budget_at.get(p.uid, now)) * PVP_DPS * power
+        budget = min(PVP_BURST * power, d.budget.get(p.uid, 0.0) + refill)
+        d.budget_at[p.uid] = now
+        if budget < PVP_HIT_COST:  # gửi dồn quá nhanh: bỏ tin này
+            d.budget[p.uid] = budget
+            return
+        dmg = min(_num(msg.get("dmg"), 0, PVP_MAX_HIT), PVP_HIT_MAX * power, budget)
+        d.budget[p.uid] = budget - max(dmg, PVP_HIT_COST)
         await self._safe(
             other.send,
             {
                 "t": "pvp_hit",
                 "room": d.id,
-                "dmg": round(_num(msg.get("dmg"), 0, PVP_MAX_HIT), 1),
+                "dmg": round(dmg, 1),
                 "knock": round(_num(msg.get("knock"), 0, 120)),
                 "sx": round(_num(msg.get("sx"), 0, 2000)),
                 "sy": round(_num(msg.get("sy"), 0, 2000)),
@@ -583,7 +609,7 @@ class Hub:
             if self.in_duel.get(uid) == d.id:
                 del self.in_duel[uid]
         for uid in (d.a, d.b):
-            await self.store.record_duel(uid, d.other(uid), uid == winner, d.map)
+            await self.store.record_duel(uid, d.other(uid), uid == winner, d.map, winner is None)
             q = self.people.get(uid)
             if q is not None:
                 over = {"t": "pvp_over", "room": d.id, "win": uid == winner, "draw": winner is None}
@@ -676,5 +702,5 @@ class MemoryStore:
     async def leave_party(self, uid):
         self.members.pop(uid, None)
 
-    async def record_duel(self, reporter, opponent, win, map_id):
-        self.duels.append((reporter, opponent, win, map_id))
+    async def record_duel(self, reporter, opponent, win, map_id, draw=False):
+        self.duels.append((reporter, opponent, "draw" if draw else win, map_id))

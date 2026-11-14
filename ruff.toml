@@ -9,6 +9,7 @@ select = ["E", "F", "W", "I", "B", "UP", "ASYNC"]
 # Code vẽ giao diện và chuỗi tiếng Việt thường dài, tách dòng làm khó đọc hơn
 "game/**" = ["E501"]
 "tools/**" = ["E501"]
+"trien_khai_vps/**" = ["E501"]
 
 [lint.isort]
 known-first-party = ["app", "shared"]

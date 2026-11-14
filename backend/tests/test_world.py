@@ -6,7 +6,16 @@ import pytest
 from starlette.testclient import TestClient
 
 from app.world import router as world_router
-from app.world.hub import PARTY_MAX, PVP_GRACE, PVP_TIME, Hub, MemoryStore, clean_combat
+from app.world.hub import (
+    PARTY_MAX,
+    PVP_BURST,
+    PVP_GRACE,
+    PVP_HIT_MAX,
+    PVP_TIME,
+    Hub,
+    MemoryStore,
+    clean_combat,
+)
 
 
 class Clock:
@@ -188,13 +197,22 @@ async def test_duel_puts_both_real_players_in_one_arena():
     assert [e["k"] for e in got["ev"]] == ["cast", "atk"] and got["ev"][1]["a"] == 7
     await hub.handle("u0", {"t": "pvp", "room": room, "s": state})
     assert len(b["u1"].of("pvp")) == 1, "Gửi dồn dập quá nhanh thì bỏ bớt"
-    # đòn trúng: máy bị đánh tự trừ máu, máy chủ chỉ chặn số liệu quá đáng
+    # đòn trúng: máy bị đánh tự trừ máu, máy chủ chặn số liệu quá đáng
     await hub.handle("u1", {"t": "pvp_hit", "room": room, "dmg": 1e9, "knock": 500, "burn": 1})
     hit = b["u0"].last("pvp_hit")
-    assert hit["dmg"] == 400 and hit["knock"] == 120 and hit["burn"] is True
+    assert hit["dmg"] == PVP_HIT_MAX and hit["knock"] == 120 and hit["burn"] is True
+    # gửi dồn đòn: chỉ lọt qua tới hết ngân sách sát thương, phải chờ hồi lại mới đánh tiếp được
+    for _ in range(10):
+        await hub.handle("u1", {"t": "pvp_hit", "room": room, "dmg": 50})
+    hits = b["u0"].of("pvp_hit")
+    assert sum(h["dmg"] for h in hits) <= PVP_BURST and len(hits) < 11
+    clock.now += 1
+    await hub.handle("u1", {"t": "pvp_hit", "room": room, "dmg": 20})
+    assert b["u0"].last("pvp_hit")["dmg"] == 20, "Ngân sách hồi lại theo thời gian"
     # người ngoài không chen vào phòng, không mời được người đang đấu
+    before = len(b["u0"].of("pvp_hit"))
     await hub.handle("u2", {"t": "pvp_hit", "room": room, "dmg": 50})
-    assert len(b["u0"].of("pvp_hit")) == 1
+    assert len(b["u0"].of("pvp_hit")) == before
     await _pos(hub, clock, "u2")
     await hub.handle("u2", {"t": "invite", "kind": "duel", "to": "u0"})
     assert "trận thách đấu khác" in b["u2"].last("notice")["text"]
@@ -231,12 +249,12 @@ async def test_duel_ends_on_quit_leave_and_time():
     clock.now += PVP_GRACE
     await hub.tick(0.2)
     assert b["u2"].last("pvp_over")["win"] is True and b["u0"].last("pvp_over")["why"] == "time"
-    # không ai gửi máu: hoà, cả hai đều không thắng
+    # không ai gửi máu: hoà, ghi là hoà cho cả hai chứ không phải thua
     await _duel(hub, clock, "u2", "u3")
     clock.now += PVP_TIME + PVP_GRACE
     await hub.tick(0.2)
     assert b["u3"].last("pvp_over")["draw"] is True and b["u3"].last("pvp_over")["win"] is False
-    assert hub.store.duels[-2:] == [("u2", "u3", False, "man1"), ("u3", "u2", False, "man1")]
+    assert hub.store.duels[-2:] == [("u2", "u3", "draw", "man1"), ("u3", "u2", "draw", "man1")]
 
 
 async def test_new_tab_during_a_duel_gives_the_win_to_the_other_side():
@@ -317,8 +335,10 @@ def test_websocket_protocol(monkeypatch):
 
 # ----- lưu vào PostgreSQL -----
 async def test_db_store_round_trip():
+    from sqlalchemy import select
+
     from app.db import SessionLocal, ping_db
-    from app.models import User
+    from app.models import DuelRecord, User
     from app.world.router import DbStore
 
     try:
@@ -339,6 +359,7 @@ async def test_db_store_round_trip():
         s.add_all(users)
         await s.commit()
         ids = [str(u.id) for u in users]
+        users_ids = [u.id for u in users]
     store = DbStore()
     try:
         await store.add_alliance(ids[1], ids[0])
@@ -358,7 +379,14 @@ async def test_db_store_round_trip():
             await store.leave_party(u)
         assert await store.party_of(ids[1]) is None
         await store.record_duel(ids[0], ids[1], True, "man1")
+        await store.record_duel(ids[1], ids[0], False, "man1", draw=True)
         await store.record_duel(ids[0], "khong-phai-uuid", True, "man1")
+        async with SessionLocal() as s:
+            rows = (
+                await s.scalars(select(DuelRecord).where(DuelRecord.reporter_id.in_(users_ids)))
+            ).all()
+        got = sorted((str(r.reporter_id) == ids[0], r.win, r.draw) for r in rows)
+        assert got == [(False, False, True), (True, True, False)], "Trận hoà ghi là hoà"
     finally:
         async with SessionLocal() as s:
             for u in ids:

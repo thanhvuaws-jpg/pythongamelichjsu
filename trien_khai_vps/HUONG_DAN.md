@@ -113,7 +113,36 @@ ssh -i ~/.ssh/royal_vps root@<ip VPS> "docker exec sukydieutra_db pg_dump -U suk
 2. Trên Cloudflare: Networking → Tunnels → sukydieutra → **Delete**.
 3. Trên Cloudflare: Domains → vtkt.online → DNS → xóa 2 bản ghi CNAME `game` và `admin`, nếu xóa tunnel mà chúng vẫn còn.
 
+## Nhật ký cập nhật
+
+- **15/11/2026 04:0x, cập nhật thách đấu PvP thật** (người dùng sửa từ khoảng 22:09 ngày 14/11 tới 03:xx ngày 15/11).
+  - Các tệp đổi:
+    - phía máy chủ: `backend/app/world/hub.py` (trận `Duel`, tin `pvp`, `pvp_hit`, `pvp_dead`, `pvp_quit`, phân xử hết giờ theo máu);
+    - phía game: `game/core/net.py`, `scene.py`, `scenes/fight.py`, `multiplayer.py`, `social.py`, `trailer.py`, `world.py`, cùng 2 tệp mới `scenes/pvp.py`, `scenes/playercard.py`;
+    - khác: `tools/make_spec.py`, `web/index.html`, cùng kiểm thử `backend/tests/test_world.py`, `game/tests/test_multiplayer.py`.
+  - Kiểm trước khi đưa lên:
+    - kiểm thử máy chủ 52/52, kiểm thử game 334/334;
+    - ruff sạch (thêm `"trien_khai_vps/**" = ["E501"]` vào `ruff.toml` cho script triển khai);
+    - biên dịch thử toàn bộ mã: OK.
+    - Không có migration CSDL mới, dữ liệu người chơi giữ nguyên.
+  - Sau khi đưa lên:
+    - `/health` OK, 4 địa chỉ trả 200;
+    - container có mã PvP mới, gói game có `scenes/pvp.py`;
+    - Cloudflare phát đúng gói mới (md5 khớp với VPS).
+  - Điểm còn để ngỏ (CHƯA sửa, để người dùng quyết):
+    - trận **hòa** bị ghi `win=False` cho cả hai người (bảng `duel_record` không có cột hòa), nên lịch sử thách đấu hiện thành "thua";
+    - `pvp_hit` không giới hạn tần suất. Máy bị sửa có thể gửi dồn dập đòn 400 sát thương. Máu vốn do máy người chơi tự báo, nên với bản demo chấp nhận được.
+- **15/11/2026, sửa hai điểm để ngỏ ở trên** (CHƯA đưa lên VPS; chạy lệnh cập nhật để đưa lên).
+  - Trận hòa: migration mới `0011_duel_draw` thêm cột `draw` vào `duel_records`; hòa thì ghi `draw=True`, `win=False` cho cả hai; API `/world/duels` trả thêm `draw`. `start.sh` tự chạy `alembic upgrade head` khi container khởi động, dữ liệu cũ giữ nguyên (cột mới mặc định `false`).
+  - `pvp_hit`: máy chủ giới hạn sát thương theo ngân sách của người ra đòn, tính theo hệ số sức đánh lúc vào trận: mỗi đòn tối đa 50 × hệ số, hồi 60 × hệ số mỗi giây, dồn tối đa 150 × hệ số; mỗi tin tốn ít nhất 5 nên gửi dồn tin không sát thương cũng bị chặn. Máu vẫn do máy người chơi tự báo (chấp nhận cho bản demo).
+  - Trailer `web/video/trailer.mp4` xuất lại theo phím mới (chuột trái chém, Shift né, bấm vào người chơi để mời).
+  - Kiểm: kiểm thử máy chủ 52/52 (có thử ghi hòa vào PostgreSQL thật), kiểm thử game 334/334, ruff sạch.
+
 ## Lưu ý
+
+- **Sau mỗi lần cập nhật, trình duyệt có thể giữ gói game cũ tới 4 giờ.** Cloudflare gắn `Cache-Control: max-age=14400` cho tệp tĩnh; cài đặt này chung cho cả tên miền, nên KHÔNG sửa (đồ án dùng chung).
+  - Ai thấy game cũ thì bấm Ctrl+F5, hoặc mở bằng cửa sổ ẩn danh.
+  - Phía Cloudflare tự lấy bản mới (đã kiểm: md5 khớp).
 
 - **Email không gửi thật** (`EMAIL_BACKEND=console`, `SKIP_EMAIL_VERIFICATION=true`):
   - đăng ký xong dùng được ngay;
