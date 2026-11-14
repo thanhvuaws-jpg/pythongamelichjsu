@@ -48,7 +48,7 @@ https://github.com/user-attachments/assets/8f33c440-58b6-497c-a96e-062cc5967504
 
 ## Game có gì
 
-| | |
+| Phần | Có gì |
 |---|---|
 | **3 màn sử, 18 di tích** | *Những khúc sông giữ nước* (938 – 1288), *Mười năm nếm mật nằm gai* (1418 – 1428), *Từ Tân Trào đến Điện Biên* (1945 – 1954). Từ Đường Lâm, Bạch Đằng, Như Nguyệt, Kiếp Bạc, Lam Sơn, Chi Lăng, Hồ Gươm tới Tân Trào, Ba Đình, Đông Khê, Điện Biên Phủ. |
 | **Học sử bằng việc làm** | Nghe người giữ ký ức kể chuyện (hồi ức tự diễn), trả lời 44 câu hỏi có ghi nguồn (12 dạng: chọn đáp án, sắp xếp sự kiện, chỉ trên bản đồ, đối chiếu nguồn, sử hay truyền thuyết...), nhặt và ghép 28 mảnh tư liệu, phá vụ điều tra, xếp dòng thời gian rồi mới qua cổng sang giai đoạn sau. |
