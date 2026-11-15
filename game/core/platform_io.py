@@ -17,6 +17,16 @@ def _window():
     return platform.window
 
 
+def is_touch_device() -> bool:
+    """Điện thoại, máy tính bảng: con trỏ chính là ngón tay. Chạy trên máy tính (kể cả trình duyệt có chuột) thì không."""
+    if not IS_WEB:
+        return False
+    try:
+        return bool(_window().matchMedia("(pointer: coarse)").matches)
+    except Exception:  # noqa: BLE001  trình duyệt lạ không có matchMedia thì coi như dùng chuột
+        return False
+
+
 def read_key(key: str) -> str | None:
     """Đọc một giá trị trang chơi ghi vào localStorage, như vai trò và điểm được tặng. Trên máy tính thì không có."""
     if not IS_WEB:

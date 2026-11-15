@@ -7,6 +7,7 @@ from typing import Any
 
 import pygame
 
+from core import platform_io
 from core.theme import HEIGHT, WIDTH
 
 FADE_TIME = 0.22
@@ -49,6 +50,9 @@ class SceneManager:
         # Hàm chạy mỗi khung hình dù cảnh nào đang ở trên cùng: giữ kết nối thế giới chung khi người chơi mở túi đồ,
         # bảng bạn chơi, hội thoại... (chỉ cảnh trên cùng được cập nhật nên không có hàm này thì mạng đứng im).
         self.pump: Callable[[float], None] | None = None
+        # Đang chơi bằng cảm ứng: hiện nút chạm thay cho các phím (thuyền, ngựa, câu cá...). Hỏi trình duyệt lúc mở game,
+        # rồi bật hẳn khi nhận được cú chạm đầu tiên.
+        self.touch = platform_io.is_touch_device()
 
     @property
     def top(self) -> Scene | None:
@@ -76,6 +80,8 @@ class SceneManager:
             self._fade = FADE_TIME * 0.6
 
     def handle(self, event: pygame.event.Event) -> None:
+        if event.type == pygame.FINGERDOWN or (event.type == pygame.MOUSEBUTTONDOWN and getattr(event, "touch", False)):
+            self.touch = True
         if self.top:
             self.top.handle(event)
 

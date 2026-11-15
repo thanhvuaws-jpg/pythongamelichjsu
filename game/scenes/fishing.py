@@ -207,8 +207,16 @@ class Fishing:
                     return t
         return None
 
+    def can_cast(self) -> bool:
+        """Có cần câu, đang đi bộ, đứng sát nước: hiện nút Thả câu khi chơi bằng cảm ứng. Không đổi hướng nhìn như _water_ahead."""
+        ws = self.ws
+        if self.mode is not None or ws.mode != "walk" or not self.state.has_rod():
+            return False
+        px, py = int(ws.x // TILE), int(ws.y // TILE)
+        return any(ws.map.get(px + dx * k, py + dy * k) == WATER for dx, dy in DIRS.values() for k in range(1, REACH_TILES + 1))
+
     def press(self):
-        """Phím C: chưa câu thì thả câu, đang chờ thì giật sớm, phao chìm thì kéo cá lên."""
+        """Phím C (hay nút chạm): chưa câu thì thả câu, đang chờ thì giật sớm, phao chìm thì kéo cá lên."""
         if self.mode == "bite":
             self._land()
         elif self.mode == "wait":

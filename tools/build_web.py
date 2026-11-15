@@ -27,7 +27,17 @@ canvas.emscripten {
   width: min(100vw, calc(100vh * 16 / 9)) !important;
   height: min(100vh, calc(100vw * 9 / 16)) !important;
 }
+/* Điện thoại: 100vh tính cả thanh địa chỉ đang hiện nên khung bị cắt dưới đáy; dvh là phần nhìn thấy thật */
+@supports (height: 100dvh) {
+  canvas.emscripten {
+    width: min(100vw, calc(100dvh * 16 / 9)) !important;
+    height: min(100dvh, calc(100vw * 9 / 16)) !important;
+  }
+}
 </style>
+"""
+# Chế độ Chơi thử mở thẳng /game/: gắn nhắc xoay ngang và nút toàn màn hình như trang chơi
+PAGE_SCRIPT = """<script src="/js/mobile.js?v=1"></script>
 """
 
 
@@ -46,9 +56,11 @@ def collect() -> None:
 
 
 def patch_html(path: Path) -> None:
-    """Script của pygbag ép canvas thành hình vuông khi cửa sổ hẹp hơn 16:9, nên khoá tỉ lệ bằng CSS."""
+    """Script của pygbag ép canvas thành hình vuông khi cửa sổ hẹp hơn 16:9, nên khoá tỉ lệ bằng CSS; thêm phần cho
+    điện thoại (web/js/mobile.js)."""
     html = path.read_text(encoding="utf-8")
     html = html.replace("</head>", PAGE_STYLE + "</head>", 1)
+    html = html.replace("</body>", PAGE_SCRIPT + "</body>", 1)
     path.write_text(html, encoding="utf-8")
 
 

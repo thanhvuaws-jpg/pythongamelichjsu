@@ -136,7 +136,13 @@ https://github.com/user-attachments/assets/8f33c440-58b6-497c-a96e-062cc5967504
 | `H` · `R` · `C` | gọi chiến mã · cưỡi ngựa · câu cá | `Esc` | rút lui |
 | `P` · `L` | bạn chơi · chat | | |
 
-Mọi bảng đều mở được từ nút ba gạch ở góc trên phải. Trong trận trên điện thoại thì chạm giữ để đi, bấm các nút dưới màn hình để đánh.
+Mọi bảng đều mở được từ nút ba gạch ở góc trên phải.
+
+**Trên điện thoại** (mở bằng trình duyệt, cầm ngang): chạm để đi, chạm người hay quái để nói chuyện, đánh. Góc dưới phải có
+nút chạm thay cho phím: nói chuyện hay đánh với ai đứng cạnh, thả câu và kéo cần, gọi và xuống ngựa, lên bờ khi đang chèo
+thuyền, nhận lời hay từ chối võ sinh thách đấu. Trong trận thì chạm giữ trên sân để đi, bấm CHÉM (giữ để chém liên tục),
+NÉ, kỹ năng ở dưới màn hình. Trang chơi tự ẩn thanh trên khi cầm ngang, có nút Toàn màn hình (Android) và nhắc xoay ngang
+khi đang cầm dọc.
 
 ## Kiến trúc
 
@@ -221,7 +227,7 @@ Mở `http://127.0.0.1:8000`. Phải dùng `127.0.0.1`: với `localhost`, pygba
 
 | Phần | Lệnh | Kết quả |
 |---|---|---|
-| Game (có bot chơi hết game, hai máy thách đấu nhau qua bộ điều phối thật) | `cd game && ../.venv/Scripts/python -m pytest tests -q` | 334 bài đạt |
+| Game (có bot chơi hết game, hai máy thách đấu nhau qua bộ điều phối thật) | `cd game && ../.venv/Scripts/python -m pytest tests -q` | 341 bài đạt |
 | Máy chủ (API, WebSocket, PostgreSQL thật) | `cd backend && ../.venv/Scripts/python -m pytest tests -q` | 52 bài đạt |
 | Phong cách code | `.venv/Scripts/ruff check game backend shared tools` | sạch |
 | Nội dung lịch sử (18 di tích, 44 câu hỏi, 28 tư liệu, 4 trận đánh) | `.venv/Scripts/python tools/check_content.py` | không có lỗi |

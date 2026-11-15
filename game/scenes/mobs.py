@@ -510,12 +510,15 @@ class Mobs:
                     continue  # tên quái đứng gần nhau thì chỉ ghi tên con gần người chơi nhất
                 drawn.append(box)
                 fonts.text(screen, text, f, rpg.difficulty_color(st.level, m.level), (sx, top - 4), "midbottom", shadow=(24, 16, 14))
+        touch = self.app.scenes.touch
         if self.duel and self.duel["state"] == "ask":
             a = self.duel["actor"]
-            ui.tag(screen, "Y: nhận lời thách đấu   ·   N: từ chối", (a.x - cx, a.y + 8 - cy), theme.LACQUER_RED, theme.GOLD_LIGHT, 14, "midtop")
+            ask = "Thách đấu: bấm Nhận lời hay Từ chối ở góc dưới phải" if touch else "Y: nhận lời thách đấu   ·   N: từ chối"
+            ui.tag(screen, ask, (a.x - cx, a.y + 8 - cy), theme.LACQUER_RED, theme.GOLD_LIGHT, 14, "midtop")
         near = self.nearest()
         if near and not ws.nearest():
-            label = {"mob": "F  Đánh", "elite": "F  Thách đấu kẻ mạnh nhất vùng"}.get(near.kind, "F  Hạ kẻ canh mật thư")
+            key = "" if touch else "F  "
+            label = key + {"mob": "Đánh", "elite": "Thách đấu kẻ mạnh nhất vùng"}.get(near.kind, "Hạ kẻ canh mật thư")
             ui.tag(screen, label, (near.x - cx, near.y + 6 - cy), theme.LACQUER_RED, theme.GOLD_LIGHT, 13, "midtop")
 
     def tracker(self) -> str | None:

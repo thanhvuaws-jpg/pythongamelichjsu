@@ -132,11 +132,29 @@ ssh -i ~/.ssh/royal_vps root@<ip VPS> "docker exec sukydieutra_db pg_dump -U suk
   - Điểm còn để ngỏ (CHƯA sửa, để người dùng quyết):
     - trận **hòa** bị ghi `win=False` cho cả hai người (bảng `duel_record` không có cột hòa), nên lịch sử thách đấu hiện thành "thua";
     - `pvp_hit` không giới hạn tần suất. Máy bị sửa có thể gửi dồn dập đòn 400 sát thương. Máu vốn do máy người chơi tự báo, nên với bản demo chấp nhận được.
-- **15/11/2026, sửa hai điểm để ngỏ ở trên** (CHƯA đưa lên VPS; chạy lệnh cập nhật để đưa lên).
+- **15/11/2026, sửa hai điểm để ngỏ ở trên.** Đã đưa lên VPS lúc 14:31–14:33 (giờ VN), xem kết quả ở cuối mục này.
   - Trận hòa: migration mới `0011_duel_draw` thêm cột `draw` vào `duel_records`; hòa thì ghi `draw=True`, `win=False` cho cả hai; API `/world/duels` trả thêm `draw`. `start.sh` tự chạy `alembic upgrade head` khi container khởi động, dữ liệu cũ giữ nguyên (cột mới mặc định `false`).
   - `pvp_hit`: máy chủ giới hạn sát thương theo ngân sách của người ra đòn, tính theo hệ số sức đánh lúc vào trận: mỗi đòn tối đa 50 × hệ số, hồi 60 × hệ số mỗi giây, dồn tối đa 150 × hệ số; mỗi tin tốn ít nhất 5 nên gửi dồn tin không sát thương cũng bị chặn. Máu vẫn do máy người chơi tự báo (chấp nhận cho bản demo).
   - Trailer `web/video/trailer.mp4` xuất lại theo phím mới (chuột trái chém, Shift né, bấm vào người chơi để mời).
   - Kiểm: kiểm thử máy chủ 52/52 (có thử ghi hòa vào PostgreSQL thật), kiểm thử game 334/334, ruff sạch.
+  - Claude kiểm lại trước khi đưa lên:
+    - lịch sử git (5 commit, repo `thanhvuaws-jpg/pythongamelichjsu`) không chứa token tunnel, mật khẩu CSDL, khóa JWT, mật khẩu quản trị hay IP VPS;
+    - chỉ 3 tệp công khai của `trien_khai_vps/` được git theo dõi;
+    - `start.sh` vẫn xuống dòng kiểu Linux;
+    - alembic chỉ có một head (`0011_duel_draw`);
+    - trần mỗi đòn hợp lệ: đòn mạnh nhất (Phi mã cấp 3 + Hào khí) khoảng 42 × hệ số, dưới trần 50.
+  - **Sao lưu CSDL trước migration:** `/opt/sukydieutra/sao_luu/truoc_0011_20261115_0731.sql.gz` trên VPS (giờ UTC trong tên tệp; lúc đó có 3 tài khoản, 7 bản ghi thách đấu).
+    - Lệnh `--go-sach` xóa cả thư mục này, nên muốn giữ thì tải về máy trước.
+  - Sau khi đưa lên:
+    - log có `Running upgrade 0010_bot_players -> 0011_duel_draw`;
+    - `alembic_version = 0011_duel_draw`, cột `draw boolean default false`;
+    - dữ liệu cũ còn đủ: 3 tài khoản, 7 bản ghi thách đấu, 0 trận hòa;
+    - container có mã ngân sách đòn mới (`PVP_BURST`);
+    - `/health`, trang game, cổng quản trị, `/game/` trả 200; trailer mới (11.231.081 byte) khớp kích thước bản trên máy.
+- **15/11/2026, chơi trên điện thoại** (CHƯA đưa lên VPS; chạy lệnh cập nhật để đưa lên). Không có migration mới.
+  - Game: nút chạm ở góc dưới phải thay cho phím (nói chuyện / đánh với ai đứng cạnh, thả câu, kéo cần, gọi và xuống ngựa, lên bờ khi đang chèo thuyền, nhận lời / từ chối võ sinh thách đấu); trong trận chạm sân là đi, đánh bằng nút. Nhận biết điện thoại bằng `(pointer: coarse)` hoặc cú chạm đầu tiên (`SceneManager.touch`).
+  - Trang web: `web/js/mobile.js` (dùng cho `play.html` và trang Chơi thử `/game/` qua `tools/build_web.py`): cầm dọc thì nhắc xoay ngang, cầm ngang thì ẩn thanh trên, nút Toàn màn hình (Android), khung game dùng `100dvh` nên không bị thanh địa chỉ cắt.
+  - Kiểm: kiểm thử game 341/341 (thêm `game/tests/test_touch.py`), thử trên trình duyệt giả lập điện thoại có cảm ứng ở máy (127.0.0.1:8203): Chơi thử và trang chơi khi đăng nhập.
 
 ## Lưu ý
 

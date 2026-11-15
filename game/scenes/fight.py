@@ -792,6 +792,7 @@ class FightScene(Scene):
             self.mouse_down, self.move_button, self.mouse = True, 3, event.pos  # giữ chuột phải: đi theo con trỏ
         elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and not self.result:
             if BTN_ATTACK.collidepoint(event.pos):
+                self.attack_held = True  # giữ nút CHÉM thì chém liên tục
                 self.attack(self.player)
             elif BTN_DODGE.collidepoint(event.pos):
                 self.dodge(self.player)
@@ -805,7 +806,7 @@ class FightScene(Scene):
                         self.cast(self.player, self.slots[i])
                         return
                 self.mouse = event.pos
-                if getattr(event, "touch", False):  # chạm màn hình điện thoại: giữ để đi tới, đánh bằng các nút
+                if getattr(event, "touch", False) or self.app.scenes.touch:  # điện thoại: chạm giữ để đi tới, đánh bằng nút
                     self.mouse_down, self.move_button = True, 1
                 else:  # chuột trái trên sân: chém
                     self.attack_held = True
@@ -1078,11 +1079,14 @@ class FightScene(Scene):
         if self.intro > 0:
             label = "ĐẤU!" if self.intro < 0.6 else str(math.ceil(self.intro - 0.6))
             fonts.text(screen, label, fonts.font("black", 92), theme.GOLD_LIGHT, (W // 2, 310), "center", shadow=(60, 20, 14))
-            fonts.text(screen, "WASD để đi · chuột trái chém · Shift né · 1, 2, 3, 4 tung kỹ năng · Q uống thuốc", fonts.font("semi", 18), theme.WHITE, (W // 2, 390), "center", shadow=(24, 16, 14))
+            how = ("Chạm giữ trên sân để đi · bấm CHÉM, NÉ, kỹ năng ở dưới màn hình" if self.app.scenes.touch else
+                   "WASD để đi · chuột trái chém · Shift né · 1, 2, 3, 4 tung kỹ năng · Q uống thuốc")
+            fonts.text(screen, how, fonts.font("semi", 18), theme.WHITE, (W // 2, 390), "center", shadow=(24, 16, 14))
         if self.result:
             self._draw_result(screen)
 
     def _draw_controls(self, screen):
+        touch = self.app.scenes.touch  # chơi bằng chạm thì nút không ghi phím
         for i, r in enumerate(self.slot_rects):
             ui.lacquer_panel(screen, r, 236)
             fonts.text(screen, str(i + 1), fonts.font("bold", 14), theme.GOLD, (r.x + 12, r.y + 8))
@@ -1099,19 +1103,20 @@ class FightScene(Scene):
                 fonts.text(screen, f"{left:.1f}", fonts.font("bold", 18), theme.WHITE, r.center, "center")
         ui.lacquer_panel(screen, BTN_ATTACK, 240)
         fonts.text(screen, "CHÉM", fonts.font("black", 22), theme.GOLD_LIGHT, BTN_ATTACK.center, "center")
-        fonts.text(screen, "chuột trái", fonts.font("ui", 12), theme.PAPER_3, (BTN_ATTACK.centerx, BTN_ATTACK.bottom - 22), "center")
+        if not touch:
+            fonts.text(screen, "chuột trái", fonts.font("ui", 12), theme.PAPER_3, (BTN_ATTACK.centerx, BTN_ATTACK.bottom - 22), "center")
         ui.lacquer_panel(screen, BTN_DODGE, 240)
-        fonts.text(screen, "NÉ (Shift)", fonts.font("bold", 15), theme.PAPER, BTN_DODGE.center, "center")
+        fonts.text(screen, "NÉ" if touch else "NÉ (Shift)", fonts.font("bold", 17 if touch else 15), theme.PAPER, BTN_DODGE.center, "center")
         ui.lacquer_panel(screen, BTN_POTION, 240)
         pot = sprites.icon(rpg.item_icon("thuoc_nam"), 2)
         screen.blit(pot, pot.get_rect(center=(BTN_POTION.centerx, BTN_POTION.y + 28)))
-        fonts.text(screen, f"Q · còn {self.state.potions}", fonts.font("semi", 12), theme.PAPER, (BTN_POTION.centerx, BTN_POTION.bottom - 14), "center")
+        fonts.text(screen, f"{'' if touch else 'Q · '}còn {self.state.potions}", fonts.font("semi", 12), theme.PAPER, (BTN_POTION.centerx, BTN_POTION.bottom - 14), "center")
         if not self.state.potions:
             ui.alpha_rect(screen, BTN_POTION.inflate(-8, -8), (10, 8, 8, 150))
         ui.lacquer_panel(screen, BTN_EAT, 240)
         fish = sprites.icon(rpg.item_icon("ca_nuong"), 2)
         screen.blit(fish, fish.get_rect(center=(BTN_EAT.centerx, BTN_EAT.y + 28)))
-        fonts.text(screen, f"E · còn {self.state.grilled}", fonts.font("semi", 12), theme.PAPER, (BTN_EAT.centerx, BTN_EAT.bottom - 14), "center")
+        fonts.text(screen, f"{'' if touch else 'E · '}còn {self.state.grilled}", fonts.font("semi", 12), theme.PAPER, (BTN_EAT.centerx, BTN_EAT.bottom - 14), "center")
         if not self.state.grilled:
             ui.alpha_rect(screen, BTN_EAT.inflate(-8, -8), (10, 8, 8, 150))
         if self.player.dodge_cd > 0:

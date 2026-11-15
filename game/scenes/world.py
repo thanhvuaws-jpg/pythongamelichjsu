@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import math
 import random
+from typing import Any
 
 import pygame
 from core import art, chienma, fleet, fonts, outfit, rpg, sprites, theme, ui, weapons
@@ -66,6 +67,7 @@ NEXT_DIR = {(1, 0): "right", (-1, 0): "left", (0, 1): "down", (0, -1): "up"}
 HUD_TRACKER = pygame.Rect(12, 10, 440, 104)
 HUD_RPG = pygame.Rect(12, H - 104, 410, 92)
 HINT_X = 724  # giữa khoảng trống từ khung cấp độ tới bản đồ nhỏ
+TOUCH_W, TOUCH_H, TOUCH_GAP = 156, 60, 10  # nút chạm ở góc dưới phải, ngay trên bản đồ nhỏ
 SMITH_CHAR = "Villager"
 MENTOR_NAME = "Cụ Đồ Sử"
 MENU_TOGGLE, MENU_W, MENU_ROW = 52, 200, 40
@@ -153,6 +155,8 @@ class WorldScene(Scene):
         self._spawn_actors()
         self.mobs = Mobs(self)
         self.mp = Multiplayer(self)  # người chơi khác trên cùng map
+        self.touch_btns: list[ui.Button] = []  # nút chạm thay phím khi chơi trên điện thoại
+        self._touch_cache: dict[str, ui.Button] = {}
         self.fishing = Fishing(self)  # câu cá, nướng cá
         self.fishing.spawn()
         self.critters = make_critters(self.map, self._life())
@@ -704,7 +708,8 @@ class WorldScene(Scene):
         self.path.clear()
         self.auto = None
         self.app.audio.play("kiem")
-        self.app.toast("Chiến mã đã tới! Bấm H lần nữa để cho ngựa về", theme.GOLD_LIGHT, 2.5)
+        again = "Bấm nút Xuống ngựa" if self.app.scenes.touch else "Bấm H lần nữa"
+        self.app.toast(f"Chiến mã đã tới! {again} để cho ngựa về", theme.GOLD_LIGHT, 2.5)
 
     def board(self, a: Actor):
         """Xuống thuyền ở ô nước gần bến nhất."""
@@ -855,6 +860,8 @@ class WorldScene(Scene):
                 if event.type == pygame.MOUSEBUTTONUP and not self._menu_rect().collidepoint(event.pos):
                     self._toggle_menu(False)  # bấm ra ngoài: chỉ đóng menu, không đi tới chỗ vừa bấm
                 return
+        if self._touch_handle(event):  # nút chạm trên điện thoại: lên bờ, câu cá, gọi ngựa...
+            return
         if self.mp.handle(event):  # thẻ lời mời ở góc trên phải: Đồng ý, Từ chối
             return
         if event.type == pygame.KEYDOWN:
@@ -939,6 +946,60 @@ class WorldScene(Scene):
                 self.auto = None
                 self._walk_to(wx, wy)
 
+    # ---------- nút chạm khi chơi trên điện thoại ----------
+    def _near_label(self, near: Actor) -> str:
+        return "Báo cáo" if near.kind == "mentor" and self.state.reports else (near.label or "Xem")
+
+    def _touch_actions(self) -> list[tuple[str, Any, str]]:
+        """Những việc bàn phím làm được mà chạm thì không: nhận lời võ sinh, lên bờ, câu cá, gọi ngựa, xuống ngựa. Thêm một
+        nút to cho việc ở ngay cạnh (nói chuyện, đánh quái) vì chạm trúng nhân vật nhỏ trên màn hình điện thoại khá khó."""
+        duel = self.mobs.duel
+        if duel and duel["state"] == "ask":
+            return [("Nhận lời", lambda: self.mobs.answer(True), "gold"), ("Từ chối", lambda: self.mobs.answer(False), "ghost")]
+        if self.mode == "boat":
+            return [("Lên bờ", self._disembark, "gold")]
+        if self.fishing.active:
+            bite = self.fishing.mode == "bite"
+            return [("Kéo cần!" if bite else "Thu cần", self.fishing.press, "gold" if bite else "ghost")]
+        out = []
+        near, mob = self.nearest(), self.mobs.nearest()
+        if near:
+            out.append((self._near_label(near), lambda a=near: self.interact(a), "gold"))
+        elif mob:
+            out.append(("Đánh", lambda m=mob: self.mobs.engage(m), "primary"))
+        if self.fishing.can_cast():
+            out.append(("Thả câu", self.fishing.press, "primary"))
+        if self.mode == "horse":
+            out.append(("Xuống ngựa", self._dismount, "ghost"))
+        elif self.mode == "walk" and self.state.level >= rpg.HORSE_LEVEL:
+            out.append(("Gọi ngựa", self._summon_horse, "ghost"))
+        return out
+
+    def _sync_touch(self):
+        """Dựng lại nút chạm theo việc đang làm; nút cùng tên được giữ nguyên để không mất lần chạm đang dở."""
+        acts = self._touch_actions() if self.app.scenes.touch and not self.warp else []
+        bottom = self._minimap_rect().y - 30
+        x = W - 16
+        btns = []
+        for label, fn, style in acts:
+            b = self._touch_cache.get(label)
+            if b is None:
+                b = self._touch_cache[label] = ui.Button((0, 0, TOUCH_W, TOUCH_H), label, None, style, size=16)
+            b.rect = pygame.Rect(x - TOUCH_W, bottom - TOUCH_H, TOUCH_W, TOUCH_H)
+            b.on_click, b.style = fn, style
+            btns.append(b)
+            x -= TOUCH_W + TOUCH_GAP
+        self.touch_btns = btns
+
+    def _touch_handle(self, event) -> bool:
+        if not self.touch_btns or event.type not in (pygame.MOUSEBUTTONDOWN, pygame.MOUSEBUTTONUP, pygame.MOUSEMOTION):
+            return False
+        for b in list(self.touch_btns):
+            if b.handle(event):
+                return True
+        # bấm vào nút mà nhấc tay ra ngoài, hay chạm lên viền nút: không đi tới chỗ đó
+        return event.type != pygame.MOUSEMOTION and any(b.rect.collidepoint(event.pos) for b in self.touch_btns)
+
     def _toggle_horse(self):
         if self.mode == "horse":
             self._dismount()
@@ -988,6 +1049,7 @@ class WorldScene(Scene):
         self.mobs.update(dt)
         self.mp.update(dt)
         self.fishing.update(dt)
+        self._sync_touch()
         self._drain_events()
         self.bonus_t -= dt
         if self.bonus_t <= 0:
@@ -1292,8 +1354,9 @@ class WorldScene(Scene):
                 screen.blit(img, img.get_rect(midbottom=(a.x - cx, a.y - TILE - 2 + bob - cy)))
         near = self.nearest()
         if near and near.label and self._can_use(near):
-            label = "Báo cáo" if near.kind == "mentor" and self.state.reports else near.label
-            ui.tag(screen, f"E  {label}", (near.x - cx, near.y + 6 - cy), theme.LACQUER, theme.GOLD_LIGHT, 13, "midtop")
+            label = self._near_label(near)
+            key = "" if self.app.scenes.touch else "E  "
+            ui.tag(screen, f"{key}{label}", (near.x - cx, near.y + 6 - cy), theme.LACQUER, theme.GOLD_LIGHT, 13, "midtop")
         self.mobs.draw_labels(screen, cx, cy)
         self.mp.draw_labels(screen, cx, cy)
 
@@ -1341,17 +1404,21 @@ class WorldScene(Scene):
         if online:
             ui.tag(screen, online, (W - 16, self._minimap_rect().y - 16), theme.LACQUER_2, theme.GOLD_LIGHT, 13, "bottomright")
         hint = (HINT_X, H - 22)
+        touch = self.app.scenes.touch
         if self.mode == "boat":
-            ui.tag(screen, "Đang chèo thuyền: WASD để chèo, tới sát bờ bấm E để lên", hint, theme.LACQUER, theme.PAPER, 14, "midbottom")
+            text = "Đang chèo thuyền: chạm để chèo, sát bờ bấm nút Lên bờ" if touch else "Đang chèo thuyền: WASD để chèo, tới sát bờ bấm E để lên"
+            ui.tag(screen, text, hint, theme.LACQUER, theme.PAPER, 14, "midbottom")
         elif self.mode == "horse":
-            key = "R" if self.horse_actor is not None else "H"
+            key = "nút Xuống ngựa" if touch else ("R" if self.horse_actor is not None else "H")
             ui.tag(screen, f"Đang cưỡi ngựa: bấm {key} để xuống", hint, theme.LACQUER, theme.PAPER, 14, "midbottom")
         elif self.fishing.active:
-            ui.tag(screen, "Đang câu cá: phao chìm, hiện dấu chấm than thì bấm C kéo lên · đi chỗ khác là thu cần", hint, theme.LACQUER,
+            key = "nút Kéo cần" if touch else "C"
+            ui.tag(screen, f"Đang câu cá: phao chìm, hiện dấu chấm than thì bấm {key} · đi chỗ khác là thu cần", hint, theme.LACQUER,
                    theme.PAPER, 14, "midbottom")
         elif self.t < HELP_TIME and not self.state.stamps:
-            ui.tag(screen, "WASD đi · E nói chuyện · F đánh quái · C câu cá · H chiến mã · L chat · nút ba gạch: các bảng khác", hint,
-                   theme.LACQUER, theme.PAPER, 13, "midbottom")
+            text = ("Chạm để đi · chạm người, vật để xem · chạm quái để đánh · nút ba gạch: các bảng khác" if touch else
+                    "WASD đi · E nói chuyện · F đánh quái · C câu cá · H chiến mã · L chat · nút ba gạch: các bảng khác")
+            ui.tag(screen, text, hint, theme.LACQUER, theme.PAPER, 13, "midbottom")
         if target:
             self._draw_arrow(screen, target)
         if self.banner:
@@ -1363,6 +1430,8 @@ class WorldScene(Scene):
             screen.blit(img, img.get_rect(center=(W // 2, H // 2 - 60)))
         self.mp.draw_chat(screen, HUD_RPG.y)
         self.mp.draw_invites(screen)
+        for b in self.touch_btns:
+            b.draw(screen)
         self._draw_menu(screen)
 
     def _progress_ratio(self) -> float:
