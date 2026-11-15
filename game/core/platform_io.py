@@ -27,6 +27,16 @@ def is_touch_device() -> bool:
         return False
 
 
+def mark(name: str, value: str) -> None:
+    """Ghi một dấu data-* lên trang để soát lỗi trên máy thật (ví dụ máy có gửi sự kiện ngón không). Máy tính thì bỏ qua."""
+    if not IS_WEB:
+        return
+    try:
+        _window().document.documentElement.setAttribute(f"data-{name}", value)
+    except Exception:  # noqa: BLE001
+        return
+
+
 def read_key(key: str) -> str | None:
     """Đọc một giá trị trang chơi ghi vào localStorage, như vai trò và điểm được tặng. Trên máy tính thì không có."""
     if not IS_WEB:

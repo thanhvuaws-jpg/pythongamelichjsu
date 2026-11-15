@@ -422,7 +422,10 @@ class Multiplayer:
             self._chat_box(screen, box, "THẾ GIỚI", f"L để chat · {rpg.WORLD_CHAT_COST} quan/tin", world, theme.GOLD_LIGHT, False)
         here = [c for c in self.net.chat if c["ch"] == "map" and c["age"] < MAP_SHOW][-4:]
         if here:
-            self._chat_box(screen, MAP_BOX.move(0, map_bottom - 8), "CÙNG MAP", "L để chat · miễn phí", here, OTHER_COL, True)
+            box = MAP_BOX.move(0, map_bottom - 8)
+            if self.app.scenes.touch:  # chừa góc dưới trái cho cần điều khiển
+                box.x = 200
+            self._chat_box(screen, box, "CÙNG MAP", "L để chat · miễn phí", here, OTHER_COL, True)
 
     def hud_tag(self) -> str | None:
         if not self.net.available:

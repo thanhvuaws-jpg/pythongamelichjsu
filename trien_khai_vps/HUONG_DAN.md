@@ -132,7 +132,7 @@ ssh -i ~/.ssh/royal_vps root@<ip VPS> "docker exec sukydieutra_db pg_dump -U suk
   - Điểm còn để ngỏ (CHƯA sửa, để người dùng quyết):
     - trận **hòa** bị ghi `win=False` cho cả hai người (bảng `duel_record` không có cột hòa), nên lịch sử thách đấu hiện thành "thua";
     - `pvp_hit` không giới hạn tần suất. Máy bị sửa có thể gửi dồn dập đòn 400 sát thương. Máu vốn do máy người chơi tự báo, nên với bản demo chấp nhận được.
-- **15/11/2026, sửa hai điểm để ngỏ ở trên.** Đã đưa lên VPS lúc 14:31–14:33 (giờ VN), xem kết quả ở cuối mục này.
+- **15/11/2026, sửa hai điểm để ngỏ ở trên.** Đã đưa lên VPS lúc 07:31–07:33 (giờ VN; trước đây ghi nhầm 14:31), xem kết quả ở cuối mục này.
   - Trận hòa: migration mới `0011_duel_draw` thêm cột `draw` vào `duel_records`; hòa thì ghi `draw=True`, `win=False` cho cả hai; API `/world/duels` trả thêm `draw`. `start.sh` tự chạy `alembic upgrade head` khi container khởi động, dữ liệu cũ giữ nguyên (cột mới mặc định `false`).
   - `pvp_hit`: máy chủ giới hạn sát thương theo ngân sách của người ra đòn, tính theo hệ số sức đánh lúc vào trận: mỗi đòn tối đa 50 × hệ số, hồi 60 × hệ số mỗi giây, dồn tối đa 150 × hệ số; mỗi tin tốn ít nhất 5 nên gửi dồn tin không sát thương cũng bị chặn. Máu vẫn do máy người chơi tự báo (chấp nhận cho bản demo).
   - Trailer `web/video/trailer.mp4` xuất lại theo phím mới (chuột trái chém, Shift né, bấm vào người chơi để mời).
@@ -143,7 +143,7 @@ ssh -i ~/.ssh/royal_vps root@<ip VPS> "docker exec sukydieutra_db pg_dump -U suk
     - `start.sh` vẫn xuống dòng kiểu Linux;
     - alembic chỉ có một head (`0011_duel_draw`);
     - trần mỗi đòn hợp lệ: đòn mạnh nhất (Phi mã cấp 3 + Hào khí) khoảng 42 × hệ số, dưới trần 50.
-  - **Sao lưu CSDL trước migration:** `/opt/sukydieutra/sao_luu/truoc_0011_20261115_0731.sql.gz` trên VPS (giờ UTC trong tên tệp; lúc đó có 3 tài khoản, 7 bản ghi thách đấu).
+  - **Sao lưu CSDL trước migration:** `/opt/sukydieutra/sao_luu/truoc_0011_20261115_0731.sql.gz` trên VPS (giờ trong tên tệp là giờ VN, VPS đặt múi +07; lúc đó có 3 tài khoản, 7 bản ghi thách đấu).
     - Lệnh `--go-sach` xóa cả thư mục này, nên muốn giữ thì tải về máy trước.
   - Sau khi đưa lên:
     - log có `Running upgrade 0010_bot_players -> 0011_duel_draw`;
@@ -151,10 +151,28 @@ ssh -i ~/.ssh/royal_vps root@<ip VPS> "docker exec sukydieutra_db pg_dump -U suk
     - dữ liệu cũ còn đủ: 3 tài khoản, 7 bản ghi thách đấu, 0 trận hòa;
     - container có mã ngân sách đòn mới (`PVP_BURST`);
     - `/health`, trang game, cổng quản trị, `/game/` trả 200; trailer mới (11.231.081 byte) khớp kích thước bản trên máy.
-- **15/11/2026, chơi trên điện thoại** (CHƯA đưa lên VPS; chạy lệnh cập nhật để đưa lên). Không có migration mới.
+- **15/11/2026, chơi trên điện thoại.** Đã đưa lên VPS lúc 12:1x (giờ VN), xem kết quả ở cuối mục này. Không có migration mới.
   - Game: nút chạm ở góc dưới phải thay cho phím (nói chuyện / đánh với ai đứng cạnh, thả câu, kéo cần, gọi và xuống ngựa, lên bờ khi đang chèo thuyền, nhận lời / từ chối võ sinh thách đấu); trong trận chạm sân là đi, đánh bằng nút. Nhận biết điện thoại bằng `(pointer: coarse)` hoặc cú chạm đầu tiên (`SceneManager.touch`).
   - Trang web: `web/js/mobile.js` (dùng cho `play.html` và trang Chơi thử `/game/` qua `tools/build_web.py`): cầm dọc thì nhắc xoay ngang, cầm ngang thì ẩn thanh trên, nút Toàn màn hình (Android), khung game dùng `100dvh` nên không bị thanh địa chỉ cắt.
   - Kiểm: kiểm thử game 341/341 (thêm `game/tests/test_touch.py`), thử trên trình duyệt giả lập điện thoại có cảm ứng ở máy (127.0.0.1:8203): Chơi thử và trang chơi khi đăng nhập.
+  - Claude kiểm lại trước khi đưa lên:
+    - so với bản trên VPS: 8 tệp đổi (`platform_io.py`, `scene.py`, `fight.py`, `fishing.py`, `mobs.py`, `world.py`, `tools/build_web.py`, `web/play.html`) và 1 tệp mới (`web/js/mobile.js`); phía máy chủ không đổi;
+    - git 7 commit, không chứa bí mật nào;
+    - `mobile.js` chỉ gán chữ cố định vào `innerHTML`, không có dữ liệu người dùng;
+    - kiểm thử máy chủ 52/52, game 341/341, ruff sạch.
+    - Không có migration nên không sao lưu lại; bản sao lưu 07:31 vẫn còn.
+  - Sau khi đưa lên:
+    - `/health` OK;
+    - `play.html` và `/game/` đều đã gắn `mobile.js`, `/js/mobile.js` trả 200;
+    - gói game Cloudflare phát ra khớp md5 với bản trên VPS;
+    - dữ liệu còn đủ: 3 tài khoản, 7 bản ghi thách đấu;
+    - không có lỗi trong log 3 phút đầu.
+
+- **15/11/2026, cần điều khiển trên điện thoại và đi không còn giật** (CHƯA đưa lên VPS; chạy lệnh cập nhật để đưa lên). Không có migration mới, phía máy chủ không đổi.
+  - Cần điều khiển ảo ở góc dưới trái (`game/core/touch.py`) trên map, trong trận và trong nhà tư liệu; nghe sự kiện ngón nên giữ cần bằng ngón này vẫn bấm CHÉM, nút chạm bằng ngón kia. Chuột giả của cú chạm trên cần bị nuốt nên nhấc tay không bị hiểu thành chạm để đi.
+  - Đi giật: khi chạm lên bản đồ để đi, nhân vật đứng khựng một khung hình mỗi khi tới giữa một ô (`_follow_path`) và đi gấp khúc theo lưới. Nay đi tiếp ô sau bằng quãng còn lại trong cùng khung hình, đoạn thẳng không vướng thì cắt chéo.
+  - Trang báo `data-sk-input="fingers"` trên thẻ `<html>` của khung game khi máy gửi sự kiện ngón (để soát trên máy thật).
+  - Kiểm: kiểm thử game 347/347, thử chạm thật (CDP) trên trình duyệt giả lập điện thoại ở máy (127.0.0.1:8203).
 
 ## Lưu ý
 

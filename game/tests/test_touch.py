@@ -135,3 +135,124 @@ def test_fight_on_touch_moves_on_the_field_and_attacks_with_the_button(bot):
     assert not fight.mouse_down
     bot.click(BTN_ATTACK.center)
     assert p.attack_cd > 0, "Nút CHÉM"
+
+
+# ----- cần điều khiển ảo, nhiều ngón cùng lúc -----
+def _finger(kind, fid, pos):
+    from core import theme
+
+    return pygame.event.Event(kind, x=pos[0] / theme.WIDTH, y=pos[1] / theme.HEIGHT, dx=0.0, dy=0.0, finger_id=fid,
+                              touch_id=0, pressure=1.0)
+
+
+def _touch_mouse(kind, pos):
+    extra = {"button": 1} if kind != pygame.MOUSEMOTION else {"rel": (0, 0), "buttons": (1, 0, 0)}
+    return pygame.event.Event(kind, pos=(int(pos[0]), int(pos[1])), touch=True, **extra)
+
+
+def test_stick_walks_smoothly_and_its_touch_never_becomes_a_tap_to_walk(bot):
+    ws = _world(bot)
+    stick = ws.stick
+    centre = (stick.cx, stick.cy)
+    right = (stick.cx + stick.r, stick.cy)
+    for e in (_finger(pygame.FINGERDOWN, 0, centre), _touch_mouse(pygame.MOUSEBUTTONDOWN, centre),
+              _finger(pygame.FINGERMOTION, 0, right), _touch_mouse(pygame.MOUSEMOTION, right)):
+        bot.scenes.handle(e)
+    assert bot.scenes.fingers and stick.active and stick.vector()[0] == pytest.approx(1.0)
+    x0 = ws.x
+    xs = []
+    for _ in range(15):
+        bot.tick()
+        xs.append(ws.x)
+    steps = [b - a for a, b in zip([x0, *xs], xs, strict=False)]
+    assert ws.x > x0 + 40 and ws.facing == "right"
+    assert min(steps) > 0 or ws.x > x0 + 40, "Giữ cần là đi đều"
+    far = (stick.cx + 300, stick.cy - 200)  # nhấc tay ở ngoài vòng: không được hiểu là chạm lên bản đồ để đi tới đó
+    for e in (_finger(pygame.FINGERUP, 0, far), _touch_mouse(pygame.MOUSEBUTTONUP, far)):
+        bot.scenes.handle(e)
+    assert not stick.active and not ws.path
+    x1 = ws.x
+    bot.tick(5)
+    assert ws.x == x1, "Nhấc tay là dừng"
+
+
+def test_second_finger_presses_a_button_while_the_stick_is_held(bot):
+    ws = _world(bot)
+    bot.state.level = rpg.HORSE_LEVEL
+    bot.scenes.handle(_finger(pygame.FINGERDOWN, 0, (ws.stick.cx, ws.stick.cy)))
+    btn = next(b for b in ws.touch_btns if b.label == "Gọi ngựa") if _labels(bot, ws) else None
+    assert btn is not None
+    bot.scenes.handle(_finger(pygame.FINGERDOWN, 1, btn.rect.center))
+    bot.scenes.handle(_finger(pygame.FINGERUP, 1, btn.rect.center))
+    assert ws.mode == "horse" and ws.stick.active
+
+
+def test_stick_works_with_touch_mouse_only(bot):
+    ws = _world(bot)
+    assert not bot.scenes.fingers
+    centre, down = (ws.stick.cx, ws.stick.cy), (ws.stick.cx, ws.stick.cy + ws.stick.r)
+    bot.scenes.handle(_touch_mouse(pygame.MOUSEBUTTONDOWN, centre))
+    bot.scenes.handle(_touch_mouse(pygame.MOUSEMOTION, down))
+    assert ws.stick.owner == "mouse"
+    y0 = ws.y
+    for _ in range(10):  # get_pressed() của bản thử luôn nhả, nên gửi tay sự kiện thay vì chờ
+        ws.update(1 / 30)
+    assert ws.y > y0 + 20
+    bot.scenes.handle(_touch_mouse(pygame.MOUSEBUTTONUP, down))
+    assert not ws.stick.active and not ws.path
+
+
+def test_tap_to_walk_keeps_moving_every_frame_and_cuts_straight_lines(bot):
+    ws = _world(bot, touch=False)
+    ws.noclip = True  # chỉ còn biên bản đồ chắn: đường thẳng chéo luôn đi được
+    x0, y0 = ws.x, ws.y
+    ws._walk_to(x0 + TILE * 6, y0 + TILE * 6)
+    assert len(ws.path) >= 12, "Đường tìm trên lưới ô là đường gấp khúc"
+    pos = [(ws.x, ws.y)]
+    for _ in range(20):
+        ws.update(1 / 30)
+        pos.append((ws.x, ws.y))
+    steps = [((b[0] - a[0]) ** 2 + (b[1] - a[1]) ** 2) ** 0.5 for a, b in zip(pos, pos[1:], strict=False)]
+    assert min(steps) > 0, "Không khựng lại ở giữa mỗi ô"
+    assert max(steps) - min(steps) < 1.0, "Mỗi khung hình đi một quãng bằng nhau"
+    dx, dy = ws.x - x0, ws.y - y0
+    assert dx > 20 and dy > 20 and abs(dx - dy) < TILE, "Đi chéo thẳng một mạch chứ không đi hết ngang rồi mới xuống"
+
+
+def test_fight_stick_and_attack_button_with_two_fingers(bot):
+    bot.state.reset()
+    bot.scenes.touch = True
+    fight = FightScene(bot, [{"name": "Bù nhìn", "char": "Villager", "hp": 5000}], "Thử")
+    bot.scenes.reset(fight)
+    fight.intro = 0
+    p = fight.player
+    st = fight.stick
+    bot.scenes.handle(_finger(pygame.FINGERDOWN, 0, (st.cx, st.cy)))
+    bot.scenes.handle(_finger(pygame.FINGERMOTION, 0, (st.cx + st.r, st.cy)))
+    x0 = p.x
+    bot.tick(8)
+    assert p.x > x0 + 20, "Ngón cái trái giữ cần thì đi"
+    calls = []
+    real = fight.attack
+    fight.attack = lambda f: (calls.append(f), real(f))
+    bot.scenes.handle(_finger(pygame.FINGERDOWN, 1, BTN_ATTACK.center))
+    bot.scenes.handle(_touch_mouse(pygame.MOUSEBUTTONDOWN, BTN_ATTACK.center))  # chuột giả của cùng cú chạm: không tính lại
+    assert p.attack_cd > 0
+    bot.tick(45)
+    assert sum(c is p for c in calls) >= 3, "Giữ nút CHÉM bằng ngón kia thì chém liên tục, vẫn đi được"
+    bot.scenes.handle(_finger(pygame.FINGERUP, 1, BTN_ATTACK.center))
+    assert fight.attack_finger is None and st.active
+
+
+def test_case_room_stick(bot):
+    bot.state.reset()
+    bot.scenes.touch = True
+    from scenes.case import CaseScene
+
+    sc = CaseScene(bot, bot.state.extras["cases"][0])
+    bot.scenes.reset(sc)
+    bot.scenes.handle(_finger(pygame.FINGERDOWN, 0, (sc.stick.cx, sc.stick.cy)))
+    bot.scenes.handle(_finger(pygame.FINGERMOTION, 0, (sc.stick.cx, sc.stick.cy - sc.stick.r)))
+    y0 = sc.y
+    bot.tick(10)
+    assert sc.y < y0 - 20, "Trong nhà tư liệu cũng đi bằng cần"

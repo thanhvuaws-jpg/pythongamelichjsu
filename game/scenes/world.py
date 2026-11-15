@@ -11,7 +11,7 @@ import random
 from typing import Any
 
 import pygame
-from core import art, chienma, fleet, fonts, outfit, rpg, sprites, theme, ui, weapons
+from core import art, chienma, fleet, fonts, outfit, rpg, sprites, theme, touch, ui, weapons
 from core.scene import Scene
 from core.sprites import TILE
 from core.tilemap import BRIDGE, WATER
@@ -68,6 +68,8 @@ HUD_TRACKER = pygame.Rect(12, 10, 440, 104)
 HUD_RPG = pygame.Rect(12, H - 104, 410, 92)
 HINT_X = 724  # giữa khoảng trống từ khung cấp độ tới bản đồ nhỏ
 TOUCH_W, TOUCH_H, TOUCH_GAP = 156, 60, 10  # nút chạm ở góc dưới phải, ngay trên bản đồ nhỏ
+STICK_AT = (104, H - 104 - 16 - 66)  # cần điều khiển ảo ở góc dưới trái, ngay trên khung cấp độ
+LINE_STEP = 10  # bước dò đường thẳng không vướng (điểm ảnh)
 SMITH_CHAR = "Villager"
 MENTOR_NAME = "Cụ Đồ Sử"
 MENU_TOGGLE, MENU_W, MENU_ROW = 52, 200, 40
@@ -157,6 +159,8 @@ class WorldScene(Scene):
         self.mp = Multiplayer(self)  # người chơi khác trên cùng map
         self.touch_btns: list[ui.Button] = []  # nút chạm thay phím khi chơi trên điện thoại
         self._touch_cache: dict[str, ui.Button] = {}
+        self.stick = touch.Stick(STICK_AT)  # cần điều khiển ảo khi chơi trên điện thoại
+        self._finger_btns = touch.FingerButtons()
         self.fishing = Fishing(self)  # câu cá, nướng cá
         self.fishing.spawn()
         self.critters = make_critters(self.map, self._life())
@@ -523,6 +527,7 @@ class WorldScene(Scene):
             scenes.push(make_battle(self.app, idx["battles"][target]))
 
     def on_resume(self, result=None):
+        self.stick.reset()  # nhấc tay lúc cảnh khác đang che thì map không nhận được, nên thả cần ở đây
         self.player_cast = outfit.hero_cast(self.state.gear)  # vừa thay đồ ở lò rèn hay túi đồ thì ngoại hình đổi ngay
         self.app.audio.music(MUSIC.get(self.level_id, "road"))
         self._apply_weather(True)
@@ -824,10 +829,12 @@ class WorldScene(Scene):
         return False
 
     def _move(self, dx, dy, dt):
+        """Đi theo hướng (dx, dy). Hướng dài hơn 1 (phím chéo, khoảng cách tới đích) thì chuẩn hoá; cần điều khiển kéo
+        chưa hết vòng (độ dài dưới 1) thì đi chậm lại theo đó."""
         length = math.hypot(dx, dy)
         if not length:
             return False
-        step = self._speed() * dt / length
+        step = self._speed() * dt / max(1.0, length)
         nx, ny = self.x + dx * step, self.y + dy * step
         moved = False
         if not self._hit(nx, self.y):
@@ -992,7 +999,19 @@ class WorldScene(Scene):
         self.touch_btns = btns
 
     def _touch_handle(self, event) -> bool:
-        if not self.touch_btns or event.type not in (pygame.MOUSEBUTTONDOWN, pygame.MOUSEBUTTONUP, pygame.MOUSEMOTION):
+        """Cần điều khiển và nút chạm (chỉ khi chơi bằng cảm ứng). True nếu sự kiện đã dùng, màn chơi không đi tới đó."""
+        scenes = self.app.scenes
+        if not scenes.touch or event.type not in touch.FINGER_EVENTS + touch.MOUSE_EVENTS:
+            return False
+        if self.stick.handle(event, scenes.fingers):
+            if self.stick.active:  # cầm cần là thôi đi theo đường đã bấm
+                self.path.clear()
+                self.auto = None
+                self.steer = None
+            return True
+        if scenes.fingers:
+            return self._finger_btns.handle(event, self.touch_btns, True)
+        if event.type in touch.FINGER_EVENTS:
             return False
         for b in list(self.touch_btns):
             if b.handle(event):
@@ -1017,6 +1036,8 @@ class WorldScene(Scene):
         dx = (keys[pygame.K_RIGHT] or keys[pygame.K_d]) - (keys[pygame.K_LEFT] or keys[pygame.K_a])
         dy = (keys[pygame.K_DOWN] or keys[pygame.K_s]) - (keys[pygame.K_UP] or keys[pygame.K_w])
         self.moving = False
+        if not (dx or dy) and self.stick.active:
+            dx, dy = self.stick.vector()
         if dx or dy:
             self.path.clear()
             self.auto = None
@@ -1073,16 +1094,45 @@ class WorldScene(Scene):
             ev.clear()
 
     def _follow_path(self, dt) -> bool:
-        tx, ty = self.path[0]
-        gx, gy = (tx + 0.5) * TILE, (ty + 1) * TILE - 8
-        dx, dy = gx - self.x, gy - self.y
-        if abs(dx) < TILE / 6 and abs(dy) < TILE / 6:
+        """Đi theo đường tìm được khi bấm, chạm lên bản đồ. Tới giữa một ô thì đi tiếp ô sau ngay trong khung hình ấy
+        bằng quãng còn lại (trước đây đứng khựng một khung hình ở mỗi ô nên đi trông giật); đoạn nào đi thẳng không
+        vướng thì cắt qua thay vì gấp khúc theo lưới ô."""
+        self._shortcut_path()
+        speed = self._speed()
+        budget = speed * dt
+        moved = False
+        while self.path and budget > 1e-6:
+            tx, ty = self.path[0]
+            gx, gy = (tx + 0.5) * TILE, (ty + 1) * TILE - 8
+            dx, dy = gx - self.x, gy - self.y
+            d = math.hypot(dx, dy)
+            if d < 0.5:
+                self.path.pop(0)
+                continue
+            step = min(budget, d)
+            if not self._move(dx, dy, step / speed):
+                self.path.clear()
+                break
+            moved = True
+            budget -= step
+            if step >= d:
+                self.path.pop(0)
+        return moved
+
+    def _shortcut_path(self):
+        """Bỏ ô kế tiếp khi từ chỗ đang đứng đi thẳng tới ô sau nó không vướng gì."""
+        for _ in range(4):
+            if len(self.path) < 2:
+                return
+            tx, ty = self.path[1]
+            if not self._clear_line((tx + 0.5) * TILE, (ty + 1) * TILE - 8):
+                return
             self.path.pop(0)
-            return True
-        if not self._move(dx, dy, dt):
-            self.path.clear()
-            return False
-        return True
+
+    def _clear_line(self, x1: float, y1: float) -> bool:
+        x0, y0 = self.x, self.y
+        n = max(1, int(math.hypot(x1 - x0, y1 - y0) // LINE_STEP))
+        return not any(self._hit(x0 + (x1 - x0) * i / n, y0 + (y1 - y0) * i / n) for i in range(1, n + 1))
 
     def _update_npcs(self, dt):
         for a in self.actors:
@@ -1406,7 +1456,7 @@ class WorldScene(Scene):
         hint = (HINT_X, H - 22)
         touch = self.app.scenes.touch
         if self.mode == "boat":
-            text = "Đang chèo thuyền: chạm để chèo, sát bờ bấm nút Lên bờ" if touch else "Đang chèo thuyền: WASD để chèo, tới sát bờ bấm E để lên"
+            text = "Đang chèo thuyền: giữ cần để chèo, sát bờ bấm nút Lên bờ" if touch else "Đang chèo thuyền: WASD để chèo, tới sát bờ bấm E để lên"
             ui.tag(screen, text, hint, theme.LACQUER, theme.PAPER, 14, "midbottom")
         elif self.mode == "horse":
             key = "nút Xuống ngựa" if touch else ("R" if self.horse_actor is not None else "H")
@@ -1416,7 +1466,7 @@ class WorldScene(Scene):
             ui.tag(screen, f"Đang câu cá: phao chìm, hiện dấu chấm than thì bấm {key} · đi chỗ khác là thu cần", hint, theme.LACQUER,
                    theme.PAPER, 14, "midbottom")
         elif self.t < HELP_TIME and not self.state.stamps:
-            text = ("Chạm để đi · chạm người, vật để xem · chạm quái để đánh · nút ba gạch: các bảng khác" if touch else
+            text = ("Giữ cần ở góc trái để đi · chạm người, vật để xem, chạm quái để đánh · nút ba gạch: các bảng khác" if touch else
                     "WASD đi · E nói chuyện · F đánh quái · C câu cá · H chiến mã · L chat · nút ba gạch: các bảng khác")
             ui.tag(screen, text, hint, theme.LACQUER, theme.PAPER, 13, "midbottom")
         if target:
@@ -1432,6 +1482,8 @@ class WorldScene(Scene):
         self.mp.draw_invites(screen)
         for b in self.touch_btns:
             b.draw(screen)
+        if self.app.scenes.touch and not self.warp:
+            self.stick.draw(screen)
         self._draw_menu(screen)
 
     def _progress_ratio(self) -> float:

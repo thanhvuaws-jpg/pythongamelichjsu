@@ -53,6 +53,7 @@ class SceneManager:
         # Đang chơi bằng cảm ứng: hiện nút chạm thay cho các phím (thuyền, ngựa, câu cá...). Hỏi trình duyệt lúc mở game,
         # rồi bật hẳn khi nhận được cú chạm đầu tiên.
         self.touch = platform_io.is_touch_device()
+        self.fingers = False  # máy gửi sự kiện ngón (nhiều ngón cùng lúc); chưa thấy thì nút chạm chạy bằng chuột giả
 
     @property
     def top(self) -> Scene | None:
@@ -80,7 +81,11 @@ class SceneManager:
             self._fade = FADE_TIME * 0.6
 
     def handle(self, event: pygame.event.Event) -> None:
-        if event.type == pygame.FINGERDOWN or (event.type == pygame.MOUSEBUTTONDOWN and getattr(event, "touch", False)):
+        if event.type == pygame.FINGERDOWN:
+            if not self.fingers:
+                platform_io.mark("sk-input", "fingers")  # để soát trên máy thật: máy này gửi được nhiều ngón cùng lúc
+            self.touch = self.fingers = True
+        elif event.type == pygame.MOUSEBUTTONDOWN and getattr(event, "touch", False):
             self.touch = True
         if self.top:
             self.top.handle(event)

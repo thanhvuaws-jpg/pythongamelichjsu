@@ -23,6 +23,7 @@ from core import (
     rpg,
     sprites,
     theme,
+    touch,
     ui,
     weapons,
 )
@@ -56,6 +57,7 @@ BTN_DODGE = pygame.Rect(W - 276, H - 88, 112, 72)
 BTN_POTION = pygame.Rect(W - 392, H - 88, 104, 72)
 BTN_EAT = pygame.Rect(W - 504, H - 88, 104, 72)
 SLOT_W = 104
+STICK_AT = (104, 548)  # cần điều khiển ảo ở góc dưới trái, ngay trên các ô kỹ năng
 
 
 class _StaticCast:
@@ -188,6 +190,9 @@ class FightScene(Scene):
         self.mouse_down = False  # đang giữ chuột phải (hay chạm giữ trên điện thoại) để đi theo con trỏ
         self.move_button = 0
         self.attack_held = False  # đang giữ chuột trái trên sân: chém liên tục theo nhịp hồi đòn
+        self.stick = touch.Stick(STICK_AT, 62)  # điện thoại: ngón cái trái giữ cần để đi
+        self.attack_finger = None  # ngón đang giữ nút CHÉM
+        self.move_finger = None  # ngón đang chạm giữ trên sân để đi tới
         self.mouse = (0, 0)
         self.app.audio.music("fight")
         self.app.audio.ambient(None)
@@ -769,6 +774,15 @@ class FightScene(Scene):
         # Bàn phím dành cho việc đánh: phím mũi tên không được chuyển con trỏ sang nút Rút lui rồi phím cách bấm nhầm
         if event.type != pygame.KEYDOWN and self.group.handle(event):
             return
+        scenes = self.app.scenes
+        if scenes.touch and not self.result:
+            if self.stick.handle(event, scenes.fingers):
+                return
+            if scenes.fingers and event.type in touch.FINGER_EVENTS:
+                self._finger(event)
+                return
+            if scenes.fingers and touch.is_touch_mouse(event):
+                return  # cú chạm này đã xử lý bằng sự kiện ngón ở trên
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 self._quit()
@@ -795,7 +809,7 @@ class FightScene(Scene):
                 self.attack_held = True  # giữ nút CHÉM thì chém liên tục
                 self.attack(self.player)
             elif BTN_DODGE.collidepoint(event.pos):
-                self.dodge(self.player)
+                self.dodge(self.player, *self.stick.vector())
             elif BTN_POTION.collidepoint(event.pos):
                 self.drink()
             elif BTN_EAT.collidepoint(event.pos):
@@ -819,6 +833,37 @@ class FightScene(Scene):
             if event.button == self.move_button:
                 self.mouse_down = False
 
+    def _finger(self, event):
+        """Điện thoại: mỗi ngón một việc, nên giữ cần đi bằng ngón này vẫn bấm CHÉM, NÉ, kỹ năng bằng ngón kia."""
+        pos, fid = touch.finger_pos(event), event.finger_id
+        if event.type == pygame.FINGERDOWN:
+            if any(b.rect.collidepoint(pos) for b in self.group.buttons):
+                return  # nút Rút lui: để nút tự xử lý bằng chuột giả
+            if BTN_ATTACK.collidepoint(pos):
+                self.attack_finger = fid
+                self.attack(self.player)
+            elif BTN_DODGE.collidepoint(pos):
+                self.dodge(self.player, *self.stick.vector())
+            elif BTN_POTION.collidepoint(pos):
+                self.drink()
+            elif BTN_EAT.collidepoint(pos):
+                self.eat()
+            else:
+                for i, r in enumerate(self.slot_rects):
+                    if r.collidepoint(pos):
+                        if i < len(self.slots):
+                            self.cast(self.player, self.slots[i])
+                        return
+                self.move_finger, self.mouse_down, self.mouse = fid, True, pos  # chạm giữ trên sân: đi tới đó
+        elif event.type == pygame.FINGERMOTION:
+            if fid == self.move_finger:
+                self.mouse = pos
+        else:
+            if fid == self.attack_finger:
+                self.attack_finger = None
+            if fid == self.move_finger:
+                self.move_finger, self.mouse_down = None, False
+
     def update(self, dt):
         self.t += dt
         if self.background:  # map bên dưới vẫn cần báo cho người cùng map biết mình đang đánh
@@ -837,6 +882,8 @@ class FightScene(Scene):
         keys = pygame.key.get_pressed()
         dx = (keys[pygame.K_RIGHT] or keys[pygame.K_d]) - (keys[pygame.K_LEFT] or keys[pygame.K_a])
         dy = (keys[pygame.K_DOWN] or keys[pygame.K_s]) - (keys[pygame.K_UP] or keys[pygame.K_w])
+        if not (dx or dy) and self.stick.active:
+            dx, dy = self.stick.vector()
         if not (dx or dy) and self.mouse_down:
             mx, my = self.mouse[0] - self.player.x, self.mouse[1] - self.player.y
             if math.hypot(mx, my) > 14:
@@ -847,7 +894,9 @@ class FightScene(Scene):
         p = self.player
         if not p.dead and p.dodge_t <= 0:
             self._walk(p, dx, dy, dt)
-        if self.attack_held:
+        if self.attack_finger is not None:
+            self.attack(p)  # giữ nút CHÉM bằng ngón: chém liên tục
+        elif self.attack_held:
             if pygame.mouse.get_pressed()[0]:
                 self.attack(p)  # còn hồi đòn thì attack tự bỏ qua
             else:  # nhả chuột ở ngoài cửa sổ nên không nhận được MOUSEBUTTONUP
@@ -946,6 +995,8 @@ class FightScene(Scene):
     def _end(self, win: bool):
         self.result = {"win": win}
         self.mouse_down = self.attack_held = False
+        self.attack_finger = self.move_finger = None
+        self.stick.reset()
         self.app.audio.play("thang" if win else "sai")
         self.group.clear()
         cx = W // 2
@@ -1079,14 +1130,16 @@ class FightScene(Scene):
         if self.intro > 0:
             label = "ĐẤU!" if self.intro < 0.6 else str(math.ceil(self.intro - 0.6))
             fonts.text(screen, label, fonts.font("black", 92), theme.GOLD_LIGHT, (W // 2, 310), "center", shadow=(60, 20, 14))
-            how = ("Chạm giữ trên sân để đi · bấm CHÉM, NÉ, kỹ năng ở dưới màn hình" if self.app.scenes.touch else
+            how = ("Giữ cần ở góc trái để đi · bấm CHÉM, NÉ, kỹ năng ở dưới màn hình" if self.app.scenes.touch else
                    "WASD để đi · chuột trái chém · Shift né · 1, 2, 3, 4 tung kỹ năng · Q uống thuốc")
             fonts.text(screen, how, fonts.font("semi", 18), theme.WHITE, (W // 2, 390), "center", shadow=(24, 16, 14))
         if self.result:
             self._draw_result(screen)
 
     def _draw_controls(self, screen):
-        touch = self.app.scenes.touch  # chơi bằng chạm thì nút không ghi phím
+        on_touch = self.app.scenes.touch  # chơi bằng chạm thì nút không ghi phím
+        if on_touch and not self.result:
+            self.stick.draw(screen)
         for i, r in enumerate(self.slot_rects):
             ui.lacquer_panel(screen, r, 236)
             fonts.text(screen, str(i + 1), fonts.font("bold", 14), theme.GOLD, (r.x + 12, r.y + 8))
@@ -1103,20 +1156,20 @@ class FightScene(Scene):
                 fonts.text(screen, f"{left:.1f}", fonts.font("bold", 18), theme.WHITE, r.center, "center")
         ui.lacquer_panel(screen, BTN_ATTACK, 240)
         fonts.text(screen, "CHÉM", fonts.font("black", 22), theme.GOLD_LIGHT, BTN_ATTACK.center, "center")
-        if not touch:
+        if not on_touch:
             fonts.text(screen, "chuột trái", fonts.font("ui", 12), theme.PAPER_3, (BTN_ATTACK.centerx, BTN_ATTACK.bottom - 22), "center")
         ui.lacquer_panel(screen, BTN_DODGE, 240)
-        fonts.text(screen, "NÉ" if touch else "NÉ (Shift)", fonts.font("bold", 17 if touch else 15), theme.PAPER, BTN_DODGE.center, "center")
+        fonts.text(screen, "NÉ" if on_touch else "NÉ (Shift)", fonts.font("bold", 17 if on_touch else 15), theme.PAPER, BTN_DODGE.center, "center")
         ui.lacquer_panel(screen, BTN_POTION, 240)
         pot = sprites.icon(rpg.item_icon("thuoc_nam"), 2)
         screen.blit(pot, pot.get_rect(center=(BTN_POTION.centerx, BTN_POTION.y + 28)))
-        fonts.text(screen, f"{'' if touch else 'Q · '}còn {self.state.potions}", fonts.font("semi", 12), theme.PAPER, (BTN_POTION.centerx, BTN_POTION.bottom - 14), "center")
+        fonts.text(screen, f"{'' if on_touch else 'Q · '}còn {self.state.potions}", fonts.font("semi", 12), theme.PAPER, (BTN_POTION.centerx, BTN_POTION.bottom - 14), "center")
         if not self.state.potions:
             ui.alpha_rect(screen, BTN_POTION.inflate(-8, -8), (10, 8, 8, 150))
         ui.lacquer_panel(screen, BTN_EAT, 240)
         fish = sprites.icon(rpg.item_icon("ca_nuong"), 2)
         screen.blit(fish, fish.get_rect(center=(BTN_EAT.centerx, BTN_EAT.y + 28)))
-        fonts.text(screen, f"{'' if touch else 'E · '}còn {self.state.grilled}", fonts.font("semi", 12), theme.PAPER, (BTN_EAT.centerx, BTN_EAT.bottom - 14), "center")
+        fonts.text(screen, f"{'' if on_touch else 'E · '}còn {self.state.grilled}", fonts.font("semi", 12), theme.PAPER, (BTN_EAT.centerx, BTN_EAT.bottom - 14), "center")
         if not self.state.grilled:
             ui.alpha_rect(screen, BTN_EAT.inflate(-8, -8), (10, 8, 8, 150))
         if self.player.dodge_cd > 0:

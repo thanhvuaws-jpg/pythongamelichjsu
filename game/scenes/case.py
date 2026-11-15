@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import pygame
-from core import fonts, outfit, progression, sprites, theme, ui
+from core import fonts, outfit, progression, sprites, theme, touch, ui
 from core.scene import Scene
 from core.sprites import TILE
 
@@ -80,6 +80,9 @@ class CaseScene(Scene):
         self.clues = [dict(c, cast=sprites.cast(c["char"]) if c.get("char") else None, img=sprites.icon(c["icon"]) if c.get("icon") else None) for c in case["clues"]]
         self.group = ui.ButtonGroup()
         self.group.add(ui.Button((W - 150, 8, 136, 40), "Ra ngoài", self._leave, "ghost", size=15))
+        self.stick = touch.Stick((104, H - 140))  # điện thoại: giữ cần để đi
+        self.act_btn = ui.Button((W - 16 - 170, H - 150, 170, 60), "", None, "gold", size=16)  # điện thoại: xem, kết luận
+        self._finger_btns = touch.FingerButtons()
         self.app.audio.ambient(None)
 
     @staticmethod
@@ -156,13 +159,34 @@ class CaseScene(Scene):
         self.note = self.case["outro"]
 
     def on_resume(self, result=None):
+        self.stick.reset()
         cont, self.next = self.next, None
         if cont:
             cont(result)
 
+    def _act_buttons(self) -> list:
+        """Điện thoại: một nút to cho việc ở ngay cạnh (xem manh mối, nêu kết luận, ra ngoài)."""
+        near = self._near() if self.app.scenes.touch else None
+        if not near:
+            return []
+        self.act_btn.label = {"clue": "Xem", "desk": "Nêu kết luận", "door": "Ra ngoài"}[near[0]]
+        self.act_btn.on_click = lambda n=near: self._use(n)
+        return [self.act_btn]
+
     def handle(self, event):
         if event.type != pygame.KEYDOWN and self.group.handle(event):
             return
+        scenes = self.app.scenes
+        if scenes.touch and event.type in touch.FINGER_EVENTS + touch.MOUSE_EVENTS:
+            if self.stick.handle(event, scenes.fingers):
+                self.target = None
+                return
+            buttons = self._act_buttons()
+            if scenes.fingers:
+                if self._finger_btns.handle(event, buttons, True):
+                    return
+            elif any(b.handle(event) for b in buttons):
+                return
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 self._leave()
@@ -193,6 +217,8 @@ class CaseScene(Scene):
         keys = pygame.key.get_pressed()
         dx = (keys[pygame.K_RIGHT] or keys[pygame.K_d]) - (keys[pygame.K_LEFT] or keys[pygame.K_a])
         dy = (keys[pygame.K_DOWN] or keys[pygame.K_s]) - (keys[pygame.K_UP] or keys[pygame.K_w])
+        if not (dx or dy) and self.stick.active:
+            dx, dy = self.stick.vector()
         if dx or dy:
             self.target = None
         elif self.target:
@@ -204,7 +230,7 @@ class CaseScene(Scene):
         self.moving = False
         length = (dx * dx + dy * dy) ** 0.5
         if length:
-            step = SPEED * dt / length
+            step = SPEED * dt / max(1.0, length)  # cần điều khiển kéo chưa hết vòng thì đi chậm lại
             nx, ny = self.x + dx * step, self.y + dy * step
             if not self._blocked(nx, self.y):
                 self.x = nx
@@ -257,4 +283,9 @@ class CaseScene(Scene):
         if near:
             label = {"clue": "Xem", "desk": "Nêu kết luận", "door": "Ra ngoài"}[near[0]]
             x, y = self._point_of(near)
-            ui.tag(screen, f"E  {label}", (x, min(y + 6, H - 90)), theme.LACQUER, theme.GOLD_LIGHT, 13, "midtop")
+            key = "" if self.app.scenes.touch else "E  "
+            ui.tag(screen, f"{key}{label}", (x, min(y + 6, H - 90)), theme.LACQUER, theme.GOLD_LIGHT, 13, "midtop")
+        if self.app.scenes.touch:
+            self.stick.draw(screen)
+            for b in self._act_buttons():
+                b.draw(screen)
