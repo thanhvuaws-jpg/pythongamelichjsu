@@ -14,7 +14,7 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.162-009688?logo=fastapi&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
 
-### [▶ Chơi ngay: game.vtkt.online](https://game.vtkt.online) &nbsp;·&nbsp; [Cổng quản trị: admin.vtkt.online](https://admin.vtkt.online)
+### [▶ Chơi ngay: game.vtkt.online](https://game.vtkt.online)
 
 <img src="docs/readme/gioi_thieu.gif" alt="Ảnh động: trận Bạch Đằng, cách đánh trong trận và chơi cùng bạn bè" width="100%">
 
@@ -190,8 +190,7 @@ python -m venv .venv
 ```
 
 **Cách nhanh trên Windows:** mở Docker Desktop rồi bấm đúp `CHAY_THU.bat`. Script tự bật cơ sở dữ liệu, tạo `backend/.env`
-từ `.env.example`, đóng gói game nếu chưa có, chạy migration, tạo tài khoản quản trị rồi mở `http://127.0.0.1:8200`
-(trang quản trị ở `/admin/`).
+từ `.env.example`, đóng gói game nếu chưa có, chạy migration, tạo tài khoản quản trị rồi mở `http://127.0.0.1:8200`.
 
 **Chạy từng bước:** sao chép `.env.example` thành `backend/.env`, điền `ADMIN_EMAIL`, `ADMIN_PASSWORD`, rồi:
 
@@ -231,8 +230,7 @@ GitHub Actions (`.github/workflows/ci.yml`) chạy cả bốn bước với Post
 
 ## Triển khai
 
-- Bản đang chạy: **https://game.vtkt.online** (người chơi) và **https://admin.vtkt.online** (quản trị), trên VPS bằng
-  Docker Compose, ra Internet qua Cloudflare Tunnel nên VPS không mở thêm cổng nào. Ghi chép và lệnh cập nhật ở
+- Bản đang chạy: **https://game.vtkt.online**, trên VPS bằng Docker Compose, ra Internet qua Cloudflare Tunnel nên VPS không mở thêm cổng nào. Ghi chép và lệnh cập nhật ở
   [`trien_khai_vps/HUONG_DAN.md`](trien_khai_vps/HUONG_DAN.md); các tệp bí mật (`.env`, token tunnel) không đưa lên git.
 - Cách triển khai khác (Render, Docker) ở [`DEPLOY.md`](DEPLOY.md).
 - Container ứng dụng tự chạy `alembic upgrade head` khi khởi động (`backend/start.sh`).
