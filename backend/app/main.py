@@ -20,7 +20,13 @@ from app.errors import register_error_handlers
 from app.game import router as game_router
 from app.leaderboard import router as leaderboard_router
 from app.logging_config import setup_logging
-from app.middleware import REQUEST_ID_HEADER, AdminHostMiddleware, RequestIdMiddleware
+from app.middleware import (
+    REQUEST_ID_HEADER,
+    AdminHostMiddleware,
+    FreshPagesMiddleware,
+    GameBundleFallbackMiddleware,
+    RequestIdMiddleware,
+)
 from app.play import router as play_router
 from app.privacy import router as privacy_router
 from app.publish import router as publish_router
@@ -58,6 +64,9 @@ def create_app() -> FastAPI:
         expose_headers=[REQUEST_ID_HEADER],
     )
     app.add_middleware(RequestIdMiddleware)
+    app.add_middleware(FreshPagesMiddleware)
+    if Path(settings.game_web_dir).is_dir():
+        app.add_middleware(GameBundleFallbackMiddleware, game_dir=settings.game_web_dir)
     if settings.admin_host:
         app.add_middleware(AdminHostMiddleware, admin_host=settings.admin_host)
     register_error_handlers(app)

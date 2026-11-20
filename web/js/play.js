@@ -154,7 +154,8 @@
 
   const frame = document.getElementById("game");
   frame.addEventListener("load", () => frame.focus());
-  frame.src = "/game/index.html";
+  // ?v=2: thoát bản trang game cũ trình duyệt còn giữ từ trước 20/11 (giờ máy chủ gửi no-cache cho mọi trang HTML)
+  frame.src = "/game/index.html?v=2";
 
   // Chat: game gọi SKChat.open khi bấm L; tin gõ xong nằm chờ trong hộp thư đi, game lấy ra bằng SKChat.take để tự trừ
   // tiền quan (kênh thế giới) trong bản lưu rồi mới gửi lên máy chủ.
