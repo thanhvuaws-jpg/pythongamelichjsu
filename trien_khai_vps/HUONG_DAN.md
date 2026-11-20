@@ -206,6 +206,7 @@ ssh -i ~/.ssh/royal_vps root@<ip VPS> "docker exec sukydieutra_db pg_dump -U suk
   - Đo sau khi đưa lên (trang thật, Edge không giao diện, bộ đệm trống, giả lập 10 Mbps trễ 60 ms): game vẽ khung hình đầu sau 13,0–13,8 giây; lần vào thứ hai 3,6 giây. Thử thêm trên máy: điện thoại xoay ngang 780×360, trường hợp chặn tự phát tiếng (bấm nút là vào ngay).
   - Kiểm: ruff sạch, kiểm thử game 352/352 (thêm `test_web_loading.py`), máy chủ 47 đạt + 5 bỏ qua vì máy chưa bật PostgreSQL (phần máy chủ không đổi).
   - Sau khi đưa lên: `/health` OK; `/game/` có màn tải mới và trỏ `sukydieutra-bb1a8fc96fc6.tar.gz` (1,8 MB); 4 tệp `/game/music/*.ogg` trả 200; `/video/trailer.mp4?v=2` đủ 21,7 MB; trang chủ gọi video `?v=2`.
+  - **Lỗi sau khi đưa lên (người dùng báo, chế độ khách):** hộp thoại "Error occurred: Cannot set properties of null (setting 'textContent')" hiện lại mỗi 8 giây. Hẹn giờ đổi mẩu "Biết không?" vẫn chạy sau khi màn tải đã gỡ, ghi vào phần tử không còn; pygbag bật `alert` cho mọi lỗi JS trên trang. Lúc thử không thấy vì Playwright tự đóng hộp thoại. Sửa trong `tools/loader/loader.js`: dừng hẹn giờ khi gỡ màn tải, mọi việc theo hẹn giờ bọc `safe()`, màn tải lỗi thì tự gỡ. Đã kiểm bằng script bắt hộp thoại và lỗi JS (30 giây sau khi vào game: không có). CHƯA đưa bản sửa lên VPS.
   - Đổi pygbag thì phải đo lại `WHEEL_URL`, `WHEEL_BYTES`, `RUNTIME_BYTES` trong `tools/web_extras.py` (sai thì chỉ mất phần tải sớm và số MB hiện trên màn tải lệch, game vẫn chạy).
 
 ## Lưu ý

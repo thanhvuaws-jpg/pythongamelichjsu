@@ -65,21 +65,27 @@
     go.textContent = isTouch ? "Chạm để vào game" : "Bấm để vào game";
 
     // ---- mẩu sử "Biết không?" lấy từ dữ liệu có nguồn của game, đổi mỗi 8 giây ----
+    // pygbag bật hộp thoại alert cho MỌI lỗi JS trên trang, nên màn tải không bao giờ được ném lỗi: mọi việc chạy theo
+    // hẹn giờ đều đi qua safe() và dừng hẳn khi màn tải đã gỡ (lỗi 20/11: hẹn giờ đổi mẩu sử còn chạy sau khi gỡ màn
+    // tải, ghi vào phần tử không còn, hộp thoại "Cannot set properties of null" hiện lại mỗi 8 giây).
+    const safe = (fn) => () => { if (!gone) try { fn(); } catch (e) { /* màn tải hỏng thì thôi, game vẫn chạy */ } };
     const fact = $("sk-fact");
     let fi = Math.floor(Math.random() * C.facts.length);
+    const put = (id, text) => { const el = $(id); if (el) el.textContent = text; };
     function showFact() {
       const f = C.facts[fi++ % C.facts.length];
-      $("sk-year").textContent = f.y;
-      $("sk-title").textContent = f.t;
-      $("sk-text").textContent = f.s;
-      $("sk-src").textContent = f.src ? "Nguồn: " + f.src : "";
+      put("sk-year", f.y);
+      put("sk-title", f.t);
+      put("sk-text", f.s);
+      put("sk-src", f.src ? "Nguồn: " + f.src : "");
     }
+    let factTimer = 0;
     if (C.facts.length) {
-      showFact();
-      setInterval(() => {
+      safe(showFact)();
+      factTimer = setInterval(safe(() => {
         fact.classList.add("fade");
-        setTimeout(() => { showFact(); fact.classList.remove("fade"); }, 460);
-      }, 8000);
+        setTimeout(safe(() => { showFact(); fact.classList.remove("fade"); }), 460);
+      }), 8000);
     } else fact.hidden = true;
 
     function unlockAudio() {
@@ -98,14 +104,27 @@
     function finish() {
       if (gone) return;
       gone = true;
-      root.classList.add("out");
-      const canvas = $("canvas");
-      if (canvas) canvas.focus();
-      setTimeout(() => root.remove(), 900);
+      clearInterval(factTimer);
+      try {
+        root.classList.add("out");
+        const canvas = $("canvas");
+        if (canvas) canvas.focus();
+      } catch (e) { /* như trên */ }
+      setTimeout(() => { try { root.remove(); } catch (e) { /* đã gỡ */ } }, 900);
     }
 
     function tick() {
       if (gone) return;
+      try {
+        step_();
+      } catch (e) {
+        finish(); // màn tải lỗi thì gỡ luôn cho thấy game, không để lỗi lặp lại mỗi khung hình
+        return;
+      }
+      requestAnimationFrame(tick);
+    }
+
+    function step_() {
       const status = ($("status") || {}).textContent || "";
       const info = $("infobox");
       const infoText = info && getComputedStyle(info).display !== "none" ? info.textContent : "";
@@ -149,7 +168,6 @@
       if (ready) setTimeout(finish, 250);
       else if (pythonUp && !infoText && !tick.hiddenAt) tick.hiddenAt = Date.now();
       if (tick.hiddenAt && Date.now() - tick.hiddenAt > 6000) finish();
-      requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
   }
