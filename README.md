@@ -175,6 +175,9 @@ flowchart LR
 
 - **Game** viết bằng pygame-ce, các cảnh xếp chồng theo ngăn xếp (`game/core/scene.py`), đóng gói sang WebAssembly bằng
   pygbag nên chạy thẳng trên trình duyệt; vẫn chạy được trên máy tính để phát triển và kiểm thử.
+- **Bản web nhẹ hơn bản máy tính** (`tools/web_extras.py`): phông cắt còn chữ Việt, nhạc nền ngoài màn tựa đề tải ngầm sau
+  khi vào game, gói game tải sẵn trong lúc Python khởi động, và có màn tải riêng (`tools/loader/`) với mẩu sử có nguồn.
+  Gói game 6,1 MB còn 1,8 MB; ở mạng 10 Mbps, lần đầu vào game từ khoảng 20 giây còn khoảng 13 giây.
 - **Trang chơi** giữ kết nối WebSocket và chuyển tin cho game qua `window.SKNet` (JSON thuần ASCII, vì chuỗi có dấu đi từ
   Python sang JavaScript trong pygbag bị đọc sai mã).
 - **Máy chủ** FastAPI, SQLAlchemy 2 bất đồng bộ (asyncpg), Alembic, JWT (access 15 phút, refresh 7 ngày), mật khẩu băm argon2,

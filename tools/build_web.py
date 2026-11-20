@@ -3,7 +3,8 @@
     .venv/Scripts/python tools/build_web.py            # chỉ build
     .venv/Scripts/python tools/build_web.py --serve    # build xong chạy thử tại http://127.0.0.1:8000
 
-Kết quả nằm ở build/sukydieutra/build/web/ (index.html + gói .apk), chép lên bất kỳ static hosting nào.
+Kết quả nằm ở build/sukydieutra/build/web/ (index.html + gói .apk + music/), chép lên bất kỳ static hosting nào.
+Bản web nhẹ hơn bản chạy trên máy: phông cắt còn chữ Việt, nhạc nền tải ngầm, có màn tải riêng (xem web_extras.py).
 """
 
 from __future__ import annotations
@@ -11,15 +12,19 @@ from __future__ import annotations
 import argparse
 import hashlib
 import os
+import re
 import shutil
 import subprocess
 import sys
 from pathlib import Path
 
+import web_extras
+
 ROOT = Path(__file__).resolve().parent.parent
 GAME = ROOT / "game"
 OUT = ROOT / "build" / "sukydieutra"
 WEB_DIR = OUT / "build" / "web"
+MUSIC_STASH = ROOT / "build" / "music_later"  # ngoài OUT để pygbag không gói vào
 GAME_PARTS = ("main.py", "core", "scenes", "content", "assets")
 SKIP = shutil.ignore_patterns("__pycache__", "*.pyc", ".save", "tests")
 PAGE_STYLE = """<style>
@@ -54,6 +59,9 @@ def collect() -> None:
         else:
             shutil.copy2(src, OUT / part)
     shutil.copytree(ROOT / "shared", OUT / "shared", ignore=SKIP)
+    print("Làm nhẹ gói tải đầu:")
+    web_extras.slim_fonts(OUT)
+    web_extras.split_music(OUT, MUSIC_STASH)
 
 
 def patch_html(path: Path) -> None:
@@ -63,7 +71,22 @@ def patch_html(path: Path) -> None:
     html = html.replace("</head>", PAGE_STYLE + "</head>", 1)
     html = html.replace("</body>", PAGE_SCRIPT + "</body>", 1)
     html = version_bundle(path.parent, html)
+    html = add_loader(path.parent, html)
     path.write_text(html, encoding="utf-8")
+
+
+def add_loader(web_dir: Path, html: str) -> str:
+    """Thay chữ "Downloading... / Loading, please wait" mặc định bằng màn tải của game (tools/loader/)."""
+    m = re.search(r'"(sukydieutra-[0-9a-f]{12}\.tar\.gz)"', html)
+    bundle = m.group(1) if m else ""
+    size = (web_dir / bundle).stat().st_size if bundle else 0
+    script, style, body = web_extras.loader_parts(bundle, size)
+    # charset phải đứng đầu: script màn tải dài, đẩy thẻ meta charset của pygbag ra quá 1024 byte đầu nên trình duyệt
+    # (khi máy chủ không ghi charset) đoán sai bảng mã và chữ Việt trong script bị vỡ
+    html = html.replace('<html lang="en-us">', '<html lang="vi"><meta charset="UTF-8">' + script, 1)
+    html = html.replace("<title>Su Ky Dieu Tra</title>", "<title>Sử Ký Điều Tra</title>", 1)
+    html = html.replace("</head>", style + "</head>", 1)
+    return html.replace("<body>", "<body>" + body, 1)
 
 
 def version_bundle(web_dir: Path, html: str) -> str:
@@ -90,11 +113,13 @@ def build() -> None:
     if not (WEB_DIR / "index.html").exists():
         raise SystemExit(f"Build xong nhưng không thấy {WEB_DIR / 'index.html'}")
     patch_html(WEB_DIR / "index.html")
+    web_extras.place_music(MUSIC_STASH, WEB_DIR)
     size = sum(f.stat().st_size for f in WEB_DIR.rglob("*") if f.is_file()) / 1024 / 1024
     print(f"\nBuild xong: {WEB_DIR} ({size:.1f} MB)")
 
 
 def main() -> None:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # cửa sổ lệnh Windows mặc định cp1252, không in được chữ Việt
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--serve", action="store_true", help="chạy thử tại http://127.0.0.1:8000 sau khi build")
     parser.add_argument("--port", type=int, default=8000)

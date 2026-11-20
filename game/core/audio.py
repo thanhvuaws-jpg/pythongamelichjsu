@@ -18,6 +18,19 @@ MIXER_RATE, MIXER_FORMAT, MIXER_CHANNELS, MIXER_BUFFER = 44100, -16, 2, 4096
 AMBIENT_VOLUME = 0.22
 AMBIENT_CHANNEL = 0  # chỉ giữ kênh đầu tiên cho tiếng nền, các kênh còn lại cho tiếng động
 AMBIENT_FILES = ("rain", "river", "wind")
+# Bản web: các bản nhạc này không nằm trong gói tải đầu (tools/build_web.py tách ra thư mục music/ cạnh index.html),
+# xếp theo thứ tự người chơi sẽ cần: ra bản đồ, vào di tích, đánh trận, cảnh buồn
+LATER_MUSIC = ("road", "temple", "fight", "sad")
+WEB_MUSIC_URL = "music/"
+
+
+async def _web_fetch(url: str) -> bytes:
+    import platform  # pygbag: platform.fopen tải tệp qua fetch của trình duyệt, tương đối với trang /game/
+
+    async with platform.fopen(url, "rb") as f:
+        return f.read()
+
+
 _FILES = {
     "no": "explosion", "va": "impact", "chem": "slash", "kiem": "sword", "ban": "launch", "lua": "fire", "nuoc": "splash",
     "click": "move", "dung": "coin", "sai": "cancel", "nhan": "powerup", "thang": "success", "nang": "levelup",
@@ -89,19 +102,45 @@ class Audio:
             return None
 
     def music(self, name: str | None):
-        """Phát lặp một bản nhạc nền; gọi lại cùng tên thì không phát lại từ đầu."""
+        """Phát lặp một bản nhạc nền; gọi lại cùng tên thì không phát lại từ đầu.
+
+        Bản web chưa có tệp nhạc (đang tải ngầm, xem fetch_music) thì tạm im, tải xong tự phát."""
         if name == self._track or not self._ok:
             return
         self._track = name
         try:
-            if not name or not self.enabled:
+            path = MUSIC_DIR / f"{name}.ogg" if name else None
+            if not path or not self.enabled or not path.exists():
                 pygame.mixer.music.stop()
                 return
-            pygame.mixer.music.load(str(MUSIC_DIR / f"{name}.ogg"))
+            pygame.mixer.music.load(str(path))
             pygame.mixer.music.set_volume(MUSIC_VOLUME)
             pygame.mixer.music.play(-1)
         except pygame.error:
             pass
+
+    async def fetch_music(self, names=LATER_MUSIC, fetch=None):
+        """Bản web: chỉ nhạc màn tựa đề nằm trong gói tải đầu, các bản khác tải ngầm khi game đã chạy.
+
+        Lần đầu vào game nhờ vậy bớt gần 4 MB; `fetch(url) -> bytes` thay được khi kiểm thử."""
+        fetch = fetch or _web_fetch
+        for name in names:
+            path = MUSIC_DIR / f"{name}.ogg"
+            if path.exists():
+                continue
+            try:
+                data = await fetch(f"{WEB_MUSIC_URL}{name}.ogg")
+                if not data:
+                    continue
+                tmp = path.with_suffix(".tai")
+                tmp.write_bytes(data)
+                tmp.replace(path)  # ghi xong mới đổi tên: không bao giờ nạp nửa tệp
+            except Exception as e:  # noqa: BLE001 - thiếu nhạc thì vẫn chơi được, chỉ im tiếng
+                print("fetch_music:", name, e)
+                continue
+            if self._track == name:  # cảnh hiện tại đang chờ đúng bản này
+                self._track = None
+                self.music(name)
 
     def ambient(self, name: str | None):
         """Tiếng nền lặp lại (mưa, sông, gió) trên một kênh riêng để tiếng động khác không chiếm mất."""

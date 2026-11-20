@@ -3,10 +3,12 @@
 # Giai đoạn 1: đóng gói game sang WebAssembly. Cần mạng vì pygbag tải mẫu trang từ CDN của nó.
 FROM python:3.12-slim AS game
 WORKDIR /src
-RUN pip install --no-cache-dir pygbag==0.9.3 pygame-ce==2.5.7
+RUN pip install --no-cache-dir pygbag==0.9.3 pygame-ce==2.5.7 fonttools==4.64.0
 COPY game ./game
 COPY shared ./shared
-COPY tools/build_web.py ./tools/build_web.py
+COPY tools/build_web.py tools/web_extras.py ./tools/
+COPY tools/loader ./tools/loader
+COPY web/img/walk.png ./web/img/walk.png
 RUN python tools/build_web.py
 
 # Giai đoạn 2: máy chủ FastAPI

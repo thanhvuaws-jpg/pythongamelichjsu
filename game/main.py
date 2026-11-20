@@ -12,7 +12,7 @@ if not IS_WEB:
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import pygame  # noqa: E402
-from core import audio, fonts, theme, ui  # noqa: E402
+from core import audio, fonts, platform_io, theme, ui  # noqa: E402
 from core.audio import Audio  # noqa: E402
 from core.scene import SceneManager  # noqa: E402
 from core.state import GameState  # noqa: E402
@@ -85,8 +85,10 @@ async def main() -> None:
     await asyncio.sleep(0)
     clock = pygame.time.Clock()
     app = App(screen)
+    if IS_WEB:  # nhạc nền ngoài màn tựa đề không nằm trong gói tải đầu, tải ngầm trong lúc người chơi đã vào game
+        music_task = asyncio.create_task(app.audio.fetch_music())  # noqa: F841 - giữ tham chiếu kẻo task bị dọn
     running = True
-    crashed = False
+    crashed = shown = False
     while running:
         dt = min(MAX_DT, (clock.tick() if IS_WEB else clock.tick(60)) / 1000)
         events = pygame.event.get()
@@ -103,6 +105,9 @@ async def main() -> None:
                 print(error)
                 _draw_crash(screen, error)
         pygame.display.flip()
+        if not shown:  # trang web giữ màn tải HTML tới khi game vẽ xong khung hình đầu (kể cả màn báo lỗi)
+            shown = True
+            platform_io.mark("sk-ready", "1")
         await asyncio.sleep(0)
     app.state.save()
     pygame.quit()

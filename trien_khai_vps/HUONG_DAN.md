@@ -189,11 +189,24 @@ ssh -i ~/.ssh/royal_vps root@<ip VPS> "docker exec sukydieutra_db pg_dump -U suk
     - `/game/` trỏ tới `sukydieutra-05a59bd107d0.tar.gz`; Cloudflare phát tệp này với MISS lần đầu, md5 khớp bản trên VPS;
     - mở thật trên Chrome: game vào màn hình chính, console ghi `cross_file.fetch sukydieutra-05a59bd107d0.tar.gz`, không lỗi;
     - dữ liệu còn đủ: 3 tài khoản, 11 bản ghi thách đấu.
-- **20/11/2026, video trang chủ thêm trận cuối và đoạn kết.** CHƯA đưa lên VPS. Không đổi code game hay máy chủ, chỉ đổi tệp tĩnh.
+- **20/11/2026, video trang chủ thêm trận cuối và đoạn kết.** Đã đưa lên VPS lúc 19:41 (giờ VN), cùng lần với mục kế tiếp. Không đổi code máy chủ, chỉ đổi tệp tĩnh.
   - `tools/make_trailer_video.py` quay ba đoạn rồi nối: phần hướng dẫn (2 phút 46), người chơi máy chơi hết ba màn (không quay) rồi đánh Chiến dịch Điện Biên Phủ (61 giây), đi qua cổng cuối vào đoạn kết (67 giây). Tổng 4 phút 53, 20,7 MB, 2560×1440.
   - `--doan-ket <tệp>` xuất riêng đoạn kết 58 giây (1280×720, 3 MB) kèm ảnh bìa, dùng cho slide 4 của bài thuyết trình.
   - `web/index.html` gọi `video/trailer.mp4?v=2` và `img/trailer.png?v=2` để Cloudflare không phát bản cũ (xem mục Lưu ý).
   - Video trong game (TrailerScene) giữ nguyên, vẫn gần ba phút.
+
+- **20/11/2026, vào game lần đầu nhanh hơn, màn tải mới.** Đã đưa lên VPS lúc 19:41 (giờ VN). Không có migration, phía máy chủ không đổi.
+  - Lý do: bạn bè người dùng báo lần đầu vào game tải lâu, trang tải xấu (chữ "Downloading..." / "Loading, please wait" mặc định của pygbag).
+  - Đo trước khi sửa (bộ đệm trống): phải tải 16,5 MB, nối đuôi nhau: bộ chạy Python ~9 MB → gói game 6,1 MB (chỉ bắt đầu sau khi Python khởi động) → pygame 1,5 MB. Ở mạng 10 Mbps mất khoảng 19–20 giây.
+  - Sửa (`tools/web_extras.py`, `tools/loader/`, `game/core/audio.py`, `game/main.py`):
+    - phông cắt còn chữ Việt; NotoSerif 1,8 MB còn 155 KB (chốt kiểu mặc định của phông biến thiên). Gói game 6,1 MB còn 1,8 MB;
+    - nhạc nền ngoài màn tựa đề (road, temple, fight, sad: 3,4 MB) nằm ở `/game/music/`, game tải ngầm sau khi đã vào;
+    - gói game và pygame tải ngay khi bộ chạy Python tải xong, trong lúc Python khởi động, cùng cờ fetch với pygbag nên pygbag lấy lại từ bộ đệm (đã kiểm: không tải hai lần);
+    - màn tải mới: mặt trống đồng, thanh tiến trình đếm byte thật, nhân vật đi theo thanh, mẩu "Biết không?" lấy từ các mốc sử có nguồn của game, nút "Bấm/Chạm để vào game" khi trình duyệt chặn tự phát tiếng. Game đánh dấu `data-sk-ready` ở khung hình đầu thì màn tải mờ đi.
+  - Đo sau khi đưa lên (trang thật, Edge không giao diện, bộ đệm trống, giả lập 10 Mbps trễ 60 ms): game vẽ khung hình đầu sau 13,0–13,8 giây; lần vào thứ hai 3,6 giây. Thử thêm trên máy: điện thoại xoay ngang 780×360, trường hợp chặn tự phát tiếng (bấm nút là vào ngay).
+  - Kiểm: ruff sạch, kiểm thử game 352/352 (thêm `test_web_loading.py`), máy chủ 47 đạt + 5 bỏ qua vì máy chưa bật PostgreSQL (phần máy chủ không đổi).
+  - Sau khi đưa lên: `/health` OK; `/game/` có màn tải mới và trỏ `sukydieutra-bb1a8fc96fc6.tar.gz` (1,8 MB); 4 tệp `/game/music/*.ogg` trả 200; `/video/trailer.mp4?v=2` đủ 21,7 MB; trang chủ gọi video `?v=2`.
+  - Đổi pygbag thì phải đo lại `WHEEL_URL`, `WHEEL_BYTES`, `RUNTIME_BYTES` trong `tools/web_extras.py` (sai thì chỉ mất phần tải sớm và số MB hiện trên màn tải lệch, game vẫn chạy).
 
 ## Lưu ý
 

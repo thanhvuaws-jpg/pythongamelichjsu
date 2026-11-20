@@ -33,7 +33,7 @@ jobs:
           python-version: "3.12"
       - name: Cài thư viện
         run: |
-          pip install ./backend[dev] pygame-ce==2.5.7
+          pip install ./backend[dev] pygame-ce==2.5.7 fonttools==4.64.0
       - name: Kiểm tra phong cách code
         run: ruff check backend game tools shared
       - name: Kiểm tra nội dung lịch sử
