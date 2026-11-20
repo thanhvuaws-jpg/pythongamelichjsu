@@ -208,10 +208,11 @@ ssh -i ~/.ssh/royal_vps root@<ip VPS> "docker exec sukydieutra_db pg_dump -U suk
   - Sau khi đưa lên: `/health` OK; `/game/` có màn tải mới và trỏ `sukydieutra-bb1a8fc96fc6.tar.gz` (1,8 MB); 4 tệp `/game/music/*.ogg` trả 200; `/video/trailer.mp4?v=2` đủ 21,7 MB; trang chủ gọi video `?v=2`.
   - **Lỗi sau khi đưa lên (người dùng báo, chế độ khách):** hộp thoại "Error occurred: Cannot set properties of null (setting 'textContent')" hiện lại mỗi 8 giây. Hẹn giờ đổi mẩu "Biết không?" vẫn chạy sau khi màn tải đã gỡ, ghi vào phần tử không còn; pygbag bật `alert` cho mọi lỗi JS trên trang. Lúc thử không thấy vì Playwright tự đóng hộp thoại. Sửa trong `tools/loader/loader.js`: dừng hẹn giờ khi gỡ màn tải, mọi việc theo hẹn giờ bọc `safe()`, màn tải lỗi thì tự gỡ. Đã kiểm bằng script bắt hộp thoại và lỗi JS (30 giây sau khi vào game: không có). Người dùng tự đưa bản sửa lên VPS; kiểm lại trên trang thật: 25 giây sau khi vào game không có hộp thoại, không có lỗi JS.
   - Đổi pygbag thì phải đo lại `WHEEL_URL`, `WHEEL_BYTES`, `RUNTIME_BYTES` trong `tools/web_extras.py` (sai thì chỉ mất phần tải sớm và số MB hiện trên màn tải lệch, game vẫn chạy).
-- **20/11/2026 tối, bạn người dùng vào trang chơi (đăng nhập) kẹt ở "Loading, please wait".** CHƯA đưa lên VPS.
+- **20/11/2026 tối, bạn người dùng vào trang chơi (đăng nhập) kẹt ở "Loading, please wait".** Đã đưa lên VPS lúc 23:43 (giờ VN).
   - Nguyên nhân: máy chủ gửi trang HTML chỉ kèm ETag/Last-Modified, không có Cache-Control, nên trình duyệt tự đoán `/game/index.html` còn mới và giữ bản trước 19:41 hàng giờ; F5 ở `play.html` không tải lại khung game. Bản cũ gọi gói `sukydieutra-05a59bd107d0.tar.gz` đã bị thay (404) nên kẹt. Chế độ khách mở `/game/` (địa chỉ khác) nên không gặp.
   - Sửa: `FreshPagesMiddleware` gắn `Cache-Control: no-cache` cho mọi trang HTML (không đổi thì 304); `GameBundleFallbackMiddleware` chuyển yêu cầu gói cũ sang gói hiện tại (307); `play.js` gọi khung game `/game/index.html?v=2` và `play.html` gọi `play.js?v=10` để thoát bản đang bị giữ. Kiểm thử `backend/tests/test_fresh_pages.py`, và thử trên `app.main` với bản đóng gói thật.
   - Ai đang kẹt: sau khi đưa lên, chỉ cần bấm F5 ở trang chơi một lần.
+  - Sau khi đưa lên: `/health` OK; `play.html`, `/game/index.html` có `Cache-Control: no-cache`; xin `sukydieutra-05a59bd107d0.tar.gz` thì 307 sang gói hiện tại; trang chơi gọi `play.js?v=10`, khung game `index.html?v=2`; mở game 15 giây không có hộp thoại hay lỗi JS.
 
 ## Lưu ý
 
