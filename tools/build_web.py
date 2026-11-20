@@ -9,6 +9,7 @@ Kết quả nằm ở build/sukydieutra/build/web/ (index.html + gói .apk), ch�
 from __future__ import annotations
 
 import argparse
+import hashlib
 import os
 import shutil
 import subprocess
@@ -61,7 +62,25 @@ def patch_html(path: Path) -> None:
     html = path.read_text(encoding="utf-8")
     html = html.replace("</head>", PAGE_STYLE + "</head>", 1)
     html = html.replace("</body>", PAGE_SCRIPT + "</body>", 1)
+    html = version_bundle(path.parent, html)
     path.write_text(html, encoding="utf-8")
+
+
+def version_bundle(web_dir: Path, html: str) -> str:
+    """Gói game mang tên theo nội dung (sukydieutra-<băm>.tar.gz), trang trỏ vào tên đó.
+
+    Cloudflare và trình duyệt giữ đệm tệp theo tên: cùng một tên sukydieutra.tar.gz thì sau khi cập nhật người chơi
+    vẫn nhận gói cũ hàng giờ (gặp 15/11/2026). index.html không bị giữ đệm, nên đổi tên là đủ. Tệp tên cũ vẫn để lại
+    cho --serve và bản itch.io (itch dùng .apk)."""
+    goc = web_dir / "sukydieutra.tar.gz"
+    cu = '"sukydieutra.tar.gz"'
+    if not goc.exists() or cu not in html:
+        return html
+    moi = f"sukydieutra-{hashlib.sha256(goc.read_bytes()).hexdigest()[:12]}.tar.gz"
+    for f in web_dir.glob("sukydieutra-*.tar.gz"):
+        f.unlink()
+    shutil.copy2(goc, web_dir / moi)
+    return html.replace(cu, f'"{moi}"')
 
 
 def build() -> None:

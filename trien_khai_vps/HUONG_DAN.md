@@ -128,7 +128,7 @@ ssh -i ~/.ssh/royal_vps root@<ip VPS> "docker exec sukydieutra_db pg_dump -U suk
   - Sau khi đưa lên:
     - `/health` OK, 4 địa chỉ trả 200;
     - container có mã PvP mới, gói game có `scenes/pvp.py`;
-    - Cloudflare phát đúng gói mới (md5 khớp với VPS).
+    - Cloudflare phát đúng gói mới (md5 khớp với VPS) — kiểm trên tệp `.apk`, không phải tệp `.tar.gz` game thật sự tải; xem mục 12:4x.
   - Điểm còn để ngỏ (CHƯA sửa, để người dùng quyết):
     - trận **hòa** bị ghi `win=False` cho cả hai người (bảng `duel_record` không có cột hòa), nên lịch sử thách đấu hiện thành "thua";
     - `pvp_hit` không giới hạn tần suất. Máy bị sửa có thể gửi dồn dập đòn 400 sát thương. Máu vốn do máy người chơi tự báo, nên với bản demo chấp nhận được.
@@ -164,21 +164,37 @@ ssh -i ~/.ssh/royal_vps root@<ip VPS> "docker exec sukydieutra_db pg_dump -U suk
   - Sau khi đưa lên:
     - `/health` OK;
     - `play.html` và `/game/` đều đã gắn `mobile.js`, `/js/mobile.js` trả 200;
-    - gói game Cloudflare phát ra khớp md5 với bản trên VPS;
+    - gói game Cloudflare phát ra khớp md5 với bản trên VPS — **KIỂM SAI TỆP**: đó là `.apk`, mà game (ngoài itch.io) tải `sukydieutra.tar.gz`. Lần sau mới phát hiện tệp `.tar.gz` bị Cloudflare giữ đệm, xem mục kế tiếp;
     - dữ liệu còn đủ: 3 tài khoản, 7 bản ghi thách đấu;
     - không có lỗi trong log 3 phút đầu.
 
-- **15/11/2026, cần điều khiển trên điện thoại và đi không còn giật** (CHƯA đưa lên VPS; chạy lệnh cập nhật để đưa lên). Không có migration mới, phía máy chủ không đổi.
+- **15/11/2026, cần điều khiển trên điện thoại và đi không còn giật.** Đã đưa lên VPS lúc 12:4x (giờ VN), xem kết quả ở cuối mục này. Không có migration mới, phía máy chủ không đổi.
   - Cần điều khiển ảo ở góc dưới trái (`game/core/touch.py`) trên map, trong trận và trong nhà tư liệu; nghe sự kiện ngón nên giữ cần bằng ngón này vẫn bấm CHÉM, nút chạm bằng ngón kia. Chuột giả của cú chạm trên cần bị nuốt nên nhấc tay không bị hiểu thành chạm để đi.
   - Đi giật: khi chạm lên bản đồ để đi, nhân vật đứng khựng một khung hình mỗi khi tới giữa một ô (`_follow_path`) và đi gấp khúc theo lưới. Nay đi tiếp ô sau bằng quãng còn lại trong cùng khung hình, đoạn thẳng không vướng thì cắt chéo.
   - Trang báo `data-sk-input="fingers"` trên thẻ `<html>` của khung game khi máy gửi sự kiện ngón (để soát trên máy thật).
   - Kiểm: kiểm thử game 347/347, thử chạm thật (CDP) trên trình duyệt giả lập điện thoại ở máy (127.0.0.1:8203).
-
+  - Claude kiểm lại trước khi đưa lên:
+    - 6 tệp đổi (`platform_io.py`, `scene.py`, `case.py`, `fight.py`, `multiplayer.py`, `world.py`) và 1 tệp mới (`game/core/touch.py`);
+    - git 8 commit, không chứa bí mật nào;
+    - kiểm thử máy chủ 52/52, game 347/347, ruff sạch.
+  - **Phát hiện khi đưa lên: người chơi vẫn nhận gói game CŨ.**
+    - Ngoài itch.io, trang `/game/` tải `sukydieutra.tar.gz` (không phải `.apk`).
+    - Tệp này lần nào cũng cùng tên, nên Cloudflare giữ đệm (HIT, tồn 25 phút): VPS có gói mới, Cloudflare vẫn phát gói của lần trước. Trình duyệt còn giữ thêm tới 4 giờ (`max-age=14400`).
+  - **Sửa tận gốc** trong `tools/build_web.py`, hàm `version_bundle`:
+    - mỗi lần build, chép gói thành `sukydieutra-<12 ký tự băm sha256>.tar.gz` và sửa `index.html` trỏ vào tên đó;
+    - xóa bản băm cũ; tệp `sukydieutra.tar.gz` và `.apk` vẫn để lại cho `--serve` và itch.io;
+    - `index.html` (và `/game/` mà `play.html` nhúng qua iframe) không bị Cloudflare giữ đệm (DYNAMIC), nên lần nào người chơi cũng nhận gói mới, khỏi phải xóa đệm bằng tay.
+    - Mỗi lần build, tar mới có thời điểm khác nên băm luôn đổi kể cả khi code giữ nguyên. Không sao, chỉ là tải lại 6 MB.
+  - Sau khi đưa lên (12:4x):
+    - `/game/` trỏ tới `sukydieutra-05a59bd107d0.tar.gz`; Cloudflare phát tệp này với MISS lần đầu, md5 khớp bản trên VPS;
+    - mở thật trên Chrome: game vào màn hình chính, console ghi `cross_file.fetch sukydieutra-05a59bd107d0.tar.gz`, không lỗi;
+    - dữ liệu còn đủ: 3 tài khoản, 11 bản ghi thách đấu.
 ## Lưu ý
 
-- **Sau mỗi lần cập nhật, trình duyệt có thể giữ gói game cũ tới 4 giờ.** Cloudflare gắn `Cache-Control: max-age=14400` cho tệp tĩnh; cài đặt này chung cho cả tên miền, nên KHÔNG sửa (đồ án dùng chung).
-  - Ai thấy game cũ thì bấm Ctrl+F5, hoặc mở bằng cửa sổ ẩn danh.
-  - Phía Cloudflare tự lấy bản mới (đã kiểm: md5 khớp).
+- **Bộ nhớ đệm Cloudflare:** Cloudflare giữ đệm tệp tĩnh và gắn `Cache-Control: max-age=14400` (4 giờ). Cài đặt này chung cho cả tên miền nên KHÔNG sửa (đồ án dùng chung).
+  - Gói game: từ 15/11 12:4x mang tên theo nội dung (`tools/build_web.py`, `version_bundle`), nên luôn mới sau mỗi lần cập nhật.
+  - JS / CSS / ảnh của trang web cùng tên thì vẫn có thể cũ tới vài giờ: sửa tệp nào thì tăng `?v=` ở chỗ gọi tệp đó (như `js/play.js?v=9`).
+  - Kiểm sau khi cập nhật: so md5 tệp `sukydieutra-*.tar.gz` mà `/game/` trỏ tới với bản trong container (không phải tệp `.apk`).
 
 - **Email không gửi thật** (`EMAIL_BACKEND=console`, `SKIP_EMAIL_VERIFICATION=true`):
   - đăng ký xong dùng được ngay;
