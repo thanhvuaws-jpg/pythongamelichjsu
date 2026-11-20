@@ -149,9 +149,12 @@ Mỗi màn có một người câu cá đứng ở mép sông, hồ gần chỗ 
   kênh thế giới hiện ở góc trên phải, mỗi tin tốn 10 quan. Máy chủ tự che từ tục, chặn gửi dồn.
 - Bảng vàng dựng ở map đầu, gần chỗ xuất phát: 20 người nhiều điểm học sử nhất và 20 người sức mạnh cao nhất.
 - Góc trên phải chỉ còn nút ba gạch; bấm vào mới xổ danh sách các bảng, có ghi phím tắt.
-- Video hướng dẫn (trailer trong game và `web/video/trailer.mp4`) dài gần ba phút, đi lần lượt: vòng chơi, màn hình, các
-  nhân vật, học một di tích, kẻ canh mật thư, đánh nhau, lên cấp, tu luyện, cảnh giới, lò rèn, vùng luyện, sổ bóng giặc,
-  câu cá, chơi cùng bạn bè và chat.
+- Video hướng dẫn (trailer trong game, cũng là phần đầu của `web/video/trailer.mp4`) dài gần ba phút, đi lần lượt: vòng
+  chơi, màn hình, các nhân vật, học một di tích, kẻ canh mật thư, đánh nhau, lên cấp, tu luyện, cảnh giới, lò rèn, vùng
+  luyện, sổ bóng giặc, câu cá, chơi cùng bạn bè và chat.
+- `web/video/trailer.mp4` (video ở trang chủ) nối thêm hai đoạn sau phần hướng dẫn, tổng gần năm phút: người chơi máy
+  đánh trận cuối Chiến dịch Điện Biên Phủ, rồi qua cổng cuối Màn 3 vào đoạn kết bảy cảnh. Đoạn kết cũng được cắt riêng
+  (`--doan-ket`, 58 giây) để chiếu trên slide thuyết trình.
 
 ## Người chơi máy, cảnh đang đánh
 

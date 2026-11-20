@@ -189,6 +189,12 @@ ssh -i ~/.ssh/royal_vps root@<ip VPS> "docker exec sukydieutra_db pg_dump -U suk
     - `/game/` trỏ tới `sukydieutra-05a59bd107d0.tar.gz`; Cloudflare phát tệp này với MISS lần đầu, md5 khớp bản trên VPS;
     - mở thật trên Chrome: game vào màn hình chính, console ghi `cross_file.fetch sukydieutra-05a59bd107d0.tar.gz`, không lỗi;
     - dữ liệu còn đủ: 3 tài khoản, 11 bản ghi thách đấu.
+- **20/11/2026, video trang chủ thêm trận cuối và đoạn kết.** CHƯA đưa lên VPS. Không đổi code game hay máy chủ, chỉ đổi tệp tĩnh.
+  - `tools/make_trailer_video.py` quay ba đoạn rồi nối: phần hướng dẫn (2 phút 46), người chơi máy chơi hết ba màn (không quay) rồi đánh Chiến dịch Điện Biên Phủ (61 giây), đi qua cổng cuối vào đoạn kết (67 giây). Tổng 4 phút 53, 20,7 MB, 2560×1440.
+  - `--doan-ket <tệp>` xuất riêng đoạn kết 58 giây (1280×720, 3 MB) kèm ảnh bìa, dùng cho slide 4 của bài thuyết trình.
+  - `web/index.html` gọi `video/trailer.mp4?v=2` và `img/trailer.png?v=2` để Cloudflare không phát bản cũ (xem mục Lưu ý).
+  - Video trong game (TrailerScene) giữ nguyên, vẫn gần ba phút.
+
 ## Lưu ý
 
 - **Bộ nhớ đệm Cloudflare:** Cloudflare giữ đệm tệp tĩnh và gắn `Cache-Control: max-age=14400` (4 giờ). Cài đặt này chung cho cả tên miền nên KHÔNG sửa (đồ án dùng chung).

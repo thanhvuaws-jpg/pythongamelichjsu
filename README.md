@@ -39,12 +39,18 @@
 
 ## Video giới thiệu
 
-Video hướng dẫn 2 phút 45 giây, quay thẳng từ cảnh hướng dẫn trong game (`tools/make_trailer_video.py`), nên luôn khớp với
-thứ người chơi thấy.
+Video quay thẳng từ game (`tools/make_trailer_video.py`), nên luôn khớp với thứ người chơi thấy. Bản đủ dài 4 phút 53 giây:
+
+1. phần hướng dẫn 2 phút 45 giây (cũng là video hướng dẫn trong game);
+2. người chơi máy đánh nhiệm vụ cuối, Chiến dịch Điện Biên Phủ: chọn phương châm, kéo pháo, đánh ba đợt;
+3. qua cổng cuối của Màn 3 vào đoạn kết: lá cờ trên nóc hầm Đờ Cát-xtơ-ri, Hiệp định Giơnevơ, tiếp quản Thủ đô, lễ chào
+   cờ ở Cột Cờ năm 1954 và ngày thống nhất 30/4/1975.
+
+Đoạn phát ngay dưới đây là phần hướng dẫn.
 
 https://github.com/user-attachments/assets/8f33c440-58b6-497c-a96e-062cc5967504
 
-<sub>Bản 1440p nằm ở <code>web/video/trailer.mp4</code> (tải về để xem), và cũng phát ngay ở trang chủ <a href="https://game.vtkt.online">game.vtkt.online</a>.</sub>
+<sub>Bản đủ (1440p) nằm ở <code>web/video/trailer.mp4</code> (tải về để xem), và cũng phát ngay ở trang chủ <a href="https://game.vtkt.online">game.vtkt.online</a>.</sub>
 
 ## Game có gì
 
