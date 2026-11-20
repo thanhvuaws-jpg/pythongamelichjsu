@@ -46,9 +46,9 @@ Video quay thẳng từ game (`tools/make_trailer_video.py`), nên luôn khớp 
 3. qua cổng cuối của Màn 3 vào đoạn kết: lá cờ trên nóc hầm Đờ Cát-xtơ-ri, Hiệp định Giơnevơ, tiếp quản Thủ đô, lễ chào
    cờ ở Cột Cờ năm 1954 và ngày thống nhất 30/4/1975.
 
-Đoạn phát ngay dưới đây là phần hướng dẫn.
+Đoạn phát ngay dưới đây là bản đủ (720p).
 
-https://github.com/user-attachments/assets/8f33c440-58b6-497c-a96e-062cc5967504
+https://github.com/user-attachments/assets/76b53910-e947-4437-a360-3ca12bac4023
 
 <sub>Bản đủ (1440p) nằm ở <code>web/video/trailer.mp4</code> (tải về để xem), và cũng phát ngay ở trang chủ <a href="https://game.vtkt.online">game.vtkt.online</a>.</sub>
 
